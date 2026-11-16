@@ -1,0 +1,1022 @@
+{
+  "id": "meier",
+  "kapitel": 2,
+  "gast": "Frau Meier, 74",
+  "thema": "Gute Fotos von Berichten",
+  "wunsch": "Ich fotografiere meine Berichte, aber die KI liest immer Unsinn. Was mache ich falsch?",
+  "dank": "Jetzt liest Lupe alles richtig. Und ich weiss endlich, wozu die App Notizen gut ist!",
+  "danach": "Frau Meier hängt einen Zettel ans Schwarze Brett: «Fotos: hell, gerade, ganz.» Bald kommt Herr Brunner mit seinem neuen iPhone.",
+  "lexikon": [
+    "pdf"
+  ],
+  "runden": [
+    {
+      "id": "r1",
+      "art": "konzept",
+      "konzept": "foto-scharf",
+      "probieren": {
+        "aufgabe": "fs-a",
+        "nurTeile": [
+          "unscharf",
+          "abgeschnitten",
+          "zuweit"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "fs-a"
+      },
+      "luecke": {
+        "aufgabe": "fs-b",
+        "vorgabe": []
+      },
+      "frei": [
+        "fs-c",
+        "fs-d",
+        "fs-e",
+        "fs-f"
+      ]
+    },
+    {
+      "id": "r2",
+      "art": "konzept",
+      "konzept": "foto-licht",
+      "probieren": {
+        "aufgabe": "fl-a",
+        "nurTeile": [
+          "schatten",
+          "blitz",
+          "finger"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "fl-a"
+      },
+      "luecke": {
+        "aufgabe": "fl-b",
+        "vorgabe": []
+      },
+      "frei": [
+        "fl-c",
+        "fl-d",
+        "fl-e",
+        "fl-f"
+      ]
+    },
+    {
+      "id": "r3",
+      "art": "konzept",
+      "konzept": "alle-seiten",
+      "probieren": {
+        "aufgabe": "as-a",
+        "nurTeile": [
+          "s1",
+          "s1u"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "as-a"
+      },
+      "luecke": {
+        "aufgabe": "as-b",
+        "vorgabe": [
+          "pdf"
+        ]
+      },
+      "frei": [
+        "as-c",
+        "as-d",
+        "as-e",
+        "as-f"
+      ]
+    },
+    {
+      "id": "r4",
+      "art": "misch",
+      "titel": "Alles zusammen",
+      "frei": [
+        "m-a"
+      ]
+    }
+  ],
+  "aufgaben": {
+    "fs-a": {
+      "typ": "tippen",
+      "wunsch": "Ich habe vier Fotos von meinem Bericht gemacht. Welches nehme ich?",
+      "frage": "Welches Foto schickst du Lupe?",
+      "bildschirm": {
+        "titel": "Deine Fotos",
+        "anordnung": "raster"
+      },
+      "flaechen": [
+        {
+          "id": "unscharf",
+          "text": "Foto 1",
+          "hinweis": "Verwackelt. Lupe kann die Zahlen nicht sicher lesen und rät.",
+          "folge": "Ich lese: Hb 18,1? Oder 13,1? Vielleicht 8,1. Ich bin nicht sicher, aber ich sage einfach mal 18,1.",
+          "bild": "fotos/unscharf.svg",
+          "bildText": "Verwackelt und unscharf. Die Zahlen verschwimmen.",
+          "art": "foto"
+        },
+        {
+          "id": "abgeschnitten",
+          "text": "Foto 2",
+          "hinweis": "Abgeschnitten. Rechts und unten fehlt ein Teil des Blatts.",
+          "folge": "Ich sehe Hb und Leukozyten. Rechts fehlt der Bereich des Labors, unten fehlen zwei Werte.",
+          "bild": "fotos/abgeschnitten.svg",
+          "bildText": "Abgeschnitten. Rechts und unten fehlt ein grosser Teil des Blatts.",
+          "art": "foto"
+        },
+        {
+          "id": "zuweit",
+          "text": "Foto 3",
+          "hinweis": "Zu weit weg. Die Schrift ist viel zu klein zum Lesen.",
+          "folge": "Ich sehe einen schönen Holztisch, eine Kaffeetasse und eine Brille. Das Blatt ist so klein wie eine Briefmarke.",
+          "bild": "fotos/zuweit.svg",
+          "bildText": "Zu weit weg. Das Blatt ist winzig, daneben Tasse und Brille.",
+          "art": "foto"
+        },
+        {
+          "id": "gut",
+          "text": "Foto 4",
+          "hinweis": "Ganzes Blatt, scharf und gerade. So kann Lupe alles lesen.",
+          "folge": "Alles gut lesbar: Hb 13,1, Leukozyten 6,2, Thrombozyten 245, Cholesterin 5,1. Alles im Bereich, den das Labor angibt.",
+          "richtig": true,
+          "bild": "fotos/gut.svg",
+          "bildText": "Ganzes Blatt, scharf, gerade, hell. Alles lesbar.",
+          "art": "foto"
+        }
+      ],
+      "loesung": [
+        "gut"
+      ]
+    },
+    "fs-b": {
+      "typ": "tippen",
+      "wunsch": "Ich habe es nochmals versucht. Ist jetzt eines gut?",
+      "frage": "Welches dieser Fotos kann Lupe gut lesen?",
+      "bildschirm": {
+        "titel": "Deine Fotos",
+        "anordnung": "raster"
+      },
+      "flaechen": [
+        {
+          "id": "schief",
+          "text": "Foto 1",
+          "hinweis": "Schief fotografiert. Lupe verrutscht beim Lesen in der Zeile.",
+          "folge": "Die Zeilen laufen schräg. Gehört 245 zu den Thrombozyten oder zum Cholesterin? Ich tippe auf Cholesterin.",
+          "bild": "fotos/schief.svg",
+          "bildText": "Schief von der Seite fotografiert. Die Zeilen laufen schräg.",
+          "art": "foto"
+        },
+        {
+          "id": "gut",
+          "text": "Foto 2",
+          "hinweis": "Ganzes Blatt, scharf und gerade. So kann Lupe alles lesen.",
+          "folge": "Alles gut lesbar: Hb 13,1, Leukozyten 6,2, Thrombozyten 245, Cholesterin 5,1. Alles im Bereich, den das Labor angibt.",
+          "richtig": true,
+          "bild": "fotos/gut.svg",
+          "bildText": "Ganzes Blatt, scharf, gerade, hell. Alles lesbar.",
+          "art": "foto"
+        },
+        {
+          "id": "unscharf",
+          "text": "Foto 3",
+          "hinweis": "Verwackelt. Lupe kann die Zahlen nicht sicher lesen und rät.",
+          "folge": "Ich lese: Hb 18,1? Oder 13,1? Vielleicht 8,1. Ich bin nicht sicher, aber ich sage einfach mal 18,1.",
+          "bild": "fotos/unscharf.svg",
+          "bildText": "Verwackelt und unscharf. Die Zahlen verschwimmen.",
+          "art": "foto"
+        },
+        {
+          "id": "zuweit",
+          "text": "Foto 4",
+          "hinweis": "Zu weit weg. Die Schrift ist viel zu klein zum Lesen.",
+          "folge": "Ich sehe einen schönen Holztisch, eine Kaffeetasse und eine Brille. Das Blatt ist so klein wie eine Briefmarke.",
+          "bild": "fotos/zuweit.svg",
+          "bildText": "Zu weit weg. Das Blatt ist winzig, daneben Tasse und Brille.",
+          "art": "foto"
+        }
+      ],
+      "loesung": [
+        "gut"
+      ]
+    },
+    "fs-c": {
+      "typ": "wahl",
+      "wunsch": "Lupe schreibt, mein Hb sei 18,1. Auf dem Papier steht 13,1!",
+      "frage": "Lupe hat dieses Foto bekommen. Warum liest sie 18,1?",
+      "lupe": "Das Foto ist verwackelt. Unscharfe Ziffern liest auch eine KI falsch.",
+      "optionen": [
+        {
+          "id": "unscharf",
+          "text": "Das Foto ist verwackelt und unscharf.",
+          "hinweis": "Genau. Ruhig halten und vor dem Senden prüfen.",
+          "richtig": true
+        },
+        {
+          "id": "lupe",
+          "text": "Lupe kann keine Zahlen lesen.",
+          "hinweis": "Doch. Auf einem scharfen Foto liest sie richtig."
+        },
+        {
+          "id": "papier",
+          "text": "Auf dem Papier ist ein Druckfehler.",
+          "hinweis": "Auf dem Papier steht klar 13,1."
+        },
+        {
+          "id": "bereich",
+          "text": "Das Labor hat den Bereich falsch angegeben.",
+          "hinweis": "Damit hat es nichts zu tun."
+        }
+      ],
+      "loesung": [
+        "unscharf"
+      ],
+      "bild": "fotos/unscharf.svg",
+      "bildText": "Verwackelt und unscharf. Die Zahlen verschwimmen."
+    },
+    "fs-d": {
+      "typ": "wahl",
+      "wunsch": "Was ist an diesem Foto falsch?",
+      "frage": "Lupe verrutscht beim Lesen in den Zeilen. Woran liegt es?",
+      "lupe": "Das Foto ist schief. Halte das iPhone gerade über das Blatt.",
+      "optionen": [
+        {
+          "id": "schief",
+          "text": "Es ist schief, von der Seite fotografiert.",
+          "hinweis": "Genau. Gerade von oben ist besser.",
+          "richtig": true
+        },
+        {
+          "id": "dunkel",
+          "text": "Es ist zu dunkel.",
+          "hinweis": "Hell genug ist es. Das Problem ist die Schräge."
+        },
+        {
+          "id": "finger",
+          "text": "Ein Finger ist im Bild.",
+          "hinweis": "Hier ist kein Finger zu sehen."
+        },
+        {
+          "id": "gut",
+          "text": "Nichts, das Foto ist gut.",
+          "hinweis": "Leider nicht. Die Zeilen laufen schräg."
+        }
+      ],
+      "loesung": [
+        "schief"
+      ],
+      "bild": "fotos/schief.svg",
+      "bildText": "Schief von der Seite fotografiert. Die Zeilen laufen schräg."
+    },
+    "fs-e": {
+      "typ": "reihe",
+      "wunsch": "In welcher Reihenfolge mache ich ein gutes Foto?",
+      "frage": "Bring die Schritte für ein gutes Foto in die richtige Reihenfolge.",
+      "schritte": [
+        {
+          "id": "pruefen",
+          "text": "Foto vergrössern und prüfen, ob alles lesbar ist"
+        },
+        {
+          "id": "hinlegen",
+          "text": "Blatt flach auf den Tisch legen"
+        },
+        {
+          "id": "abdruecken",
+          "text": "Stillhalten, bis das Bild scharf ist, dann abdrücken"
+        },
+        {
+          "id": "halten",
+          "text": "iPhone gerade darüber halten, das ganze Blatt im Bild"
+        }
+      ],
+      "loesung": [
+        "hinlegen",
+        "halten",
+        "abdruecken",
+        "pruefen"
+      ],
+      "lupe": "Flach hinlegen, gerade darüber, stillhalten, abdrücken, prüfen. Ein Foto, das Lupe gut lesen kann.",
+      "daneben": {
+        "texte": [
+          "Erst geprüft, dann fotografiert? Da gab es noch gar nichts zu prüfen.",
+          "Abgedrückt, bevor das Blatt lag. Auf dem Foto ist eine fliegende Hand."
+        ],
+        "hinweis": "Zuerst das Blatt hinlegen, dann das iPhone halten, dann abdrücken, zum Schluss prüfen."
+      }
+    },
+    "fs-f": {
+      "typ": "wahl",
+      "wunsch": "Lupe sagt, ihr fehlen zwei Werte und der Bereich des Labors.",
+      "frage": "Lupe hat dieses Foto bekommen. Was ist passiert?",
+      "lupe": "Das Blatt ist abgeschnitten. Alles muss aufs Bild, auch die Ränder.",
+      "optionen": [
+        {
+          "id": "ab",
+          "text": "Das Blatt ist rechts und unten abgeschnitten.",
+          "hinweis": "Genau. Das ganze Blatt gehört aufs Bild.",
+          "richtig": true
+        },
+        {
+          "id": "vergessen",
+          "text": "Lupe hat die Werte vergessen.",
+          "hinweis": "Sie konnte sie gar nicht sehen."
+        },
+        {
+          "id": "leer",
+          "text": "Auf dem Bericht stehen keine weiteren Werte.",
+          "hinweis": "Doch, sie sind nur nicht auf dem Foto."
+        },
+        {
+          "id": "unscharf",
+          "text": "Das Foto ist unscharf.",
+          "hinweis": "Scharf ist es. Aber es fehlt ein Teil."
+        }
+      ],
+      "loesung": [
+        "ab"
+      ],
+      "bild": "fotos/abgeschnitten.svg",
+      "bildText": "Abgeschnitten. Rechts und unten fehlt ein grosser Teil des Blatts."
+    },
+    "fl-a": {
+      "typ": "tippen",
+      "wunsch": "Beim Fotografieren war etwas im Weg. Welches Foto ist brauchbar?",
+      "frage": "Welches Foto schickst du Lupe?",
+      "bildschirm": {
+        "titel": "Deine Fotos",
+        "anordnung": "raster"
+      },
+      "flaechen": [
+        {
+          "id": "schatten",
+          "text": "Foto 1",
+          "hinweis": "Ein Schatten liegt über den Werten. Lupe rät, was darunter steht.",
+          "folge": "Die oberen Werte lese ich. Unten ist alles dunkel. Ich vermute, Cholesterin ist 3,1. Oder 8,1.",
+          "bild": "fotos/schatten.svg",
+          "bildText": "Ein dunkler Schatten liegt über der unteren Hälfte.",
+          "art": "foto"
+        },
+        {
+          "id": "blitz",
+          "text": "Foto 2",
+          "hinweis": "Der Blitz spiegelt auf dem Papier. Der weisse Fleck verdeckt die Zahl.",
+          "folge": "Bei Hb sehe ich nur einen weissen Fleck. Ich nehme an, der Wert ist gut. Weiss ist ja eine freundliche Farbe.",
+          "bild": "fotos/blitz.svg",
+          "bildText": "Ein weisser Fleck vom Blitz verdeckt die Werte.",
+          "art": "foto"
+        },
+        {
+          "id": "finger",
+          "text": "Foto 3",
+          "hinweis": "Ein Finger liegt auf den Werten. Leg das Blatt hin und nimm die Hand weg.",
+          "folge": "Unter dem Finger steht wohl etwas Wichtiges. Ich sehe nur einen hübschen Fingernagel.",
+          "bild": "fotos/finger.svg",
+          "bildText": "Ein Finger liegt quer über den Werten.",
+          "art": "foto"
+        },
+        {
+          "id": "gut",
+          "text": "Foto 4",
+          "hinweis": "Helles Licht, kein Schatten, kein Finger. So kann Lupe alles lesen.",
+          "folge": "Alles gut lesbar: Hb 13,1, Leukozyten 6,2, Thrombozyten 245, Cholesterin 5,1. Alles im Bereich, den das Labor angibt.",
+          "richtig": true,
+          "bild": "fotos/gut.svg",
+          "bildText": "Ganzes Blatt, scharf, gerade, hell. Alles lesbar.",
+          "art": "foto"
+        }
+      ],
+      "loesung": [
+        "gut"
+      ]
+    },
+    "fl-b": {
+      "typ": "tippen",
+      "wunsch": "Abends am Küchentisch habe ich noch drei Fotos gemacht.",
+      "frage": "Welches dieser Fotos kann Lupe lesen?",
+      "bildschirm": {
+        "titel": "Deine Fotos",
+        "anordnung": "raster"
+      },
+      "flaechen": [
+        {
+          "id": "dunkel",
+          "text": "Foto 1",
+          "hinweis": "Viel zu dunkel. Mach Licht oder geh ans Fenster.",
+          "folge": "Es ist Nacht auf diesem Foto. Ich erkenne einen hellen Rechteck-Schimmer. Mehr nicht.",
+          "bild": "fotos/dunkel.svg",
+          "bildText": "Viel zu dunkel. Man erkennt kaum etwas.",
+          "art": "foto"
+        },
+        {
+          "id": "zerknittert",
+          "text": "Foto 2",
+          "hinweis": "Falten verbiegen die Zahlen. Streich das Blatt vorher glatt.",
+          "folge": "Durch die 6,2 läuft eine Falte. Ist das eine 6,2 oder eine 0,2? Ich nehme 0,2.",
+          "bild": "fotos/zerknittert.svg",
+          "bildText": "Gefaltet und zerknittert. Falten laufen durch die Zahlen.",
+          "art": "foto"
+        },
+        {
+          "id": "gut",
+          "text": "Foto 3",
+          "hinweis": "Hell, glatt, frei. So kann Lupe alles lesen.",
+          "folge": "Alles gut lesbar: Hb 13,1, Leukozyten 6,2, Thrombozyten 245, Cholesterin 5,1. Alles im Bereich, den das Labor angibt.",
+          "richtig": true,
+          "bild": "fotos/gut.svg",
+          "bildText": "Ganzes Blatt, scharf, gerade, hell. Alles lesbar.",
+          "art": "foto"
+        },
+        {
+          "id": "blitz",
+          "text": "Foto 4",
+          "hinweis": "Der Blitz spiegelt auf dem Papier. Der weisse Fleck verdeckt die Zahl.",
+          "folge": "Bei Hb sehe ich nur einen weissen Fleck. Ich nehme an, der Wert ist gut. Weiss ist ja eine freundliche Farbe.",
+          "bild": "fotos/blitz.svg",
+          "bildText": "Ein weisser Fleck vom Blitz verdeckt die Werte.",
+          "art": "foto"
+        }
+      ],
+      "loesung": [
+        "gut"
+      ]
+    },
+    "fl-c": {
+      "typ": "wahl",
+      "wunsch": "Lupe sagt: «Bei Hb sehe ich nur einen weissen Fleck.»",
+      "frage": "Was ist auf diesem Foto passiert?",
+      "lupe": "Der Blitz spiegelt auf dem glänzenden Papier. Ohne Blitz und mit hellem Licht klappt es.",
+      "optionen": [
+        {
+          "id": "blitz",
+          "text": "Der Blitz hat gespiegelt.",
+          "hinweis": "Genau. Blitz aus, dafür ans helle Fenster.",
+          "richtig": true
+        },
+        {
+          "id": "leer",
+          "text": "Auf dem Bericht fehlt der Wert.",
+          "hinweis": "Der Wert ist da, nur verdeckt."
+        },
+        {
+          "id": "weiss",
+          "text": "Das Labor hat weiss gedruckt.",
+          "hinweis": "Nein, das ist eine Spiegelung."
+        },
+        {
+          "id": "schnell",
+          "text": "Lupe war zu schnell.",
+          "hinweis": "Lupe kann nicht lesen, was verdeckt ist."
+        }
+      ],
+      "loesung": [
+        "blitz"
+      ],
+      "bild": "fotos/blitz.svg",
+      "bildText": "Ein weisser Fleck vom Blitz verdeckt die Werte."
+    },
+    "fl-d": {
+      "typ": "wahl",
+      "wunsch": "So halte ich das Blatt immer fest. Ist das schlimm?",
+      "frage": "Was hilft bei diesem Foto?",
+      "lupe": "Das Blatt hinlegen und die Hand wegnehmen. Dann verdeckt der Finger nichts.",
+      "optionen": [
+        {
+          "id": "hinlegen",
+          "text": "Das Blatt auf den Tisch legen und die Hand wegnehmen",
+          "hinweis": "Genau. So bleibt alles frei.",
+          "richtig": true
+        },
+        {
+          "id": "naeher",
+          "text": "Näher heran gehen",
+          "hinweis": "Dann ist der Finger noch grösser im Bild."
+        },
+        {
+          "id": "blitz",
+          "text": "Den Blitz einschalten",
+          "hinweis": "Der Blitz macht den Finger nicht durchsichtig."
+        },
+        {
+          "id": "andere",
+          "text": "Mit der anderen Hand halten",
+          "hinweis": "Dann liegt ein anderer Finger im Bild."
+        }
+      ],
+      "loesung": [
+        "hinlegen"
+      ],
+      "bild": "fotos/finger.svg",
+      "bildText": "Ein Finger liegt quer über den Werten."
+    },
+    "fl-e": {
+      "typ": "wahl",
+      "wunsch": "Unten ist mein Foto ganz dunkel. Was mache ich falsch?",
+      "frage": "Woher kommt der dunkle Teil, und was hilft?",
+      "lupe": "Es ist dein eigener Schatten. Stell dich so, dass das Licht von der Seite kommt.",
+      "optionen": [
+        {
+          "id": "schatten",
+          "text": "Mein Schatten fällt aufs Blatt. Ich stelle mich anders hin.",
+          "hinweis": "Genau. Licht von der Seite, Schatten neben dem Blatt.",
+          "richtig": true
+        },
+        {
+          "id": "blitz",
+          "text": "Ich brauche den Blitz.",
+          "hinweis": "Der Blitz macht oft weisse Flecken. Besser anders hinstellen."
+        },
+        {
+          "id": "papier",
+          "text": "Das Papier ist schmutzig.",
+          "hinweis": "Es ist ein Schatten, kein Schmutz."
+        },
+        {
+          "id": "egal",
+          "text": "Egal, Lupe errät den Rest.",
+          "hinweis": "Raten ist genau das Problem."
+        }
+      ],
+      "loesung": [
+        "schatten"
+      ],
+      "bild": "fotos/schatten.svg",
+      "bildText": "Ein dunkler Schatten liegt über der unteren Hälfte."
+    },
+    "fl-f": {
+      "typ": "wahl",
+      "wunsch": "Es ist Abend und das Foto ist viel zu dunkel.",
+      "frage": "Was tust du?",
+      "lupe": "Licht machen, zum Beispiel eine helle Lampe. Oder am nächsten Tag beim Fenster fotografieren.",
+      "optionen": [
+        {
+          "id": "licht",
+          "text": "Eine helle Lampe einschalten oder morgen am Fenster fotografieren",
+          "hinweis": "Genau. Helles Licht ohne Blitz ist am besten.",
+          "richtig": true
+        },
+        {
+          "id": "blitz",
+          "text": "Den Blitz einschalten",
+          "hinweis": "Auf glänzendem Papier gibt das oft einen weissen Fleck."
+        },
+        {
+          "id": "schicken",
+          "text": "Trotzdem schicken",
+          "hinweis": "Dann rät Lupe. Das wollen wir nicht."
+        },
+        {
+          "id": "bildschirm",
+          "text": "Den iPhone-Bildschirm heller stellen",
+          "hinweis": "Das macht nur die Anzeige heller, nicht das Foto."
+        }
+      ],
+      "loesung": [
+        "licht"
+      ],
+      "bild": "fotos/dunkel.svg",
+      "bildText": "Viel zu dunkel. Man erkennt kaum etwas."
+    },
+    "as-a": {
+      "wunsch": "Mein Bericht hat zwei Seiten. Was hänge ich an?",
+      "grundprompt": "Lupe, erklär mir diesen Laborbericht in einfachen Worten.",
+      "teile": [
+        {
+          "id": "s1",
+          "art": "anhang",
+          "text": "Seite 1 (Foto)",
+          "bild": "fotos/gut.svg",
+          "bildText": "Ganzes Blatt, scharf, gerade, hell. Alles lesbar."
+        },
+        {
+          "id": "s2",
+          "art": "anhang",
+          "text": "Seite 2 (Foto)",
+          "bild": "fotos/seite2.svg",
+          "bildText": "Seite 2 von 2 mit weiteren Werten und der Beurteilung."
+        },
+        {
+          "id": "s1u",
+          "art": "anhang",
+          "text": "Seite 1 nochmals, verwackelt (Foto)",
+          "bild": "fotos/unscharf.svg",
+          "bildText": "Verwackelt und unscharf. Die Zahlen verschwimmen."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "s1u"
+            ]
+          },
+          "fehlbild": "doppelt"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "s2"
+            ]
+          },
+          "fehlbild": "ohne2"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "s1"
+            ]
+          },
+          "fehlbild": "ohne1"
+        }
+      ],
+      "fehlbilder": {
+        "doppelt": {
+          "texte": [
+            "Seite 1 habe ich zweimal, einmal scharf, einmal verwackelt. Ist Hb 13,1 oder 18,1? Ich bin verwirrt.",
+            "Zwei Versionen von Seite 1, die sich widersprechen. Welche gilt?"
+          ],
+          "hinweis": "Schick jede Seite nur einmal, die scharfe Version."
+        },
+        "ohne2": {
+          "texte": [
+            "Alles im Bereich! (Lupe hat nur Seite 1 gesehen. Was auf Seite 2 steht, weiss sie nicht.)",
+            "Unten steht «Seite 1 von 2». Wo ist Seite 2? Dort steht vermutlich die Beurteilung."
+          ],
+          "hinweis": "Unten steht «Seite 1 von 2». Ohne Seite 2 fehlen Werte und die Beurteilung der Ärztin."
+        },
+        "ohne1": {
+          "texte": [
+            "Ich sehe nur «Fortsetzung». Wovon? Welches Datum, welche ersten Werte?",
+            "Seite 2 ohne Seite 1 ist wie ein Buch ohne Anfang."
+          ],
+          "hinweis": "Seite 1 fehlt: Datum und die ersten Werte."
+        }
+      },
+      "erfolg": [
+        "Beide Seiten sind da. Alle Werte liegen im Bereich des Labors. Die Ärztin hat unten auf Seite 2 unterschrieben.",
+        "Zwei Seiten, sieben Werte, alle im Bereich des Labors. Frag deine Ärztin, ob sie das auch so sieht."
+      ],
+      "loesung": [
+        "s1",
+        "s2"
+      ]
+    },
+    "as-b": {
+      "wunsch": "Das Labor hat mir den Bericht auch als PDF gemailt.",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "pdf",
+          "art": "anhang",
+          "text": "Laborbericht.pdf (aus der E-Mail)",
+          "bild": "fotos/pdf.svg",
+          "bildText": "Eine PDF-Datei vom Labor."
+        },
+        {
+          "id": "foto",
+          "art": "anhang",
+          "text": "Foto vom Papierbericht",
+          "bild": "fotos/schatten.svg",
+          "bildText": "Ein dunkler Schatten liegt über der unteren Hälfte."
+        },
+        {
+          "id": "erklaer",
+          "art": "frage",
+          "text": "Erklär mir diesen Bericht."
+        },
+        {
+          "id": "einfach",
+          "art": "wie",
+          "text": "In einfachen Worten."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "foto"
+            ]
+          },
+          "fehlbild": "doppelt"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "pdf"
+            ]
+          },
+          "fehlbild": "keinPdf"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "erklaer"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        }
+      ],
+      "fehlbilder": {
+        "doppelt": {
+          "texte": [
+            "Im PDF steht Cholesterin 5,1. Auf dem Foto ist es dunkel, ich lese 8,1. Was stimmt jetzt?",
+            "Zwei Versionen desselben Berichts, eine davon schlecht lesbar. Ich bin verwirrt."
+          ],
+          "hinweis": "Das PDF reicht. Ein zusätzliches, schlechtes Foto stiftet nur Verwirrung."
+        },
+        "keinPdf": {
+          "texte": [
+            "Gern. Welchen Bericht? Ich sehe keinen.",
+            "Ich warte auf den Bericht."
+          ],
+          "hinweis": "Häng das PDF an. Es ist sauberer als jedes Foto."
+        },
+        "keineFrage": {
+          "texte": [
+            "Ein PDF! Und was soll ich damit?",
+            "Danke. Soll ich es abspeichern?"
+          ],
+          "hinweis": "Sag, was Lupe tun soll."
+        },
+        "fach": {
+          "texte": [
+            "Hb 13,1 g/dl im Referenzintervall, Leukozyten normwertig, Thrombozyten unauffällig.",
+            "Laborchemisch keine Auffälligkeiten."
+          ],
+          "hinweis": "Richtig, aber Fachsprache. Bitte um einfache Worte."
+        }
+      },
+      "erfolg": [
+        "Das PDF ist gut lesbar. Alle Werte liegen im Bereich, den das Labor angibt.",
+        "Alles klar lesbar. Deine Werte sind im Bereich des Labors."
+      ],
+      "loesung": [
+        "pdf",
+        "erklaer",
+        "einfach"
+      ]
+    },
+    "as-c": {
+      "typ": "reihe",
+      "wunsch": "Wie scanne ich mit dem iPhone einen Bericht?",
+      "frage": "Bring die Schritte zum Scannen in die richtige Reihenfolge.",
+      "schritte": [
+        {
+          "id": "menue",
+          "text": "Auf die Büroklammer (oder Kamera) tippen"
+        },
+        {
+          "id": "notiz",
+          "text": "Eine neue Notiz beginnen"
+        },
+        {
+          "id": "halten",
+          "text": "iPhone über das Blatt halten, es knipst selbst"
+        },
+        {
+          "id": "app",
+          "text": "Die App Notizen öffnen"
+        },
+        {
+          "id": "scannen",
+          "text": "«Dokumente scannen» wählen"
+        }
+      ],
+      "loesung": [
+        "app",
+        "notiz",
+        "menue",
+        "scannen",
+        "halten"
+      ],
+      "lupe": "Notizen öffnen, neue Notiz, Büroklammer, «Dokumente scannen», halten. Eine saubere, gerade Seite.",
+      "daneben": {
+        "texte": [
+          "Das iPhone hält über dem Blatt, aber es ist noch keine App offen. Es passiert nichts.",
+          "«Dokumente scannen» gesucht, bevor eine Notiz offen war. Der Knopf ist nicht da."
+        ],
+        "hinweis": "Zuerst die App öffnen, dann eine Notiz, dann das Menü, dann «Dokumente scannen», zum Schluss halten."
+      }
+    },
+    "as-d": {
+      "typ": "tippen",
+      "wunsch": "In der Notiz ist ein Menü aufgegangen. Was jetzt?",
+      "frage": "Du willst einen Bericht scannen. Was tippst du an?",
+      "bildschirm": {
+        "titel": "Notizen",
+        "zeilen": [
+          "Menü der Büroklammer in einer neuen Notiz"
+        ]
+      },
+      "flaechen": [
+        {
+          "id": "auswaehlen",
+          "text": "Foto oder Video auswählen",
+          "hinweis": "Damit wählst du ein altes Foto, du scannst nichts Neues.",
+          "folge": "Deine Fotos gehen auf. Ein Scan entsteht so nicht."
+        },
+        {
+          "id": "scannen",
+          "text": "Dokumente scannen",
+          "hinweis": "Genau. Der Scanner findet das Blatt und macht es gerade.",
+          "folge": "Die Kamera geht auf. Ein gelber Rahmen findet das Blatt und knipst es gerade und zugeschnitten.",
+          "richtig": true
+        },
+        {
+          "id": "aufnehmen",
+          "text": "Foto oder Video aufnehmen",
+          "hinweis": "Ein normales Foto geht auch. Ein Scan ist aber sauberer.",
+          "folge": "Ein normales Foto mit Tisch und Schatten. Brauchbar, aber ein Scan ist sauberer."
+        },
+        {
+          "id": "text",
+          "text": "Text scannen",
+          "hinweis": "Das tippt nur den Text ab. Für Lupe ist ein Scan des ganzen Blatts besser.",
+          "folge": "Das iPhone liest Text ab und schreibt ihn in die Notiz. Die Tabelle geht dabei durcheinander."
+        }
+      ],
+      "loesung": [
+        "scannen"
+      ]
+    },
+    "as-e": {
+      "typ": "wahl",
+      "wunsch": "Unten auf meinem Bericht steht «Seite 1 von 3».",
+      "frage": "Wie viele Seiten schickst du Lupe?",
+      "lupe": "Alle drei. «Seite 1 von 3» heisst: Der Bericht hat drei Seiten.",
+      "optionen": [
+        {
+          "id": "drei",
+          "text": "Drei Seiten",
+          "hinweis": "Genau. Alle Seiten gehören dazu.",
+          "richtig": true
+        },
+        {
+          "id": "eine",
+          "text": "Eine Seite reicht",
+          "hinweis": "Dann fehlen Lupe zwei Drittel."
+        },
+        {
+          "id": "zwei",
+          "text": "Zwei Seiten",
+          "hinweis": "Es sind drei. Zähl nach."
+        },
+        {
+          "id": "vier",
+          "text": "Vier Seiten, sicherheitshalber eine doppelt",
+          "hinweis": "Doppelte Seiten verwirren nur."
+        }
+      ],
+      "loesung": [
+        "drei"
+      ]
+    },
+    "as-f": {
+      "typ": "wahl",
+      "wunsch": "Ich habe den Bericht auf Papier und als PDF.",
+      "frage": "Was schickst du Lupe?",
+      "lupe": "Das PDF. Es ist sauber, vollständig und hat keine Schatten.",
+      "optionen": [
+        {
+          "id": "pdf",
+          "text": "Das PDF",
+          "hinweis": "Genau. Besser geht es nicht.",
+          "richtig": true
+        },
+        {
+          "id": "foto",
+          "text": "Ein Foto vom Papier",
+          "hinweis": "Geht auch, aber das PDF ist sauberer."
+        },
+        {
+          "id": "beides",
+          "text": "Beides, sicherheitshalber",
+          "hinweis": "Doppelt verwirrt eher. Das PDF reicht."
+        },
+        {
+          "id": "abschreiben",
+          "text": "Alles von Hand abtippen",
+          "hinweis": "Dabei schleichen sich Tippfehler ein. Nimm das PDF."
+        }
+      ],
+      "loesung": [
+        "pdf"
+      ]
+    },
+    "m-a": {
+      "wunsch": "Zum Schluss: zwei Seiten, aber eines der Fotos ist misslungen.",
+      "grundprompt": "Lupe, erklär mir diesen Bericht in einfachen Worten.",
+      "teile": [
+        {
+          "id": "scan1",
+          "art": "anhang",
+          "text": "Seite 1, gescannt",
+          "bild": "fotos/scan.svg",
+          "bildText": "Gescannt: sauber zugeschnitten, gerade, ohne Tisch."
+        },
+        {
+          "id": "blitz1",
+          "art": "anhang",
+          "text": "Seite 1 mit Blitz (Foto)",
+          "bild": "fotos/blitz.svg",
+          "bildText": "Ein weisser Fleck vom Blitz verdeckt die Werte."
+        },
+        {
+          "id": "s2",
+          "art": "anhang",
+          "text": "Seite 2 (Foto)",
+          "bild": "fotos/seite2.svg",
+          "bildText": "Seite 2 von 2 mit weiteren Werten und der Beurteilung."
+        },
+        {
+          "id": "finger1",
+          "art": "anhang",
+          "text": "Seite 1 mit Finger (Foto)",
+          "bild": "fotos/finger.svg",
+          "bildText": "Ein Finger liegt quer über den Werten."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "blitz1"
+            ]
+          },
+          "fehlbild": "blitz"
+        },
+        {
+          "wenn": {
+            "gewaehlt": [
+              "finger1"
+            ]
+          },
+          "fehlbild": "finger"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "scan1"
+            ]
+          },
+          "fehlbild": "ohne1"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "s2"
+            ]
+          },
+          "fehlbild": "ohne2"
+        }
+      ],
+      "fehlbilder": {
+        "blitz": {
+          "texte": [
+            "Auf einem Foto ist ein weisser Fleck über dem Hb. Welche Seite 1 gilt?",
+            "Ein Foto mit Blitz-Fleck. Ich lese dort nichts."
+          ],
+          "hinweis": "Schick nur die gute Version von Seite 1, den Scan."
+        },
+        "finger": {
+          "texte": [
+            "Auf einem Foto liegt ein Finger auf den Werten. Ich rate, was darunter steht.",
+            "Ein Fingernagel, wo der Wert sein sollte."
+          ],
+          "hinweis": "Das Foto mit Finger ist unbrauchbar. Nimm den Scan."
+        },
+        "ohne1": {
+          "texte": [
+            "Ich sehe nur «Fortsetzung». Wo ist der Anfang?",
+            "Seite 1 fehlt mir."
+          ],
+          "hinweis": "Seite 1 fehlt. Nimm den Scan."
+        },
+        "ohne2": {
+          "texte": [
+            "Alles im Bereich! (Seite 2 hat Lupe nie gesehen.)",
+            "Wo ist Seite 2 von 2?"
+          ],
+          "hinweis": "Seite 2 fehlt."
+        }
+      },
+      "erfolg": [
+        "Beide Seiten sind gut lesbar. Alle Werte liegen im Bereich des Labors.",
+        "Seite 1 gescannt, Seite 2 klar. Ich kann alles lesen."
+      ],
+      "loesung": [
+        "scan1",
+        "s2"
+      ]
+    }
+  }
+}

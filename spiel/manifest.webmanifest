@@ -1,0 +1,16 @@
+{
+  "name": "Zweitblick",
+  "short_name": "Zweitblick",
+  "description": "Lernspiel: mit der KI-App Claude die eigenen Befunde besser verstehen",
+  "lang": "de-CH",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#faf6ef",
+  "theme_color": "#1d5c63",
+  "icons": [
+    { "src": "bilder/lupe-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "bilder/lupe-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" },
+    { "src": "bilder/lupe.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

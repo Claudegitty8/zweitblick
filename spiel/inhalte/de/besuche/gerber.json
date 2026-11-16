@@ -1,0 +1,1426 @@
+{
+  "id": "gerber",
+  "kapitel": 1,
+  "gast": "Frau Gerber, 78",
+  "thema": "Blutwerte verstehen",
+  "wunsch": "Ich habe neue Blutwerte bekommen und verstehe kein Wort. Kannst du mir helfen?",
+  "dank": "Jetzt verstehe ich meine Werte. Und ich weiss, was ich den Arzt fragen will. Merci vielmal!",
+  "danach": "Frau Gerber erzählt es weiter. Morgen kommt Frau Meier mit einem Stapel Fotos.",
+  "lexikon": [
+    "claude",
+    "hb",
+    "referenz"
+  ],
+  "runden": [
+    {
+      "id": "r1",
+      "art": "konzept",
+      "konzept": "erklaeren",
+      "probieren": {
+        "aufgabe": "e-a",
+        "nurTeile": [
+          "erklaer",
+          "kurz"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "e-a"
+      },
+      "luecke": {
+        "aufgabe": "e-b",
+        "vorgabe": [
+          "brief"
+        ]
+      },
+      "frei": [
+        "e-c",
+        "e-d",
+        "e-e",
+        "e-f"
+      ]
+    },
+    {
+      "id": "r2",
+      "art": "konzept",
+      "konzept": "nachfragen",
+      "probieren": {
+        "aufgabe": "n-a",
+        "nurTeile": [
+          "hae",
+          "neu"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "n-a"
+      },
+      "luecke": {
+        "aufgabe": "n-b",
+        "vorgabe": [
+          "einfach"
+        ]
+      },
+      "frei": [
+        "n-c",
+        "n-d",
+        "n-e",
+        "n-f"
+      ]
+    },
+    {
+      "id": "r3",
+      "art": "konzept",
+      "konzept": "arzt-entscheidet",
+      "probieren": {
+        "aufgabe": "a-a",
+        "nurTeile": [
+          "kaufen",
+          "lupe",
+          "nichts"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "a-a"
+      },
+      "luecke": {
+        "aufgabe": "a-b",
+        "vorgabe": []
+      },
+      "frei": [
+        "a-c",
+        "a-d",
+        "a-e",
+        "a-f"
+      ]
+    },
+    {
+      "id": "r4",
+      "art": "misch",
+      "titel": "Alles zusammen",
+      "frei": [
+        "m-a"
+      ]
+    }
+  ],
+  "aufgaben": {
+    "e-a": {
+      "wunsch": "Ich habe meine Blutwerte bekommen. Was heisst das alles?",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "bericht",
+          "art": "anhang",
+          "text": "Laborbericht vom 12. Mai (Foto)",
+          "bild": "fotos/gerber.svg",
+          "bildText": "Frau Gerbers Laborbericht. Hämoglobin 11,2 ist als tief markiert."
+        },
+        {
+          "id": "erklaer",
+          "art": "frage",
+          "text": "Erklär mir diesen Bericht."
+        },
+        {
+          "id": "einfach",
+          "art": "wie",
+          "text": "In einfachen Worten, ohne Fachwörter."
+        },
+        {
+          "id": "kurz",
+          "art": "wie",
+          "text": "Kurz, höchstens fünf Sätze."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "fehlt": [
+              "bericht"
+            ]
+          },
+          "fehlbild": "keiner"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "erklaer"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "kurz"
+            ]
+          },
+          "fehlbild": "lang"
+        }
+      ],
+      "fehlbilder": {
+        "keiner": {
+          "texte": [
+            "Gerne! Blut besteht aus Plasma, roten und weissen Blutkörperchen. Soll ich auch die Geschichte der Blutspende erzählen?",
+            "Klar! Blutwerte sind Zahlen über das Blut. Welche Zahlen meinst du? Ich sehe keine."
+          ],
+          "hinweis": "Lupe hat keinen Bericht bekommen. Darum erklärt sie Blut im Allgemeinen, nicht diese Werte."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für das Foto! Ein schöner Bericht mit blauem Kopf. Was soll ich damit machen?",
+            "Ich sehe einen Bericht. Soll ich ihn abschreiben, übersetzen oder einrahmen?"
+          ],
+          "hinweis": "Lupe hat den Bericht, weiss aber nicht, was du willst. Sag es ihr."
+        },
+        "fach": {
+          "texte": [
+            "Hb erniedrigt, Erythrozyten unter dem Referenzbereich. Weitere Abklärung der Genese empfohlen.",
+            "Hämoglobinkonzentration und Erythrozytenzahl liegen unterhalb der laborspezifischen Referenzintervalle."
+          ],
+          "hinweis": "Lupe hat richtig erklärt, aber in Fachsprache. Bitte sie um einfache Worte."
+        },
+        "lang": {
+          "texte": [
+            "Gern! Teil 1 von 12: Was ist Blut? (Lupe schreibt vier Seiten. Frau Gerber holt sich einen Kaffee.)",
+            "Das Hämoglobin, kurz Hb, hat eine lange Geschichte. Im Jahr 1840 … (Es folgen 30 Absätze.)"
+          ],
+          "hinweis": "Ohne «kurz» schreibt Lupe einen ganzen Aufsatz. Sag, wie lang die Antwort sein soll."
+        }
+      },
+      "erfolg": [
+        "Hb ist der rote Blutfarbstoff. Er bringt Sauerstoff durch den Körper. Deiner ist 11,2, das Labor nennt 12 bis 16. Also etwas tief. Frag deinen Arzt, was das heisst.",
+        "Zwei Werte sind etwas tief: Hb, der rote Blutfarbstoff, und die roten Blutkörperchen. Die anderen sind im Bereich. Besprich das mit deinem Arzt."
+      ],
+      "loesung": [
+        "bericht",
+        "erklaer",
+        "einfach",
+        "kurz"
+      ]
+    },
+    "e-b": {
+      "wunsch": "Ich habe auch den Brief vom Spital. Den verstehe ich gar nicht.",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "brief",
+          "art": "anhang",
+          "text": "Austrittsbericht vom Spital (PDF)"
+        },
+        {
+          "id": "erklaer",
+          "art": "frage",
+          "text": "Erklär mir diesen Brief."
+        },
+        {
+          "id": "einfach",
+          "art": "wie",
+          "text": "In einfachen Worten, ohne Fachwörter."
+        },
+        {
+          "id": "kurz",
+          "art": "wie",
+          "text": "Kurz, höchstens fünf Sätze."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "fehlt": [
+              "brief"
+            ]
+          },
+          "fehlbild": "keiner"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "erklaer"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "kurz"
+            ]
+          },
+          "fehlbild": "lang"
+        }
+      ],
+      "fehlbilder": {
+        "keiner": {
+          "texte": [
+            "Gerne! Ein Spital ist ein Haus mit vielen Betten. Welchen Brief meinst du? Ich sehe keinen.",
+            "Spitalbriefe sind oft lang und schwierig. Leider sehe ich deinen nicht."
+          ],
+          "hinweis": "Der Brief ist nicht angehängt. Lupe kann nur raten."
+        },
+        "keineFrage": {
+          "texte": [
+            "Ein PDF! Drei Seiten, viele Wörter. Und jetzt?",
+            "Danke. Ich habe den Brief. Soll ich ihn auf Englisch übersetzen?"
+          ],
+          "hinweis": "Lupe hat den Brief, aber keine Frage dazu."
+        },
+        "fach": {
+          "texte": [
+            "Status nach elektiver Knie-TEP rechts, komplikationsloser Verlauf, Mobilisation an Gehstöcken.",
+            "Postoperativ regelrechte Wundverhältnisse, Entlassung in gutem Allgemeinzustand."
+          ],
+          "hinweis": "Richtig, aber Fachsprache. Bitte um einfache Worte."
+        },
+        "lang": {
+          "texte": [
+            "Gern! Kapitel 1: Die Geschichte des Kniegelenks. (Lupe schreibt und schreibt.)",
+            "Zuerst erkläre ich jedes der 214 Wörter einzeln …"
+          ],
+          "hinweis": "Ohne Längenangabe wird die Antwort sehr lang."
+        }
+      },
+      "erfolg": [
+        "Du hast ein neues rechtes Kniegelenk bekommen. Die Operation ist gut verlaufen. Du darfst mit Gehstöcken laufen. Frag deinen Arzt, wie lange.",
+        "Das Spital schreibt: Knie operiert, alles gut verheilt, nach Hause mit Gehstöcken. Bei Fragen hilft dein Hausarzt."
+      ],
+      "loesung": [
+        "brief",
+        "erklaer",
+        "einfach",
+        "kurz"
+      ]
+    },
+    "e-c": {
+      "wunsch": "Der Arzt hat mein Knie geröntgt. Hier ist der Befund.",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "roentgen",
+          "art": "anhang",
+          "text": "Röntgenbefund Knie (Foto)"
+        },
+        {
+          "id": "erklaer",
+          "art": "frage",
+          "text": "Erklär mir diesen Befund."
+        },
+        {
+          "id": "allesKnochen",
+          "art": "frage",
+          "text": "Erklär mir alles über Knochen."
+        },
+        {
+          "id": "einfach",
+          "art": "wie",
+          "text": "In einfachen Worten, ohne Fachwörter."
+        },
+        {
+          "id": "kurz",
+          "art": "wie",
+          "text": "Kurz, höchstens fünf Sätze."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "allesKnochen"
+            ]
+          },
+          "fehlbild": "zuviel"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "roentgen"
+            ]
+          },
+          "fehlbild": "keiner"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "erklaer"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "kurz"
+            ]
+          },
+          "fehlbild": "lang"
+        }
+      ],
+      "fehlbilder": {
+        "zuviel": {
+          "texte": [
+            "Der Mensch hat 206 Knochen. Fangen wir beim Schädel an …",
+            "Alles über Knochen? Das dauert. Kapitel 1: Der kleine Zeh."
+          ],
+          "hinweis": "«Alles über Knochen» ist zu viel. Frag nur nach deinem Befund."
+        },
+        "keiner": {
+          "texte": [
+            "Gerne! Blut besteht aus Plasma, roten und weissen Blutkörperchen. Soll ich auch die Geschichte der Blutspende erzählen?",
+            "Klar! Blutwerte sind Zahlen über das Blut. Welche Zahlen meinst du? Ich sehe keine."
+          ],
+          "hinweis": "Lupe hat keinen Bericht bekommen. Darum erklärt sie Blut im Allgemeinen, nicht diese Werte."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für das Foto! Ein schöner Bericht mit blauem Kopf. Was soll ich damit machen?",
+            "Ich sehe einen Bericht. Soll ich ihn abschreiben, übersetzen oder einrahmen?"
+          ],
+          "hinweis": "Lupe hat den Bericht, weiss aber nicht, was du willst. Sag es ihr."
+        },
+        "fach": {
+          "texte": [
+            "Gonarthrose medial betont, Gelenkspaltverschmälerung, subchondrale Sklerosierung.",
+            "Degenerative Veränderungen des Kniegelenks, Kellgren-Lawrence Grad II."
+          ],
+          "hinweis": "Lupe antwortet in Fachsprache. Bitte um einfache Worte."
+        },
+        "lang": {
+          "texte": [
+            "Gern! Teil 1 von 12: Was ist Blut? (Lupe schreibt vier Seiten. Frau Gerber holt sich einen Kaffee.)",
+            "Das Hämoglobin, kurz Hb, hat eine lange Geschichte. Im Jahr 1840 … (Es folgen 30 Absätze.)"
+          ],
+          "hinweis": "Ohne «kurz» schreibt Lupe einen ganzen Aufsatz. Sag, wie lang die Antwort sein soll."
+        }
+      },
+      "erfolg": [
+        "Dein Knie ist etwas abgenutzt, vor allem innen. Das nennt man Arthrose. Frag deine Ärztin, was du dagegen tun kannst.",
+        "Das Röntgenbild zeigt Abnutzung im Knie. Wie stark sie stört, besprichst du am besten mit deiner Ärztin."
+      ],
+      "loesung": [
+        "roentgen",
+        "erklaer",
+        "einfach",
+        "kurz"
+      ]
+    },
+    "e-d": {
+      "wunsch": "Auf meinem Zettel vom Augenarzt stehen nur Abkürzungen.",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "auge",
+          "art": "anhang",
+          "text": "Befund Augenarzt (Foto)"
+        },
+        {
+          "id": "rezept",
+          "art": "anhang",
+          "text": "Rezept für Brillengläser (Foto)"
+        },
+        {
+          "id": "erklaer",
+          "art": "frage",
+          "text": "Erklär mir diesen Befund."
+        },
+        {
+          "id": "einfach",
+          "art": "wie",
+          "text": "In einfachen Worten, ohne Fachwörter."
+        },
+        {
+          "id": "kurz",
+          "art": "wie",
+          "text": "Kurz, höchstens fünf Sätze."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "rezept"
+            ]
+          },
+          "fehlbild": "falsch"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "auge"
+            ]
+          },
+          "fehlbild": "keiner"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "erklaer"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "kurz"
+            ]
+          },
+          "fehlbild": "lang"
+        }
+      ],
+      "fehlbilder": {
+        "falsch": {
+          "texte": [
+            "Ich sehe zwei Zettel. Ich erkläre mal das Brillenrezept. Dioptrien sind …",
+            "Welchen Zettel meinst du? Ich nehme einfach den zweiten."
+          ],
+          "hinweis": "Häng nur den Bericht an, um den es geht. Sonst erklärt Lupe vielleicht den falschen."
+        },
+        "keiner": {
+          "texte": [
+            "Gerne! Blut besteht aus Plasma, roten und weissen Blutkörperchen. Soll ich auch die Geschichte der Blutspende erzählen?",
+            "Klar! Blutwerte sind Zahlen über das Blut. Welche Zahlen meinst du? Ich sehe keine."
+          ],
+          "hinweis": "Lupe hat keinen Bericht bekommen. Darum erklärt sie Blut im Allgemeinen, nicht diese Werte."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für das Foto! Ein schöner Bericht mit blauem Kopf. Was soll ich damit machen?",
+            "Ich sehe einen Bericht. Soll ich ihn abschreiben, übersetzen oder einrahmen?"
+          ],
+          "hinweis": "Lupe hat den Bericht, weiss aber nicht, was du willst. Sag es ihr."
+        },
+        "fach": {
+          "texte": [
+            "Visus cc 0,8 bds., Tensio normoton, Fundus unauffällig.",
+            "Beginnende Katarakt, kein Handlungsbedarf, Kontrolle in 12 Monaten."
+          ],
+          "hinweis": "Lupe antwortet mit Abkürzungen. Bitte um einfache Worte."
+        },
+        "lang": {
+          "texte": [
+            "Gern! Teil 1 von 12: Was ist Blut? (Lupe schreibt vier Seiten. Frau Gerber holt sich einen Kaffee.)",
+            "Das Hämoglobin, kurz Hb, hat eine lange Geschichte. Im Jahr 1840 … (Es folgen 30 Absätze.)"
+          ],
+          "hinweis": "Ohne «kurz» schreibt Lupe einen ganzen Aufsatz. Sag, wie lang die Antwort sein soll."
+        }
+      },
+      "erfolg": [
+        "Mit Brille siehst du gut. Der Augendruck ist normal. Die Linse wird etwas trüb. Nächste Kontrolle in einem Jahr.",
+        "Deine Augen sind recht gut. Eine leichte Trübung der Linse soll in einem Jahr kontrolliert werden."
+      ],
+      "loesung": [
+        "auge",
+        "erklaer",
+        "einfach",
+        "kurz"
+      ]
+    },
+    "e-e": {
+      "typ": "wahl",
+      "wunsch": "Lupe hat geantwortet, aber ich verstehe kein Wort davon.",
+      "frage": "Lupe antwortet mit lauter Fachwörtern. Was hat in der Nachricht gefehlt?",
+      "lupe": "Die Bitte um einfache Worte. Ohne sie antwortet Lupe wie ein Lehrbuch.",
+      "optionen": [
+        {
+          "id": "einfach",
+          "text": "Die Bitte «in einfachen Worten»",
+          "hinweis": "Genau. Sag Lupe, wie sie erklären soll.",
+          "richtig": true
+        },
+        {
+          "id": "bericht",
+          "text": "Ein zweiter Bericht",
+          "hinweis": "Noch ein Bericht macht die Antwort nicht einfacher."
+        },
+        {
+          "id": "hoeflich",
+          "text": "Ein «bitte» und «danke»",
+          "hinweis": "Freundlich ist schön, aber Lupe versteht dich auch ohne."
+        },
+        {
+          "id": "gross",
+          "text": "Grössere Schrift",
+          "hinweis": "Die Schrift ändert nichts an Lupes Wörtern."
+        }
+      ],
+      "loesung": [
+        "einfach"
+      ]
+    },
+    "e-f": {
+      "typ": "wahl",
+      "wunsch": "Ich habe gefragt: «Was bedeuten meine Werte?» Lupe erklärt Blut im Allgemeinen.",
+      "frage": "Woran liegt das am ehesten?",
+      "lupe": "Der Bericht war nicht angehängt. Lupe sieht nur, was du ihr gibst.",
+      "optionen": [
+        {
+          "id": "anhang",
+          "text": "Der Bericht war nicht angehängt.",
+          "hinweis": "Richtig. Ohne Bericht kennt Lupe die Werte nicht.",
+          "richtig": true
+        },
+        {
+          "id": "dumm",
+          "text": "Lupe ist nicht klug genug.",
+          "hinweis": "Klug ist sie. Aber sie sieht deine Werte nicht."
+        },
+        {
+          "id": "geheim",
+          "text": "Lupe darf über Werte nicht sprechen.",
+          "hinweis": "Doch. Sie braucht aber den Bericht."
+        },
+        {
+          "id": "frage",
+          "text": "Die Frage war zu kurz.",
+          "hinweis": "Kurz ist gut. Es fehlte der Bericht."
+        }
+      ],
+      "loesung": [
+        "anhang"
+      ]
+    },
+    "n-a": {
+      "wunsch": "Lupe schreibt etwas von «Erythrozyten». Was ist das?",
+      "grundprompt": "Lupe, kurze Frage zu deiner Antwort.",
+      "teile": [
+        {
+          "id": "wort",
+          "art": "frage",
+          "text": "Was heisst «Erythrozyten»?"
+        },
+        {
+          "id": "hae",
+          "art": "frage",
+          "text": "Hä?"
+        },
+        {
+          "id": "neu",
+          "art": "angaben",
+          "text": "Ich fange einen neuen Chat an."
+        },
+        {
+          "id": "einfach",
+          "art": "wie",
+          "text": "Bitte in einfachen Worten."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "neu"
+            ]
+          },
+          "fehlbild": "neu"
+        },
+        {
+          "wenn": {
+            "gewaehlt": [
+              "hae"
+            ]
+          },
+          "fehlbild": "hae"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "wort"
+            ]
+          },
+          "fehlbild": "keinWort"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        }
+      ],
+      "fehlbilder": {
+        "neu": {
+          "texte": [
+            "Hallo! Schön, dich kennenzulernen. Worum geht es? Ich weiss von keinem Bericht.",
+            "Neuer Chat, neues Glück! Welchen Bericht meinst du?"
+          ],
+          "hinweis": "Im neuen Chat weiss Lupe nichts mehr vom Bericht. Frag im selben Chat nach."
+        },
+        "hae": {
+          "texte": [
+            "Ich erkläre alles nochmals. Hb 11,2 g/dl, Erythrozyten 3,9 T/l, Referenzbereich … (genau wie vorhin)",
+            "Gern nochmals: genau dieselbe Antwort wie vorhin."
+          ],
+          "hinweis": "Mit «Hä?» weiss Lupe nicht, was unklar ist. Nenn das Wort."
+        },
+        "keinWort": {
+          "texte": [
+            "Gern! Welche Stelle meinst du?",
+            "Ich bin bereit. Was möchtest du wissen?"
+          ],
+          "hinweis": "Lupe weiss nicht, welches Wort du meinst. Nenn es."
+        },
+        "fach": {
+          "texte": [
+            "Erythrozyten sind kernlose, bikonkave Zellen mit Hämoglobin.",
+            "Die Erythropoese findet im roten Knochenmark statt."
+          ],
+          "hinweis": "Lupe erklärt das Fachwort mit noch mehr Fachwörtern. Bitte um einfache Worte."
+        }
+      },
+      "erfolg": [
+        "Erythrozyten sind die roten Blutkörperchen. Sie tragen den Sauerstoff durch den Körper.",
+        "Das sind die roten Blutkörperchen. Sie transportieren den Sauerstoff."
+      ],
+      "loesung": [
+        "wort",
+        "einfach"
+      ]
+    },
+    "n-b": {
+      "wunsch": "Was ist mit «Referenzbereich» gemeint?",
+      "grundprompt": "Lupe, kurze Frage zu deiner Antwort.",
+      "teile": [
+        {
+          "id": "wort",
+          "art": "frage",
+          "text": "Was heisst «Referenzbereich»?"
+        },
+        {
+          "id": "allg",
+          "art": "frage",
+          "text": "Was heisst das alles?"
+        },
+        {
+          "id": "einfach",
+          "art": "wie",
+          "text": "Bitte in einfachen Worten."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "allg"
+            ]
+          },
+          "fehlbild": "allg"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "wort"
+            ]
+          },
+          "fehlbild": "keinWort"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        }
+      ],
+      "fehlbilder": {
+        "allg": {
+          "texte": [
+            "Alles nochmals von vorn? Gern: Hb 11,2 …",
+            "Ich erkläre den ganzen Bericht nochmals, genau gleich."
+          ],
+          "hinweis": "Frag nach dem einen Wort. Sonst wiederholt Lupe alles."
+        },
+        "keinWort": {
+          "texte": [
+            "Gern! Welche Stelle meinst du?",
+            "Was genau ist unklar?"
+          ],
+          "hinweis": "Nenn das Wort, das du nicht verstehst."
+        },
+        "fach": {
+          "texte": [
+            "Das Referenzintervall umfasst die zentralen 95 Prozent der Messwerte einer gesunden Referenzpopulation.",
+            "Ein statistisch ermittelter Normbereich, methodenabhängig."
+          ],
+          "hinweis": "Richtig, aber schwierig. Bitte um einfache Worte."
+        }
+      },
+      "erfolg": [
+        "Das ist der Bereich, in dem der Wert bei den meisten Menschen liegt. Er steht auf dem Bericht.",
+        "So viel ist bei den meisten Menschen üblich. Das Labor schreibt den Bereich auf den Bericht."
+      ],
+      "loesung": [
+        "wort",
+        "einfach"
+      ]
+    },
+    "n-c": {
+      "wunsch": "Lupe schreibt «g/dl». Ist das eine Krankheit?",
+      "grundprompt": "Lupe, kurze Frage zu deiner Antwort.",
+      "teile": [
+        {
+          "id": "wort",
+          "art": "frage",
+          "text": "Was heisst «g/dl»?"
+        },
+        {
+          "id": "hae",
+          "art": "frage",
+          "text": "Hä?"
+        },
+        {
+          "id": "einfach",
+          "art": "wie",
+          "text": "Bitte in einfachen Worten."
+        },
+        {
+          "id": "neu",
+          "art": "angaben",
+          "text": "Ich frage lieber in einem neuen Chat."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "neu"
+            ]
+          },
+          "fehlbild": "neu"
+        },
+        {
+          "wenn": {
+            "gewaehlt": [
+              "hae"
+            ]
+          },
+          "fehlbild": "hae"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "wort"
+            ]
+          },
+          "fehlbild": "keinWort"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        }
+      ],
+      "fehlbilder": {
+        "neu": {
+          "texte": [
+            "Hallo! Worum geht es? Ich weiss von keinem Bericht.",
+            "Neuer Chat! Was ist g/dl? Ohne den Bericht sage ich lieber nichts."
+          ],
+          "hinweis": "Im neuen Chat fehlt der Bericht. Bleib im selben Chat."
+        },
+        "hae": {
+          "texte": [
+            "Gern nochmals: genau dieselbe Antwort wie vorhin.",
+            "Ich erkläre alles nochmals, Wort für Wort gleich."
+          ],
+          "hinweis": "«Hä?» sagt Lupe nicht, was unklar ist."
+        },
+        "keinWort": {
+          "texte": [
+            "Gern! Was ist unklar?",
+            "Welche Stelle meinst du?"
+          ],
+          "hinweis": "Nenn das Wort."
+        },
+        "fach": {
+          "texte": [
+            "Gramm pro Deziliter, eine Massenkonzentrationsangabe.",
+            "SI-fremde Einheit, entspricht dem Zehntel von g/l."
+          ],
+          "hinweis": "Bitte um einfache Worte."
+        }
+      },
+      "erfolg": [
+        "Keine Krankheit. «g/dl» ist die Masseinheit: Gramm in einem Zehntelliter Blut. Wie «Liter» beim Milchkarton.",
+        "Das ist nur die Einheit, wie «Kilo» beim Gewicht. Gramm pro Zehntelliter Blut."
+      ],
+      "loesung": [
+        "wort",
+        "einfach"
+      ]
+    },
+    "n-d": {
+      "wunsch": "Die Erklärung ist mir immer noch zu schwierig.",
+      "grundprompt": "Lupe, das ist mir noch zu schwierig.",
+      "teile": [
+        {
+          "id": "einfacher",
+          "art": "wie",
+          "text": "Bitte noch einfacher, wie für ein Kind."
+        },
+        {
+          "id": "beispiel",
+          "art": "wie",
+          "text": "Mit einem Beispiel aus dem Alltag."
+        },
+        {
+          "id": "aufgeben",
+          "art": "angaben",
+          "text": "Vergiss es."
+        },
+        {
+          "id": "lauter",
+          "art": "wie",
+          "text": "SCHREIB DAS GROSS."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "aufgeben"
+            ]
+          },
+          "fehlbild": "aufgeben"
+        },
+        {
+          "wenn": {
+            "gewaehlt": [
+              "lauter"
+            ]
+          },
+          "fehlbild": "laut"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfacher"
+            ]
+          },
+          "fehlbild": "nichtEinfacher"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "beispiel"
+            ]
+          },
+          "fehlbild": "keinBeispiel"
+        }
+      ],
+      "fehlbilder": {
+        "aufgeben": {
+          "texte": [
+            "Schade! Melde dich, wenn du doch noch Fragen hast.",
+            "In Ordnung. Ich bin da, wenn du willst."
+          ],
+          "hinweis": "Aufgeben musst du nicht. Bitte Lupe einfach, es nochmals einfacher zu sagen."
+        },
+        "laut": {
+          "texte": [
+            "DAS HÄMOGLOBIN IST DER ROTE BLUTFARBSTOFF. (Grösser, aber kein bisschen einfacher.)",
+            "IN GROSSBUCHSTABEN: GENAU DERSELBE TEXT."
+          ],
+          "hinweis": "Gross geschrieben ist nicht einfacher. Bitte um einfachere Worte."
+        },
+        "nichtEinfacher": {
+          "texte": [
+            "Gern! Zum Beispiel: Das Hämoglobin bindet Sauerstoff reversibel …",
+            "Ein Beispiel: die Sauerstoffsättigung im arteriellen Blut."
+          ],
+          "hinweis": "Das Beispiel ist schon gut, aber noch zu schwierig. Bitte auch um einfachere Worte."
+        },
+        "keinBeispiel": {
+          "texte": [
+            "Hb ist ein Farbstoff im Blut, der Sauerstoff trägt.",
+            "Der rote Blutfarbstoff trägt Sauerstoff."
+          ],
+          "hinweis": "Schon einfacher. Ein Beispiel aus dem Alltag hilft oft noch mehr."
+        }
+      },
+      "erfolg": [
+        "Stell dir Lastwagen vor, die Sauerstoff liefern. Das sind die roten Blutkörperchen. Hb ist die Ladefläche. Ist sie klein, kommt weniger an.",
+        "Wie ein Postauto mit Paketen: Hb trägt den Sauerstoff zu allen Teilen des Körpers."
+      ],
+      "loesung": [
+        "einfacher",
+        "beispiel"
+      ]
+    },
+    "n-e": {
+      "typ": "wahl",
+      "wunsch": "Ich verstehe ein Wort in Lupes Antwort nicht.",
+      "frage": "Was schreibst du am besten?",
+      "lupe": "«Was heisst …?» mit dem Wort, im selben Chat. So weiss Lupe, was unklar ist.",
+      "optionen": [
+        {
+          "id": "wort",
+          "text": "«Was heisst Leukozyten?» im selben Chat",
+          "hinweis": "Genau. Wort nennen, im selben Chat bleiben.",
+          "richtig": true
+        },
+        {
+          "id": "hae",
+          "text": "«Hä?»",
+          "hinweis": "Lupe weiss dann nicht, was du meinst."
+        },
+        {
+          "id": "neu",
+          "text": "Einen neuen Chat beginnen und fragen",
+          "hinweis": "Im neuen Chat kennt Lupe den Bericht nicht mehr."
+        },
+        {
+          "id": "nichts",
+          "text": "Nichts. Ich google es später.",
+          "hinweis": "Darfst du. Aber Lupe kann es dir gleich hier erklären."
+        }
+      ],
+      "loesung": [
+        "wort"
+      ]
+    },
+    "n-f": {
+      "typ": "wahl",
+      "wunsch": "Darf ich so oft nachfragen, wie ich will?",
+      "frage": "Lupe hat dir etwas schon zweimal erklärt. Du verstehst es noch nicht.",
+      "lupe": "Frag ruhig nochmals und sag, wie: einfacher, mit Beispiel. Lupe wird nicht ungeduldig.",
+      "optionen": [
+        {
+          "id": "nochmal",
+          "text": "Nochmals fragen: «Bitte noch einfacher, mit einem Beispiel.»",
+          "hinweis": "Genau. Lupe wird nicht müde und nicht ungeduldig.",
+          "richtig": true
+        },
+        {
+          "id": "peinlich",
+          "text": "Lieber nicht. Das ist peinlich.",
+          "hinweis": "Ist es nicht. Nachfragen ist der beste Weg."
+        },
+        {
+          "id": "anderes",
+          "text": "Eine andere App ausprobieren.",
+          "hinweis": "Musst du nicht. Sag Lupe, wie sie es besser erklären kann."
+        },
+        {
+          "id": "schluss",
+          "text": "Aufhören, es ist zu schwierig.",
+          "hinweis": "Gib nicht auf. Bitte um einfachere Worte."
+        }
+      ],
+      "loesung": [
+        "nochmal"
+      ]
+    },
+    "a-a": {
+      "typ": "wahl",
+      "wunsch": "Lupe sagt, mein Hb ist etwas tief. Soll ich jetzt Eisentabletten kaufen?",
+      "frage": "Was macht Frau Gerber am besten?",
+      "lupe": "Mit der Ärztin oder dem Arzt besprechen. Ein tiefer Hb kann verschiedene Gründe haben.",
+      "optionen": [
+        {
+          "id": "arzt",
+          "text": "Den Bericht und Lupes Erklärung zum Arzt mitnehmen und fragen",
+          "hinweis": "Genau. Der Arzt kennt Frau Gerber und entscheidet.",
+          "richtig": true
+        },
+        {
+          "id": "kaufen",
+          "text": "Gleich Eisentabletten aus der Drogerie kaufen",
+          "hinweis": "Lieber nicht auf eigene Faust. Ein tiefer Hb hat nicht immer mit Eisen zu tun."
+        },
+        {
+          "id": "lupe",
+          "text": "Lupe fragen, wie viele Tabletten sie nehmen soll",
+          "hinweis": "Das entscheidet nicht Lupe, sondern der Arzt."
+        },
+        {
+          "id": "nichts",
+          "text": "Nichts tun und den Bericht wegwerfen",
+          "hinweis": "Besser besprechen. Dafür ist der Bericht da."
+        }
+      ],
+      "loesung": [
+        "arzt"
+      ]
+    },
+    "a-b": {
+      "typ": "wahl",
+      "wunsch": "Lupe meint, mein Blutdruckmittel könnte schuld an der Müdigkeit sein.",
+      "frage": "Was tut Frau Gerber jetzt?",
+      "lupe": "Weiter nehmen und mit dem Arzt sprechen. Nie eine Tablette ohne Rücksprache absetzen.",
+      "optionen": [
+        {
+          "id": "weiter",
+          "text": "Die Tablette weiter nehmen und bald mit dem Arzt sprechen",
+          "hinweis": "Richtig. Ohne Rücksprache absetzen kann gefährlich sein.",
+          "richtig": true
+        },
+        {
+          "id": "stopp",
+          "text": "Die Tablette sofort weglassen",
+          "hinweis": "Gefährlich. Manche Tabletten darf man nicht einfach weglassen."
+        },
+        {
+          "id": "halb",
+          "text": "Nur noch die halbe Tablette nehmen",
+          "hinweis": "Auch das bitte nicht ohne den Arzt."
+        },
+        {
+          "id": "tausch",
+          "text": "Die Tablette der Nachbarin probieren",
+          "hinweis": "Nein. Fremde Tabletten können schaden."
+        }
+      ],
+      "loesung": [
+        "weiter"
+      ]
+    },
+    "a-c": {
+      "typ": "wahl",
+      "wunsch": "Lupe hat mir vier mögliche Ursachen genannt. Welche stimmt?",
+      "frage": "Was bedeuten Lupes «mögliche Ursachen»?",
+      "lupe": "Es sind Vermutungen zum Besprechen. Welche zutrifft, klärt die Ärztin oder der Arzt.",
+      "optionen": [
+        {
+          "id": "vermutung",
+          "text": "Vermutungen, die man mit dem Arzt bespricht",
+          "hinweis": "Genau. Eine zweite Sicht, keine Diagnose.",
+          "richtig": true
+        },
+        {
+          "id": "erste",
+          "text": "Die erste in der Liste ist sicher richtig",
+          "hinweis": "Die Reihenfolge sagt nicht, was zutrifft."
+        },
+        {
+          "id": "alle",
+          "text": "Ich habe alle vier Krankheiten",
+          "hinweis": "Nein. Es sind Möglichkeiten, keine Befunde."
+        },
+        {
+          "id": "diagnose",
+          "text": "Eine Diagnose, die so gilt",
+          "hinweis": "Lupe stellt keine Diagnosen."
+        }
+      ],
+      "loesung": [
+        "vermutung"
+      ]
+    },
+    "a-d": {
+      "typ": "wahl",
+      "wunsch": "Mein Arzt sagt etwas anderes als Lupe. Wem glaube ich?",
+      "frage": "Lupe und der Arzt sind nicht gleicher Meinung.",
+      "lupe": "Frag den Arzt, warum er es anders sieht. Er kennt dich und hat dich untersucht.",
+      "optionen": [
+        {
+          "id": "fragen",
+          "text": "Den Arzt fragen, warum er es anders sieht",
+          "hinweis": "Genau. Er kennt dich, hat dich untersucht und entscheidet.",
+          "richtig": true
+        },
+        {
+          "id": "lupe",
+          "text": "Lupe glauben, sie hat mehr gelesen",
+          "hinweis": "Lupe kennt nur, was du ihr gibst. Der Arzt hat dich untersucht."
+        },
+        {
+          "id": "streit",
+          "text": "Mit dem Arzt streiten und gehen",
+          "hinweis": "Besser nachfragen. Ein Gespräch klärt mehr."
+        },
+        {
+          "id": "beide",
+          "text": "Beide ignorieren",
+          "hinweis": "Dann bleiben die Fragen offen."
+        }
+      ],
+      "loesung": [
+        "fragen"
+      ]
+    },
+    "a-e": {
+      "wunsch": "Ich will Lupes Erklärung zum Termin mitnehmen. Was schreibe ich?",
+      "grundprompt": "Lupe, ich habe nächste Woche einen Termin.",
+      "teile": [
+        {
+          "id": "zusammen",
+          "art": "frage",
+          "text": "Fass das Wichtigste für meinen Arzt zusammen."
+        },
+        {
+          "id": "kurz",
+          "art": "wie",
+          "text": "Kurz, auf eine halbe Seite."
+        },
+        {
+          "id": "rezept",
+          "art": "frage",
+          "text": "Schreib mir ein Rezept für Eisentabletten."
+        },
+        {
+          "id": "diagnose",
+          "art": "frage",
+          "text": "Sag mir, welche Krankheit ich habe."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "rezept"
+            ]
+          },
+          "fehlbild": "rezept"
+        },
+        {
+          "wenn": {
+            "gewaehlt": [
+              "diagnose"
+            ]
+          },
+          "fehlbild": "diagnose"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "zusammen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "kurz"
+            ]
+          },
+          "fehlbild": "lang"
+        }
+      ],
+      "fehlbilder": {
+        "rezept": {
+          "texte": [
+            "Rezepte darf ich nicht ausstellen. Das macht deine Ärztin oder dein Arzt.",
+            "Ich bin eine Übungs-KI, keine Ärztin. Rezepte gibt es nur in der Praxis."
+          ],
+          "hinweis": "Lupe kann kein Rezept schreiben. Das entscheidet der Arzt."
+        },
+        "diagnose": {
+          "texte": [
+            "Eine Diagnose kann ich nicht stellen. Ich nenne höchstens Möglichkeiten zum Besprechen.",
+            "Sicher sagen kann das nur deine Ärztin."
+          ],
+          "hinweis": "Lupe stellt keine Diagnose. Bitte lieber um eine Zusammenfassung."
+        },
+        "keineFrage": {
+          "texte": [
+            "Schön! Viel Glück beim Termin.",
+            "Ein Termin, gut. Und was soll ich tun?"
+          ],
+          "hinweis": "Lupe weiss nicht, was sie tun soll."
+        },
+        "lang": {
+          "texte": [
+            "Hier die Zusammenfassung auf zwölf Seiten …",
+            "Zuerst die Geschichte deiner Blutwerte seit 1980 …"
+          ],
+          "hinweis": "Für den Termin hilft eine kurze Zusammenfassung."
+        }
+      },
+      "erfolg": [
+        "Für deinen Arzt: Hb 11,2, etwas unter dem Bereich des Labors. Auch die roten Blutkörperchen etwas tief. Frage: Woher kommt das, braucht es mehr Tests?",
+        "Kurz für den Termin: zwei Blutwerte etwas tief, sonst alles im Bereich. Bitte erklären, ob und was zu tun ist."
+      ],
+      "loesung": [
+        "zusammen",
+        "kurz"
+      ]
+    },
+    "a-f": {
+      "typ": "wahl",
+      "wunsch": "Kann Lupe nicht einfach sagen, was ich habe?",
+      "frage": "Was kann eine KI wie Lupe oder Claude bei Gesundheitsfragen gut?",
+      "lupe": "Erklären, mögliche Ursachen nennen, Fragen vorbereiten. Entscheiden tut die Ärztin oder der Arzt.",
+      "optionen": [
+        {
+          "id": "erklaeren",
+          "text": "Befunde erklären und Fragen für den Arzt vorbereiten",
+          "hinweis": "Genau. Dafür ist sie stark.",
+          "richtig": true
+        },
+        {
+          "id": "diagnose",
+          "text": "Sichere Diagnosen stellen",
+          "hinweis": "Nein. Eine KI ist kein Arzt und kann sich irren."
+        },
+        {
+          "id": "rezept",
+          "text": "Rezepte ausstellen",
+          "hinweis": "Nein. Das kann nur eine Ärztin oder ein Arzt."
+        },
+        {
+          "id": "ersatz",
+          "text": "Den Arztbesuch ersetzen",
+          "hinweis": "Nein. Sie hilft, den Besuch besser vorzubereiten."
+        }
+      ],
+      "loesung": [
+        "erklaeren"
+      ]
+    },
+    "m-a": {
+      "wunsch": "Zum Schluss: Mein Cholesterin-Bericht, bitte einmal richtig.",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "bericht",
+          "art": "anhang",
+          "text": "Blutfette vom Juni (Foto)"
+        },
+        {
+          "id": "erklaer",
+          "art": "frage",
+          "text": "Erklär mir diesen Bericht."
+        },
+        {
+          "id": "einfach",
+          "art": "wie",
+          "text": "In einfachen Worten."
+        },
+        {
+          "id": "kurz",
+          "art": "wie",
+          "text": "Kurz, höchstens fünf Sätze."
+        },
+        {
+          "id": "stopp",
+          "art": "angaben",
+          "text": "Ich höre mit meinen Tabletten auf, wenn alles gut ist."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "stopp"
+            ]
+          },
+          "fehlbild": "stopp"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "bericht"
+            ]
+          },
+          "fehlbild": "keiner"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "erklaer"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "kurz"
+            ]
+          },
+          "fehlbild": "lang"
+        }
+      ],
+      "fehlbilder": {
+        "stopp": {
+          "texte": [
+            "Bitte setz keine Tablette ab, ohne deinen Arzt zu fragen. Gute Werte können auch von den Tabletten kommen.",
+            "Vorsicht: Gute Werte heissen oft, dass die Tablette wirkt. Frag zuerst deinen Arzt."
+          ],
+          "hinweis": "Tabletten nur nach Rücksprache absetzen. Der Arzt entscheidet."
+        },
+        "keiner": {
+          "texte": [
+            "Gerne! Blut besteht aus Plasma, roten und weissen Blutkörperchen. Soll ich auch die Geschichte der Blutspende erzählen?",
+            "Klar! Blutwerte sind Zahlen über das Blut. Welche Zahlen meinst du? Ich sehe keine."
+          ],
+          "hinweis": "Lupe hat keinen Bericht bekommen. Darum erklärt sie Blut im Allgemeinen, nicht diese Werte."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für das Foto! Ein schöner Bericht mit blauem Kopf. Was soll ich damit machen?",
+            "Ich sehe einen Bericht. Soll ich ihn abschreiben, übersetzen oder einrahmen?"
+          ],
+          "hinweis": "Lupe hat den Bericht, weiss aber nicht, was du willst. Sag es ihr."
+        },
+        "fach": {
+          "texte": [
+            "Hb erniedrigt, Erythrozyten unter dem Referenzbereich. Weitere Abklärung der Genese empfohlen.",
+            "Hämoglobinkonzentration und Erythrozytenzahl liegen unterhalb der laborspezifischen Referenzintervalle."
+          ],
+          "hinweis": "Lupe hat richtig erklärt, aber in Fachsprache. Bitte sie um einfache Worte."
+        },
+        "lang": {
+          "texte": [
+            "Gern! Teil 1 von 12: Was ist Blut? (Lupe schreibt vier Seiten. Frau Gerber holt sich einen Kaffee.)",
+            "Das Hämoglobin, kurz Hb, hat eine lange Geschichte. Im Jahr 1840 … (Es folgen 30 Absätze.)"
+          ],
+          "hinweis": "Ohne «kurz» schreibt Lupe einen ganzen Aufsatz. Sag, wie lang die Antwort sein soll."
+        }
+      },
+      "erfolg": [
+        "Deine Blutfette liegen in dem Bereich, den das Labor angibt. Besprich beim nächsten Termin, ob alles so bleiben soll.",
+        "Alle Werte auf diesem Bericht sind im Bereich des Labors. Frag deinen Arzt, was das für dich heisst."
+      ],
+      "loesung": [
+        "bericht",
+        "erklaer",
+        "einfach",
+        "kurz"
+      ]
+    }
+  }
+}

@@ -1,0 +1,398 @@
+/* Zweitblick: Gestaltung für ältere Menschen.
+   Grosse Schrift, grosse Klickflächen, hoher Kontrast, jeder Knopf mit Text. Hell und dunkel. */
+
+:root {
+  --grund: #faf6ef;
+  --karte: #ffffff;
+  --text: #1f1a14;
+  --leise: #4f463c;
+  --linie: #d9cfc1;
+  --haupt: #1d5c63;          /* Knöpfe, Kontrast zu Weiss über 7:1 */
+  --haupt-hell: #e2f0f1;
+  --haupt-text: #ffffff;
+  --warm: #8a4a17;           /* Akzent, Kontrast zu Weiss über 6:1 */
+  --gut: #1e6b34;
+  --gut-hell: #e4f3e7;
+  --hinweis-hell: #fff4d6;
+  --warn: #a3201b;
+  --warn-hell: #fde8e6;
+  --schatten: 0 2px 6px rgba(60, 40, 20, 0.12);
+  --rund: 14px;
+  --klick: 52px;
+  color-scheme: light dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --grund: #16130f;
+    --karte: #221e19;
+    --text: #f3ede4;
+    --leise: #cfc4b6;
+    --linie: #4a4238;
+    --haupt: #7cc7cf;
+    --haupt-hell: #1f3638;
+    --haupt-text: #0e1414;
+    --warm: #f0b27a;
+    --gut: #8fd9a1;
+    --gut-hell: #1c3022;
+    --hinweis-hell: #3a3220;
+    --warn: #ff9b94;
+    --warn-hell: #3d1f1d;
+    --schatten: none;
+  }
+}
+
+html { font-size: 20px; -webkit-text-size-adjust: 100%; }
+html[data-schrift="gross"] { font-size: 23px; }
+html[data-schrift="sehrgross"] { font-size: 26px; }
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--grund);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.5;
+  /* Lange Wörter wie «Versichertennummer» dürfen umbrechen, statt aus dem Bild zu ragen. */
+  overflow-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Text in Knöpfen und Zeilen darf schrumpfen und umbrechen. */
+button > span, .flaeche-text, .reihe-text { min-width: 0; }
+
+main {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0.8rem 0.8rem 3rem;
+  outline: none;
+}
+
+h1, h2, h3 { line-height: 1.25; margin: 0.2rem 0 0.6rem; }
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.25rem; }
+h3 { font-size: 1.1rem; }
+p { margin: 0.4rem 0; }
+a { color: var(--haupt); }
+
+:focus-visible { outline: 3px solid var(--warm); outline-offset: 3px; }
+
+.klein { font-size: 0.9rem; color: var(--leise); }
+.etikett { font-size: 0.85rem; font-weight: 700; text-transform: none; letter-spacing: 0.02em; color: var(--warm); margin-bottom: 0.2rem; }
+.laden, .fehler { padding: 1rem; }
+.fehler { background: var(--warn-hell); color: var(--warn); border-radius: var(--rund); }
+[hidden] { display: none !important; }
+
+/* --- Kopf, Navigation, Fuss --- */
+.kopf { text-align: center; padding: 0.4rem 0 0.2rem; }
+.kopf p { color: var(--leise); margin: 0; }
+
+.hauptnav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem;
+  margin: 0.6rem 0 0.8rem;
+}
+@media (min-width: 640px) { .hauptnav { grid-template-columns: repeat(4, 1fr); } }
+.hauptnav-knopf {
+  min-height: var(--klick);
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 2px solid var(--haupt);
+  background: var(--karte);
+  color: var(--haupt);
+  border-radius: 999px;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+.hauptnav-knopf.aktuell { background: var(--haupt); color: var(--haupt-text); }
+
+.leiste {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.6rem;
+}
+.leiste-titel { font-size: 1rem; margin: 0; color: var(--leise); }
+.fuss { text-align: center; font-size: 0.8rem; color: var(--leise); margin-top: 1.5rem; }
+.notruf-zeile {
+  margin: 1rem 0 0;
+  padding: 0.6rem 0.8rem;
+  border-left: 6px solid var(--warn);
+  background: var(--warn-hell);
+  border-radius: 8px;
+  font-weight: 700;
+}
+
+/* --- Karten --- */
+.karte {
+  background: var(--karte);
+  border: 1px solid var(--linie);
+  border-radius: var(--rund);
+  padding: 0.9rem 1rem;
+  margin: 0.8rem 0;
+  box-shadow: var(--schatten);
+}
+.karte.gast { border-left: 6px solid var(--warm); }
+.karte.feier { text-align: center; }
+.karte.feier .lupe { margin: 0 auto 0.4rem; }
+.karte.ausweg { background: var(--hinweis-hell); }
+.karte.notfall { border-left: 6px solid var(--warn); }
+.karte.echt { border-left: 6px solid var(--haupt); }
+.wunsch { font-size: 1.05rem; font-style: italic; }
+
+/* --- Knöpfe --- */
+button { font: inherit; }
+.los, .knopf, .knopf-zweit, .knopf-warn, .knopf-leise {
+  min-height: var(--klick);
+  border-radius: 12px;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.los, .knopf { background: var(--haupt); color: var(--haupt-text); border: 2px solid var(--haupt); width: 100%; margin: 0.4rem 0; }
+.knopf-zweit { background: var(--karte); color: var(--haupt); border: 2px solid var(--haupt); }
+.knopf-warn { background: var(--warn); color: #fff; border: 2px solid var(--warn); }
+.knopf-leise { background: transparent; color: var(--haupt); border: 2px solid transparent; text-decoration: underline; padding-left: 0.2rem; }
+.zurueck { text-decoration: none; border: 2px solid var(--haupt); background: var(--karte); }
+button:disabled { cursor: not-allowed; }
+.los:disabled { opacity: 0.7; }
+/* Gesperrte Antworten bleiben gut lesbar (ältere Augen): kein Verblassen, nur gestrichelter Rand. */
+.baustein:disabled:not([aria-pressed="true"]), .flaeche:disabled:not([aria-pressed="true"]), .reihe-knopf:disabled {
+  color: var(--leise);
+  border-style: dashed;
+}
+.reihe-knopf:disabled { border-color: var(--linie); }
+.knopf-reihe { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 0.5rem 0; }
+.knopf-reihe > * { flex: 1 1 12rem; margin: 0; }
+.knopf-reihe.senkrecht { flex-direction: column; }
+.knopf-reihe.senkrecht > * { flex: 0 0 auto; }
+.aktionen > * { margin-top: 0.6rem; }
+
+/* --- Lupe, die Übungs-KI --- */
+.lupe { position: relative; width: 3.2rem; height: 3.6rem; flex: 0 0 auto; }
+.lupe-glas {
+  position: absolute; top: 0; left: 0;
+  width: 2.8rem; height: 2.8rem;
+  border-radius: 50%;
+  border: 0.32rem solid var(--haupt);
+  background: var(--haupt-hell);
+  display: flex; align-items: center; justify-content: center; gap: 0.35rem;
+}
+.lupe-griff {
+  position: absolute; bottom: 0.05rem; right: 0.15rem;
+  width: 0.45rem; height: 1.3rem;
+  background: var(--warm);
+  border-radius: 0.3rem;
+  transform: rotate(-45deg);
+}
+.auge { width: 0.4rem; height: 0.55rem; border-radius: 50%; background: var(--text); }
+.lupe.froh .auge { height: 0.3rem; border-radius: 0 0 0.4rem 0.4rem; background: transparent; border-bottom: 0.18rem solid var(--text); }
+.lupe-zeile { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 0.7rem; margin: 0.6rem 0; }
+.sprechblase {
+  position: relative;
+  background: var(--karte);
+  border: 2px solid var(--haupt);
+  border-radius: 14px;
+  padding: 0.6rem 0.8rem;
+  margin: 0;
+  /* Ist neben Lupe zu wenig Platz (schmales Handy, grosse Schrift), rutscht die Sprechblase darunter. */
+  flex: 1 1 9rem;
+}
+
+/* --- Café-Bild --- */
+.cafe-bild { display: block; width: 100%; max-height: 7rem; margin: 0.2rem 0; }
+.cafe-boden { fill: var(--linie); }
+.tisch-platte, .tisch-bein { fill: var(--warm); }
+.tisch:not(.besetzt) .tisch-platte, .tisch:not(.besetzt) .tisch-bein { fill: var(--linie); }
+.gast-kopf { fill: var(--haupt); }
+.gast-koerper { fill: var(--haupt); opacity: 0.8; }
+.tasse { fill: var(--karte); stroke: var(--warm); stroke-width: 1.5; }
+
+/* --- Listen im Café --- */
+.runden, .besuch-liste, .meister-liste, .sprung-liste, .ergebnis-liste, .quellen-liste { padding-left: 1.3rem; margin: 0.4rem 0; }
+.runden li, .besuch-liste li, .meister-liste li { margin: 0.25rem 0; }
+.runden li.geschafft { color: var(--gut); }
+.runden li.geschafft::after { content: " (geschafft)"; font-size: 0.85rem; }
+.runden li.aktuell { font-weight: 700; }
+.besuch-liste li { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.4rem; }
+.besuch-status { font-size: 0.85rem; color: var(--leise); }
+.besuch-erledigt .besuch-status { color: var(--gut); font-weight: 700; }
+.besuch-dran .besuch-name { font-weight: 700; }
+.meister-liste { list-style: none; padding-left: 0; }
+.meister-liste li { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; border-bottom: 1px solid var(--linie); padding: 0.3rem 0; }
+.punkte { display: inline-flex; gap: 0.3rem; flex: 0 0 auto; }
+.punkt { width: 0.9rem; height: 0.9rem; border-radius: 50%; border: 2px solid var(--haupt); }
+.punkt.voll { background: var(--haupt); }
+.meister-zeile { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; font-weight: 700; }
+
+/* --- Schritte einer Runde --- */
+.schritte { list-style: none; padding: 0; margin: 0.3rem 0; display: flex; flex-wrap: wrap; gap: 0.3rem; }
+.schritte li { font-size: 0.8rem; padding: 0.15rem 0.55rem; border-radius: 999px; border: 1px solid var(--linie); color: var(--leise); }
+.schritte li.aktuell { background: var(--haupt); color: var(--haupt-text); border-color: var(--haupt); font-weight: 700; }
+
+/* --- Werkbank: Nachricht zusammenstecken --- */
+.nachricht {
+  background: var(--grund);
+  border: 2px dashed var(--linie);
+  border-radius: 10px;
+  padding: 0.5rem 0.7rem;
+  min-height: 2.6rem;
+}
+.nachricht.anweisung { border-style: solid; border-color: var(--haupt); }
+.anhaenge { list-style: none; padding: 0; margin: 0.2rem 0 0.4rem; display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.anhang { background: var(--haupt-hell); border: 1px solid var(--haupt); border-radius: 8px; padding: 0.2rem 0.6rem; font-size: 0.9rem; }
+.anhang::before { content: "Anhang: "; font-weight: 700; }
+.anhang.leer { background: transparent; border-style: dashed; }
+.anhang.leer::before { content: ""; }
+.teil-gruppe { margin-top: 0.7rem; }
+.bausteine { display: flex; flex-direction: column; gap: 0.45rem; }
+.baustein {
+  display: flex; align-items: center; gap: 0.6rem;
+  width: 100%;
+  min-height: var(--klick);
+  text-align: left;
+  background: var(--karte);
+  color: var(--text);
+  border: 2px solid var(--linie);
+  border-radius: 12px;
+  padding: 0.45rem 0.7rem;
+  margin: 0.25rem 0;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.baustein[aria-pressed="true"] { border-color: var(--haupt); background: var(--haupt-hell); font-weight: 700; }
+.baustein-zeichen {
+  flex: 0 0 auto;
+  width: 1.7rem; height: 1.7rem;
+  border-radius: 50%;
+  border: 2px solid var(--haupt);
+  display: inline-flex; align-items: center; justify-content: center;
+  font-weight: 700; color: var(--haupt);
+}
+.baustein-zeichen::before { content: "+"; }
+.baustein[aria-pressed="true"] .baustein-zeichen { background: var(--haupt); color: var(--haupt-text); }
+.baustein[aria-pressed="true"] .baustein-zeichen::before { content: "✓"; }
+.baustein.wahl .baustein-zeichen { border-radius: 50%; }
+.baustein.wahl .baustein-zeichen::before { content: ""; }
+.baustein.wahl[aria-pressed="true"] .baustein-zeichen::before { content: "✓"; }
+.markiert { outline: 4px solid var(--warm); outline-offset: 2px; }
+.teil-hinweis { font-weight: 700; color: var(--warm); }
+.frage { font-weight: 700; font-size: 1.05rem; }
+.bild-klein { width: 3.2rem; height: 4.2rem; object-fit: cover; border-radius: 6px; border: 1px solid var(--linie); flex: 0 0 auto; }
+.bild-gross { display: block; width: 100%; max-width: 18rem; margin: 0.5rem auto; border-radius: 10px; border: 1px solid var(--linie); }
+
+/* --- Antippen: nachgebautes iPhone --- */
+.telefon {
+  /* Das nachgebaute iPhone ist immer hell, auch im dunklen Modus. Darum eigene Farben. */
+  --leise: #4f463c;
+  --text: #1f1a14;
+  max-width: 24rem;
+  margin: 0.6rem auto;
+  border: 0.55rem solid #2b2b2b;
+  border-radius: 2rem;
+  background: #f4f5f7;
+  color: #111;
+  padding: 0.6rem 0.6rem 0.8rem;
+}
+.telefon-kopf { text-align: center; font-weight: 700; padding: 0.3rem 0 0.5rem; border-bottom: 1px solid #ccd; margin-bottom: 0.5rem; }
+.telefon-zeile { font-size: 0.85rem; color: #333; margin: 0.2rem 0.2rem 0.4rem; }
+.telefon-flaechen { display: flex; flex-direction: column; gap: 0.45rem; }
+.anordnung-raster .telefon-flaechen { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; }
+.flaeche {
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+  min-height: var(--klick);
+  width: 100%;
+  text-align: left;
+  background: #ffffff;
+  color: #111;
+  border: 2px solid #c8ccd4;
+  border-radius: 12px;
+  padding: 0.45rem 0.7rem;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.flaeche-foto { align-items: center; padding: 0.35rem; }
+.flaeche[aria-pressed="true"] { border-color: #1d5c63; background: #e2f0f1; box-shadow: 0 0 0 3px #1d5c63; }
+.flaeche-text { font-weight: 700; }
+.flaeche-zusatz { font-size: 0.8rem; color: #444; }
+.flaeche-bild { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 8px; margin-bottom: 0.3rem; background: #ddd; }
+.telefon-fuss { font-size: 0.7rem; color: #555; text-align: center; margin: 0.6rem 0 0; }
+
+/* --- Sortieren --- */
+.reihe { list-style: decimal; padding-left: 1.3rem; margin: 0.5rem 0; }
+.reihe-zeile { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.4rem; padding: 0.4rem 0; border-bottom: 1px solid var(--linie); }
+.reihe-zeile.markiert { outline: 4px solid var(--warm); }
+.reihe-text { flex: 1 1 12rem; }
+.reihe-knoepfe { display: flex; gap: 0.4rem; flex: 1 1 10rem; max-width: 14rem; }
+.reihe-knopf {
+  flex: 1 1 0; min-width: 0; padding: 0 0.4rem; font-size: 0.9rem;
+  min-height: 48px;
+  border: 2px solid var(--haupt); background: var(--karte); color: var(--haupt);
+  border-radius: 10px; font-weight: 700; cursor: pointer;
+}
+
+/* --- Ergebnis und Hinweise --- */
+.ergebnis { border-left: 6px solid var(--haupt); }
+.hinweis { background: var(--hinweis-hell); border-radius: 10px; padding: 0.5rem 0.7rem; }
+.hinweis:empty, .status:empty, .hilfe-text:empty, .teil-hinweis:empty { display: none; }
+.hinweis.gut { background: var(--gut-hell); }
+.status { font-weight: 700; }
+.hilfe-text { background: var(--hinweis-hell); border-radius: 10px; padding: 0.5rem 0.7rem; font-weight: 700; }
+.schon-gesehen { border-left: 6px solid var(--warm); }
+
+/* --- Aha, Merkbild, Beispielbilder --- */
+.aha p { font-size: 1.05rem; }
+.merkbild { background: var(--grund); border-radius: 10px; padding: 0.5rem 0.7rem; margin-top: 0.6rem; }
+.beispiel-bilder { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.6rem; margin: 0.6rem 0; }
+@media (min-width: 640px) { .beispiel-bilder { grid-template-columns: repeat(3, 1fr); } }
+.beispiel-bild { margin: 0; border-radius: 10px; padding: 0.35rem; border: 3px solid var(--warn); background: var(--karte); }
+.beispiel-bild.gut { border-color: var(--gut); }
+.beispiel-bild img { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 6px; }
+.beispiel-bild figcaption { font-size: 0.85rem; margin-top: 0.3rem; }
+.beispiel-bild.schlecht strong { color: var(--warn); }
+.beispiel-bild.gut strong { color: var(--gut); }
+.klein-bilder { grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 640px) { .klein-bilder { grid-template-columns: repeat(3, 1fr); } }
+.echt-schritte { padding-left: 1.4rem; margin: 0.4rem 0; }
+.echt-schritte li { margin: 0.3rem 0; }
+.spick-gruppe h2 { margin-top: 1.2rem; }
+
+/* --- Lexikon, Einstellungen --- */
+details.eintrag summary {
+  min-height: var(--klick);
+  display: flex; align-items: center; justify-content: space-between; gap: 0.6rem;
+  cursor: pointer; font-weight: 700;
+}
+details.eintrag summary::marker { color: var(--haupt); }
+.link-zeile { display: inline-block; margin: 0.4rem 0; min-height: 44px; line-height: 44px; }
+.rueckfrage { background: var(--warn-hell); border-radius: 10px; padding: 0.6rem 0.8rem; margin-top: 0.5rem; }
+.sprung-liste li { margin: 0.4rem 0; }
+.sprung-knopf { width: 100%; text-align: left; }
+.sprung-fertig { color: var(--leise); }
+.quellen-liste li { margin: 0.4rem 0; font-size: 0.85rem; }
+
+/* Schmale Handys: weniger Rand, damit mehr Platz für Text bleibt. */
+@media (max-width: 400px) {
+  main { padding-left: 0.5rem; padding-right: 0.5rem; }
+  .karte { padding: 0.75rem 0.7rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
+}
+
+/* --- Drucken: nur der Inhalt, ohne Knöpfe und Navigation --- */
+@media print {
+  :root { --grund: #fff; --karte: #fff; --text: #000; --schatten: none; }
+  .hauptnav, .nicht-drucken, button { display: none !important; }
+  .klein-bilder { grid-template-columns: repeat(3, 1fr); }
+  h2, h3 { break-after: avoid; }
+  .karte { break-inside: avoid; border: 1px solid #999; }
+  main { max-width: none; }
+}

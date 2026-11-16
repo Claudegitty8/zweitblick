@@ -1,0 +1,28 @@
+# Änderungen
+
+## 0.9 (16. November 2026): erste vollständige Fassung, nicht veröffentlicht
+
+### Neu
+- Gesundheits-Café mit 7 Besuchen und 21 Themen in 7 Kapiteln: Blutwerte verstehen, Gute Fotos von Berichten, App holen und einrichten, Ein Ordner für alles, Die zweite Sicht, Mögliche Ursachen, Sicher bleiben.
+- 133 Aufgaben: Zusammenstecken 42, Vorhersagen 64, Antippen 20, Sortieren 7.
+- Neue Übungsform «Antippen» auf einem vereinfacht nachgebauten iPhone.
+- Kapitel «Gute Fotos» mit 14 eigenen Bildern: 9 Fehler (verwackelt, abgeschnitten, zu weit weg, schief, Schatten, Blitz, Finger, zu dunkel, zerknittert), 3 gute Beispiele (Foto, Scan, PDF), «Seite 1 von 2» und ein Laborbericht.
+- Land-Wahl Schweiz oder Deutschland mit 15 Länderwerten.
+- Karten «So ist es in echt» nach jedem Thema und Spickzettel zum Drucken.
+- Lexikon mit 32 Begriffen, 31 Fakten mit Quelle und Prüfdatum, 5 medizinische mit zweiter Quelle.
+- Notfall-Karte und Notrufzeile mit der Nummer des Landes.
+
+### Übernommen aus dem KI-Studio (angepasst)
+- Lernregeln, Ausweg, Wiederholungen, Schnelltest, Springen mit Rückgängig, freiwillige Fragen, Spielstand sichern und laden, Umwandlung alter Stände, Inhaltsprüfung, Tests.
+- Entfernt, weil hier ohne Nutzen: Tokens und Budget, Einrichtung (Kaufen), Kiwi.
+
+### Behoben während der Prüfung
+- Länder-Knöpfe beim ersten Start waren riesig.
+- Lange Wörter (zum Beispiel «Versichertennummer») ragten bei 320 px und sehr grosser Schrift aus dem Bild.
+- Knöpfe «Hoch» und «Runter» passten bei 320 px nicht neben den Text.
+- Lupes Sprechblase war auf schmalen Handys nur ein Wort breit.
+- Gesperrte Antworten waren zu blass (Kontrast unter 4,5:1), im dunklen Modus auf dem nachgebauten iPhone kaum lesbar.
+- Nach «Lösung zeigen» blieb der Hinweis von «Zeig mir, wo» stehen.
+- Bilder im Spickzettel fehlten beim Drucken (verzögertes Laden), Bilder waren auf dem Handy zu klein.
+- Rückfragen: Escape bricht jetzt ab, der Fokus liegt auf «Abbrechen».
+- Schritt «Lücke» heisst jetzt «Ergänzen».

@@ -1,0 +1,196 @@
+{
+  "hinweis": "Hier stehen alle Angaben, die schnell veralten: Namen, Knöpfe, Fristen, Nummern, Gesundheitsangaben. Jeder Eintrag braucht eine Quelle und ein Prüfdatum. Vor jeder Version neu prüfen.",
+  "fakten": [
+    {
+      "id": "app-store",
+      "aussage": "Die App heisst im App Store «Claude by Anthropic». Anbieter: Anthropic PBC. Gratis mit In-App-Käufen, ab 18, braucht iOS 18 oder neuer.",
+      "quelle": "https://apps.apple.com/de/app/claude-by-anthropic/id6473753684",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "gesundheit-usa",
+      "aussage": "Die Gesundheitsfunktionen der iPhone-App gibt es nur in den USA, als Testversion, mit Pro-, Max- oder Ultra-Abo.",
+      "quelle": "https://support.claude.com/en/articles/11869619-use-claude-with-ios-apps",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "kein-medizinprodukt",
+      "aussage": "Laut Claude-Hilfe ist Claude kein Medizinprodukt und gibt keine medizinische Beratung.",
+      "quelle": "https://support.claude.com/en/articles/11869619-use-claude-with-ios-apps",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "unsicherheit-nennen",
+      "aussage": "Laut Anthropic soll Claude Unsicherheit nennen und an Fachpersonen verweisen.",
+      "quelle": "https://www.anthropic.com/news/healthcare-life-sciences",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "training-fristen",
+      "aussage": "Mit eingeschaltetem Training dürfen Chats bis fünf Jahre aufbewahrt werden, sonst gelten 30 Tage.",
+      "quelle": "https://www.anthropic.com/news/updates-to-our-consumer-terms",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "training-schalter",
+      "aussage": "Auf dem Handy: Name im Menü, Einstellungen, Datenschutz, Schalter «Help Improve Claude».",
+      "quelle": "https://privacy.claude.com/en/articles/12109829-how-do-i-change-my-model-improvement-privacy-settings",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "chat-loeschen",
+      "aussage": "Gelöschte Chats verschwinden sofort aus der Liste und werden innert 30 Tagen von den Servern gelöscht.",
+      "quelle": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "inkognito",
+      "aussage": "Inkognito-Chats werden nicht zum Verbessern von Claude genutzt.",
+      "quelle": "https://support.claude.com/en/articles/8325621-claude-data-privacy-faq",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "projekte-gratis",
+      "aussage": "Projekte gibt es auch im Gratis-Konto, höchstens fünf.",
+      "quelle": "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "projekt-dateien",
+      "aussage": "Dateien im Projekt stehen in allen Chats des Projekts zur Verfügung.",
+      "quelle": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "anhaengen",
+      "aussage": "Dateien und Fotos hängt man über den Knopf «+» im Eingabefeld an. Bilder sollten mindestens 1000 mal 1000 Bildpunkte haben.",
+      "quelle": "https://support.claude.com/en/articles/8241126-upload-files-to-claude",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "anmelden",
+      "aussage": "Anmelden geht mit Apple, Google oder E-Mail. Bei E-Mail kommt ein Link zum Anmelden.",
+      "quelle": "https://support.claude.com/en/articles/13189465-log-in-to-your-claude-account",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "mindestalter",
+      "aussage": "Claude ist ab 18 Jahren.",
+      "quelle": "https://www.anthropic.com/legal/consumer-terms",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "deutsch",
+      "aussage": "Die Oberfläche von Claude gibt es auf Deutsch.",
+      "quelle": "https://support.claude.com/en/articles/10769299",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "oxford-studie",
+      "aussage": "In einer Studie mit 1298 Personen fanden Menschen mit KI-Hilfe die passende Erkrankung nicht öfter als ohne.",
+      "quelle": "https://ora.ox.ac.uk/objects/uuid:ccb8b891-c738-4890-a4d5-45959d0e04d9/files/rns0648349",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "notruf-ch",
+      "aussage": "Medizinischer Notruf in der Schweiz: 144. Europäischer Notruf: 112.",
+      "quelle": "https://www.ch.ch/en/police",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "notruf-ch-herz",
+      "aussage": "Bei Warnzeichen für Herzinfarkt oder Hirnschlag sofort 144 anrufen, nicht den Hausarzt (Schweizerische Herzstiftung).",
+      "quelle": "https://rehasportmedizin.insel.ch/fileadmin/Rehasportmedizin/Dokumente/Patientenportal/Schweizer_Herzstiftung/Deutsch/3.210_Flyer_richtig-handeln_DE_2023.pdf",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "notruf-de",
+      "aussage": "Bei Verdacht auf Herzinfarkt oder Schlaganfall in Deutschland sofort 112 anrufen, nicht 116117 (Deutsche Herzstiftung).",
+      "quelle": "https://idw-online.de/en/attachmentdata57832.pdf",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "notruf-angaben",
+      "aussage": "Am Notruf sagen: wo, wer, was.",
+      "quelle": "https://kapo.tg.ch/public/upload/assets/15256/Notrufnummern-Karte.pdf",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "kopie-ch",
+      "aussage": "Schweiz: Grundsätzlich Anspruch auf eine Gratis-Kopie der Krankengeschichte (Datenschutzgesetz).",
+      "quelle": "https://live.fmh.ch/files/pdf7/08-informationsrechte-2020-de-v2.pdf",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "kopie-de",
+      "aussage": "Deutschland: Die erste Kopie der Patientenakte ist kostenlos (Europäischer Gerichtshof).",
+      "quelle": "https://www.beck-aktuell.de/heute-im-recht/rechtsprechung/eugh-patientenakte-patient-hat-recht-auf-unentgeltliche-erste-kopie-2023-10-26",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "epd",
+      "aussage": "Das elektronische Patientendossier ist freiwillig und gratis.",
+      "quelle": "https://www.bs.ch/en/node/13748",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "epd-post",
+      "aussage": "Die Post stellt ihre EPD-Plattform Ende 2026 ein.",
+      "quelle": "https://www.netzwoche.ch/news/2026-06-25/ende-2026-ist-schluss-mit-der-epd-plattform-der-post",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "epa-app",
+      "aussage": "In der ePA-App der Krankenkasse kann man Dokumente ansehen und herunterladen.",
+      "quelle": "https://www.verbraucherzentrale.de/wissen/gesundheit-pflege/krankenversicherung/elektronische-patientenakte-epa-digitale-patientenakte-fuer-alle-kommt-57223",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "hb",
+      "aussage": "Hämoglobin ist der rote Blutfarbstoff und transportiert Sauerstoff. Ein tiefer Wert kann auf Blutarmut hinweisen.",
+      "quelle": "https://www.gesundheit.gv.at/labor/laborwerte/blutbild/haemoglobin.html",
+      "geprueft": "2026-11-16",
+      "quelle2": "https://www.tk.de/techniker/krankheit-und-behandlungen/erkrankungen/behandlungen-und-medizin/bluterkrankungen/was-ist-eine-anaemie-2022012"
+    },
+    {
+      "id": "referenzbereich",
+      "aussage": "Referenzbereiche hängen unter anderem von Alter und Geschlecht ab und unterscheiden sich je nach Labor.",
+      "quelle": "https://www.apotheken-umschau.de/diagnose/laborwerte/kleines-und-grosses-blutbild-778955.html",
+      "geprueft": "2026-11-16",
+      "quelle2": "https://www.gesundheit.gv.at/labor/laborbefund/normalwerte.html"
+    },
+    {
+      "id": "schwindel",
+      "aussage": "Schwindel hat viele mögliche Ursachen, darunter Innenohr, Kreislauf und Medikamente. Eine genaue Beschreibung hilft bei der Suche.",
+      "quelle": "https://www.apotheken.de/krankheiten/4716-schwindel",
+      "geprueft": "2026-11-16",
+      "quelle2": "https://www.beobachter.ch/medizin-krankheit/schwindel-wenn-die-welt-sich-plotzlich-dreht"
+    },
+    {
+      "id": "muedigkeit",
+      "aussage": "Müdigkeit kann viele Ursachen haben, zum Beispiel Blutarmut, Schilddrüse oder Medikamente.",
+      "quelle": "https://www.apotheken-umschau.de/Schlafen/Muedigkeit--Ursachen-Medikamente-119585_7.html",
+      "geprueft": "2026-11-16",
+      "quelle2": "https://www.aponet.de/artikel/staendige-muedigkeit-was-ab-60-jahren-hinter-erschoepfung-stecken-kann-31657"
+    },
+    {
+      "id": "nicht-absetzen",
+      "aussage": "Kein Medikament ohne Rücksprache mit der Ärztin oder dem Arzt absetzen.",
+      "quelle": "https://www.bundesaerztekammer.de/fileadmin/user_upload/_old-files/downloads/pdf-Ordner/Patienteninformationen/kip-multimedikation.pdf",
+      "geprueft": "2026-11-16",
+      "quelle2": "https://concordia.ch/content/dam/concordia.ch/gesundheitskompass/alle-wegweiser/de_wegweiser/CON_BK_Wegweiser_Medikamente_korrekte_Einnahme_210x297mm_2fbg_DE.pdf"
+    },
+    {
+      "id": "scannen",
+      "aussage": "Die App Notizen kann über die Büroklammer «Dokumente scannen»: Seiten werden erkannt, zugeschnitten und gerade gerichtet.",
+      "quelle": "https://www.giga.de/tech/18-versteckte-iphone-tricks-warum-apples-notizen-app-viel-maechtiger-ist-als-ihr-denkt--01M5YHSFVEX9ZMMGT1VHG072CZ",
+      "geprueft": "2026-11-16"
+    },
+    {
+      "id": "senioren",
+      "aussage": "Für ältere Menschen: grosse Schrift, grosse Klickflächen, beschriftete Knöpfe.",
+      "quelle": "https://www.nngroup.com/alertbox/seniors.html",
+      "geprueft": "2026-11-16"
+    }
+  ]
+}

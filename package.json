@@ -1,0 +1,13 @@
+{
+  "name": "zweitblick",
+  "version": "0.9.0",
+  "private": true,
+  "type": "module",
+  "description": "Lernspiel «Zweitblick»: ältere Menschen lernen, mit der KI-App Claude eigene Befunde besser zu verstehen",
+  "scripts": {
+    "start": "node werkzeuge/server.mjs",
+    "test": "node --test",
+    "inhalte": "node werkzeuge/pruefe-inhalte.mjs",
+    "pruefen": "npm test && npm run inhalte"
+  }
+}

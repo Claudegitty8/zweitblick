@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img"><title>Zweitblick: Lupe</title>
+<rect width="512" height="512" rx="96" fill="#1d5c63"/>
+<rect x="318" y="300" width="56" height="170" rx="28" fill="#f0b27a" transform="rotate(-45 346 385)"/>
+<circle cx="226" cy="222" r="140" fill="#e2f0f1" stroke="#faf6ef" stroke-width="36"/>
+<ellipse cx="186" cy="214" rx="20" ry="28" fill="#1f1a14"/>
+<ellipse cx="266" cy="214" rx="20" ry="28" fill="#1f1a14"/>
+<path d="M176 276 Q226 316 276 276" stroke="#1f1a14" stroke-width="16" fill="none" stroke-linecap="round"/>
+</svg>

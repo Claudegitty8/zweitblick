@@ -1,0 +1,1128 @@
+{
+  "id": "brunner-ordner",
+  "kapitel": 4,
+  "gast": "Herr Brunner, 81",
+  "thema": "Ein Ordner für alles",
+  "wunsch": "Meine Berichte liegen überall herum. Und Lupe vergisst jedes Mal, wer ich bin.",
+  "dank": "Endlich ist alles an einem Ort. Und Lupe weiss gleich, wer ich bin. Wunderbar!",
+  "danach": "Herr Brunner bringt Kuchen für alle. Am Nebentisch wartet schon Herr Keller. Ihm ist schwindlig.",
+  "lexikon": [
+    "dossier",
+    "usa"
+  ],
+  "runden": [
+    {
+      "id": "r1",
+      "art": "konzept",
+      "konzept": "projekt",
+      "probieren": {
+        "aufgabe": "pr-a",
+        "nurTeile": [
+          "neu",
+          "chats",
+          "einstellungen"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "pr-a"
+      },
+      "luecke": {
+        "aufgabe": "pr-b",
+        "vorgabe": []
+      },
+      "frei": [
+        "pr-c",
+        "pr-d",
+        "pr-e",
+        "pr-f"
+      ]
+    },
+    {
+      "id": "r2",
+      "art": "konzept",
+      "konzept": "anweisung",
+      "probieren": {
+        "aufgabe": "an-a",
+        "nurTeile": [
+          "katze",
+          "einfach"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "an-a"
+      },
+      "luecke": {
+        "aufgabe": "an-b",
+        "vorgabe": [
+          "alter",
+          "krank"
+        ]
+      },
+      "frei": [
+        "an-c",
+        "an-d",
+        "an-e",
+        "an-f"
+      ]
+    },
+    {
+      "id": "r3",
+      "art": "konzept",
+      "konzept": "berichte",
+      "probieren": {
+        "aufgabe": "be-a",
+        "nurTeile": [
+          "warten",
+          "anrufen",
+          "passwort"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "be-a"
+      },
+      "luecke": {
+        "aufgabe": "be-b",
+        "vorgabe": []
+      },
+      "frei": [
+        "be-c",
+        "be-d",
+        "be-e",
+        "be-f"
+      ]
+    },
+    {
+      "id": "r4",
+      "art": "misch",
+      "titel": "Alles zusammen",
+      "frei": [
+        "m-a"
+      ]
+    }
+  ],
+  "aufgaben": {
+    "pr-a": {
+      "typ": "tippen",
+      "wunsch": "Jeden Tag muss ich Lupe alles neu erklären. Das nervt.",
+      "frage": "Wo legt Herr Brunner einen festen Ort für seine Berichte an?",
+      "bildschirm": {
+        "titel": "Claude: Menü"
+      },
+      "flaechen": [
+        {
+          "id": "neu",
+          "text": "Neuer Chat",
+          "hinweis": "Ein neuer Chat ausserhalb eines Projekts fängt bei null an.",
+          "folge": "Hallo! Schön, dich kennenzulernen. Wie heisst du? Hast du Berichte für mich? Ich weiss noch nichts von dir."
+        },
+        {
+          "id": "projekte",
+          "text": "Projekte",
+          "hinweis": "Genau. Hier legt er «Meine Gesundheit» an.",
+          "folge": "Die Projekte gehen auf. Hier kann Herr Brunner «Meine Gesundheit» anlegen.",
+          "richtig": true
+        },
+        {
+          "id": "chats",
+          "text": "Chats",
+          "hinweis": "Das ist die Liste alter Chats, kein fester Ort für Berichte.",
+          "folge": "Eine lange Liste alter Chats. Welcher war es nochmal?"
+        },
+        {
+          "id": "einstellungen",
+          "text": "Einstellungen",
+          "hinweis": "Dort sind Schalter, keine Berichte.",
+          "folge": "Einstellungen. Hier gehören keine Berichte hin."
+        }
+      ],
+      "loesung": [
+        "projekte"
+      ]
+    },
+    "pr-b": {
+      "typ": "tippen",
+      "wunsch": "Ich lege ein neues Projekt an. Wie nenne ich es?",
+      "frage": "Welchen Namen gibst du dem Projekt?",
+      "bildschirm": {
+        "titel": "Neues Projekt",
+        "zeilen": [
+          "Name des Projekts wählen"
+        ]
+      },
+      "flaechen": [
+        {
+          "id": "unbenannt",
+          "text": "Unbenanntes Projekt",
+          "hinweis": "Später weisst du nicht mehr, was drin ist.",
+          "folge": "Ein Projekt ohne Namen. In drei Wochen fragt sich Herr Brunner, was das war."
+        },
+        {
+          "id": "asdf",
+          "text": "asdf",
+          "hinweis": "Ein Zufallsname hilft niemandem.",
+          "folge": "«asdf». Auch Lupe weiss nicht, worum es geht."
+        },
+        {
+          "id": "gesund",
+          "text": "Meine Gesundheit",
+          "hinweis": "Genau. Ein klarer Name.",
+          "folge": "Das Projekt «Meine Gesundheit» ist angelegt.",
+          "richtig": true
+        },
+        {
+          "id": "test",
+          "text": "Test",
+          "hinweis": "Zu ungenau. Bald gibt es mehrere Tests.",
+          "folge": "«Test». Herr Brunner hat später drei Projekte namens Test."
+        }
+      ],
+      "loesung": [
+        "gesund"
+      ]
+    },
+    "pr-c": {
+      "typ": "wahl",
+      "wunsch": "Ich habe Lupe ausserhalb des Projekts gefragt. Sie kennt meine Berichte nicht!",
+      "frage": "Warum kennt Lupe die Berichte nicht?",
+      "lupe": "Der Chat war ausserhalb des Projekts. Nur Chats im Projekt kennen die Dateien darin.",
+      "optionen": [
+        {
+          "id": "ausserhalb",
+          "text": "Der Chat lief nicht im Projekt",
+          "hinweis": "Genau. Starte Chats im Projekt.",
+          "richtig": true
+        },
+        {
+          "id": "vergessen",
+          "text": "Lupe hat sie vergessen",
+          "hinweis": "Sie hatte sie in diesem Chat gar nicht."
+        },
+        {
+          "id": "geloescht",
+          "text": "Die Berichte sind gelöscht",
+          "hinweis": "Sie liegen noch im Projekt."
+        },
+        {
+          "id": "abo",
+          "text": "Projekte gehen nur mit Abo",
+          "hinweis": "Projekte gibt es auch gratis."
+        }
+      ],
+      "loesung": [
+        "ausserhalb"
+      ]
+    },
+    "pr-d": {
+      "typ": "tippen",
+      "wunsch": "Wohin mit dem neuen Bericht, damit jeder Chat ihn kennt?",
+      "frage": "Wo legst du den Bericht ab?",
+      "bildschirm": {
+        "titel": "Projekt: Meine Gesundheit"
+      },
+      "flaechen": [
+        {
+          "id": "dateien",
+          "text": "Dateien: +",
+          "hinweis": "Genau. Dateien im Projekt kennt jeder Chat darin.",
+          "folge": "Der Bericht liegt jetzt im Projekt. Jeder Chat hier kennt ihn.",
+          "richtig": true
+        },
+        {
+          "id": "chat",
+          "text": "Nur im aktuellen Chat anhängen",
+          "hinweis": "Dann kennt ihn nur dieser eine Chat.",
+          "folge": "Dieser Chat kennt den Bericht. Der nächste nicht mehr."
+        },
+        {
+          "id": "teilen",
+          "text": "Teilen",
+          "hinweis": "Damit schickst du etwas weg. Ablegen ist es nicht.",
+          "folge": "Das Teilen-Menü geht auf. Der Bericht liegt noch nicht im Projekt."
+        },
+        {
+          "id": "umbenennen",
+          "text": "Projekt umbenennen",
+          "hinweis": "Damit änderst du nur den Namen.",
+          "folge": "Das Projekt heisst jetzt anders. Der Bericht fehlt noch."
+        }
+      ],
+      "loesung": [
+        "dateien"
+      ]
+    },
+    "pr-e": {
+      "typ": "wahl",
+      "wunsch": "Kostet so ein Projekt etwas?",
+      "frage": "Wie viele Projekte gibt es gratis?",
+      "lupe": "Laut Claude-Hilfe bis zu fünf. Eines für die Gesundheit reicht.",
+      "optionen": [
+        {
+          "id": "fuenf",
+          "text": "Bis zu fünf",
+          "hinweis": "Genau. Mehr braucht es hier nicht.",
+          "richtig": true
+        },
+        {
+          "id": "keins",
+          "text": "Keines, Projekte kosten immer",
+          "hinweis": "Doch, gratis gibt es bis zu fünf."
+        },
+        {
+          "id": "eins",
+          "text": "Nur eines",
+          "hinweis": "Es sind bis zu fünf."
+        },
+        {
+          "id": "hundert",
+          "text": "Hundert",
+          "hinweis": "Gratis sind es bis zu fünf."
+        }
+      ],
+      "loesung": [
+        "fuenf"
+      ]
+    },
+    "pr-f": {
+      "typ": "wahl",
+      "wunsch": "Ich habe einen neuen Bericht vom Augenarzt. Wohin damit?",
+      "frage": "Was macht Herr Brunner mit dem neuen Bericht?",
+      "lupe": "Er legt ihn als Datei ins Projekt. Dann kennt ihn jeder Chat dort.",
+      "optionen": [
+        {
+          "id": "projekt",
+          "text": "Als Datei ins Projekt «Meine Gesundheit» legen",
+          "hinweis": "Genau. Ein Ort für alles.",
+          "richtig": true
+        },
+        {
+          "id": "neu",
+          "text": "Einen neuen Chat ohne Projekt beginnen",
+          "hinweis": "Dann weiss Lupe nichts von den anderen Berichten."
+        },
+        {
+          "id": "schublade",
+          "text": "In die Schublade, zu den anderen",
+          "hinweis": "Dort kann Lupe ihn nicht lesen."
+        },
+        {
+          "id": "zweites",
+          "text": "Ein zweites Projekt nur für die Augen anlegen",
+          "hinweis": "Geht, aber dann ist alles verteilt. Besser ein Projekt."
+        }
+      ],
+      "loesung": [
+        "projekt"
+      ]
+    },
+    "an-a": {
+      "wunsch": "Was schreibe ich in die Anweisung des Projekts?",
+      "grundprompt": "Erklär mir meinen neuen Bericht.",
+      "teile": [
+        {
+          "id": "alter",
+          "art": "anweisung",
+          "text": "Ich bin 81 Jahre alt."
+        },
+        {
+          "id": "krank",
+          "art": "anweisung",
+          "text": "Ich habe hohen Blutdruck."
+        },
+        {
+          "id": "tabl",
+          "art": "anweisung",
+          "text": "Ich nehme eine Blutdrucktablette und einen Blutverdünner."
+        },
+        {
+          "id": "einfach",
+          "art": "anweisung",
+          "text": "Erklär einfach und kurz."
+        },
+        {
+          "id": "katze",
+          "art": "anweisung",
+          "text": "Meine Katze heisst Mimi."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "katze"
+            ]
+          },
+          "fehlbild": "katze"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "alter"
+            ]
+          },
+          "fehlbild": "alter"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "tabl"
+            ]
+          },
+          "fehlbild": "tabl"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        }
+      ],
+      "fehlbilder": {
+        "katze": {
+          "texte": [
+            "Gern! Übrigens: Mimi ist ein schöner Name. Katzen vertragen keine Blutdrucktabletten.",
+            "Ich erkläre deinen Bericht. Und Tipps für Mimis Fell gibt es gratis dazu."
+          ],
+          "hinweis": "Was nichts mit Gesundheit zu tun hat, gehört nicht in die Anweisung. Lupe benutzt sonst auch das."
+        },
+        "alter": {
+          "texte": [
+            "Deine Werte vergleiche ich mit denen von 30-Jährigen. Da sieht einiges ungewohnt aus.",
+            "Für einen jungen Menschen wäre das ungewöhnlich. Wie alt bist du eigentlich?"
+          ],
+          "hinweis": "Ohne Alter vergleicht Lupe vielleicht mit jungen Menschen. Manche Werte hängen vom Alter ab."
+        },
+        "tabl": {
+          "texte": [
+            "Ein Wert ist auffällig. Woher er kommt? Ich denke an alles Mögliche, nur nicht an Tabletten.",
+            "Ich sehe einen auffälligen Wert. Nimmst du Medikamente? Das weiss ich nicht."
+          ],
+          "hinweis": "Ohne Tablettenliste kann Lupe Zusammenhänge mit Medikamenten nicht erkennen."
+        },
+        "fach": {
+          "texte": [
+            "Hypertonie-Patient, 81, unter Antikoagulation, Kreatinin grenzwertig, eGFR leicht reduziert.",
+            "Laborchemisch diskret eingeschränkte Nierenfunktion bei bekannter Hypertonie."
+          ],
+          "hinweis": "Ohne «einfach erklären» antwortet Lupe in Fachsprache."
+        }
+      },
+      "erfolg": [
+        "Danke, jetzt kenne ich dich: 81, hoher Blutdruck, zwei Tabletten. Ich erkläre deinen Bericht einfach und kurz.",
+        "Mit deinem Alter und deinen Tabletten kann ich den Bericht besser einordnen. Hier einfach und kurz erklärt."
+      ],
+      "loesung": [
+        "alter",
+        "krank",
+        "tabl",
+        "einfach"
+      ]
+    },
+    "an-b": {
+      "wunsch": "Die Anweisung ist angefangen. Was fehlt noch?",
+      "grundprompt": "Was sagt mein Bericht?",
+      "teile": [
+        {
+          "id": "alter",
+          "art": "anweisung",
+          "text": "Ich bin 81 Jahre alt."
+        },
+        {
+          "id": "krank",
+          "art": "anweisung",
+          "text": "Ich habe hohen Blutdruck."
+        },
+        {
+          "id": "tabl",
+          "art": "anweisung",
+          "text": "Ich nehme eine Blutdrucktablette und einen Blutverdünner."
+        },
+        {
+          "id": "einfach",
+          "art": "anweisung",
+          "text": "Erklär einfach und kurz."
+        },
+        {
+          "id": "wetter",
+          "art": "anweisung",
+          "text": "Ich mag sonniges Wetter."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "wetter"
+            ]
+          },
+          "fehlbild": "wetter"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "alter"
+            ]
+          },
+          "fehlbild": "alter"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "tabl"
+            ]
+          },
+          "fehlbild": "tabl"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        }
+      ],
+      "fehlbilder": {
+        "wetter": {
+          "texte": [
+            "Bei Sonnenschein sehen Blutwerte gleich aus wie bei Regen. Aber schön, dass du die Sonne magst!",
+            "Dein Bericht, sonnig erklärt: Alles hell und freundlich! (Lupe hat sich ablenken lassen.)"
+          ],
+          "hinweis": "Das Wetter hat in der Anweisung nichts zu suchen. Lupe benutzt sonst auch das."
+        },
+        "alter": {
+          "texte": [
+            "Deine Werte vergleiche ich mit denen von 30-Jährigen. Da sieht einiges ungewohnt aus.",
+            "Für einen jungen Menschen wäre das ungewöhnlich. Wie alt bist du eigentlich?"
+          ],
+          "hinweis": "Ohne Alter vergleicht Lupe vielleicht mit jungen Menschen. Manche Werte hängen vom Alter ab."
+        },
+        "tabl": {
+          "texte": [
+            "Ein Wert ist auffällig. Woher er kommt? Ich denke an alles Mögliche, nur nicht an Tabletten.",
+            "Ich sehe einen auffälligen Wert. Nimmst du Medikamente? Das weiss ich nicht."
+          ],
+          "hinweis": "Ohne Tablettenliste kann Lupe Zusammenhänge mit Medikamenten nicht erkennen."
+        },
+        "fach": {
+          "texte": [
+            "Hypertonie-Patient, 81, unter Antikoagulation, Kreatinin grenzwertig, eGFR leicht reduziert.",
+            "Laborchemisch diskret eingeschränkte Nierenfunktion bei bekannter Hypertonie."
+          ],
+          "hinweis": "Ohne «einfach erklären» antwortet Lupe in Fachsprache."
+        }
+      },
+      "erfolg": [
+        "Danke. Mit Alter, Blutdruck und Tabletten erkläre ich dir den Bericht einfach und kurz.",
+        "Jetzt habe ich alles Wichtige. Hier dein Bericht, einfach erklärt."
+      ],
+      "loesung": [
+        "alter",
+        "krank",
+        "tabl",
+        "einfach"
+      ]
+    },
+    "an-c": {
+      "wunsch": "Lupe soll mir sagen, wenn sie sich nicht sicher ist.",
+      "grundprompt": "Was bedeutet dieser Wert?",
+      "teile": [
+        {
+          "id": "alter",
+          "art": "anweisung",
+          "text": "Ich bin 81 Jahre alt."
+        },
+        {
+          "id": "tabl",
+          "art": "anweisung",
+          "text": "Ich nehme eine Blutdrucktablette und einen Blutverdünner."
+        },
+        {
+          "id": "einfach",
+          "art": "anweisung",
+          "text": "Erklär einfach und kurz."
+        },
+        {
+          "id": "unsicher",
+          "art": "anweisung",
+          "text": "Sag es, wenn du unsicher bist."
+        },
+        {
+          "id": "loben",
+          "art": "anweisung",
+          "text": "Sag mir immer, dass alles gut ist."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "loben"
+            ]
+          },
+          "fehlbild": "loben"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "unsicher"
+            ]
+          },
+          "fehlbild": "sicher"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "alter"
+            ]
+          },
+          "fehlbild": "alter"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "tabl"
+            ]
+          },
+          "fehlbild": "tabl"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        }
+      ],
+      "fehlbilder": {
+        "loben": {
+          "texte": [
+            "Alles gut! (Lupe sagt das, weil es in der Anweisung steht. Ob es stimmt, weiss sie nicht.)",
+            "Wunderbar, alles bestens! Wie gewünscht."
+          ],
+          "hinweis": "Wer sich Beruhigung bestellt, bekommt Beruhigung statt Ehrlichkeit. Lass das weg."
+        },
+        "sicher": {
+          "texte": [
+            "Der Wert ist eindeutig harmlos. (Lupe klingt sehr sicher, kennt aber nur diesen einen Wert.)",
+            "Ganz klar: kein Problem. (Woher sie das weiss, sagt sie nicht.)"
+          ],
+          "hinweis": "Ohne diese Bitte klingt Lupe oft sicherer, als sie ist."
+        },
+        "alter": {
+          "texte": [
+            "Deine Werte vergleiche ich mit denen von 30-Jährigen. Da sieht einiges ungewohnt aus.",
+            "Für einen jungen Menschen wäre das ungewöhnlich. Wie alt bist du eigentlich?"
+          ],
+          "hinweis": "Ohne Alter vergleicht Lupe vielleicht mit jungen Menschen. Manche Werte hängen vom Alter ab."
+        },
+        "tabl": {
+          "texte": [
+            "Ein Wert ist auffällig. Woher er kommt? Ich denke an alles Mögliche, nur nicht an Tabletten.",
+            "Ich sehe einen auffälligen Wert. Nimmst du Medikamente? Das weiss ich nicht."
+          ],
+          "hinweis": "Ohne Tablettenliste kann Lupe Zusammenhänge mit Medikamenten nicht erkennen."
+        },
+        "fach": {
+          "texte": [
+            "Hypertonie-Patient, 81, unter Antikoagulation, Kreatinin grenzwertig, eGFR leicht reduziert.",
+            "Laborchemisch diskret eingeschränkte Nierenfunktion bei bekannter Hypertonie."
+          ],
+          "hinweis": "Ohne «einfach erklären» antwortet Lupe in Fachsprache."
+        }
+      },
+      "erfolg": [
+        "Der Wert liegt knapp über dem Bereich des Labors. Ich bin unsicher, was das für dich heisst. Frag bitte deinen Arzt.",
+        "Kurz: etwas erhöht. Sicher bin ich nicht, mir fehlen ältere Werte zum Vergleich. Frag deinen Arzt."
+      ],
+      "loesung": [
+        "alter",
+        "tabl",
+        "einfach",
+        "unsicher"
+      ]
+    },
+    "an-d": {
+      "wunsch": "Ich vertrage kein Penicillin. Gehört das in die Anweisung?",
+      "grundprompt": "Ich habe eine Frage zu meinem Rezept.",
+      "teile": [
+        {
+          "id": "alter",
+          "art": "anweisung",
+          "text": "Ich bin 81 Jahre alt."
+        },
+        {
+          "id": "allergie",
+          "art": "anweisung",
+          "text": "Allergie: Penicillin."
+        },
+        {
+          "id": "einfach",
+          "art": "anweisung",
+          "text": "Erklär einfach und kurz."
+        },
+        {
+          "id": "passwort",
+          "art": "anweisung",
+          "text": "Mein Bank-Passwort ist Rosa1949."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "passwort"
+            ]
+          },
+          "fehlbild": "passwort"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "allergie"
+            ]
+          },
+          "fehlbild": "allergie"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "alter"
+            ]
+          },
+          "fehlbild": "alter"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        }
+      ],
+      "fehlbilder": {
+        "passwort": {
+          "texte": [
+            "Halt! Ein Passwort gehört nie in einen Chat. Ändere es am besten bei deiner Bank.",
+            "Ich brauche dein Bank-Passwort für nichts. Bitte lösche es sofort."
+          ],
+          "hinweis": "Passwörter gehören nirgends in einen Chat. Auch nicht in die Anweisung."
+        },
+        "allergie": {
+          "texte": [
+            "Gern erkläre ich dir das Rezept. Allergien? Davon weiss ich nichts.",
+            "Das Rezept sieht normal aus. (Lupe weiss nichts von der Penicillin-Allergie.)"
+          ],
+          "hinweis": "Allergien gehören in die Anweisung. Sonst kann Lupe nicht darauf achten."
+        },
+        "alter": {
+          "texte": [
+            "Deine Werte vergleiche ich mit denen von 30-Jährigen. Da sieht einiges ungewohnt aus.",
+            "Für einen jungen Menschen wäre das ungewöhnlich. Wie alt bist du eigentlich?"
+          ],
+          "hinweis": "Ohne Alter vergleicht Lupe vielleicht mit jungen Menschen. Manche Werte hängen vom Alter ab."
+        },
+        "fach": {
+          "texte": [
+            "Hypertonie-Patient, 81, unter Antikoagulation, Kreatinin grenzwertig, eGFR leicht reduziert.",
+            "Laborchemisch diskret eingeschränkte Nierenfunktion bei bekannter Hypertonie."
+          ],
+          "hinweis": "Ohne «einfach erklären» antwortet Lupe in Fachsprache."
+        }
+      },
+      "erfolg": [
+        "Ich weiss jetzt von deiner Penicillin-Allergie. Frag bei jedem neuen Medikament in der Apotheke nach, ob es passt.",
+        "Danke. Bei Fragen zu Medikamenten erinnere ich dich an die Allergie. Prüfen muss es die Apotheke oder der Arzt."
+      ],
+      "loesung": [
+        "alter",
+        "allergie",
+        "einfach"
+      ]
+    },
+    "an-e": {
+      "typ": "wahl",
+      "wunsch": "Was gehört in die Anweisung im Projekt?",
+      "frage": "Welche Angaben gehören in die Anweisung?",
+      "lupe": "Alter, Krankheiten, Tabletten, Allergien. Und wie Lupe antworten soll.",
+      "optionen": [
+        {
+          "id": "gesund",
+          "text": "Alter, Krankheiten, Tabletten, Allergien",
+          "hinweis": "Genau. Dazu: einfach erklären, Unsicherheit sagen.",
+          "richtig": true
+        },
+        {
+          "id": "alles",
+          "text": "Mein ganzes Leben, von der Taufe an",
+          "hinweis": "Zu viel. Lupe braucht nur, was mit Gesundheit zu tun hat."
+        },
+        {
+          "id": "passwort",
+          "text": "Meine Passwörter, damit ich sie nicht vergesse",
+          "hinweis": "Nie. Passwörter gehören in keinen Chat."
+        },
+        {
+          "id": "nichts",
+          "text": "Nichts, Lupe weiss das schon",
+          "hinweis": "Lupe weiss nur, was du ihr sagst."
+        }
+      ],
+      "loesung": [
+        "gesund"
+      ]
+    },
+    "an-f": {
+      "typ": "wahl",
+      "wunsch": "Für welche Chats gilt die Anweisung?",
+      "frage": "Wofür gilt die Anweisung im Projekt?",
+      "lupe": "Für jeden Chat im Projekt. So musst du nicht jedes Mal alles neu erklären.",
+      "optionen": [
+        {
+          "id": "projekt",
+          "text": "Für jeden Chat in diesem Projekt",
+          "hinweis": "Genau.",
+          "richtig": true
+        },
+        {
+          "id": "einer",
+          "text": "Nur für den ersten Chat",
+          "hinweis": "Nein, für alle Chats im Projekt."
+        },
+        {
+          "id": "alle",
+          "text": "Für alle Chats, auch ausserhalb des Projekts",
+          "hinweis": "Nur innerhalb des Projekts."
+        },
+        {
+          "id": "keiner",
+          "text": "Für keinen, sie ist nur eine Notiz",
+          "hinweis": "Doch, Lupe liest sie bei jedem Chat im Projekt."
+        }
+      ],
+      "loesung": [
+        "projekt"
+      ]
+    },
+    "be-a": {
+      "typ": "wahl",
+      "wunsch": "Ich warte, dass meine Berichte in Claude erscheinen. Seit einer Woche.",
+      "frage": "Wie kommen Herrn Brunners Berichte zu Lupe?",
+      "lupe": "Er verlangt in der Praxis eine Kopie und lädt sie selbst hoch. Von selbst kommen sie nicht.",
+      "optionen": [
+        {
+          "id": "kopie",
+          "text": "Eine Kopie verlangen und selbst hochladen",
+          "hinweis": "Genau. In [[land]] kommen sie nicht von selbst.",
+          "richtig": true
+        },
+        {
+          "id": "warten",
+          "text": "Weiter warten, sie kommen automatisch",
+          "hinweis": "In [[land]] kommen sie nicht von selbst."
+        },
+        {
+          "id": "anrufen",
+          "text": "Lupe soll die Praxis anrufen",
+          "hinweis": "Lupe kann nicht telefonieren."
+        },
+        {
+          "id": "passwort",
+          "text": "Das Passwort der Praxis eingeben",
+          "hinweis": "Das gibt es nicht und gehört nicht in einen Chat."
+        }
+      ],
+      "loesung": [
+        "kopie"
+      ]
+    },
+    "be-b": {
+      "typ": "wahl",
+      "wunsch": "Kostet mich die Kopie meiner Berichte etwas?",
+      "frage": "Muss Herr Brunner für eine Kopie bezahlen?",
+      "lupe": "[[kopieRecht]]",
+      "optionen": [
+        {
+          "id": "gratis",
+          "text": "Meist nicht. [[kopieRecht]]",
+          "hinweis": "Genau. Frag ruhig nach.",
+          "richtig": true
+        },
+        {
+          "id": "teuer",
+          "text": "Ja, pro Seite fünf [[waehrung]]",
+          "hinweis": "Das ist erfunden."
+        },
+        {
+          "id": "verboten",
+          "text": "Kopien sind verboten",
+          "hinweis": "Nein. Du darfst deine Berichte bekommen."
+        },
+        {
+          "id": "anwalt",
+          "text": "Nur über einen Anwalt",
+          "hinweis": "Nein. Eine Anfrage in der Praxis reicht."
+        }
+      ],
+      "loesung": [
+        "gratis"
+      ]
+    },
+    "be-c": {
+      "typ": "wahl",
+      "wunsch": "Gibt es noch einen anderen Weg zu meinen Berichten?",
+      "frage": "Wo kann Herr Brunner sonst noch nachsehen?",
+      "lupe": "[[dossierWeg]].",
+      "optionen": [
+        {
+          "id": "dossier",
+          "text": "[[dossierWeg]]",
+          "hinweis": "Genau. Nicht alles liegt dort, aber oft einiges.",
+          "richtig": true
+        },
+        {
+          "id": "apple",
+          "text": "In Apple Health, dort ist alles automatisch",
+          "hinweis": "Arztberichte kommen in [[land]] nicht automatisch in Apple Health."
+        },
+        {
+          "id": "google",
+          "text": "Im Internet nach seinem Namen suchen",
+          "hinweis": "Dort liegen keine Arztberichte. Zum Glück."
+        },
+        {
+          "id": "lupe",
+          "text": "Lupe fragen, sie hat alles",
+          "hinweis": "Lupe hat nur, was du ihr gibst."
+        }
+      ],
+      "loesung": [
+        "dossier"
+      ]
+    },
+    "be-d": {
+      "typ": "reihe",
+      "wunsch": "Wie kommt mein Laborbericht ins Projekt?",
+      "frage": "Bring die Schritte in die richtige Reihenfolge.",
+      "schritte": [
+        {
+          "id": "projekt",
+          "text": "Den Bericht im Projekt «Meine Gesundheit» hinzufügen"
+        },
+        {
+          "id": "scannen",
+          "text": "Papier mit «Dokumente scannen» einlesen"
+        },
+        {
+          "id": "fragen",
+          "text": "In der Praxis nach einer Kopie fragen"
+        },
+        {
+          "id": "erhalten",
+          "text": "Die Kopie auf Papier oder als PDF bekommen"
+        }
+      ],
+      "loesung": [
+        "fragen",
+        "erhalten",
+        "scannen",
+        "projekt"
+      ],
+      "lupe": "Fragen, bekommen, scannen, ins Projekt. Jetzt kennt jeder Chat im Projekt den Bericht.",
+      "daneben": {
+        "texte": [
+          "Herr Brunner scannt, aber er hat noch gar keine Kopie. Er scannt seine Zeitung.",
+          "Im Projekt hinzugefügt: nichts. Der Bericht war noch in der Praxis."
+        ],
+        "hinweis": "Erst die Kopie holen, dann scannen, dann ins Projekt."
+      }
+    },
+    "be-e": {
+      "typ": "wahl",
+      "wunsch": "Mein Enkel sagt, Claude kann Apple Health direkt lesen.",
+      "frage": "Stimmt das für Herrn Brunner in [[land]]?",
+      "lupe": "Nein. Die direkte Verbindung zu Apple Health gibt es laut Claude-Hilfe nur in den USA, und nur im Abo.",
+      "optionen": [
+        {
+          "id": "usa",
+          "text": "Nein, das gibt es nur in den USA und im Abo",
+          "hinweis": "Genau. Bei uns lädt man Berichte selbst hoch.",
+          "richtig": true
+        },
+        {
+          "id": "ja",
+          "text": "Ja, es geht überall",
+          "hinweis": "Nein, nur in den USA."
+        },
+        {
+          "id": "bald",
+          "text": "Ja, ab nächster Woche",
+          "hinweis": "Wann es kommt, weiss niemand."
+        },
+        {
+          "id": "trick",
+          "text": "Ja, mit einem Trick aus dem Internet",
+          "hinweis": "Fremde Zusatzdienste meiden wir. Gesundheitsdaten gingen dann an noch eine Firma."
+        }
+      ],
+      "loesung": [
+        "usa"
+      ]
+    },
+    "be-f": {
+      "typ": "wahl",
+      "wunsch": "Was sage ich am Schalter in der Praxis?",
+      "frage": "Welcher Satz passt am besten?",
+      "lupe": "Freundlich und klar: eine Kopie der eigenen Berichte, auf Papier oder als PDF.",
+      "optionen": [
+        {
+          "id": "kopie",
+          "text": "«Kann ich eine Kopie meiner Berichte haben, auf Papier oder als PDF?»",
+          "hinweis": "Genau. Klar und freundlich.",
+          "richtig": true
+        },
+        {
+          "id": "alle",
+          "text": "«Geben Sie mir die Akten aller Patienten.»",
+          "hinweis": "Nur deine eigenen Berichte, bitte."
+        },
+        {
+          "id": "ki",
+          "text": "«Schicken Sie alles direkt an meine KI.»",
+          "hinweis": "Das geht nicht. Du holst die Kopie selbst."
+        },
+        {
+          "id": "nichts",
+          "text": "Gar nichts. Ich warte lieber.",
+          "hinweis": "Frag ruhig. Es ist dein Recht."
+        }
+      ],
+      "loesung": [
+        "kopie"
+      ]
+    },
+    "m-a": {
+      "wunsch": "Zum Schluss: Projekt mit Anweisung und Bericht. Jetzt die erste Frage.",
+      "grundprompt": "Erklär mir meinen neuen Laborbericht.",
+      "teile": [
+        {
+          "id": "alter",
+          "art": "anweisung",
+          "text": "Ich bin 81 Jahre alt."
+        },
+        {
+          "id": "tabl",
+          "art": "anweisung",
+          "text": "Ich nehme eine Blutdrucktablette und einen Blutverdünner."
+        },
+        {
+          "id": "einfach",
+          "art": "anweisung",
+          "text": "Erklär einfach und kurz."
+        },
+        {
+          "id": "bericht",
+          "art": "anhang",
+          "text": "Laborbericht vom Oktober (aus dem Projekt)"
+        },
+        {
+          "id": "katze",
+          "art": "anweisung",
+          "text": "Meine Katze heisst Mimi."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "katze"
+            ]
+          },
+          "fehlbild": "katze"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "bericht"
+            ]
+          },
+          "fehlbild": "keiner"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "alter"
+            ]
+          },
+          "fehlbild": "alter"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "tabl"
+            ]
+          },
+          "fehlbild": "tabl"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        }
+      ],
+      "fehlbilder": {
+        "katze": {
+          "texte": [
+            "Gern! Übrigens: Mimi ist ein schöner Name. Katzen vertragen keine Blutdrucktabletten.",
+            "Ich erkläre deinen Bericht. Und Tipps für Mimis Fell gibt es gratis dazu."
+          ],
+          "hinweis": "Was nichts mit Gesundheit zu tun hat, gehört nicht in die Anweisung. Lupe benutzt sonst auch das."
+        },
+        "alter": {
+          "texte": [
+            "Deine Werte vergleiche ich mit denen von 30-Jährigen. Da sieht einiges ungewohnt aus.",
+            "Für einen jungen Menschen wäre das ungewöhnlich. Wie alt bist du eigentlich?"
+          ],
+          "hinweis": "Ohne Alter vergleicht Lupe vielleicht mit jungen Menschen. Manche Werte hängen vom Alter ab."
+        },
+        "tabl": {
+          "texte": [
+            "Ein Wert ist auffällig. Woher er kommt? Ich denke an alles Mögliche, nur nicht an Tabletten.",
+            "Ich sehe einen auffälligen Wert. Nimmst du Medikamente? Das weiss ich nicht."
+          ],
+          "hinweis": "Ohne Tablettenliste kann Lupe Zusammenhänge mit Medikamenten nicht erkennen."
+        },
+        "fach": {
+          "texte": [
+            "Hypertonie-Patient, 81, unter Antikoagulation, Kreatinin grenzwertig, eGFR leicht reduziert.",
+            "Laborchemisch diskret eingeschränkte Nierenfunktion bei bekannter Hypertonie."
+          ],
+          "hinweis": "Ohne «einfach erklären» antwortet Lupe in Fachsprache."
+        },
+        "keiner": {
+          "texte": [
+            "Gern. Welchen Bericht? Im Projekt liegt noch keiner.",
+            "Ich sehe keinen Bericht. Hast du ihn ins Projekt gelegt?"
+          ],
+          "hinweis": "Der Bericht fehlt. Leg ihn ins Projekt."
+        }
+      },
+      "erfolg": [
+        "Ich kenne dich jetzt: 81, zwei Tabletten. Dein Bericht vom Oktober, einfach erklärt: Die meisten Werte liegen im Bereich des Labors.",
+        "Danke. Mit Anweisung und Bericht kann ich gut helfen. Hier die kurze Erklärung."
+      ],
+      "loesung": [
+        "alter",
+        "tabl",
+        "einfach",
+        "bericht"
+      ]
+    }
+  }
+}

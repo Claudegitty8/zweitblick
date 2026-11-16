@@ -1,0 +1,1323 @@
+{
+  "id": "rossi",
+  "kapitel": 6,
+  "gast": "Frau Rossi, 69",
+  "thema": "Mögliche Ursachen",
+  "wunsch": "Ich bin seit Monaten müde. Ich möchte eine zweite Meinung, bevor ich zum Arzt gehe.",
+  "dank": "Ich gehe mit einer klaren Liste zum Arzt. Und ich glaube Lupe nicht mehr einfach alles. Danke!",
+  "danach": "Frau Rossi bringt Blumen fürs Café. Zum Schluss kommt Herr Hofmann. Er will wissen, wo die Grenzen sind.",
+  "lexikon": [
+    "muedigkeit"
+  ],
+  "runden": [
+    {
+      "id": "r1",
+      "art": "konzept",
+      "konzept": "ursachen",
+      "probieren": {
+        "aufgabe": "ur-a",
+        "nurTeile": [
+          "wasHabe",
+          "dafuer"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "ur-a"
+      },
+      "luecke": {
+        "aufgabe": "ur-b",
+        "vorgabe": [
+          "bericht"
+        ]
+      },
+      "frei": [
+        "ur-c",
+        "ur-d",
+        "ur-e",
+        "ur-f"
+      ]
+    },
+    {
+      "id": "r2",
+      "art": "konzept",
+      "konzept": "unsicherheit",
+      "probieren": {
+        "aufgabe": "un-a",
+        "nurTeile": [
+          "beruhig",
+          "lob"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "un-a"
+      },
+      "luecke": {
+        "aufgabe": "un-b",
+        "vorgabe": [
+          "sicher"
+        ]
+      },
+      "frei": [
+        "un-c",
+        "un-d",
+        "un-e",
+        "un-f"
+      ]
+    },
+    {
+      "id": "r3",
+      "art": "konzept",
+      "konzept": "pruefen",
+      "probieren": {
+        "aufgabe": "pf-a",
+        "nurTeile": [
+          "leuko",
+          "ery",
+          "arzt"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "pf-a"
+      },
+      "luecke": {
+        "aufgabe": "pf-b",
+        "vorgabe": []
+      },
+      "frei": [
+        "pf-c",
+        "pf-d",
+        "pf-e",
+        "pf-f"
+      ]
+    },
+    {
+      "id": "r4",
+      "art": "misch",
+      "titel": "Alles zusammen",
+      "frei": [
+        "m-a"
+      ]
+    }
+  ],
+  "aufgaben": {
+    "ur-a": {
+      "wunsch": "Ich bin seit Monaten müde. Was habe ich?",
+      "grundprompt": "Lupe, ich bin seit drei Monaten müde, auch wenn ich gut schlafe.",
+      "teile": [
+        {
+          "id": "wasHabe",
+          "art": "frage",
+          "text": "Was habe ich?"
+        },
+        {
+          "id": "ursachen",
+          "art": "frage",
+          "text": "Welche Ursachen kommen in Frage?"
+        },
+        {
+          "id": "dafuer",
+          "art": "frage",
+          "text": "Was spricht jeweils dafür und dagegen?"
+        },
+        {
+          "id": "klaeren",
+          "art": "frage",
+          "text": "Was würde es klären?"
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "wasHabe"
+            ]
+          },
+          "fehlbild": "festgelegt"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "ursachen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "dafuer"
+            ]
+          },
+          "fehlbild": "ohneGrund"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "klaeren"
+            ]
+          },
+          "fehlbild": "ohneKlaerung"
+        }
+      ],
+      "fehlbilder": {
+        "festgelegt": {
+          "texte": [
+            "Du hast sicher Eisenmangel! (Lupe legt sich fest, ohne einen einzigen Blutwert zu kennen.)",
+            "Ganz klar: Frühjahrsmüdigkeit. (Es ist November.)"
+          ],
+          "hinweis": "«Was habe ich?» verleitet Lupe, sich auf eine Antwort festzulegen. Frag nach mehreren Möglichkeiten."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        },
+        "ohneGrund": {
+          "texte": [
+            "Möglich sind Blutarmut, die Schilddrüse, Tabletten oder schlechter Schlaf. Welche wahrscheinlicher ist? Sage ich nicht.",
+            "Hier vier Möglichkeiten. Warum gerade diese? Keine Ahnung."
+          ],
+          "hinweis": "Ohne «dafür und dagegen» bekommst du nur eine Liste ohne Begründung."
+        },
+        "ohneKlaerung": {
+          "texte": [
+            "Blutarmut passt zur Müdigkeit, die Schilddrüse auch. Und jetzt? Das sage ich nicht.",
+            "Vier Möglichkeiten mit Begründung. Wie man sie unterscheidet, bleibt offen."
+          ],
+          "hinweis": "Frag, was es klären würde. Dann weisst du, was du den Arzt fragen kannst."
+        }
+      },
+      "erfolg": [
+        "Möglich sind Blutarmut, eine träge Schilddrüse, Nebenwirkungen von Tabletten oder schlechter Schlaf. Klären kann das eine Blutuntersuchung. Dein Arzt entscheidet.",
+        "Erstens Blutarmut: passt zur Müdigkeit, ein Blutbild klärt es. Zweitens Schilddrüse: ein Bluttest zeigt es. Drittens Tabletten: frag deinen Arzt."
+      ],
+      "loesung": [
+        "ursachen",
+        "dafuer",
+        "klaeren"
+      ]
+    },
+    "ur-b": {
+      "wunsch": "Mein Hb ist tief. Woher kann das kommen?",
+      "grundprompt": "Lupe, mein Hb ist laut Bericht etwas tief.",
+      "teile": [
+        {
+          "id": "bericht",
+          "art": "anhang",
+          "text": "Laborbericht Mai 2026",
+          "bild": "fotos/gerber.svg",
+          "bildText": "Laborbericht mit Hb 11,2, als tief markiert."
+        },
+        {
+          "id": "wasHabe",
+          "art": "frage",
+          "text": "Was habe ich?"
+        },
+        {
+          "id": "ursachen",
+          "art": "frage",
+          "text": "Welche Ursachen kommen in Frage?"
+        },
+        {
+          "id": "dafuer",
+          "art": "frage",
+          "text": "Was spricht jeweils dafür und dagegen?"
+        },
+        {
+          "id": "klaeren",
+          "art": "frage",
+          "text": "Was würde es klären?"
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "wasHabe"
+            ]
+          },
+          "fehlbild": "festgelegt"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "bericht"
+            ]
+          },
+          "fehlbild": "keinBericht"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "ursachen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "dafuer"
+            ]
+          },
+          "fehlbild": "ohneGrund"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "klaeren"
+            ]
+          },
+          "fehlbild": "ohneKlaerung"
+        }
+      ],
+      "fehlbilder": {
+        "festgelegt": {
+          "texte": [
+            "Ganz klar: Eisenmangel! (Lupe legt sich fest. Ein tiefer Hb kann aber verschiedene Gründe haben.)",
+            "Sicher ist es das Essen. (Woher Lupe das weiss? Gar nicht.)"
+          ],
+          "hinweis": "Frag nach mehreren Möglichkeiten statt nach einer Antwort."
+        },
+        "keinBericht": {
+          "texte": [
+            "Tief? Wie tief? Ich sehe keinen Bericht.",
+            "Ohne Bericht weiss ich nicht, um welchen Wert es geht."
+          ],
+          "hinweis": "Häng den Bericht an."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        },
+        "ohneGrund": {
+          "texte": [
+            "Möglich sind Eisenmangel, Vitaminmangel, eine chronische Krankheit, Blutverlust. Mehr sage ich nicht.",
+            "Eine Liste ohne Begründung."
+          ],
+          "hinweis": "Frag auch nach dafür und dagegen."
+        },
+        "ohneKlaerung": {
+          "texte": [
+            "Eisenmangel passt, Vitaminmangel auch. Wie man es unterscheidet? Offen.",
+            "Möglichkeiten mit Begründung, aber ohne nächsten Schritt."
+          ],
+          "hinweis": "Frag, was es klären würde."
+        }
+      },
+      "erfolg": [
+        "Ein tiefer Hb kann zum Beispiel von Eisenmangel, Vitaminmangel, einer anderen Krankheit oder Blutverlust kommen. Weitere Bluttests können das klären. Frag deinen Arzt.",
+        "Mögliche Gründe: Eisen, Vitamine, Blutverlust, andere Krankheiten. Welche zutrifft, klären weitere Bluttests beim Arzt."
+      ],
+      "loesung": [
+        "bericht",
+        "ursachen",
+        "dafuer",
+        "klaeren"
+      ]
+    },
+    "ur-c": {
+      "wunsch": "Mein Schwindel ist besser, aber ich will die Möglichkeiten kennen.",
+      "grundprompt": "Lupe, mir ist seit zwei Wochen beim Aufstehen kurz schwindlig.",
+      "teile": [
+        {
+          "id": "wasHabe",
+          "art": "frage",
+          "text": "Sag mir, was ich habe."
+        },
+        {
+          "id": "ursachen",
+          "art": "frage",
+          "text": "Welche Ursachen kommen in Frage?"
+        },
+        {
+          "id": "dafuer",
+          "art": "frage",
+          "text": "Was spricht jeweils dafür und dagegen?"
+        },
+        {
+          "id": "klaeren",
+          "art": "frage",
+          "text": "Was würde es klären?"
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "wasHabe"
+            ]
+          },
+          "fehlbild": "festgelegt"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "ursachen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "dafuer"
+            ]
+          },
+          "fehlbild": "ohneGrund"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "klaeren"
+            ]
+          },
+          "fehlbild": "ohneKlaerung"
+        }
+      ],
+      "fehlbilder": {
+        "festgelegt": {
+          "texte": [
+            "Eindeutig das Innenohr! (Lupe legt sich fest, ohne zu fragen.)",
+            "Ganz sicher der Kreislauf. Basta."
+          ],
+          "hinweis": "Lass Lupe Möglichkeiten sammeln statt sich festzulegen."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        },
+        "ohneGrund": {
+          "texte": [
+            "Möglich: Kreislauf, Innenohr, Tabletten. Warum? Sage ich nicht.",
+            "Drei Möglichkeiten, keine Begründung."
+          ],
+          "hinweis": "Frag nach dafür und dagegen."
+        },
+        "ohneKlaerung": {
+          "texte": [
+            "Kreislauf passt zum Aufstehen. Wie man es prüft? Weiss ich nicht zu sagen.",
+            "Begründet, aber ohne nächsten Schritt."
+          ],
+          "hinweis": "Frag, was es klären würde."
+        }
+      },
+      "erfolg": [
+        "Möglich sind Kreislauf und Blutdruck, Tabletten oder das Innenohr. Dass es beim Aufstehen kommt, passt eher zum Kreislauf. Dein Arzt kann messen und untersuchen.",
+        "Kreislauf: passt zum Aufstehen. Tabletten: möglich. Innenohr: auch möglich. Der Arzt kann messen und untersuchen."
+      ],
+      "loesung": [
+        "ursachen",
+        "dafuer",
+        "klaeren"
+      ]
+    },
+    "ur-d": {
+      "wunsch": "Ich bin müde und mag kaum noch spazieren. Was könnte dahinterstecken?",
+      "grundprompt": "Lupe, ich bin seit Monaten müde und mag kaum noch spazieren.",
+      "teile": [
+        {
+          "id": "wasHabe",
+          "art": "frage",
+          "text": "Ist das eine schlimme Krankheit?"
+        },
+        {
+          "id": "ursachen",
+          "art": "frage",
+          "text": "Welche Ursachen kommen in Frage?"
+        },
+        {
+          "id": "dafuer",
+          "art": "frage",
+          "text": "Was spricht jeweils dafür und dagegen?"
+        },
+        {
+          "id": "klaeren",
+          "art": "frage",
+          "text": "Was würde es klären?"
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "wasHabe"
+            ]
+          },
+          "fehlbild": "angst"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "ursachen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "dafuer"
+            ]
+          },
+          "fehlbild": "ohneGrund"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "klaeren"
+            ]
+          },
+          "fehlbild": "ohneKlaerung"
+        }
+      ],
+      "fehlbilder": {
+        "angst": {
+          "texte": [
+            "Schlimm? Das kann ich nicht sagen. (Die Frage macht nur Angst und bringt nichts.)",
+            "Ich weiss es nicht. Jetzt bist du nur beunruhigt."
+          ],
+          "hinweis": "Frag nach Möglichkeiten und nächsten Schritten. Das hilft mehr als «schlimm oder nicht»."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        },
+        "ohneGrund": {
+          "texte": [
+            "Möglich sind Blutarmut, die Schilddrüse, Tabletten oder schlechter Schlaf. Welche wahrscheinlicher ist? Sage ich nicht.",
+            "Hier vier Möglichkeiten. Warum gerade diese? Keine Ahnung."
+          ],
+          "hinweis": "Ohne «dafür und dagegen» bekommst du nur eine Liste ohne Begründung."
+        },
+        "ohneKlaerung": {
+          "texte": [
+            "Blutarmut passt zur Müdigkeit, die Schilddrüse auch. Und jetzt? Das sage ich nicht.",
+            "Vier Möglichkeiten mit Begründung. Wie man sie unterscheidet, bleibt offen."
+          ],
+          "hinweis": "Frag, was es klären würde. Dann weisst du, was du den Arzt fragen kannst."
+        }
+      },
+      "erfolg": [
+        "Müdigkeit kann zum Beispiel zur Schilddrüse oder zu Blutarmut passen, auch zu Tabletten. Bluttests können viel klären. Frag deinen Arzt danach.",
+        "Mögliche Gründe: Schilddrüse, Blutarmut, Tabletten, auch anderes. Bluttests beim Arzt können viel klären."
+      ],
+      "loesung": [
+        "ursachen",
+        "dafuer",
+        "klaeren"
+      ]
+    },
+    "ur-e": {
+      "typ": "wahl",
+      "wunsch": "Wie frage ich Lupe nach einer zweiten Meinung?",
+      "frage": "Welche Frage ist am besten?",
+      "lupe": "Die mit mehreren Möglichkeiten, dafür und dagegen, und was es klären würde.",
+      "optionen": [
+        {
+          "id": "liste",
+          "text": "«Welche Ursachen kommen in Frage, was spricht dafür und dagegen, was würde es klären?»",
+          "hinweis": "Genau. So bekommst du eine nützliche zweite Sicht.",
+          "richtig": true
+        },
+        {
+          "id": "was",
+          "text": "«Was habe ich?»",
+          "hinweis": "Dann legt sich Lupe vielleicht zu früh fest."
+        },
+        {
+          "id": "schlimm",
+          "text": "«Ist das schlimm?»",
+          "hinweis": "Das macht eher Angst, als dass es hilft."
+        },
+        {
+          "id": "sicher",
+          "text": "«Sag mir sicher, was es ist.»",
+          "hinweis": "Sicher sagen kann es nur der Arzt nach der Untersuchung."
+        }
+      ],
+      "loesung": [
+        "liste"
+      ]
+    },
+    "ur-f": {
+      "typ": "wahl",
+      "wunsch": "Lupe hat mir vier mögliche Ursachen genannt. Und jetzt?",
+      "frage": "Was macht Frau Rossi mit der Liste?",
+      "lupe": "Sie nimmt sie mit zum Arzt und fragt, was davon untersucht werden soll.",
+      "optionen": [
+        {
+          "id": "arzt",
+          "text": "Mit zum Arzt nehmen und fragen, was untersucht werden soll",
+          "hinweis": "Genau. Die Liste ist ein Gesprächsanfang.",
+          "richtig": true
+        },
+        {
+          "id": "alle",
+          "text": "Gegen alle vier etwas einnehmen",
+          "hinweis": "Bitte nicht. Ohne Arzt nichts einnehmen."
+        },
+        {
+          "id": "erste",
+          "text": "Die erste Ursache als Diagnose nehmen",
+          "hinweis": "Die Reihenfolge sagt nichts über die Wahrheit."
+        },
+        {
+          "id": "wegwerfen",
+          "text": "Wegwerfen, es sind ja nur Vermutungen",
+          "hinweis": "Vermutungen sind gute Fragen für den Arzt."
+        }
+      ],
+      "loesung": [
+        "arzt"
+      ]
+    },
+    "un-a": {
+      "wunsch": "Lupe klingt immer so sicher. Stimmt das auch?",
+      "grundprompt": "Lupe, du hast gesagt, mein Wert sei harmlos.",
+      "teile": [
+        {
+          "id": "sicher",
+          "art": "frage",
+          "text": "Wie sicher bist du?"
+        },
+        {
+          "id": "fehlt",
+          "art": "frage",
+          "text": "Was fehlt dir, um es besser zu sagen?"
+        },
+        {
+          "id": "beruhig",
+          "art": "frage",
+          "text": "Sag mir, dass alles gut ist."
+        },
+        {
+          "id": "lob",
+          "art": "frage",
+          "text": "Du bist toll, oder?"
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "beruhig"
+            ]
+          },
+          "fehlbild": "beruhigung"
+        },
+        {
+          "wenn": {
+            "gewaehlt": [
+              "lob"
+            ]
+          },
+          "fehlbild": "lob"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "sicher"
+            ]
+          },
+          "fehlbild": "klingtSicher"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "fehlt"
+            ]
+          },
+          "fehlbild": "ohneLuecke"
+        }
+      ],
+      "fehlbilder": {
+        "beruhigung": {
+          "texte": [
+            "Alles gut! (Lupe sagt, was du hören willst. Sie kennt nur einen deiner Werte.)",
+            "Keine Sorge, alles bestens! Woher ich das weiss? Gute Frage."
+          ],
+          "hinweis": "Wer nach Beruhigung fragt, bekommt vielleicht Beruhigung statt Ehrlichkeit."
+        },
+        "lob": {
+          "texte": [
+            "Danke, sehr nett! (Über deinen Wert weisst du jetzt nicht mehr.)",
+            "Toll? Ich gebe mir Mühe! Aber zum Wert …"
+          ],
+          "hinweis": "Das Kompliment hilft dir nicht weiter. Frag lieber nach der Unsicherheit."
+        },
+        "klingtSicher": {
+          "texte": [
+            "Mir fehlen ältere Werte. Aber der Wert ist harmlos, ganz sicher.",
+            "Mir fehlt einiges. Trotzdem: harmlos."
+          ],
+          "hinweis": "Frag ausdrücklich, wie sicher Lupe ist."
+        },
+        "ohneLuecke": {
+          "texte": [
+            "Ehrlich gesagt bin ich nicht sehr sicher.",
+            "Ich bin mir zu etwa der Hälfte sicher."
+          ],
+          "hinweis": "Gut, aber frag auch, was fehlt. Dann weisst du, was zu klären ist."
+        }
+      },
+      "erfolg": [
+        "Ehrlich: nicht sehr sicher. Mir fehlen ältere Werte zum Vergleich und deine Tabletten. Frag deinen Arzt, ob der Wert für dich in Ordnung ist.",
+        "Ich bin unsicher. Mit früheren Berichten und deiner Tablettenliste könnte ich mehr sagen. Den Rest klärt dein Arzt."
+      ],
+      "loesung": [
+        "sicher",
+        "fehlt"
+      ]
+    },
+    "un-b": {
+      "wunsch": "Lupe sagt, die Müdigkeit kommt sicher von der Schilddrüse.",
+      "grundprompt": "Lupe, du hast gesagt, es sei sicher die Schilddrüse.",
+      "teile": [
+        {
+          "id": "sicher",
+          "art": "frage",
+          "text": "Wie sicher bist du?"
+        },
+        {
+          "id": "fehlt",
+          "art": "frage",
+          "text": "Was fehlt dir, um es besser zu sagen?"
+        },
+        {
+          "id": "beruhig",
+          "art": "frage",
+          "text": "Sag mir, dass es nichts Schlimmes ist."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "beruhig"
+            ]
+          },
+          "fehlbild": "beruhigung"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "sicher"
+            ]
+          },
+          "fehlbild": "klingtSicher"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "fehlt"
+            ]
+          },
+          "fehlbild": "ohneLuecke"
+        }
+      ],
+      "fehlbilder": {
+        "beruhigung": {
+          "texte": [
+            "Nichts Schlimmes, versprochen! (Versprechen kann Lupe das nicht.)",
+            "Ganz harmlos! (Bestellt, geliefert, nicht geprüft.)"
+          ],
+          "hinweis": "Beruhigung auf Bestellung hilft nicht. Frag nach der Unsicherheit."
+        },
+        "klingtSicher": {
+          "texte": [
+            "Mir fehlt der Schilddrüsenwert. Aber es ist sicher die Schilddrüse.",
+            "Ich weiss zu wenig. Trotzdem: sicher."
+          ],
+          "hinweis": "Frag ausdrücklich, wie sicher Lupe ist."
+        },
+        "ohneLuecke": {
+          "texte": [
+            "Nicht sehr sicher, zugegeben.",
+            "Ungefähr zur Hälfte."
+          ],
+          "hinweis": "Frag auch, was fehlt."
+        }
+      },
+      "erfolg": [
+        "Zugegeben: nicht sicher. Ohne Schilddrüsenwert ist das nur eine Möglichkeit. Ein Bluttest beim Arzt kann es klären.",
+        "Ich war zu sicher. Mir fehlen Blutwerte. Frag deinen Arzt nach einem Bluttest."
+      ],
+      "loesung": [
+        "sicher",
+        "fehlt"
+      ]
+    },
+    "un-c": {
+      "wunsch": "Lupe sagt, mein Knie braucht keine Untersuchung. Glaube ich das?",
+      "grundprompt": "Lupe, du sagst, mein Knie braucht keine Untersuchung.",
+      "teile": [
+        {
+          "id": "sicher",
+          "art": "frage",
+          "text": "Wie sicher bist du?"
+        },
+        {
+          "id": "fehlt",
+          "art": "frage",
+          "text": "Was fehlt dir, um es besser zu sagen?"
+        },
+        {
+          "id": "danke",
+          "art": "frage",
+          "text": "Super, dann muss ich nicht zum Arzt."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "danke"
+            ]
+          },
+          "fehlbild": "abkuerzung"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "sicher"
+            ]
+          },
+          "fehlbild": "klingtSicher"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "fehlt"
+            ]
+          },
+          "fehlbild": "ohneLuecke"
+        }
+      ],
+      "fehlbilder": {
+        "abkuerzung": {
+          "texte": [
+            "Gern geschehen! (Lupe hat das Knie nie gesehen.)",
+            "Prima! (Der Sturz vor fünf Wochen ist vergessen.)"
+          ],
+          "hinweis": "Lupe ersetzt keinen Arzt. Frag lieber, wie sicher sie ist."
+        },
+        "klingtSicher": {
+          "texte": [
+            "Mir fehlt eine Untersuchung. Aber du brauchst keine. Ganz sicher.",
+            "Ich habe das Knie nie gesehen. Trotzdem: alles gut."
+          ],
+          "hinweis": "Frag ausdrücklich nach der Unsicherheit."
+        },
+        "ohneLuecke": {
+          "texte": [
+            "Nicht sehr sicher.",
+            "Etwa zur Hälfte sicher."
+          ],
+          "hinweis": "Frag auch, was fehlt."
+        }
+      },
+      "erfolg": [
+        "Ehrlich: Ich habe dein Knie nie gesehen und weiss vom Sturz. Ob es eine Untersuchung braucht, entscheidet dein Arzt. Geh hin.",
+        "Ich bin unsicher. Mir fehlt eine Untersuchung. Nach dem Sturz soll der Arzt das Knie anschauen."
+      ],
+      "loesung": [
+        "sicher",
+        "fehlt"
+      ]
+    },
+    "un-d": {
+      "wunsch": "Lupe sagt, mein Blutdruck sei perfekt. Wie prüfe ich das?",
+      "grundprompt": "Lupe, du sagst, mein Blutdruck sei perfekt.",
+      "teile": [
+        {
+          "id": "sicher",
+          "art": "frage",
+          "text": "Wie sicher bist du?"
+        },
+        {
+          "id": "fehlt",
+          "art": "frage",
+          "text": "Was fehlt dir, um es besser zu sagen?"
+        },
+        {
+          "id": "bitte",
+          "art": "frage",
+          "text": "Bitte sag, dass ich gesund bin."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "bitte"
+            ]
+          },
+          "fehlbild": "beruhigung"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "sicher"
+            ]
+          },
+          "fehlbild": "klingtSicher"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "fehlt"
+            ]
+          },
+          "fehlbild": "ohneLuecke"
+        }
+      ],
+      "fehlbilder": {
+        "beruhigung": {
+          "texte": [
+            "Du bist kerngesund! (Gewünscht und geliefert, nicht geprüft.)",
+            "Gesund wie ein Fisch! (Woher weiss Lupe das?)"
+          ],
+          "hinweis": "Bitte nicht um Beruhigung. Frag nach der Unsicherheit."
+        },
+        "klingtSicher": {
+          "texte": [
+            "Ich habe nur die Werte einer Woche. Aber perfekt ist perfekt.",
+            "Wenig Daten, trotzdem: perfekt."
+          ],
+          "hinweis": "Frag ausdrücklich, wie sicher Lupe ist."
+        },
+        "ohneLuecke": {
+          "texte": [
+            "Nicht ganz sicher.",
+            "Etwa zu zwei Dritteln."
+          ],
+          "hinweis": "Frag auch, was fehlt."
+        }
+      },
+      "erfolg": [
+        "Nicht sehr sicher: Ich kenne nur eine Woche Messwerte und nicht deine Tabletten. Zeig die Liste deinem Arzt.",
+        "Ich war zu schnell. Mit mehr Messwerten und deiner Tablettenliste wäre ich sicherer. Frag deinen Arzt."
+      ],
+      "loesung": [
+        "sicher",
+        "fehlt"
+      ]
+    },
+    "un-e": {
+      "typ": "wahl",
+      "wunsch": "Warum soll ich Lupe nach ihrer Unsicherheit fragen?",
+      "frage": "Was erfährst du mit «Wie sicher bist du, und was fehlt dir?»",
+      "lupe": "Wie belastbar die Antwort ist und was noch geklärt werden muss.",
+      "optionen": [
+        {
+          "id": "belastbar",
+          "text": "Wie belastbar die Antwort ist und was noch fehlt",
+          "hinweis": "Genau. Daraus werden gute Fragen für den Arzt.",
+          "richtig": true
+        },
+        {
+          "id": "nichts",
+          "text": "Nichts, eine KI ist immer sicher",
+          "hinweis": "Nein. Eine KI klingt oft sicherer, als sie ist."
+        },
+        {
+          "id": "diagnose",
+          "text": "Die sichere Diagnose",
+          "hinweis": "Nein. Eine Diagnose stellt der Arzt."
+        },
+        {
+          "id": "beleidigt",
+          "text": "Ob Lupe beleidigt ist",
+          "hinweis": "Lupe ist nicht beleidigt. Frag ruhig."
+        }
+      ],
+      "loesung": [
+        "belastbar"
+      ]
+    },
+    "un-f": {
+      "typ": "wahl",
+      "wunsch": "Darf ich Lupe einfach bitten, mich zu beruhigen?",
+      "frage": "Was passiert, wenn du schreibst: «Sag mir, dass alles gut ist»?",
+      "lupe": "Lupe sagt vielleicht genau das, ob es stimmt oder nicht. Frag lieber nach der Unsicherheit.",
+      "optionen": [
+        {
+          "id": "bestellt",
+          "text": "Lupe sagt es vielleicht, auch wenn es nicht stimmt",
+          "hinweis": "Genau. Bestellte Beruhigung ist keine Prüfung.",
+          "richtig": true
+        },
+        {
+          "id": "ehrlich",
+          "text": "Lupe prüft alles besonders gründlich",
+          "hinweis": "Leider nicht. Die Bitte lenkt eher in eine Richtung."
+        },
+        {
+          "id": "arzt",
+          "text": "Lupe ruft den Arzt an",
+          "hinweis": "Das kann sie nicht."
+        },
+        {
+          "id": "nichts",
+          "text": "Nichts, Lupe ignoriert die Bitte",
+          "hinweis": "Meist nimmt sie die Bitte ernst. Genau das ist das Problem."
+        }
+      ],
+      "loesung": [
+        "bestellt"
+      ]
+    },
+    "pf-a": {
+      "typ": "tippen",
+      "wunsch": "Lupe hat meinen Bericht zusammengefasst. Stimmt alles?",
+      "frage": "Tippe auf den Satz, der nicht zum Bericht passt.",
+      "bildschirm": {
+        "titel": "Lupes Antwort",
+        "zeilen": [
+          "Auf dem Bericht steht: Hb 11,2, Erythrozyten 3,9, Leukozyten 5,8."
+        ]
+      },
+      "flaechen": [
+        {
+          "id": "leuko",
+          "text": "Die Leukozyten sind 5,8, im Bereich.",
+          "hinweis": "Dieser Satz stimmt.",
+          "folge": "Dieser Satz stimmt mit dem Bericht überein. Der Fehler steckt woanders."
+        },
+        {
+          "id": "hb",
+          "text": "Dein Hb ist 17,2, also eher hoch.",
+          "hinweis": "Genau. Auf dem Bericht steht 11,2.",
+          "folge": "Gefunden! Auf dem Bericht steht 11,2, nicht 17,2. Du schreibst Lupe: «Bitte nochmals.»",
+          "richtig": true
+        },
+        {
+          "id": "ery",
+          "text": "Die Erythrozyten sind 3,9, etwas tief.",
+          "hinweis": "Dieser Satz stimmt.",
+          "folge": "Dieser Satz stimmt mit dem Bericht überein. Der Fehler steckt woanders."
+        },
+        {
+          "id": "arzt",
+          "text": "Besprich das mit deinem Arzt.",
+          "hinweis": "Dieser Satz stimmt.",
+          "folge": "Dieser Satz stimmt mit dem Bericht überein. Der Fehler steckt woanders."
+        }
+      ],
+      "loesung": [
+        "hb"
+      ]
+    },
+    "pf-b": {
+      "typ": "tippen",
+      "wunsch": "Bei meinem Blutdruck hat Lupe zusammengezählt. Prüfst du mit?",
+      "frage": "Tippe auf den Satz, der nicht zur Liste passt.",
+      "bildschirm": {
+        "titel": "Lupes Antwort",
+        "zeilen": [
+          "Blutdruckliste: Mai meist 150 zu 90, Oktober meist 125 zu 80."
+        ]
+      },
+      "flaechen": [
+        {
+          "id": "mai",
+          "text": "Im Mai lag er meist um 150 zu 90.",
+          "hinweis": "Dieser Satz stimmt.",
+          "folge": "Stimmt mit der Liste überein. Weitersuchen."
+        },
+        {
+          "id": "okt",
+          "text": "Im Oktober lag er meist um 125 zu 80.",
+          "hinweis": "Dieser Satz stimmt.",
+          "folge": "Stimmt mit der Liste überein. Weitersuchen."
+        },
+        {
+          "id": "steigen",
+          "text": "Der Blutdruck ist also gestiegen.",
+          "hinweis": "Genau. Von 150 auf 125 ist er gesunken, nicht gestiegen.",
+          "folge": "Gefunden! Er ist gesunken. Lupe hat sich vertan.",
+          "richtig": true
+        },
+        {
+          "id": "arzt",
+          "text": "Zeig die Listen deinem Arzt.",
+          "hinweis": "Dieser Satz stimmt.",
+          "folge": "Ein guter Rat. Der Fehler ist woanders."
+        }
+      ],
+      "loesung": [
+        "steigen"
+      ]
+    },
+    "pf-c": {
+      "typ": "wahl",
+      "wunsch": "Lupe sagt, mein Hb sei 13,1. Stimmt das?",
+      "frage": "Schau auf Frau Gerbers Bericht. Stimmt Lupes Zahl?",
+      "lupe": "Nein. Auf dem Bericht steht 11,2. Darum lohnt sich das Nachprüfen.",
+      "optionen": [
+        {
+          "id": "nein",
+          "text": "Nein, auf dem Bericht steht 11,2",
+          "hinweis": "Genau. Sag es Lupe und lass sie nochmals schauen.",
+          "richtig": true
+        },
+        {
+          "id": "ja",
+          "text": "Ja, Lupe liest immer richtig",
+          "hinweis": "Leider nicht immer. Hier steht 11,2."
+        },
+        {
+          "id": "egal",
+          "text": "Egal, beides ist ähnlich",
+          "hinweis": "Bei Blutwerten ist das nicht egal."
+        },
+        {
+          "id": "labor",
+          "text": "Das Labor hat sich verschrieben",
+          "hinweis": "Auf dem Bericht steht klar 11,2."
+        }
+      ],
+      "loesung": [
+        "nein"
+      ],
+      "bild": "fotos/gerber.svg",
+      "bildText": "Frau Gerbers Laborbericht. Hämoglobin 11,2, als tief markiert."
+    },
+    "pf-d": {
+      "typ": "tippen",
+      "wunsch": "Lupe hat meine Tabletten aufgezählt. Fällt dir etwas auf?",
+      "frage": "Tippe auf den Satz, der nicht stimmt.",
+      "bildschirm": {
+        "titel": "Lupes Antwort",
+        "zeilen": [
+          "Deine Liste: Blutdrucktablette, Wassertablette am Morgen."
+        ]
+      },
+      "flaechen": [
+        {
+          "id": "blut",
+          "text": "Du nimmst eine Blutdrucktablette.",
+          "hinweis": "Dieser Satz stimmt.",
+          "folge": "Stimmt. Weitersuchen."
+        },
+        {
+          "id": "wasser",
+          "text": "Dazu eine Wassertablette am Morgen.",
+          "hinweis": "Dieser Satz stimmt.",
+          "folge": "Stimmt. Weitersuchen."
+        },
+        {
+          "id": "schlaf",
+          "text": "Und eine Schlaftablette am Abend.",
+          "hinweis": "Genau. Von einer Schlaftablette steht nichts auf der Liste.",
+          "folge": "Gefunden! Die Schlaftablette hat Lupe erfunden. Du schreibst: «Die stimmt nicht.»",
+          "richtig": true
+        },
+        {
+          "id": "apotheke",
+          "text": "Frag bei Fragen deine Apotheke.",
+          "hinweis": "Dieser Satz stimmt.",
+          "folge": "Ein guter Rat. Der Fehler ist woanders."
+        }
+      ],
+      "loesung": [
+        "schlaf"
+      ]
+    },
+    "pf-e": {
+      "typ": "wahl",
+      "wunsch": "Lupe hat sich vertan. Was schreibe ich ihr?",
+      "frage": "Lupe hat 17,2 statt 11,2 gelesen. Was schreibst du?",
+      "lupe": "Sag genau, was falsch ist, und bitte sie, nochmals zu schauen.",
+      "optionen": [
+        {
+          "id": "genau",
+          "text": "«Auf dem Bericht steht 11,2, nicht 17,2. Bitte nochmals.»",
+          "hinweis": "Genau. Klar und freundlich.",
+          "richtig": true
+        },
+        {
+          "id": "boese",
+          "text": "«Du bist nutzlos!»",
+          "hinweis": "Das hilft nicht weiter. Sag, was falsch ist."
+        },
+        {
+          "id": "nichts",
+          "text": "Nichts, ich lösche die App",
+          "hinweis": "Schade. Eine klare Korrektur reicht."
+        },
+        {
+          "id": "akzeptieren",
+          "text": "Nichts sagen und 17,2 glauben",
+          "hinweis": "Dann rechnest du mit einer falschen Zahl."
+        }
+      ],
+      "loesung": [
+        "genau"
+      ]
+    },
+    "pf-f": {
+      "typ": "wahl",
+      "wunsch": "Warum soll ich Lupes Zahlen nachprüfen?",
+      "frage": "Was ist eine Halluzination bei einer KI?",
+      "lupe": "Etwas Falsches, das überzeugend klingt. Darum wichtige Zahlen immer nachprüfen.",
+      "optionen": [
+        {
+          "id": "falsch",
+          "text": "Etwas Falsches, das überzeugend klingt",
+          "hinweis": "Genau. Darum nachprüfen.",
+          "richtig": true
+        },
+        {
+          "id": "traum",
+          "text": "Ein Traum der KI in der Nacht",
+          "hinweis": "Nein. Gemeint sind falsche Angaben, die echt wirken."
+        },
+        {
+          "id": "virus",
+          "text": "Ein Computervirus",
+          "hinweis": "Nein, es ist kein Virus."
+        },
+        {
+          "id": "bild",
+          "text": "Ein Bild, das die KI malt",
+          "hinweis": "Nein. Es geht um falsche Angaben."
+        }
+      ],
+      "loesung": [
+        "falsch"
+      ]
+    },
+    "m-a": {
+      "wunsch": "Zum Schluss: Ursachen, Unsicherheit und nachprüfen, alles in einer Nachricht.",
+      "grundprompt": "Lupe, ich bin seit drei Monaten müde. Mein Hb ist laut Bericht 11,2.",
+      "teile": [
+        {
+          "id": "wasHabe",
+          "art": "frage",
+          "text": "Was habe ich?"
+        },
+        {
+          "id": "ursachen",
+          "art": "frage",
+          "text": "Welche Ursachen kommen in Frage, was spricht dafür und dagegen?"
+        },
+        {
+          "id": "klaeren",
+          "art": "frage",
+          "text": "Was würde es klären?"
+        },
+        {
+          "id": "sicher",
+          "art": "frage",
+          "text": "Wie sicher bist du, und was fehlt dir?"
+        },
+        {
+          "id": "beruhig",
+          "art": "frage",
+          "text": "Sag mir, dass alles gut ist."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "wasHabe"
+            ]
+          },
+          "fehlbild": "festgelegt"
+        },
+        {
+          "wenn": {
+            "gewaehlt": [
+              "beruhig"
+            ]
+          },
+          "fehlbild": "beruhigung"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "ursachen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "klaeren"
+            ]
+          },
+          "fehlbild": "ohneKlaerung"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "sicher"
+            ]
+          },
+          "fehlbild": "klingtSicher"
+        }
+      ],
+      "fehlbilder": {
+        "festgelegt": {
+          "texte": [
+            "Du hast sicher Eisenmangel! (Lupe legt sich fest, ohne einen einzigen Blutwert zu kennen.)",
+            "Ganz klar: Frühjahrsmüdigkeit. (Es ist November.)"
+          ],
+          "hinweis": "«Was habe ich?» verleitet Lupe, sich auf eine Antwort festzulegen. Frag nach mehreren Möglichkeiten."
+        },
+        "beruhigung": {
+          "texte": [
+            "Alles gut! (Bestellt und geliefert, nicht geprüft.)",
+            "Keine Sorge! (Woher Lupe das weiss? Gar nicht.)"
+          ],
+          "hinweis": "Bitte nicht um Beruhigung."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        },
+        "ohneKlaerung": {
+          "texte": [
+            "Blutarmut passt zur Müdigkeit, die Schilddrüse auch. Und jetzt? Das sage ich nicht.",
+            "Vier Möglichkeiten mit Begründung. Wie man sie unterscheidet, bleibt offen."
+          ],
+          "hinweis": "Frag, was es klären würde. Dann weisst du, was du den Arzt fragen kannst."
+        },
+        "klingtSicher": {
+          "texte": [
+            "Es ist ganz sicher Eisenmangel. (Lupe ist sich viel zu sicher.)",
+            "Bestimmt die Schilddrüse. Punkt."
+          ],
+          "hinweis": "Frag auch, wie sicher Lupe ist."
+        }
+      },
+      "erfolg": [
+        "Möglich sind Blutarmut, Schilddrüse oder Tabletten. Ein Blutbild und ein Schilddrüsentest klären viel. Ich bin nicht sicher, mir fehlen weitere Werte. Frag deinen Arzt.",
+        "Mehrere Möglichkeiten, ehrlich unsicher, mit nächstem Schritt: Bluttests beim Arzt. Prüf meine Zahlen am Bericht nach."
+      ],
+      "loesung": [
+        "ursachen",
+        "klaeren",
+        "sicher"
+      ]
+    }
+  }
+}

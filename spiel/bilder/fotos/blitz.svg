@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400" role="img"><title>Blitz-Spiegelung: ein weisser Fleck verdeckt die Werte</title><defs><radialGradient id="glanz"><stop offset="0" stop-color="#ffffff" stop-opacity="1"/><stop offset="0.55" stop-color="#ffffff" stop-opacity="0.95"/><stop offset="1" stop-color="#ffffff" stop-opacity="0"/></radialGradient></defs><rect x="0" y="0" width="300" height="400" fill="#b8875a"/><path d="M0 60 Q150 50 300 70 M0 170 Q150 160 300 180 M0 290 Q150 280 300 300" stroke="#a5764b" stroke-width="3" fill="none"/><rect x="34" y="45" width="240" height="320" fill="#000" opacity="0.18"/><g transform="translate(30 40) scale(1.0)"><rect x="0" y="0" width="240" height="320" fill="#ffffff" stroke="#d0d0d0"/>
+<rect x="0" y="0" width="240" height="34" fill="#2f5d8a"/>
+<text x="12" y="22" font-size="13" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">Labor Hinterwil</text>
+<text x="12" y="56" font-size="15" font-weight="700" fill="#1a1a1a" font-family="Arial, sans-serif">Laborbericht</text>
+<text x="12" y="74" font-size="9" fill="#333" font-family="Arial, sans-serif">Patientin: Erika Meier</text>
+<text x="12" y="86" font-size="9" fill="#333" font-family="Arial, sans-serif">Datum: 3. März 2026</text>
+<line x1="12" y1="96" x2="228" y2="96" stroke="#999" stroke-width="0.8"/>
+<text x="12" y="108" font-size="7.5" fill="#555" font-family="Arial, sans-serif">Wert</text>
+<text x="118" y="108" font-size="7.5" fill="#555" font-family="Arial, sans-serif">Ergebnis</text>
+<text x="176" y="108" font-size="7.5" fill="#555" font-family="Arial, sans-serif">Referenz</text>
+<text x="12" y="126" font-size="9" fill="#1a1a1a" font-family="Arial, sans-serif">Hämoglobin (Hb)</text>
+<text x="118" y="126" font-size="10" font-weight="700" fill="#1a1a1a" font-family="Arial, sans-serif">13,1 </text>
+<text x="150" y="136" font-size="6.5" fill="#555" font-family="Arial, sans-serif">g/dl</text>
+<text x="176" y="126" font-size="8.5" fill="#333" font-family="Arial, sans-serif">12,0–16,0</text>
+<line x1="12" y1="140" x2="228" y2="140" stroke="#e2e2e2" stroke-width="0.6"/>
+<text x="12" y="156" font-size="9" fill="#1a1a1a" font-family="Arial, sans-serif">Leukozyten</text>
+<text x="118" y="156" font-size="10" font-weight="700" fill="#1a1a1a" font-family="Arial, sans-serif">6,2 </text>
+<text x="150" y="166" font-size="6.5" fill="#555" font-family="Arial, sans-serif">G/l</text>
+<text x="176" y="156" font-size="8.5" fill="#333" font-family="Arial, sans-serif">4,0–10,0</text>
+<line x1="12" y1="170" x2="228" y2="170" stroke="#e2e2e2" stroke-width="0.6"/>
+<text x="12" y="186" font-size="9" fill="#1a1a1a" font-family="Arial, sans-serif">Thrombozyten</text>
+<text x="118" y="186" font-size="10" font-weight="700" fill="#1a1a1a" font-family="Arial, sans-serif">245 </text>
+<text x="150" y="196" font-size="6.5" fill="#555" font-family="Arial, sans-serif">G/l</text>
+<text x="176" y="186" font-size="8.5" fill="#333" font-family="Arial, sans-serif">150–400</text>
+<line x1="12" y1="200" x2="228" y2="200" stroke="#e2e2e2" stroke-width="0.6"/>
+<text x="12" y="216" font-size="9" fill="#1a1a1a" font-family="Arial, sans-serif">Cholesterin</text>
+<text x="118" y="216" font-size="10" font-weight="700" fill="#1a1a1a" font-family="Arial, sans-serif">5,1 </text>
+<text x="150" y="226" font-size="6.5" fill="#555" font-family="Arial, sans-serif">mmol/l</text>
+<text x="176" y="216" font-size="8.5" fill="#333" font-family="Arial, sans-serif">unter 5,2</text>
+<line x1="12" y1="230" x2="228" y2="230" stroke="#e2e2e2" stroke-width="0.6"/>
+<line x1="12" y1="290" x2="228" y2="290" stroke="#999" stroke-width="0.8"/>
+<text x="228" y="305" font-size="8" fill="#555" text-anchor="end" font-family="Arial, sans-serif">Seite 1 von 2</text></g><ellipse cx="160" cy="185" rx="95" ry="70" fill="url(#glanz)"/></svg>

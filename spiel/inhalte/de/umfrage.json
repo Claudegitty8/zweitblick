@@ -1,0 +1,118 @@
+{
+  "fragen": [
+    {
+      "id": "foto",
+      "frage": "Du schickst einer KI ein Foto deines Laborberichts. Was ist am wichtigsten?",
+      "optionen": [
+        {
+          "id": "lesbar",
+          "text": "Ganzes Blatt, scharf, hell und gut lesbar",
+          "richtig": true
+        },
+        {
+          "id": "schnell",
+          "text": "Möglichst schnell abdrücken"
+        },
+        {
+          "id": "blitz",
+          "text": "Immer mit Blitz"
+        }
+      ]
+    },
+    {
+      "id": "automatisch",
+      "frage": "Kommen deine Arztberichte in [[land]] von selbst zu Claude?",
+      "optionen": [
+        {
+          "id": "nein",
+          "text": "Nein, ich muss sie selbst holen und hochladen",
+          "richtig": true
+        },
+        {
+          "id": "ja",
+          "text": "Ja, automatisch"
+        },
+        {
+          "id": "apple",
+          "text": "Ja, über Apple Health"
+        }
+      ]
+    },
+    {
+      "id": "ursachen",
+      "frage": "Eine KI nennt dir vier mögliche Ursachen für deine Müdigkeit. Was heisst das?",
+      "optionen": [
+        {
+          "id": "vermutung",
+          "text": "Vermutungen, die ich mit dem Arzt bespreche",
+          "richtig": true
+        },
+        {
+          "id": "diagnose",
+          "text": "Eine sichere Diagnose"
+        },
+        {
+          "id": "alle",
+          "text": "Ich habe alle vier Krankheiten"
+        }
+      ]
+    },
+    {
+      "id": "training",
+      "frage": "Wo stellst du ein, dass deine Chats nicht zum Training der KI genutzt werden?",
+      "optionen": [
+        {
+          "id": "datenschutz",
+          "text": "In den Einstellungen unter Datenschutz",
+          "richtig": true
+        },
+        {
+          "id": "nirgends",
+          "text": "Das geht nicht"
+        },
+        {
+          "id": "arzt",
+          "text": "Beim Hausarzt"
+        }
+      ]
+    },
+    {
+      "id": "notfall",
+      "frage": "Seit zehn Minuten drückt es auf deiner Brust. Was tust du?",
+      "optionen": [
+        {
+          "id": "notruf",
+          "text": "Sofort [[notruf]] anrufen",
+          "richtig": true
+        },
+        {
+          "id": "ki",
+          "text": "Zuerst die KI fragen"
+        },
+        {
+          "id": "warten",
+          "text": "Bis morgen abwarten"
+        }
+      ]
+    },
+    {
+      "id": "projekt",
+      "frage": "Wozu dient ein Projekt in Claude?",
+      "optionen": [
+        {
+          "id": "ort",
+          "text": "Berichte und eine Anweisung liegen an einem Ort, jeder Chat darin kennt sie",
+          "richtig": true
+        },
+        {
+          "id": "teilen",
+          "text": "Damit alle meine Chats sehen"
+        },
+        {
+          "id": "abo",
+          "text": "Es ist ein teures Zusatzangebot"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,720 @@
+{
+  "app": {
+    "titel": "Zweitblick",
+    "untertitel": "Das Gesundheits-Café von Hinterwil",
+    "fuss": "Zweitblick, Version 0.9 · inoffiziell, kein Angebot von Anthropic oder Apple",
+    "lupeName": "Lupe, die Übungs-KI",
+    "lupeWillkommen": "Hallo! Ich bin Lupe, eine Übungs-KI. Ich sehe viel, aber ich weiss nur, was du mir gibst.",
+    "lupeNeu": "Willkommen im Gesundheits-Café! Gleich kommt der erste Gast. Wir helfen zusammen.",
+    "lupeLaeuft": "Unser Gast wartet noch. Machen wir weiter?",
+    "lupeNaechster": "Die Tür geht auf. Ein neuer Gast kommt ins Café!",
+    "lupeFertig": "Alle Gäste sind zufrieden. Du weisst jetzt, wie man mit KI die eigenen Befunde besser versteht.",
+    "lupeBereit": "Ich bin bereit. Stell deine Nachricht zusammen und schick sie mir.",
+    "lupeFrage": "Ich warte auf deine Antwort.",
+    "cafeBild": "Das Café: {besetzt} von {anzahl} Tischen sind besetzt.",
+    "leisteName": "Kopfleiste",
+    "zurueck": "Zurück zum Café",
+    "navName": "Hauptbereiche",
+    "navCafe": "Café",
+    "navSpickzettel": "Spickzettel",
+    "navLexikon": "Lexikon",
+    "navHilfe": "Hilfe und Einstellungen",
+    "notrufZeile": "Im Notfall nicht chatten: sofort [[notruf]] anrufen.",
+    "landFrage": "Wo wohnst du?",
+    "landInfo": "Davon hängen die Notrufnummer und die Wege zu deinen Arztberichten ab.",
+    "landName": {
+      "ch": "Schweiz",
+      "de": "Deutschland"
+    },
+    "landSpaeter": "Du kannst das später unter «Hilfe und Einstellungen» ändern.",
+    "landEtikett": "Wo wohnst du?",
+    "landGeaendert": "Gespeichert. Die Texte passen jetzt zu deinem Land.",
+    "besuchEtikett": "Nächster Gast",
+    "besuchRunden": "Darum geht es bei diesem Besuch:",
+    "besuchStarten": "Besuch beginnen",
+    "weiterUeben": "Weiter üben",
+    "allesFertig": "Alle Gäste waren da. Schau dir den Spickzettel an und probier es in der echten App.",
+    "alleBesucheEtikett": "Alle Besuche",
+    "besuchErledigt": "erledigt",
+    "besuchDran": "jetzt dran",
+    "besuchKommt": "kommt noch",
+    "meisterschaftEtikett": "Das kannst du schon",
+    "punkteLabel": "{erfolge} von {noetig} geschafft",
+    "homeTitel": "Tipp: Zweitblick aufs Home-Bildschirm legen",
+    "homeWarum": "Safari löscht den Spielstand, wenn du die Seite länger nicht besuchst. Als Symbol auf dem Home-Bildschirm passiert das nicht.",
+    "homeSchritte": [
+      "Tippe unten in Safari auf das Teilen-Symbol (Viereck mit Pfeil nach oben).",
+      "Wähle «Zum Home-Bildschirm».",
+      "Tippe auf «Hinzufügen». Öffne Zweitblick ab jetzt über das neue Symbol."
+    ],
+    "rundeEtikett": "Runde {nr} von {anzahl}",
+    "schritteName": "Schritte dieser Runde",
+    "schritt": {
+      "probieren": "Probieren",
+      "aha": "Aha",
+      "beispiel": "Beispiel",
+      "luecke": "Ergänzen",
+      "frei": "Selber",
+      "misch": "Alles zusammen",
+      "wiederholung": "Wiederholung"
+    },
+    "schrittHilfe": {
+      "probieren": "Probier einfach. Hier kann nichts schiefgehen.",
+      "beispiel": "So sieht es richtig aus. Drück auf «Lupe, los!» und schau, was passiert.",
+      "luecke": "Ein Teil ist schon da. Was fehlt noch?",
+      "frei": "Jetzt du, ohne Vorlage. Gelingt es beim ersten Versuch, gibt es einen Punkt. {anzahl} Punkte, und das Thema sitzt.",
+      "misch": "Alles, was du bei diesem Besuch gelernt hast. Probier so oft du willst.",
+      "wiederholung": "Kurz wiederholen, damit es sitzt."
+    },
+    "schrittHilfeFrage": {
+      "probieren": "Probier einfach. Hier kann nichts schiefgehen.",
+      "beispiel": "So ist es richtig. Drück auf «Antwort prüfen».",
+      "luecke": "Überleg zuerst selbst. Dann antworte.",
+      "frei": "Jetzt du, ohne Vorlage. Gelingt es beim ersten Versuch, gibt es einen Punkt. {anzahl} Punkte, und das Thema sitzt."
+    },
+    "situationZaehler": "Aufgabe {nr} von {anzahl}",
+    "wiederholungEtikett": "Wiederholung: {konzept}",
+    "werkbankName": "Deine Nachricht an Lupe",
+    "anweisungEtikett": "Anweisung im Projekt (gilt für jede Nachricht)",
+    "anweisungLeer": "(noch leer)",
+    "anhangEtikett": "Angehängt",
+    "anhangLeer": "(nichts angehängt)",
+    "nachrichtEtikett": "Deine Nachricht",
+    "teileHilfe": "Tippe ein Teil an, um es dazuzunehmen. Nochmals tippen nimmt es wieder weg.",
+    "art": {
+      "anweisung": "Für die Anweisung im Projekt",
+      "anhang": "Anhängen",
+      "frage": "Deine Frage",
+      "angaben": "Angaben",
+      "wie": "So soll Lupe antworten"
+    },
+    "frageEtikett": "Die Frage",
+    "tippenEtikett": "Tippe auf die richtige Stelle",
+    "telefonName": "Nachgebauter iPhone-Bildschirm",
+    "nachgebaut": "Vereinfacht nachgebaut. In echt sieht es etwas anders aus.",
+    "reiheHilfe": "Verschiebe die Schritte mit «Hoch» und «Runter».",
+    "reiheHoch": "«{text}» nach oben schieben",
+    "reiheRunter": "«{text}» nach unten schieben",
+    "reiheHochKurz": "Hoch",
+    "reiheRunterKurz": "Runter",
+    "soGut": "So ist es gut:",
+    "soNicht": "So nicht:",
+    "los": "Lupe, los!",
+    "antworten": "Antwort prüfen",
+    "waehleZuerst": "Wähle zuerst eine Antwort.",
+    "tippeZuerst": "Tippe zuerst auf eine Stelle im Bildschirm.",
+    "gelungen": "Genau so. Lupe hatte alles, was nötig war.",
+    "wasPassiert": "Was ist da passiert?",
+    "ahaAnalogie": "Merkbild",
+    "ahaLexikon": "Neu im Lexikon: {begriff}",
+    "ahaWeiter": "Zeig mir ein Beispiel",
+    "beispielWeiter": "Jetzt ich",
+    "weiter": "Weiter",
+    "naechste": "Nächste Aufgabe",
+    "andere": "Andere Aufgabe nehmen",
+    "nochmal": "Ändere deine Nachricht und versuch es nochmals. Oder nimm eine andere Aufgabe.",
+    "nochmalWahl": "Überleg nochmals und wähle neu. Oder nimm eine andere Aufgabe.",
+    "nochmalReihe": "Verschieb die Schritte und versuch es nochmals. Oder nimm eine andere Aufgabe.",
+    "nochmalMisch": "Ändere deine Antwort und versuch es nochmals.",
+    "nochmalLuecke": "Fast. Ändere etwas und versuch es nochmals. Der Knopf «Tipp» hilft.",
+    "gezaehlt": "Das gibt einen Punkt!",
+    "gezaehltNachholen": "Richtig! Das gibt einen Punkt für dieses Thema.",
+    "nichtGezaehlt": "Gelöst! Einen Punkt gibt es nur beim ersten Versuch ohne grosse Hilfe. Diese Aufgabe kommt später nochmals.",
+    "schonGesehen": "Diese Aufgabe kennst du schon. Löse sie jetzt allein, dann gibt es einen Punkt.",
+    "auswegText": "Dieses Thema ist zäh. Du kannst weiter üben oder weitergehen. «{konzept}» kommt dann später nochmals zum Wiederholen.",
+    "auswegKnopf": "Weitergehen und später üben",
+    "verschobenTitel": "Weiter geht's!",
+    "verschobenText": "«{konzept}» üben wir später nochmals. Jede richtige Wiederholung gibt dann einen Punkt.",
+    "wiederholungGut": "Richtig. Das sitzt!",
+    "wiederholungSchlecht": "Kein Problem. Das üben wir bald nochmals.",
+    "hilfe": [
+      "Tipp",
+      "Zeig mir, wo",
+      "Lösung zeigen"
+    ],
+    "hilfeAngebot": "Zweimal daneben ist ganz normal. Magst du einen Tipp?",
+    "hilfeZuviel": "Brauchst du dieses Teil wirklich?",
+    "hilfeFehlt": "Schau dir dieses Teil an.",
+    "hilfeFalscheWahl": "Diese Antwort ist es nicht.",
+    "hilfePlatz": "Dieser Schritt gehört weiter nach oben.",
+    "hilfeLoesung": "So wäre es richtig. Für einen Punkt zählt diese Aufgabe jetzt nicht.",
+    "hilfeRegel": "Der Tipp ist erlaubt. Mit «{zeig}» oder «{loesung}» gibt es für diese Aufgabe keinen Punkt.",
+    "tippMisch": "Geh die Gruppen einzeln durch. Was braucht Lupe aus jeder Gruppe, und was schadet?",
+    "echtEtikett": "So ist es in echt",
+    "echtStand": "Stand: November 2026. Die Knöpfe in der echten App können etwas anders heissen.",
+    "aufSpickzettel": "Diese Karte liegt jetzt auf deinem Spickzettel.",
+    "rundeFertigTitel": "Geschafft: {konzept}",
+    "rundeFertigText": "{anzahl} Punkte. Das sitzt.",
+    "pause": "Gute Stelle für eine Pause. Dein Stand ist gespeichert.",
+    "zumCafe": "Zurück ins Café",
+    "weiterRunde": "Gleich weitermachen",
+    "besuchFertigTitel": "Besuch geschafft!",
+    "gastSagt": "Das sagt {gast}",
+    "cafeWaechstEtikett": "Im Café",
+    "etappeFertigTitel": "Geschafft: {titel}",
+    "etappeFertigText": "Wieder ein Stück sicherer.",
+    "schnelltestKnopf": "Das kann ich schon",
+    "schnelltestTitel": "Schnelltest",
+    "schnelltestInfo": "Pro Thema drei Aufgaben, je ein Versuch, ohne Hilfe. Schaffst du alle drei, überspringst du die Einführung. Scheitern kostet nichts.",
+    "schnelltestStart": "Schnelltest starten",
+    "schnelltestZaehler": "Schnelltest · Aufgabe {nr} von {anzahl}",
+    "schnelltestRichtig": "Richtig.",
+    "schnelltestFalsch": "Das war es nicht. Kein Problem: Dieses Thema übst du einfach normal.",
+    "schnelltestErgebnis": "Dein Ergebnis",
+    "schnelltestBestanden": "kannst du schon. Die Einführung wird übersprungen.",
+    "schnelltestOffen": "übst du normal.",
+    "umfrageVorherTitel": "Freiwillig: Was weisst du schon?",
+    "umfrageVorherText": "Sechs kurze Fragen vor dem Start. Am Schluss siehst du, was du dazugelernt hast. Die Antworten bleiben auf diesem Gerät.",
+    "umfrageNachherTitel": "Was weisst du jetzt?",
+    "umfrageNachherText": "Zum Abschluss dieselben sechs Fragen nochmals.",
+    "umfrageStart": "Fragen beantworten",
+    "umfrageZaehler": "Frage {nr} von {anzahl}",
+    "umfrageWeissNicht": "Weiss ich nicht",
+    "umfrageDanke": "Danke! Was richtig ist, erfährst du im Spiel.",
+    "umfrageErgebnis": "Vor dem Spiel: {vorher} von {anzahl} richtig. Jetzt: {nachher} von {anzahl}.",
+    "umfrageNurNachher": "Jetzt: {nachher} von {anzahl} richtig.",
+    "daumenFrage": "Hat dir dieser Besuch gefallen?",
+    "daumenHoch": "Ja, gut",
+    "daumenRunter": "Nein, eher nicht",
+    "daumenDanke": "Danke! Deine Antwort bleibt auf diesem Gerät.",
+    "spickTitel": "Spickzettel",
+    "spickInfo": "Hier sammelst du die Schritte für die echte Claude-App. Leg den Spickzettel daneben, wenn du es selbst machst.",
+    "spickLeer": "Noch leer. Nach jedem Thema kommt eine Karte dazu.",
+    "spickDrucken": "Spickzettel drucken",
+    "spickOffen": "{anzahl} von {gesamt} Karten fehlen noch.",
+    "lexikonTitel": "Lexikon",
+    "lexikonInfo": "Wörter, die im Spiel vorkommen. Tippe auf ein Wort, um es zu öffnen.",
+    "lexikonOffen": "Noch {anzahl} Themen zu entdecken.",
+    "lexEnglisch": "Auf Englisch",
+    "lexAnalogie": "Merkbild",
+    "lexQuatsch": "Lupes Quatsch dazu",
+    "lexGenauer": "Genauer gesagt",
+    "quelleLink": "Quelle (neues Fenster)",
+    "einstellungenTitel": "Hilfe und Einstellungen",
+    "notfallTitel": "Im Notfall",
+    "notfallText": "Bei Brustschmerz, Atemnot, plötzlicher Lähmung oder Sprachstörung: sofort [[notruf]] anrufen. Nicht chatten, nicht abwarten.",
+    "spielHilfeTitel": "So funktioniert das Spiel",
+    "spielHilfe": [
+      "Gäste im Café bringen erfundene Arztberichte. Du hilfst ihnen mit Lupe, einer Übungs-KI.",
+      "Jedes Thema hat fünf Schritte: Probieren, Aha, Beispiel, Ergänzen, Selber. Fehler kosten nichts.",
+      "Klemmt es, hilft der Knopf «Tipp». Nach einigen Versuchen kannst du auch weitergehen und später üben.",
+      "Lupe ist nachgebaut. Sie verbindet sich mit niemandem und liest nie deine echten Daten."
+    ],
+    "schriftEtikett": "Schriftgrösse",
+    "schrift": {
+      "normal": "Normal",
+      "gross": "Gross",
+      "sehrgross": "Sehr gross"
+    },
+    "standEtikett": "Dein Spielstand",
+    "standInfo": "Dein Spielstand bleibt auf diesem Gerät und wird automatisch gespeichert. Es gibt kein Konto.",
+    "standInfoAus": "Dieses Gerät erlaubt kein Speichern. Dein Fortschritt gilt nur, solange die Seite offen ist.",
+    "offlineInfo": "Nach dem ersten Laden geht Zweitblick auch ohne Internet.",
+    "browserInfo": "Öffne Zweitblick in Safari, nicht aus WhatsApp oder E-Mail heraus. Sonst kann der Spielstand verloren gehen.",
+    "iphoneInfo": "Auf dem iPhone: Leg Zweitblick aufs Home-Bildschirm. Sonst löscht Safari den Stand nach längerer Pause.",
+    "standSichern": "Spielstand als Datei sichern",
+    "standGesichert": "Die Datei wurde erstellt. Du findest sie bei deinen Downloads.",
+    "standLaden": "Spielstand aus Datei laden",
+    "standGeladen": "Spielstand geladen.",
+    "standUngueltig": "Diese Datei ist kein Zweitblick-Spielstand. Wähle die Datei, die du gesichert hast.",
+    "loeschen": "Spielstand löschen",
+    "loeschenFrage": "Wirklich alles löschen und von vorn beginnen? Das lässt sich nicht rückgängig machen.",
+    "loeschenJa": "Ja, alles löschen",
+    "loeschenNein": "Abbrechen, nichts löschen",
+    "geloescht": "Alles gelöscht. Wir fangen neu an.",
+    "sprungEtikett": "Zu einem Besuch springen",
+    "sprungInfo": "Schon weiter gewesen, zum Beispiel auf einem anderen Gerät? Spring direkt zu deinem Besuch. Übersprungenes kommt später zum Wiederholen.",
+    "sprungWaehlen": "Besuch auswählen",
+    "sprungNichts": "Gerade gibt es keinen späteren Besuch, zu dem du springen kannst.",
+    "sprungZiel": "Besuch {nr}: {gast}, {thema}",
+    "sprungFrage": "Zu {gast} springen? Alle Besuche davor gelten dann als erledigt.",
+    "sprungJa": "Ja, springen",
+    "sprungNein": "Abbrechen",
+    "sprungGemacht": "Gesprungen. Jetzt kommt {gast}.",
+    "sprungZurueck": "Letzten Sprung rückgängig machen",
+    "sprungZurueckFrage": "Zurück zum Stand vor dem letzten Sprung?",
+    "sprungZurueckJa": "Ja, zurück",
+    "sprungZurueckGemacht": "Der Sprung ist rückgängig gemacht.",
+    "sprungHinweis": "Schon weiter gewesen? Zu deinem Besuch springen",
+    "ueberEtikett": "Über dieses Spiel",
+    "ueberZweckEtikett": "Wozu",
+    "ueberZweck": "Zweitblick übt, wie man mit der KI-App Claude eigene Befunde besser versteht. Alle Fälle sind erfunden. Das Spiel stellt keine Diagnosen.",
+    "ueberDatenEtikett": "Deine Daten",
+    "ueberDaten": "Dein Spielstand bleibt auf diesem Gerät. Das Spiel schickt nichts weg, hat kein Konto und keine Cookies. GitHub, der Anbieter der Seite, sieht wie jede Website deine IP-Adresse.",
+    "ueberGithubLink": "Datenschutz bei GitHub (auf Englisch, neues Fenster)",
+    "ueberGithubAdresse": "https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement",
+    "ueberFachEtikett": "Fachlich",
+    "ueberFach": "Die Gesundheitsangaben stammen aus öffentlichen Quellen. Eine Ärztin oder ein Arzt hat das Spiel nicht geprüft. Bei Fragen zu deiner Gesundheit: frag deine Ärztin oder deinen Arzt.",
+    "ueberInoffiziellEtikett": "Inoffiziell",
+    "ueberInoffiziell": "Zweitblick ist ein inoffizielles Lernspiel, kein Angebot von Anthropic oder Apple und nicht mit ihnen verbunden. Claude ist eine Marke von Anthropic. iPhone ist eine Marke von Apple.",
+    "ueberKontaktEtikett": "Kontakt",
+    "ueberKontakt": "Fragen oder einen Fehler gefunden? Schreib an:",
+    "ueberKontaktAdresse": "",
+    "quellenTitel": "Quellen ({anzahl})",
+    "quelleStand": "Quelle, geprüft {datum}",
+    "quelleZweite": "zweite Quelle"
+  },
+  "laender": {
+    "ch": {
+      "notruf": "144",
+      "land": "der Schweiz",
+      "dossier": "elektronisches Patientendossier (EPD)",
+      "dossierKurz": "EPD",
+      "dossierWeg": "Im Patientendossier (EPD) nachsehen, falls du eines hast",
+      "kopieRecht": "In der Schweiz hast du grundsätzlich Anspruch auf eine Gratis-Kopie deiner Krankengeschichte.",
+      "nummer": "AHV-Nummer",
+      "nummerLang": "AHV-Nummer und Versichertennummer",
+      "waehrung": "Franken",
+      "bereitschaft": "den ärztlichen Notfalldienst deiner Region",
+      "arztpraxis": "Hausarztpraxis",
+      "quelleKopie": "https://www.beobachter.ch/gesundheit/medizin-krankheit/kann-ich-einen-falschen-arztbericht-korrigieren-lassen-605045",
+      "quelleDossier": "https://www.bag.admin.ch/de/epd-im-ueberblick",
+      "quelleNotruf": "https://www.ch.ch/en/police",
+      "nummerBeispiel": "756.1234.5678.97"
+    },
+    "de": {
+      "notruf": "112",
+      "land": "Deutschland",
+      "dossier": "elektronische Patientenakte (ePA)",
+      "dossierKurz": "ePA",
+      "dossierWeg": "In der ePA-App deiner Krankenkasse nachsehen",
+      "kopieRecht": "In Deutschland ist die erste Kopie deiner Patientenakte kostenlos.",
+      "nummer": "Versichertennummer",
+      "nummerLang": "Versichertennummer und Krankenkassen-Nummer",
+      "waehrung": "Euro",
+      "bereitschaft": "den ärztlichen Bereitschaftsdienst unter 116117",
+      "arztpraxis": "Hausarztpraxis",
+      "quelleKopie": "https://www.aok.de/pp/gg/magazine/gesundheit-gesellschaft-12-2023/kopie-patientenakte-kosten/",
+      "quelleDossier": "https://www.verbraucherzentrale.de/wissen/gesundheit-pflege/krankenversicherung/elektronische-patientenakte-epa-digitale-patientenakte-fuer-alle-kommt-57223",
+      "quelleNotruf": "https://herzstiftung.de/herzinfarkt-anzeichen",
+      "nummerBeispiel": "A123456789"
+    }
+  },
+  "kapitel": {
+    "1": {
+      "name": "Der erste Versuch"
+    },
+    "2": {
+      "name": "Gute Fotos"
+    },
+    "3": {
+      "name": "Die App holen"
+    },
+    "4": {
+      "name": "Ein Ordner für alles"
+    },
+    "5": {
+      "name": "Die zweite Sicht"
+    },
+    "6": {
+      "name": "Mögliche Ursachen"
+    },
+    "7": {
+      "name": "Sicher bleiben"
+    }
+  },
+  "konzepte": {
+    "erklaeren": {
+      "name": "Bericht erklären lassen",
+      "analogie": "Ein Dolmetscher: Er übersetzt Fachsprache in deine Sprache. Aber nur, was du ihm zeigst.",
+      "aha": [
+        "Lupe kann nur erklären, was du ihr zeigst. Häng den Bericht an.",
+        "Sag dazu, was du willst und wie: erklären, in einfachen Worten, kurz.",
+        "Fehlt etwas davon, rät Lupe. Dann kommt ein Lehrbuch oder ein Aufsatz."
+      ],
+      "tipp": "Häng den Bericht an. Bitte um eine kurze Erklärung in einfachen Worten.",
+      "echt": [
+        "Öffne die Claude-App und tippe unten im Eingabefeld auf «+».",
+        "Wähle das Foto oder die Datei mit dem Bericht.",
+        "Schreib: «Erklär mir diesen Bericht in einfachen Worten, kurz.» Dann senden."
+      ]
+    },
+    "nachfragen": {
+      "name": "Nachfragen",
+      "analogie": "In der Apotheke fragst du auch nach, bis du verstehst, wie du die Tabletten nimmst.",
+      "aha": [
+        "Ein Wort nicht verstanden? Frag im selben Chat nach. Lupe weiss noch, worum es ging.",
+        "Frag genau: «Was heisst Hb?» ist besser als «Hä?».",
+        "Du darfst auch sagen: «Bitte noch einfacher.» Das ist kein Problem."
+      ],
+      "tipp": "Nenn das Wort, das du nicht verstehst, und bleib im selben Chat.",
+      "echt": [
+        "Bleib im selben Chat. Schreib unten ins Eingabefeld.",
+        "Frag genau: «Was heisst Erythrozyten?»",
+        "Ist es noch zu schwierig, schreib: «Bitte noch einfacher, ohne Fachwörter.»"
+      ]
+    },
+    "arzt-entscheidet": {
+      "name": "Der Arzt entscheidet",
+      "analogie": "Ein Navi schlägt den Weg vor. Ist die Strasse gesperrt, entscheidest du mit dem, der den Weg kennt.",
+      "aha": [
+        "Lupe erklärt und gibt eine zweite Sicht. Entscheiden tut deine Ärztin oder dein Arzt.",
+        "Setz keine Tablette ab und nimm nichts Neues dazu, ohne zu fragen.",
+        "Nimm Lupes Erklärung mit in die Praxis. So wird das Gespräch besser."
+      ],
+      "tipp": "Was Lupe sagt, ist ein Vorschlag zum Besprechen. Entscheiden tut die Ärztin oder der Arzt.",
+      "echt": [
+        "Lass dir den Befund von Claude erklären.",
+        "Schreib dir die wichtigsten Punkte auf oder mach ein Bildschirmfoto.",
+        "Besprich alles mit deiner Ärztin oder deinem Arzt, bevor du etwas änderst."
+      ]
+    },
+    "foto-scharf": {
+      "name": "Ganz, scharf und gerade",
+      "analogie": "Wie ein Passfoto: ganzes Gesicht, scharf, gerade von vorn. Sonst wird es nicht angenommen.",
+      "aha": [
+        "Lupe liest nur, was auf dem Foto gut zu sehen ist. Unscharfe Zahlen liest sie falsch.",
+        "Das ganze Blatt gehört aufs Bild, ohne viel Tisch rundherum. Halte das iPhone gerade darüber.",
+        "Schau das Foto vor dem Senden an. Kannst du alles lesen, kann es Lupe auch."
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/unscharf.svg",
+          "text": "Verwackelt und unscharf. Die Zahlen verschwimmen.",
+          "gut": false
+        },
+        {
+          "datei": "fotos/abgeschnitten.svg",
+          "text": "Abgeschnitten. Rechts und unten fehlt ein grosser Teil des Blatts.",
+          "gut": false
+        },
+        {
+          "datei": "fotos/zuweit.svg",
+          "text": "Zu weit weg. Das Blatt ist winzig, daneben Tasse und Brille.",
+          "gut": false
+        },
+        {
+          "datei": "fotos/schief.svg",
+          "text": "Schief von der Seite fotografiert. Die Zeilen laufen schräg.",
+          "gut": false
+        },
+        {
+          "datei": "fotos/gut.svg",
+          "text": "Ganzes Blatt, scharf, gerade, hell. Alles lesbar.",
+          "gut": true
+        }
+      ],
+      "tipp": "Ganzes Blatt, iPhone ruhig und gerade darüber halten. Dann das Foto vergrössern und prüfen.",
+      "echt": [
+        "Leg das Blatt flach auf einen Tisch.",
+        "Halte das iPhone gerade darüber, so dass das ganze Blatt aufs Bild passt.",
+        "Halte still, bis das Bild scharf ist. Dann abdrücken.",
+        "Schau das Foto an und vergrössere es mit zwei Fingern. Ist alles lesbar?"
+      ]
+    },
+    "foto-licht": {
+      "name": "Gutes Licht, freie Sicht",
+      "analogie": "Wie beim Zeitunglesen: Mit hellem Licht und ohne Hand auf der Seite geht es am besten.",
+      "aha": [
+        "Schatten, Blitz-Spiegelungen und Finger können genau die wichtigen Zahlen verdecken.",
+        "Fotografiere bei hellem Licht ohne Blitz. Das Blatt liegt glatt, die Finger sind weg.",
+        "Achte auf deinen eigenen Schatten. Stell dich so hin, dass er nicht aufs Blatt fällt."
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/schatten.svg",
+          "text": "Ein dunkler Schatten liegt über der unteren Hälfte.",
+          "gut": false
+        },
+        {
+          "datei": "fotos/blitz.svg",
+          "text": "Ein weisser Fleck vom Blitz verdeckt die Werte.",
+          "gut": false
+        },
+        {
+          "datei": "fotos/finger.svg",
+          "text": "Ein Finger liegt quer über den Werten.",
+          "gut": false
+        },
+        {
+          "datei": "fotos/dunkel.svg",
+          "text": "Viel zu dunkel. Man erkennt kaum etwas.",
+          "gut": false
+        },
+        {
+          "datei": "fotos/zerknittert.svg",
+          "text": "Gefaltet und zerknittert. Falten laufen durch die Zahlen.",
+          "gut": false
+        },
+        {
+          "datei": "fotos/gut.svg",
+          "text": "Ganzes Blatt, scharf, gerade, hell. Alles lesbar.",
+          "gut": true
+        }
+      ],
+      "tipp": "Helles Licht ohne Blitz, kein Schatten, kein Finger, das Blatt glatt gestrichen.",
+      "echt": [
+        "Geh ans Fenster oder unter eine helle Lampe.",
+        "Schalte den Blitz aus. Auf glänzendem Papier macht er weisse Flecken.",
+        "Streich das Blatt glatt und leg es hin. Halte es nicht mit den Fingern fest.",
+        "Pass auf, dass dein Schatten nicht aufs Blatt fällt."
+      ]
+    },
+    "alle-seiten": {
+      "name": "Alle Seiten, am besten gescannt",
+      "analogie": "Wie ein Buch: Fehlt eine Seite, fehlt ein Stück der Geschichte.",
+      "aha": [
+        "Steht unten «Seite 1 von 2», schick beide Seiten. Sonst fehlen Werte oder die Beurteilung.",
+        "Hast du den Bericht als PDF, schick das PDF. Das ist besser als jedes Foto.",
+        "Für Papier hat das iPhone «Dokumente scannen» in der App Notizen. Das macht saubere, gerade Seiten."
+      ],
+      "bilder": [
+        {
+          "datei": "fotos/scan.svg",
+          "text": "Gescannt: sauber zugeschnitten, gerade, ohne Tisch.",
+          "gut": true
+        },
+        {
+          "datei": "fotos/pdf.svg",
+          "text": "Eine PDF-Datei vom Labor.",
+          "gut": true
+        }
+      ],
+      "tipp": "Zähl die Seiten. Nimm wenn möglich das PDF, sonst «Dokumente scannen» in der App Notizen.",
+      "echt": [
+        "Schau unten auf dem Bericht nach: «Seite 1 von 2» heisst zwei Seiten.",
+        "Hast du ein PDF, zum Beispiel aus einer E-Mail, häng das PDF an.",
+        "Für Papier: Öffne die App Notizen und eine neue Notiz. Tippe auf die Büroklammer oder die Kamera.",
+        "Wähle «Dokumente scannen» und halte das iPhone über das Blatt. Es knipst und schneidet selbst zu.",
+        "Mach so alle Seiten nacheinander. Dann sichern und in Claude anhängen."
+      ]
+    },
+    "app-finden": {
+      "name": "Die echte App finden",
+      "analogie": "Wie in der Apotheke: Du schaust auf den Hersteller, nicht nur auf die bunte Packung.",
+      "aha": [
+        "Im App Store gibt es viele KI-Apps mit ähnlichen Namen. Manche wollen gleich Geld.",
+        "Die echte App heisst «Claude by Anthropic». Als Anbieter steht Anthropic darunter.",
+        "Laden ist gratis. Ein Abo brauchst du zum Anfangen nicht."
+      ],
+      "tipp": "Such nach «Claude» und schau auf den Anbieter: Anthropic.",
+      "echt": [
+        "Öffne den App Store und tippe auf «Suchen».",
+        "Gib «Claude» ein.",
+        "Wähle «Claude by Anthropic». Als Anbieter steht Anthropic PBC.",
+        "Tippe auf «Laden». Die App braucht iOS 18 oder neuer."
+      ]
+    },
+    "konto": {
+      "name": "Ein Konto anlegen",
+      "analogie": "Wie ein Bibliotheksausweis: einmal anmelden, dann kennt man dich.",
+      "aha": [
+        "Zum Start meldest du dich an: mit Apple, Google oder deiner E-Mail-Adresse.",
+        "Mit E-Mail kommt eine Nachricht mit einem Link oder Code. Nimm eine Adresse, die du liest.",
+        "Claude ist erst ab 18. Zum Anfangen reicht das Gratis-Konto."
+      ],
+      "tipp": "Nimm eine Anmeldung, die du kennst, und schau danach in dein E-Mail-Postfach.",
+      "echt": [
+        "Öffne die Claude-App.",
+        "Melde dich mit Apple, Google oder deiner E-Mail-Adresse an.",
+        "Bei E-Mail: Öffne die Nachricht von Anthropic und tippe auf den Link. Nichts gekommen? Schau im Spam-Ordner.",
+        "Bestätige, dass du mindestens 18 bist. Ein Abo brauchst du nicht."
+      ]
+    },
+    "datenschutz": {
+      "name": "Training ausschalten",
+      "analogie": "Vorhänge zuziehen: Du entscheidest, wer hineinschauen darf.",
+      "aha": [
+        "In den Einstellungen gibt es unter «Datenschutz» einen Schalter fürs Training. Er heisst auf Englisch «Help improve Claude».",
+        "Ist er an, dürfen deine Chats zum Verbessern der KI genutzt und bis fünf Jahre aufbewahrt werden. Ist er aus: 30 Tage.",
+        "Für Gesundheitsfragen empfehlen wir: aus. Du kannst es jederzeit ändern."
+      ],
+      "tipp": "Name antippen, dann Einstellungen, dann Datenschutz, dann den Schalter fürs Training aus.",
+      "echt": [
+        "Öffne das Menü und tippe auf deinen Namen.",
+        "Wähle «Einstellungen» und dann «Datenschutz».",
+        "Schalte «Help improve Claude» aus. Auf Deutsch heisst er ähnlich.",
+        "Neue Chats werden dann nicht mehr fürs Training genutzt."
+      ]
+    },
+    "projekt": {
+      "name": "Ein Projekt «Meine Gesundheit»",
+      "analogie": "Ein Ordner mit Register statt loser Zettel in der Schublade.",
+      "aha": [
+        "In einem Projekt liegen deine Berichte und eine Anweisung beisammen. Jeder neue Chat darin kennt sie.",
+        "Ohne Projekt fängt jeder Chat bei null an. Lupe kennt dich dann nicht.",
+        "Gratis gibt es bis zu fünf Projekte. Eines für die Gesundheit reicht."
+      ],
+      "tipp": "Leg ein Projekt an, lege die Berichte dort ab und starte die Chats im Projekt.",
+      "echt": [
+        "Öffne das Menü und tippe auf «Projekte».",
+        "Leg ein neues Projekt an. Name: «Meine Gesundheit».",
+        "Füge deine Berichte als Dateien zum Projekt hinzu.",
+        "Starte neue Chats immer in diesem Projekt.",
+        "Klappt das Anlegen in der App nicht, öffne claude.ai in Safari."
+      ]
+    },
+    "anweisung": {
+      "name": "Die Anweisung im Projekt",
+      "analogie": "Der Fragebogen beim neuen Hausarzt: einmal ausgefüllt, und alle wissen Bescheid.",
+      "aha": [
+        "Im Projekt gibt es ein Feld für Anweisungen. Sie gelten für jeden Chat darin.",
+        "Schreib hinein: Alter, bekannte Krankheiten, Tabletten, Allergien.",
+        "Und wie Lupe antworten soll: einfach, kurz, und sagen, wenn sie unsicher ist."
+      ],
+      "tipp": "Alter, Krankheiten, Tabletten, Allergien, dazu «einfach erklären». Alles andere weglassen.",
+      "echt": [
+        "Öffne das Projekt «Meine Gesundheit».",
+        "Öffne die Anweisungen des Projekts.",
+        "Schreib Alter, Krankheiten, Tabletten und Allergien hinein.",
+        "Ergänze: «Erklär einfach und kurz. Sag, wenn du unsicher bist.»"
+      ]
+    },
+    "berichte": {
+      "name": "Berichte beschaffen",
+      "analogie": "Die Post holen statt warten: Briefe kommen nicht von selbst auf den Küchentisch.",
+      "aha": [
+        "In [[land]] kommen Arztberichte nicht von selbst zu Claude. Die automatische Verbindung gibt es nur in den USA.",
+        "Frag in der Praxis nach einer Kopie. [[kopieRecht]]",
+        "Ein weiterer Weg: [[dossierWeg]]."
+      ],
+      "tipp": "Bitte in der Praxis um eine Kopie. Sie kommt nicht von selbst.",
+      "echt": [
+        "Frag in der Praxis: «Kann ich eine Kopie meiner Berichte haben, auf Papier oder als PDF?»",
+        "[[kopieRecht]]",
+        "[[dossierWeg]].",
+        "Scanne Papier mit der App Notizen und füge alles ins Projekt ein."
+      ]
+    },
+    "beschwerden": {
+      "name": "Beschwerden genau beschreiben",
+      "analogie": "Der Arzt fragt auch zuerst: Seit wann? Wann genau? Wie stark?",
+      "aha": [
+        "«Mir ist schwindlig» kann vieles heissen. Lupe zählt dann alles auf, von harmlos bis selten.",
+        "Beschreib: seit wann, wann genau, wie lange, was dazukommt.",
+        "Nenn auch, was sich geändert hat, zum Beispiel eine neue Tablette."
+      ],
+      "tipp": "Seit wann, wann genau, wie lange, was dazukommt. Und was sich zuletzt geändert hat.",
+      "echt": [
+        "Starte im Projekt einen neuen Chat.",
+        "Beschreib: seit wann, wann genau, wie lange, was dazukommt.",
+        "Nenn, was sich geändert hat, zum Beispiel eine neue Tablette.",
+        "Frag: «Was könnte dahinterstecken, und was frage ich meinen Arzt?»"
+      ]
+    },
+    "verlauf": {
+      "name": "Den Verlauf vergleichen",
+      "analogie": "Eine Fieberkurve: Ein Wert allein sagt wenig, die Kurve zeigt, wohin es geht.",
+      "aha": [
+        "Ein einzelner Wert ist eine Momentaufnahme. Mehrere Berichte zeigen, ob sich etwas verändert.",
+        "Achte auf das Datum. Ohne Datum hält Lupe einen alten Wert vielleicht für neu.",
+        "Frag dann: «Wie haben sich die Werte verändert?»"
+      ],
+      "tipp": "Alte und neue Berichte mit Datum anhängen und nach der Veränderung fragen.",
+      "echt": [
+        "Leg alte und neue Berichte ins Projekt.",
+        "Achte darauf, dass das Datum gut lesbar ist. Sonst schreib es dazu.",
+        "Frag: «Wie haben sich meine Werte seit 2024 verändert?»"
+      ]
+    },
+    "fragen-arzt": {
+      "name": "Fragen für den Arzt",
+      "analogie": "Ein Einkaufszettel: Ohne ihn kommst du mit Brot heim und hast die Milch vergessen.",
+      "aha": [
+        "Im Sprechzimmer vergisst man schnell, was man fragen wollte.",
+        "Bitte Lupe um wenige, kurze Fragen zu deinem Thema.",
+        "Schreib sie auf oder zeig sie in der Praxis auf dem iPhone."
+      ],
+      "tipp": "Thema nennen, um höchstens drei kurze Fragen bitten.",
+      "echt": [
+        "Schreib im Projekt: «Mach mir drei kurze Fragen für meinen Arzttermin zum Schwindel.»",
+        "Lies die Fragen und streich, was nicht passt.",
+        "Mach ein Bildschirmfoto oder schreib sie auf einen Zettel.",
+        "Nimm die Fragen mit in die Praxis."
+      ]
+    },
+    "ursachen": {
+      "name": "Mögliche Ursachen statt einer Antwort",
+      "analogie": "Ein Detektiv mit einer Liste von Verdächtigen: Er prüft jeden, bevor er jemanden beschuldigt.",
+      "aha": [
+        "Frag nicht «Was habe ich?». Dann legt sich Lupe vielleicht zu früh auf eine Antwort fest.",
+        "Frag: «Welche Ursachen kommen in Frage? Was spricht dafür, was dagegen?»",
+        "Und: «Was würde es klären?» So weisst du, was du den Arzt fragen kannst."
+      ],
+      "tipp": "Frag nach mehreren möglichen Ursachen, nach dafür und dagegen und danach, was es klären würde.",
+      "echt": [
+        "Beschreib im Projekt deine Beschwerden genau.",
+        "Frag: «Welche Ursachen kommen in Frage? Was spricht dafür und dagegen?»",
+        "Frag: «Welche Untersuchung würde es klären?»",
+        "Nimm die Liste mit zum Arzt. Er entscheidet."
+      ]
+    },
+    "unsicherheit": {
+      "name": "Nach der Unsicherheit fragen",
+      "analogie": "Der Wetterbericht sagt nicht nur «Regen», sondern «70 Prozent Regen». So weisst du, wie sicher es ist.",
+      "aha": [
+        "Eine KI klingt oft sehr sicher, auch wenn sie es nicht ist.",
+        "Frag: «Wie sicher bist du? Was fehlt dir, um es besser zu sagen?»",
+        "Bestell keine Beruhigung. Wer «Sag, dass alles gut ist» schreibt, bekommt genau das."
+      ],
+      "tipp": "Frag, wie sicher Lupe ist und was ihr fehlt. Bitte nicht um Beruhigung.",
+      "echt": [
+        "Schreib nach einer Antwort: «Wie sicher bist du dir?»",
+        "Frag: «Welche Angaben oder Untersuchungen fehlen dir?»",
+        "Nimm, was fehlt, als Frage zum Arzt mit."
+      ]
+    },
+    "pruefen": {
+      "name": "Prüfen statt glauben",
+      "analogie": "Wechselgeld nachzählen: Meistens stimmt es. Aber nachzählen lohnt sich.",
+      "aha": [
+        "Lupe kann sich verlesen oder etwas Falsches sagen, das gut klingt.",
+        "Vergleich die wichtigen Zahlen in der Antwort mit dem Bericht.",
+        "Stimmt etwas nicht, sag es Lupe und lass sie nochmals schauen."
+      ],
+      "tipp": "Leg Antwort und Bericht nebeneinander und vergleich die Zahlen.",
+      "echt": [
+        "Lies Claudes Antwort und such die Zahlen darin.",
+        "Vergleich sie mit dem Bericht.",
+        "Stimmt etwas nicht, schreib zum Beispiel: «Auf dem Bericht steht 11,2, nicht 17,2. Bitte nochmals.»"
+      ]
+    },
+    "notfall": {
+      "name": "Im Notfall anrufen, nicht chatten",
+      "analogie": "Ein Feuermelder: Wenn er piept, recherchierst du nicht, sondern rufst die Feuerwehr.",
+      "aha": [
+        "Bei Brustschmerz oder Druck, Atemnot, plötzlicher Lähmung einer Körperseite oder Sprachstörung: sofort [[notruf]] anrufen.",
+        "Nicht chatten, nicht abwarten, nicht zuerst den Hausarzt anrufen. Jede Minute zählt.",
+        "Lupe ist für Fragen, die Zeit haben. Für Notfälle ist sie der falsche Ort."
+      ],
+      "tipp": "Warnzeichen heisst: sofort [[notruf]]. Fragen an Lupe haben Zeit bis später.",
+      "echt": [
+        "Warnzeichen: Brustschmerz oder Druck, Atemnot, plötzliche Lähmung, Sprachstörung.",
+        "Ruf sofort [[notruf]] an. Sag, wo du bist, wer du bist und was passiert ist.",
+        "Fragen an Claude haben Zeit, bis der Notfall vorbei ist."
+      ]
+    },
+    "nur-noetiges": {
+      "name": "Nur Nötiges teilen",
+      "analogie": "Eine Postkarte kann jeder lesen, der sie in die Hand nimmt. Schreib nur drauf, was nötig ist.",
+      "aha": [
+        "Für Fragen zu Befunden braucht Lupe keine [[nummerLang]] und keine Adresse.",
+        "Deck solche Angaben vor dem Foto ab. Oder schneide das Foto zu.",
+        "Schick keine Berichte von anderen Menschen ohne deren Erlaubnis. Passwörter gehören nie in einen Chat."
+      ],
+      "tipp": "Nur was Lupe für die Frage braucht. Keine Nummern, keine Adresse, keine fremden Berichte.",
+      "echt": [
+        "Prüf vor dem Senden: Steht eine [[nummer]], Adresse oder Telefonnummer drauf?",
+        "Deck sie beim Fotografieren mit einem Zettel ab oder schneide das Foto in der App Fotos zu.",
+        "Schick keine Berichte anderer Menschen ohne deren Erlaubnis.",
+        "Passwörter und Bankdaten gehören nie in einen Chat."
+      ]
+    },
+    "loeschen": {
+      "name": "Chats löschen",
+      "analogie": "Alte Briefe schreddern, statt sie ewig in der Schublade zu lassen.",
+      "aha": [
+        "Du kannst jeden Chat löschen. Er verschwindet sofort aus deiner Liste.",
+        "Laut Anthropic ist er innert 30 Tagen auch auf den Servern gelöscht.",
+        "Für einmalige Fragen gibt es den Inkognito-Chat. Er wird nicht fürs Training genutzt."
+      ],
+      "tipp": "Öffne das Menü des Chats und wähle «Löschen». Für Einmaliges den Inkognito-Chat.",
+      "echt": [
+        "Öffne die Liste deiner Chats.",
+        "Öffne beim Chat das Menü und wähle «Löschen». Bestätige.",
+        "Laut Anthropic ist der Chat innert 30 Tagen auch auf den Servern gelöscht.",
+        "Für eine einmalige Frage kannst du einen Inkognito-Chat starten."
+      ]
+    }
+  }
+}

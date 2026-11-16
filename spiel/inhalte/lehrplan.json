@@ -1,0 +1,172 @@
+{
+  "kapitel": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "id": 3
+    },
+    {
+      "id": 4
+    },
+    {
+      "id": 5
+    },
+    {
+      "id": 6
+    },
+    {
+      "id": 7
+    }
+  ],
+  "konzepte": [
+    {
+      "id": "erklaeren",
+      "kapitel": 1,
+      "braucht": []
+    },
+    {
+      "id": "nachfragen",
+      "kapitel": 1,
+      "braucht": [
+        "erklaeren"
+      ]
+    },
+    {
+      "id": "arzt-entscheidet",
+      "kapitel": 1,
+      "braucht": [
+        "nachfragen"
+      ]
+    },
+    {
+      "id": "foto-scharf",
+      "kapitel": 2,
+      "braucht": [
+        "erklaeren"
+      ]
+    },
+    {
+      "id": "foto-licht",
+      "kapitel": 2,
+      "braucht": [
+        "foto-scharf"
+      ]
+    },
+    {
+      "id": "alle-seiten",
+      "kapitel": 2,
+      "braucht": [
+        "foto-licht"
+      ]
+    },
+    {
+      "id": "app-finden",
+      "kapitel": 3,
+      "braucht": [
+        "alle-seiten"
+      ]
+    },
+    {
+      "id": "konto",
+      "kapitel": 3,
+      "braucht": [
+        "app-finden"
+      ]
+    },
+    {
+      "id": "datenschutz",
+      "kapitel": 3,
+      "braucht": [
+        "konto"
+      ]
+    },
+    {
+      "id": "projekt",
+      "kapitel": 4,
+      "braucht": [
+        "datenschutz"
+      ]
+    },
+    {
+      "id": "anweisung",
+      "kapitel": 4,
+      "braucht": [
+        "projekt"
+      ]
+    },
+    {
+      "id": "berichte",
+      "kapitel": 4,
+      "braucht": [
+        "anweisung"
+      ]
+    },
+    {
+      "id": "beschwerden",
+      "kapitel": 5,
+      "braucht": [
+        "berichte"
+      ]
+    },
+    {
+      "id": "verlauf",
+      "kapitel": 5,
+      "braucht": [
+        "beschwerden"
+      ]
+    },
+    {
+      "id": "fragen-arzt",
+      "kapitel": 5,
+      "braucht": [
+        "verlauf"
+      ]
+    },
+    {
+      "id": "ursachen",
+      "kapitel": 6,
+      "braucht": [
+        "fragen-arzt"
+      ]
+    },
+    {
+      "id": "unsicherheit",
+      "kapitel": 6,
+      "braucht": [
+        "ursachen"
+      ]
+    },
+    {
+      "id": "pruefen",
+      "kapitel": 6,
+      "braucht": [
+        "unsicherheit"
+      ]
+    },
+    {
+      "id": "notfall",
+      "kapitel": 7,
+      "braucht": [
+        "pruefen"
+      ]
+    },
+    {
+      "id": "nur-noetiges",
+      "kapitel": 7,
+      "braucht": [
+        "notfall"
+      ]
+    },
+    {
+      "id": "loeschen",
+      "kapitel": 7,
+      "braucht": [
+        "nur-noetiges"
+      ]
+    }
+  ]
+}

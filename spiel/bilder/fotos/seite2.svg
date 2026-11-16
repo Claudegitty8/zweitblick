@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400" width="300" height="400" role="img"><title>Seite 2 von 2 des Laborberichts</title><defs></defs><rect x="0" y="0" width="300" height="400" fill="#b8875a"/><path d="M0 60 Q150 50 300 70 M0 170 Q150 160 300 180 M0 290 Q150 280 300 300" stroke="#a5764b" stroke-width="3" fill="none"/><rect x="34" y="45" width="240" height="320" fill="#000" opacity="0.18"/><g transform="translate(30 40) scale(1.0)"><rect x="0" y="0" width="240" height="320" fill="#ffffff" stroke="#d0d0d0"/>
+<rect x="0" y="0" width="240" height="34" fill="#2f5d8a"/>
+<text x="12" y="22" font-size="13" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">Labor Hinterwil</text>
+<text x="12" y="56" font-size="15" font-weight="700" fill="#1a1a1a" font-family="Arial, sans-serif">Laborbericht (Fortsetzung)</text>
+<text x="12" y="74" font-size="9" fill="#333" font-family="Arial, sans-serif">Patientin: Erika Meier</text>
+<text x="12" y="86" font-size="9" fill="#333" font-family="Arial, sans-serif">Datum: 3. März 2026</text>
+<line x1="12" y1="96" x2="228" y2="96" stroke="#999" stroke-width="0.8"/>
+<text x="12" y="108" font-size="7.5" fill="#555" font-family="Arial, sans-serif">Wert</text>
+<text x="118" y="108" font-size="7.5" fill="#555" font-family="Arial, sans-serif">Ergebnis</text>
+<text x="176" y="108" font-size="7.5" fill="#555" font-family="Arial, sans-serif">Referenz</text>
+<text x="12" y="126" font-size="9" fill="#1a1a1a" font-family="Arial, sans-serif">Kreatinin</text>
+<text x="118" y="126" font-size="10" font-weight="700" fill="#1a1a1a" font-family="Arial, sans-serif">78 </text>
+<text x="150" y="136" font-size="6.5" fill="#555" font-family="Arial, sans-serif">µmol/l</text>
+<text x="176" y="126" font-size="8.5" fill="#333" font-family="Arial, sans-serif">45–90</text>
+<line x1="12" y1="140" x2="228" y2="140" stroke="#e2e2e2" stroke-width="0.6"/>
+<text x="12" y="156" font-size="9" fill="#1a1a1a" font-family="Arial, sans-serif">Eisen (Ferritin)</text>
+<text x="118" y="156" font-size="10" font-weight="700" fill="#1a1a1a" font-family="Arial, sans-serif">64 </text>
+<text x="150" y="166" font-size="6.5" fill="#555" font-family="Arial, sans-serif">µg/l</text>
+<text x="176" y="156" font-size="8.5" fill="#333" font-family="Arial, sans-serif">15–150</text>
+<line x1="12" y1="170" x2="228" y2="170" stroke="#e2e2e2" stroke-width="0.6"/>
+<text x="12" y="186" font-size="9" fill="#1a1a1a" font-family="Arial, sans-serif">TSH (Schilddrüse)</text>
+<text x="118" y="186" font-size="10" font-weight="700" fill="#1a1a1a" font-family="Arial, sans-serif">1,9 </text>
+<text x="150" y="196" font-size="6.5" fill="#555" font-family="Arial, sans-serif">mU/l</text>
+<text x="176" y="186" font-size="8.5" fill="#333" font-family="Arial, sans-serif">0,4–4,0</text>
+<line x1="12" y1="200" x2="228" y2="200" stroke="#e2e2e2" stroke-width="0.6"/>
+<text x="12" y="222" font-size="8" fill="#333" font-family="Arial, sans-serif">Beurteilung: Dr. med. A. Muster</text>
+<line x1="12" y1="290" x2="228" y2="290" stroke="#999" stroke-width="0.8"/>
+<text x="228" y="305" font-size="8" fill="#555" text-anchor="end" font-family="Arial, sans-serif">Seite 2 von 2</text></g></svg>

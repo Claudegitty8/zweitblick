@@ -1,0 +1,856 @@
+{
+  "id": "hofmann",
+  "kapitel": 7,
+  "gast": "Herr Hofmann, 85",
+  "thema": "Sicher bleiben",
+  "wunsch": "Ich will Lupe gern nutzen. Aber wo sind die Grenzen, und was gebe ich besser nicht preis?",
+  "dank": "Jetzt weiss ich, wann ich anrufe statt chatte, und was ich für mich behalte. Ein gutes Gefühl.",
+  "danach": "Alle Tische im Café sind besetzt. Die Gäste kommen wieder, mit neuen Fragen und mehr Mut.",
+  "lexikon": [
+    "inkognito"
+  ],
+  "runden": [
+    {
+      "id": "r1",
+      "art": "konzept",
+      "konzept": "notfall",
+      "probieren": {
+        "aufgabe": "no-a",
+        "nurTeile": [
+          "chat",
+          "warten",
+          "hausarzt"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "no-a"
+      },
+      "luecke": {
+        "aufgabe": "no-b",
+        "vorgabe": []
+      },
+      "frei": [
+        "no-c",
+        "no-d",
+        "no-e",
+        "no-f"
+      ]
+    },
+    {
+      "id": "r2",
+      "art": "konzept",
+      "konzept": "nur-noetiges",
+      "probieren": {
+        "aufgabe": "nn-a",
+        "nurTeile": [
+          "ganz",
+          "nachbar"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "nn-a"
+      },
+      "luecke": {
+        "aufgabe": "nn-b",
+        "vorgabe": [
+          "medi"
+        ]
+      },
+      "frei": [
+        "nn-c",
+        "nn-d",
+        "nn-e",
+        "nn-f"
+      ]
+    },
+    {
+      "id": "r3",
+      "art": "konzept",
+      "konzept": "loeschen",
+      "probieren": {
+        "aufgabe": "lo-a",
+        "nurTeile": [
+          "umbenennen",
+          "teilen",
+          "projekt"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "lo-a"
+      },
+      "luecke": {
+        "aufgabe": "lo-b",
+        "vorgabe": []
+      },
+      "frei": [
+        "lo-c",
+        "lo-d",
+        "lo-e",
+        "lo-f"
+      ]
+    },
+    {
+      "id": "r4",
+      "art": "misch",
+      "titel": "Alles zusammen",
+      "frei": [
+        "m-a"
+      ]
+    }
+  ],
+  "aufgaben": {
+    "no-a": {
+      "typ": "wahl",
+      "wunsch": "Seit zehn Minuten drückt es auf meiner Brust. Soll ich Lupe fragen?",
+      "frage": "Was tut Herr Hofmann jetzt?",
+      "lupe": "Sofort [[notruf]] anrufen. Druck auf der Brust ist ein Warnzeichen. Jede Minute zählt.",
+      "optionen": [
+        {
+          "id": "notruf",
+          "text": "Sofort [[notruf]] anrufen",
+          "hinweis": "Richtig. Bei diesem Warnzeichen zählt jede Minute.",
+          "richtig": true
+        },
+        {
+          "id": "chat",
+          "text": "Zuerst Lupe fragen, was es sein könnte",
+          "hinweis": "Nein. Chatten kostet Zeit. Zuerst [[notruf]]."
+        },
+        {
+          "id": "warten",
+          "text": "Abwarten, ob es von allein besser wird",
+          "hinweis": "Nicht abwarten. Sofort [[notruf]] anrufen."
+        },
+        {
+          "id": "hausarzt",
+          "text": "Morgen den Hausarzt anrufen",
+          "hinweis": "Bei diesem Warnzeichen nicht. Sofort [[notruf]]."
+        }
+      ],
+      "loesung": [
+        "notruf"
+      ]
+    },
+    "no-b": {
+      "typ": "wahl",
+      "wunsch": "Meine Frau spricht plötzlich ganz verwaschen.",
+      "frage": "Was tut Herr Hofmann?",
+      "lupe": "Sofort [[notruf]] anrufen. Plötzliche Sprachstörung kann ein Zeichen für einen Hirnschlag sein.",
+      "optionen": [
+        {
+          "id": "notruf",
+          "text": "Sofort [[notruf]] anrufen",
+          "hinweis": "Richtig. Jede Minute zählt.",
+          "richtig": true
+        },
+        {
+          "id": "foto",
+          "text": "Ein Video machen und Lupe schicken",
+          "hinweis": "Nein. Das kostet Zeit. Sofort [[notruf]]."
+        },
+        {
+          "id": "hinlegen",
+          "text": "Sie hinlegen und morgen weiterschauen",
+          "hinweis": "Nicht abwarten. Sofort [[notruf]]."
+        },
+        {
+          "id": "bereitschaft",
+          "text": "Erst [[bereitschaft]] anrufen",
+          "hinweis": "Bei diesen Warnzeichen nicht. Direkt [[notruf]]."
+        }
+      ],
+      "loesung": [
+        "notruf"
+      ]
+    },
+    "no-c": {
+      "typ": "wahl",
+      "wunsch": "Welche Zeichen bedeuten: sofort anrufen?",
+      "frage": "Bei welchem Zeichen rufst du sofort [[notruf]] an?",
+      "lupe": "Plötzliche Lähmung einer Körperseite ist ein Warnzeichen. Sofort [[notruf]].",
+      "optionen": [
+        {
+          "id": "laehmung",
+          "text": "Plötzlich ist ein Arm und eine Gesichtshälfte gelähmt",
+          "hinweis": "Richtig. Sofort [[notruf]].",
+          "richtig": true
+        },
+        {
+          "id": "schnupfen",
+          "text": "Schnupfen seit gestern",
+          "hinweis": "Kein Notfall. Das hat Zeit."
+        },
+        {
+          "id": "frage",
+          "text": "Eine Frage zum Laborbericht",
+          "hinweis": "Kein Notfall. Dafür ist Lupe da."
+        },
+        {
+          "id": "termin",
+          "text": "Der Arzttermin ist erst nächste Woche",
+          "hinweis": "Kein Notfall."
+        }
+      ],
+      "loesung": [
+        "laehmung"
+      ]
+    },
+    "no-d": {
+      "typ": "reihe",
+      "wunsch": "Was sage ich am Telefon, wenn ich [[notruf]] anrufe?",
+      "frage": "Bring die Angaben am Telefon in eine sinnvolle Reihenfolge.",
+      "schritte": [
+        {
+          "id": "was",
+          "text": "Was ist passiert"
+        },
+        {
+          "id": "wo",
+          "text": "Wo bin ich: Ort, Strasse, Hausnummer"
+        },
+        {
+          "id": "warten",
+          "text": "Warten, bis die Notrufzentrale das Gespräch beendet"
+        },
+        {
+          "id": "wer",
+          "text": "Wer ruft an, mit Rückrufnummer"
+        }
+      ],
+      "loesung": [
+        "wo",
+        "wer",
+        "was",
+        "warten"
+      ],
+      "lupe": "Wo, wer, was, und nicht einfach auflegen. So findet die Hilfe den Weg.",
+      "daneben": {
+        "texte": [
+          "Alles erzählt, aber die Adresse vergessen. Die Hilfe weiss nicht, wohin.",
+          "Aufgelegt, bevor die Zentrale fertig war. Sie hatte noch Fragen."
+        ],
+        "hinweis": "Zuerst wo, dann wer, dann was. Und warten, bis die Zentrale das Gespräch beendet."
+      }
+    },
+    "no-e": {
+      "typ": "wahl",
+      "wunsch": "Darf ich bei Warnzeichen zuerst Lupe fragen, ob es ernst ist?",
+      "frage": "Wofür ist Lupe da, wofür nicht?",
+      "lupe": "Lupe ist für Fragen, die Zeit haben. Bei Warnzeichen gilt: sofort [[notruf]].",
+      "optionen": [
+        {
+          "id": "zeit",
+          "text": "Lupe für Fragen mit Zeit, bei Warnzeichen sofort [[notruf]]",
+          "hinweis": "Richtig.",
+          "richtig": true
+        },
+        {
+          "id": "alles",
+          "text": "Lupe für alles, auch Notfälle",
+          "hinweis": "Nein. Im Notfall zählt jede Minute."
+        },
+        {
+          "id": "notfall",
+          "text": "Lupe nur für Notfälle",
+          "hinweis": "Umgekehrt: Für Notfälle ist sie der falsche Ort."
+        },
+        {
+          "id": "nie",
+          "text": "Lupe für gar nichts",
+          "hinweis": "Für Fragen mit Zeit ist sie gut."
+        }
+      ],
+      "loesung": [
+        "zeit"
+      ]
+    },
+    "no-f": {
+      "typ": "wahl",
+      "wunsch": "Seit einer Stunde habe ich einen Schnupfen. Notfall?",
+      "frage": "Ist das ein Fall für [[notruf]]?",
+      "lupe": "Nein. Ein Schnupfen hat Zeit. Den kannst du in Ruhe besprechen.",
+      "optionen": [
+        {
+          "id": "nein",
+          "text": "Nein, das hat Zeit",
+          "hinweis": "Richtig. [[notruf]] ist für echte Notfälle.",
+          "richtig": true
+        },
+        {
+          "id": "ja",
+          "text": "Ja, sofort [[notruf]]",
+          "hinweis": "Nein, ein Schnupfen ist kein Notfall."
+        },
+        {
+          "id": "rega",
+          "text": "Ja, mit dem Helikopter",
+          "hinweis": "Sicher nicht."
+        },
+        {
+          "id": "lupe",
+          "text": "Nein, aber Lupe soll mir Medikamente verschreiben",
+          "hinweis": "Lupe verschreibt nichts. Frag die Apotheke."
+        }
+      ],
+      "loesung": [
+        "nein"
+      ]
+    },
+    "nn-a": {
+      "wunsch": "Was gehört aufs Foto, und was nicht?",
+      "grundprompt": "Lupe, erklär mir diesen Bericht in einfachen Worten.",
+      "teile": [
+        {
+          "id": "werte",
+          "art": "anhang",
+          "text": "Foto: nur die Werte, Kopf mit Adresse abgedeckt"
+        },
+        {
+          "id": "ganz",
+          "art": "anhang",
+          "text": "Foto: ganzes Blatt mit [[nummer]] und Adresse"
+        },
+        {
+          "id": "nachbar",
+          "art": "anhang",
+          "text": "Foto: Bericht vom Nachbarn, zum Vergleich"
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "nachbar"
+            ]
+          },
+          "fehlbild": "fremd"
+        },
+        {
+          "wenn": {
+            "gewaehlt": [
+              "ganz"
+            ]
+          },
+          "fehlbild": "nummer"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "werte"
+            ]
+          },
+          "fehlbild": "ohneBericht"
+        }
+      ],
+      "fehlbilder": {
+        "fremd": {
+          "texte": [
+            "Das ist der Bericht deines Nachbarn. Weiss er, dass du ihn mir zeigst?",
+            "Herr Meier ist nicht hier. Hat er zugestimmt?"
+          ],
+          "hinweis": "Berichte anderer Menschen nur mit deren Erlaubnis."
+        },
+        "nummer": {
+          "texte": [
+            "Danke für die [[nummer]]. Gebraucht habe ich sie für nichts. Jetzt liegt sie aber im Chat.",
+            "Den Bericht erkläre ich gern. Die [[nummer]] darauf brauche ich nicht."
+          ],
+          "hinweis": "Lupe braucht die [[nummer]] nicht. Deck sie vor dem Foto ab."
+        },
+        "ohneBericht": {
+          "texte": [
+            "Gern. Welchen Bericht? Ich sehe keinen.",
+            "Ich warte auf den Bericht."
+          ],
+          "hinweis": "Der Bericht selbst fehlt."
+        }
+      },
+      "erfolg": [
+        "Danke. Deine Werte sehe ich gut, persönliche Nummern keine. So soll es sein.",
+        "Alles, was ich brauche, und nichts mehr. Hier die Erklärung."
+      ],
+      "loesung": [
+        "werte"
+      ]
+    },
+    "nn-b": {
+      "wunsch": "Ich schreibe Lupe eine Frage zu meinem Rezept.",
+      "grundprompt": "Lupe, ich habe eine Frage zu meinem Rezept.",
+      "teile": [
+        {
+          "id": "medi",
+          "art": "angaben",
+          "text": "Darauf steht eine neue Blutdrucktablette."
+        },
+        {
+          "id": "frage",
+          "art": "frage",
+          "text": "Wofür ist sie, in einfachen Worten?"
+        },
+        {
+          "id": "nummer",
+          "art": "angaben",
+          "text": "Meine [[nummer]] ist [[nummerBeispiel]]."
+        },
+        {
+          "id": "adresse",
+          "art": "angaben",
+          "text": "Ich wohne an der Dorfstrasse 12."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "nummer"
+            ]
+          },
+          "fehlbild": "nummer"
+        },
+        {
+          "wenn": {
+            "gewaehlt": [
+              "adresse"
+            ]
+          },
+          "fehlbild": "adresse"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "medi"
+            ]
+          },
+          "fehlbild": "ohneMedi"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "frage"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        }
+      ],
+      "fehlbilder": {
+        "nummer": {
+          "texte": [
+            "Danke für die [[nummer]]. Gebraucht habe ich sie für nichts. Jetzt liegt sie aber im Chat.",
+            "Den Bericht erkläre ich gern. Die [[nummer]] darauf brauche ich nicht."
+          ],
+          "hinweis": "Lupe braucht die [[nummer]] nicht. Deck sie vor dem Foto ab."
+        },
+        "adresse": {
+          "texte": [
+            "Dorfstrasse 12, schön. Für die Frage zur Tablette brauche ich das nicht.",
+            "Deine Adresse hilft mir beim Rezept nicht."
+          ],
+          "hinweis": "Die Adresse braucht Lupe nicht. Lass sie weg."
+        },
+        "ohneMedi": {
+          "texte": [
+            "Gern. Welche Tablette?",
+            "Was steht denn auf dem Rezept?"
+          ],
+          "hinweis": "Nenn die Tablette, um die es geht."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke, notiert. Und was willst du wissen?",
+            "Eine neue Tablette. Und nun?"
+          ],
+          "hinweis": "Stell deine Frage."
+        }
+      },
+      "erfolg": [
+        "Blutdrucktabletten senken den Blutdruck. Wie genau deine wirkt und wie du sie nimmst, erklärt dir die Apotheke.",
+        "Sie soll den Blutdruck senken. Fragen zur Einnahme beantwortet dir die Apotheke am besten."
+      ],
+      "loesung": [
+        "medi",
+        "frage"
+      ]
+    },
+    "nn-c": {
+      "typ": "wahl",
+      "wunsch": "Lupe will doch alles wissen, oder?",
+      "frage": "Welche Angabe braucht Lupe für eine Frage zu deinen Blutwerten nicht?",
+      "lupe": "Die [[nummer]]. Für Blutwerte braucht Lupe Werte, Alter und Tabletten, keine Nummern.",
+      "optionen": [
+        {
+          "id": "nummer",
+          "text": "Meine [[nummer]]",
+          "hinweis": "Richtig. Die braucht Lupe nicht.",
+          "richtig": true
+        },
+        {
+          "id": "alter",
+          "text": "Mein Alter",
+          "hinweis": "Das hilft beim Einordnen."
+        },
+        {
+          "id": "tabl",
+          "text": "Meine Tabletten",
+          "hinweis": "Die helfen beim Einordnen."
+        },
+        {
+          "id": "werte",
+          "text": "Die Blutwerte",
+          "hinweis": "Die braucht Lupe natürlich."
+        }
+      ],
+      "loesung": [
+        "nummer"
+      ]
+    },
+    "nn-d": {
+      "typ": "wahl",
+      "wunsch": "Meine Freundin hat mir ihren Bericht geschickt. Darf ich ihn Lupe zeigen?",
+      "frage": "Was tust du?",
+      "lupe": "Zuerst die Freundin fragen. Gesundheitsdaten anderer nur mit deren Erlaubnis.",
+      "optionen": [
+        {
+          "id": "fragen",
+          "text": "Zuerst die Freundin fragen",
+          "hinweis": "Richtig. Ihre Daten, ihre Entscheidung.",
+          "richtig": true
+        },
+        {
+          "id": "einfach",
+          "text": "Einfach hochladen, sie merkt es nicht",
+          "hinweis": "Nein. Das sind ihre Daten."
+        },
+        {
+          "id": "anonym",
+          "text": "Ihren Namen wegstreichen und hochladen, ohne zu fragen",
+          "hinweis": "Besser trotzdem fragen."
+        },
+        {
+          "id": "alle",
+          "text": "Gleich alle Berichte aus dem Turnverein sammeln",
+          "hinweis": "Sicher nicht."
+        }
+      ],
+      "loesung": [
+        "fragen"
+      ]
+    },
+    "nn-e": {
+      "typ": "tippen",
+      "wunsch": "Ich will auf dem Foto meine Nummer verschwinden lassen.",
+      "frage": "Was tippst du in der App Fotos an?",
+      "bildschirm": {
+        "titel": "Fotos: Bearbeiten",
+        "zeilen": [
+          "Foto vom Laborbericht, oben stehen Name und Nummer"
+        ]
+      },
+      "flaechen": [
+        {
+          "id": "zuschneiden",
+          "text": "Zuschneiden",
+          "hinweis": "Genau. Schneide den Kopf mit Name und Nummer weg.",
+          "folge": "Der obere Teil mit Name und Nummer ist weg. Die Werte bleiben.",
+          "richtig": true
+        },
+        {
+          "id": "filter",
+          "text": "Filter",
+          "hinweis": "Ein Filter macht das Bild nur bunter.",
+          "folge": "Das Foto ist jetzt schwarz-weiss. Die Nummer ist noch da."
+        },
+        {
+          "id": "licht",
+          "text": "Licht",
+          "hinweis": "Damit wird das Foto heller, die Nummer bleibt.",
+          "folge": "Heller. Die Nummer ist jetzt sogar besser lesbar."
+        },
+        {
+          "id": "teilen",
+          "text": "Teilen",
+          "hinweis": "Damit schickst du das Foto weg, mit Nummer.",
+          "folge": "Halt! So geht die Nummer mit."
+        }
+      ],
+      "loesung": [
+        "zuschneiden"
+      ]
+    },
+    "nn-f": {
+      "typ": "wahl",
+      "wunsch": "Mein Enkel sagt, ich soll Lupe mein Passwort geben, damit sie hilft.",
+      "frage": "Was ist richtig?",
+      "lupe": "Passwörter gehören nie in einen Chat. Niemand braucht sie, auch keine KI.",
+      "optionen": [
+        {
+          "id": "nie",
+          "text": "Passwörter gehören nie in einen Chat",
+          "hinweis": "Richtig.",
+          "richtig": true
+        },
+        {
+          "id": "einmal",
+          "text": "Nur einmal, dann löschen",
+          "hinweis": "Auch nicht einmal."
+        },
+        {
+          "id": "ki",
+          "text": "Einer KI darf man es geben",
+          "hinweis": "Nein, auch keiner KI."
+        },
+        {
+          "id": "anweisung",
+          "text": "In die Anweisung im Projekt, da ist es sicher",
+          "hinweis": "Nein. Passwörter gehören nirgends hin."
+        }
+      ],
+      "loesung": [
+        "nie"
+      ]
+    },
+    "lo-a": {
+      "typ": "tippen",
+      "wunsch": "Diesen alten Chat brauche ich nicht mehr.",
+      "frage": "Wie löschst du den Chat?",
+      "bildschirm": {
+        "titel": "Chat: Menü",
+        "zeilen": [
+          "Menü eines alten Chats"
+        ]
+      },
+      "flaechen": [
+        {
+          "id": "umbenennen",
+          "text": "Umbenennen",
+          "hinweis": "Damit änderst du nur den Namen.",
+          "folge": "Der Chat heisst jetzt anders. Gelöscht ist er nicht."
+        },
+        {
+          "id": "loeschen",
+          "text": "Löschen",
+          "hinweis": "Genau.",
+          "folge": "Gelöscht. Der Chat ist aus der Liste weg, laut Anthropic innert 30 Tagen auch von den Servern.",
+          "richtig": true
+        },
+        {
+          "id": "teilen",
+          "text": "Teilen",
+          "hinweis": "Damit schickst du den Chat an andere. Das willst du hier nicht.",
+          "folge": "Das Teilen-Menü geht auf. Gelöscht ist nichts."
+        },
+        {
+          "id": "projekt",
+          "text": "Zum Projekt hinzufügen",
+          "hinweis": "Damit verschiebst du ihn nur.",
+          "folge": "Der Chat liegt jetzt im Projekt. Gelöscht ist er nicht."
+        }
+      ],
+      "loesung": [
+        "loeschen"
+      ]
+    },
+    "lo-b": {
+      "typ": "tippen",
+      "wunsch": "Ich habe eine einmalige Frage und will danach keine Spuren.",
+      "frage": "Was startest du?",
+      "bildschirm": {
+        "titel": "Claude: Neuer Chat"
+      },
+      "flaechen": [
+        {
+          "id": "normal",
+          "text": "Normaler Chat",
+          "hinweis": "Der bleibt in der Liste, bis du ihn löschst.",
+          "folge": "Ein normaler Chat. Er bleibt, bis du ihn löschst."
+        },
+        {
+          "id": "projekt",
+          "text": "Chat im Projekt «Meine Gesundheit»",
+          "hinweis": "Gut für Gesundheitsfragen, aber er bleibt gespeichert.",
+          "folge": "Ein Chat im Projekt. Er bleibt gespeichert."
+        },
+        {
+          "id": "inkognito",
+          "text": "Inkognito-Chat",
+          "hinweis": "Genau. Laut Anthropic nicht fürs Training genutzt.",
+          "folge": "Ein Inkognito-Chat. Laut Anthropic wird er nicht fürs Training genutzt.",
+          "richtig": true
+        },
+        {
+          "id": "teilen",
+          "text": "Geteilter Chat",
+          "hinweis": "Den sehen andere. Das Gegenteil von keinen Spuren.",
+          "folge": "Ein geteilter Chat. Andere können ihn sehen."
+        }
+      ],
+      "loesung": [
+        "inkognito"
+      ]
+    },
+    "lo-c": {
+      "typ": "wahl",
+      "wunsch": "Was passiert, wenn ich einen Chat lösche?",
+      "frage": "Was sagt Anthropic dazu?",
+      "lupe": "Er verschwindet sofort aus der Liste und wird innert 30 Tagen von den Servern gelöscht.",
+      "optionen": [
+        {
+          "id": "dreissig",
+          "text": "Sofort aus der Liste, innert 30 Tagen von den Servern",
+          "hinweis": "Richtig.",
+          "richtig": true
+        },
+        {
+          "id": "nie",
+          "text": "Er bleibt für immer gespeichert",
+          "hinweis": "Nein, laut Anthropic innert 30 Tagen gelöscht."
+        },
+        {
+          "id": "papierkorb",
+          "text": "Er liegt jahrelang im Papierkorb",
+          "hinweis": "Nein."
+        },
+        {
+          "id": "arzt",
+          "text": "Er wird an den Arzt geschickt",
+          "hinweis": "Nein, nichts wird an den Arzt geschickt."
+        }
+      ],
+      "loesung": [
+        "dreissig"
+      ]
+    },
+    "lo-d": {
+      "typ": "wahl",
+      "wunsch": "Wird ein Inkognito-Chat fürs Training benutzt?",
+      "frage": "Was gilt laut Anthropic für Inkognito-Chats?",
+      "lupe": "Sie werden nicht zum Verbessern von Claude genutzt, auch wenn das Training eingeschaltet ist.",
+      "optionen": [
+        {
+          "id": "nein",
+          "text": "Nein, nie fürs Training",
+          "hinweis": "Richtig.",
+          "richtig": true
+        },
+        {
+          "id": "ja",
+          "text": "Ja, immer",
+          "hinweis": "Nein, laut Anthropic nicht."
+        },
+        {
+          "id": "abo",
+          "text": "Nur im Abo nicht",
+          "hinweis": "Das gilt auch gratis."
+        },
+        {
+          "id": "wochenende",
+          "text": "Nur am Wochenende nicht",
+          "hinweis": "Nein, das hat mit dem Wochentag nichts zu tun."
+        }
+      ],
+      "loesung": [
+        "nein"
+      ]
+    },
+    "lo-e": {
+      "typ": "reihe",
+      "wunsch": "Wie lösche ich einen alten Chat Schritt für Schritt?",
+      "frage": "Bring die Schritte in die richtige Reihenfolge.",
+      "schritte": [
+        {
+          "id": "menue",
+          "text": "Beim Chat das Menü öffnen"
+        },
+        {
+          "id": "liste",
+          "text": "Die Liste der Chats öffnen"
+        },
+        {
+          "id": "bestaetigen",
+          "text": "Bestätigen"
+        },
+        {
+          "id": "loeschen",
+          "text": "«Löschen» wählen"
+        }
+      ],
+      "loesung": [
+        "liste",
+        "menue",
+        "loeschen",
+        "bestaetigen"
+      ],
+      "lupe": "Liste, Menü, Löschen, bestätigen. Weg ist er.",
+      "daneben": {
+        "texte": [
+          "Bestätigt, aber was eigentlich? Es war noch nichts ausgewählt.",
+          "Menü gesucht, bevor die Liste offen war. Nicht gefunden."
+        ],
+        "hinweis": "Zuerst die Liste, dann das Menü, dann «Löschen», dann bestätigen."
+      }
+    },
+    "lo-f": {
+      "typ": "wahl",
+      "wunsch": "Soll ich die Berichte im Projekt auch irgendwann löschen?",
+      "frage": "Was ist sinnvoll?",
+      "lupe": "Was du nicht mehr brauchst, darfst du löschen. Was du für den Verlauf brauchst, behalte.",
+      "optionen": [
+        {
+          "id": "sinnvoll",
+          "text": "Löschen, was ich nicht mehr brauche, behalten, was ich für den Verlauf brauche",
+          "hinweis": "Richtig. Du entscheidest.",
+          "richtig": true
+        },
+        {
+          "id": "alles",
+          "text": "Alles sofort löschen",
+          "hinweis": "Dann fehlt dir später der Verlauf."
+        },
+        {
+          "id": "nie",
+          "text": "Nie etwas löschen",
+          "hinweis": "Darfst du, aber Altes, Unnötiges kann weg."
+        },
+        {
+          "id": "arzt",
+          "text": "Der Arzt muss das entscheiden",
+          "hinweis": "Nein, das entscheidest du."
+        }
+      ],
+      "loesung": [
+        "sinnvoll"
+      ]
+    },
+    "m-a": {
+      "typ": "wahl",
+      "wunsch": "Zum Schluss: Plötzlich kann ich den linken Arm kaum heben, und ich rede verwaschen.",
+      "frage": "Was tut Herr Hofmann zuerst?",
+      "lupe": "Sofort [[notruf]] anrufen. Plötzliche Lähmung und Sprachstörung sind Warnzeichen.",
+      "optionen": [
+        {
+          "id": "notruf",
+          "text": "Sofort [[notruf]] anrufen",
+          "hinweis": "Richtig. Fragen an Lupe haben Zeit bis später.",
+          "richtig": true
+        },
+        {
+          "id": "lupe",
+          "text": "Lupe fragen, ob es schlimm ist",
+          "hinweis": "Nein. Bei Warnzeichen nicht chatten."
+        },
+        {
+          "id": "loeschen",
+          "text": "Zuerst alte Chats löschen",
+          "hinweis": "Nein. Zuerst [[notruf]]."
+        },
+        {
+          "id": "schlafen",
+          "text": "Hinlegen und schlafen",
+          "hinweis": "Nicht abwarten. Sofort [[notruf]]."
+        }
+      ],
+      "loesung": [
+        "notruf"
+      ]
+    }
+  }
+}

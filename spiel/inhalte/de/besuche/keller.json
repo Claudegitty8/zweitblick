@@ -1,0 +1,1747 @@
+{
+  "id": "keller",
+  "kapitel": 5,
+  "gast": "Herr Keller, 76",
+  "thema": "Die zweite Sicht",
+  "wunsch": "Mir ist manchmal schwindlig. Ich möchte wissen, was dahinterstecken könnte, bevor ich zum Arzt gehe.",
+  "dank": "Mein Arzt hat gesagt, so gut vorbereitet sei selten jemand. Er schaut sich die Tablette an.",
+  "danach": "Herr Keller spendiert eine Runde Kaffee. Frau Rossi setzt sich dazu. Sie ist seit Monaten müde.",
+  "lexikon": [
+    "schwindel"
+  ],
+  "runden": [
+    {
+      "id": "r1",
+      "art": "konzept",
+      "konzept": "beschwerden",
+      "probieren": {
+        "aufgabe": "bs-a",
+        "nurTeile": [
+          "wetter",
+          "was"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "bs-a"
+      },
+      "luecke": {
+        "aufgabe": "bs-b",
+        "vorgabe": [
+          "seit"
+        ]
+      },
+      "frei": [
+        "bs-c",
+        "bs-d",
+        "bs-e",
+        "bs-f"
+      ]
+    },
+    {
+      "id": "r2",
+      "art": "konzept",
+      "konzept": "verlauf",
+      "probieren": {
+        "aufgabe": "vl-a",
+        "nurTeile": [
+          "okt",
+          "ohne"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "vl-a"
+      },
+      "luecke": {
+        "aufgabe": "vl-b",
+        "vorgabe": [
+          "j24"
+        ]
+      },
+      "frei": [
+        "vl-c",
+        "vl-d",
+        "vl-e",
+        "vl-f"
+      ]
+    },
+    {
+      "id": "r3",
+      "art": "konzept",
+      "konzept": "fragen-arzt",
+      "probieren": {
+        "aufgabe": "fa-a",
+        "nurTeile": [
+          "vorwurf",
+          "fragen"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "fa-a"
+      },
+      "luecke": {
+        "aufgabe": "fa-b",
+        "vorgabe": [
+          "fragen"
+        ]
+      },
+      "frei": [
+        "fa-c",
+        "fa-d",
+        "fa-e",
+        "fa-f"
+      ]
+    },
+    {
+      "id": "r4",
+      "art": "misch",
+      "titel": "Alles zusammen",
+      "frei": [
+        "m-a"
+      ]
+    }
+  ],
+  "aufgaben": {
+    "bs-a": {
+      "wunsch": "Mir ist schwindlig. Was kann das sein?",
+      "grundprompt": "Lupe, mir ist schwindlig.",
+      "teile": [
+        {
+          "id": "seit",
+          "art": "angaben",
+          "text": "Seit zwei Wochen."
+        },
+        {
+          "id": "wann",
+          "art": "angaben",
+          "text": "Vor allem beim Aufstehen."
+        },
+        {
+          "id": "dauer",
+          "art": "angaben",
+          "text": "Es dauert nur kurz."
+        },
+        {
+          "id": "neu",
+          "art": "angaben",
+          "text": "Seit drei Wochen nehme ich eine neue Blutdrucktablette."
+        },
+        {
+          "id": "wetter",
+          "art": "angaben",
+          "text": "Gestern hat es geregnet."
+        },
+        {
+          "id": "was",
+          "art": "frage",
+          "text": "Was könnte das sein, und was frage ich meinen Arzt?"
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "wetter"
+            ]
+          },
+          "fehlbild": "wetter"
+        },
+        {
+          "wenn": {
+            "aus": [
+              "seit",
+              "wann",
+              "dauer"
+            ],
+            "hoechstens": 0
+          },
+          "fehlbild": "nichts"
+        },
+        {
+          "wenn": {
+            "aus": [
+              "seit",
+              "wann",
+              "dauer"
+            ],
+            "hoechstens": 1
+          },
+          "fehlbild": "wenig"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "neu"
+            ]
+          },
+          "fehlbild": "keineTablette"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "was"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        }
+      ],
+      "fehlbilder": {
+        "wetter": {
+          "texte": [
+            "Regen! Vielleicht Wetterfühligkeit? (Lupe hat sich am Regen festgebissen.)",
+            "Das Wetter könnte … Moment, wieso Regen?"
+          ],
+          "hinweis": "Was nichts damit zu tun hat, lenkt Lupe ab."
+        },
+        "nichts": {
+          "texte": [
+            "Schwindel kann viele Gründe haben: Innenohr, Kreislauf, Augen, Nerven, Tabletten … (Lupe zählt zwanzig Dinge auf.)",
+            "Möglich ist vieles, von harmlos bis selten. Ohne mehr Angaben kann ich nichts eingrenzen."
+          ],
+          "hinweis": "«Schwindlig» allein sagt zu wenig. Lupe zählt alles auf und kann nichts eingrenzen."
+        },
+        "wenig": {
+          "texte": [
+            "Danke! Aber wann genau? Beim Gehen, im Liegen, beim Aufstehen? Ich rate weiter.",
+            "Etwas genauer, bitte: Wann tritt es auf, und wie lange dauert es?"
+          ],
+          "hinweis": "Schon besser. Je genauer die Beschreibung, desto besser kann Lupe eingrenzen."
+        },
+        "keineTablette": {
+          "texte": [
+            "Schwindel beim Aufstehen kann mit dem Kreislauf zu tun haben. Hat sich zuletzt etwas geändert?",
+            "Das passt zum Kreislauf. Gab es etwas Neues, zum Beispiel ein Medikament?"
+          ],
+          "hinweis": "Das Wichtigste fehlt: die neue Tablette. Was sich geändert hat, gehört immer dazu."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        }
+      },
+      "erfolg": [
+        "Kurzer Schwindel beim Aufstehen kann mit dem Blutdruck zu tun haben, auch mit einer neuen Blutdrucktablette. Nicht selbst absetzen. Frag deinen Arzt bald.",
+        "Das passt zum Blutdruck, vielleicht zur neuen Tablette. Frag deinen Arzt: Kann die Tablette schuld sein? Setz sie nicht selbst ab."
+      ],
+      "loesung": [
+        "seit",
+        "wann",
+        "dauer",
+        "neu",
+        "was"
+      ]
+    },
+    "bs-b": {
+      "wunsch": "Ich huste seit Wochen. Was schreibe ich Lupe?",
+      "grundprompt": "Lupe, ich huste.",
+      "teile": [
+        {
+          "id": "seit",
+          "art": "angaben",
+          "text": "Seit drei Wochen."
+        },
+        {
+          "id": "wann",
+          "art": "angaben",
+          "text": "Vor allem nachts."
+        },
+        {
+          "id": "dazu",
+          "art": "angaben",
+          "text": "Kein Fieber, trockener Husten."
+        },
+        {
+          "id": "neu",
+          "art": "angaben",
+          "text": "Seit einem Monat nehme ich eine neue Blutdrucktablette."
+        },
+        {
+          "id": "katze",
+          "art": "angaben",
+          "text": "Die Nachbarskatze war zu Besuch."
+        },
+        {
+          "id": "was",
+          "art": "frage",
+          "text": "Was könnte das sein, und was frage ich meinen Arzt?"
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "katze"
+            ]
+          },
+          "fehlbild": "katze"
+        },
+        {
+          "wenn": {
+            "aus": [
+              "seit",
+              "wann",
+              "dazu"
+            ],
+            "hoechstens": 0
+          },
+          "fehlbild": "nichts"
+        },
+        {
+          "wenn": {
+            "aus": [
+              "seit",
+              "wann",
+              "dazu"
+            ],
+            "hoechstens": 1
+          },
+          "fehlbild": "wenig"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "neu"
+            ]
+          },
+          "fehlbild": "keineTablette"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "was"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        }
+      ],
+      "fehlbilder": {
+        "katze": {
+          "texte": [
+            "Eine Katze! Vielleicht eine Katzenallergie? (Lupe hat sich auf die Katze gestürzt.)",
+            "Die Katze ist verdächtig. Ich ermittle."
+          ],
+          "hinweis": "Was nur nebenbei passiert ist, lenkt Lupe auf eine falsche Spur."
+        },
+        "nichts": {
+          "texte": [
+            "Husten hat sehr viele Gründe: Erkältung, Allergie, Rauch, trockene Luft … (Lupe zählt weiter.)",
+            "Von harmlos bis ernst ist alles möglich. Ich kann nicht eingrenzen."
+          ],
+          "hinweis": "«Ich huste» allein sagt zu wenig."
+        },
+        "wenig": {
+          "texte": [
+            "Danke! Aber wann genau? Beim Gehen, im Liegen, beim Aufstehen? Ich rate weiter.",
+            "Etwas genauer, bitte: Wann tritt es auf, und wie lange dauert es?"
+          ],
+          "hinweis": "Schon besser. Je genauer die Beschreibung, desto besser kann Lupe eingrenzen."
+        },
+        "keineTablette": {
+          "texte": [
+            "Trockener Husten seit Wochen. Hat sich etwas geändert, zum Beispiel ein Medikament?",
+            "Gab es in letzter Zeit etwas Neues? Das würde helfen."
+          ],
+          "hinweis": "Die neue Tablette gehört dazu. Neues immer erwähnen."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        }
+      },
+      "erfolg": [
+        "Danke, das ist genau: drei Wochen, nachts, trocken, kein Fieber, neue Tablette seit einem Monat. Das gehört zum Arzt. Frag ihn auch nach der Tablette.",
+        "Mit diesen Angaben kann dein Arzt viel anfangen. Frag ihn, ob die neue Tablette mit dem Husten zu tun haben könnte."
+      ],
+      "loesung": [
+        "seit",
+        "wann",
+        "dazu",
+        "neu",
+        "was"
+      ]
+    },
+    "bs-c": {
+      "wunsch": "Mein Knie tut weh. Wie beschreibe ich das?",
+      "grundprompt": "Lupe, mein Knie tut weh.",
+      "teile": [
+        {
+          "id": "seit",
+          "art": "angaben",
+          "text": "Seit einem Monat."
+        },
+        {
+          "id": "wann",
+          "art": "angaben",
+          "text": "Vor allem beim Treppensteigen."
+        },
+        {
+          "id": "dazu",
+          "art": "angaben",
+          "text": "Morgens ist es steif, nach ein paar Schritten besser."
+        },
+        {
+          "id": "sturz",
+          "art": "angaben",
+          "text": "Vor fünf Wochen bin ich auf dem Trottoir gestolpert."
+        },
+        {
+          "id": "was",
+          "art": "frage",
+          "text": "Was könnte das sein, und was frage ich meinen Arzt?"
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "aus": [
+              "seit",
+              "wann",
+              "dazu"
+            ],
+            "hoechstens": 0
+          },
+          "fehlbild": "nichts"
+        },
+        {
+          "wenn": {
+            "aus": [
+              "seit",
+              "wann",
+              "dazu"
+            ],
+            "hoechstens": 1
+          },
+          "fehlbild": "wenig"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "sturz"
+            ]
+          },
+          "fehlbild": "keinSturz"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "was"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        }
+      ],
+      "fehlbilder": {
+        "nichts": {
+          "texte": [
+            "Knieschmerzen haben viele Gründe: Abnutzung, Verletzung, Entzündung … (Lupe zählt alles auf.)",
+            "Das kann vieles sein. Ich weiss zu wenig."
+          ],
+          "hinweis": "«Tut weh» allein sagt zu wenig."
+        },
+        "wenig": {
+          "texte": [
+            "Danke! Aber wann genau? Beim Gehen, im Liegen, beim Aufstehen? Ich rate weiter.",
+            "Etwas genauer, bitte: Wann tritt es auf, und wie lange dauert es?"
+          ],
+          "hinweis": "Schon besser. Je genauer die Beschreibung, desto besser kann Lupe eingrenzen."
+        },
+        "keinSturz": {
+          "texte": [
+            "Steifigkeit am Morgen und Schmerzen beim Treppensteigen. Gab es einen Unfall oder Sturz?",
+            "Ist in letzter Zeit etwas passiert? Ein Sturz wäre wichtig."
+          ],
+          "hinweis": "Der Sturz fehlt. Was vorher passiert ist, gehört dazu."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        }
+      },
+      "erfolg": [
+        "Danke, sehr genau. Sag deinem Arzt unbedingt vom Sturz vor fünf Wochen. Er wird das Knie wohl anschauen wollen.",
+        "Mit Sturz, Steifigkeit am Morgen und Schmerz beim Treppensteigen weiss dein Arzt, wo er suchen muss."
+      ],
+      "loesung": [
+        "seit",
+        "wann",
+        "dazu",
+        "sturz",
+        "was"
+      ]
+    },
+    "bs-d": {
+      "wunsch": "Ich schlafe schlecht. Was schreibe ich?",
+      "grundprompt": "Lupe, ich schlafe schlecht.",
+      "teile": [
+        {
+          "id": "seit",
+          "art": "angaben",
+          "text": "Seit etwa zwei Monaten."
+        },
+        {
+          "id": "wann",
+          "art": "angaben",
+          "text": "Ich wache jede Nacht um drei Uhr auf."
+        },
+        {
+          "id": "dazu",
+          "art": "angaben",
+          "text": "Dann muss ich auf die Toilette und kann nicht mehr einschlafen."
+        },
+        {
+          "id": "neu",
+          "art": "angaben",
+          "text": "Seit drei Monaten nehme ich eine Wassertablette."
+        },
+        {
+          "id": "was",
+          "art": "frage",
+          "text": "Was könnte das sein, und was frage ich meinen Arzt?"
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "aus": [
+              "seit",
+              "wann",
+              "dazu"
+            ],
+            "hoechstens": 0
+          },
+          "fehlbild": "nichts"
+        },
+        {
+          "wenn": {
+            "aus": [
+              "seit",
+              "wann",
+              "dazu"
+            ],
+            "hoechstens": 1
+          },
+          "fehlbild": "wenig"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "neu"
+            ]
+          },
+          "fehlbild": "keineTablette"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "was"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        }
+      ],
+      "fehlbilder": {
+        "nichts": {
+          "texte": [
+            "Schlechter Schlaf hat viele Gründe: Sorgen, Lärm, Kaffee, Schmerzen … (Lupe zählt weiter.)",
+            "Das kann alles Mögliche sein. Erzähl mir mehr."
+          ],
+          "hinweis": "«Schlecht schlafen» allein sagt zu wenig."
+        },
+        "wenig": {
+          "texte": [
+            "Danke! Aber wann genau? Beim Gehen, im Liegen, beim Aufstehen? Ich rate weiter.",
+            "Etwas genauer, bitte: Wann tritt es auf, und wie lange dauert es?"
+          ],
+          "hinweis": "Schon besser. Je genauer die Beschreibung, desto besser kann Lupe eingrenzen."
+        },
+        "keineTablette": {
+          "texte": [
+            "Nachts auf die Toilette und dann wach. Nimmst du etwas Neues ein?",
+            "Hat sich bei den Medikamenten etwas geändert?"
+          ],
+          "hinweis": "Die Wassertablette fehlt. Neue Tabletten immer erwähnen."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        }
+      },
+      "erfolg": [
+        "Danke, sehr genau. Frag deinen Arzt, ob die Wassertablette etwas mit dem nächtlichen Aufwachen zu tun hat. Ändere nichts selbst.",
+        "Seit wann, wann, was passiert, und die neue Tablette: Damit kann dein Arzt gut weiterhelfen."
+      ],
+      "loesung": [
+        "seit",
+        "wann",
+        "dazu",
+        "neu",
+        "was"
+      ]
+    },
+    "bs-e": {
+      "typ": "wahl",
+      "wunsch": "Welche Beschreibung hilft Lupe am meisten?",
+      "frage": "Welche Nachricht ist am besten?",
+      "lupe": "Die mit Zeit, Situation, Dauer und dem, was sich geändert hat.",
+      "optionen": [
+        {
+          "id": "genau",
+          "text": "«Seit zwei Wochen, beim Aufstehen, kurz. Seit drei Wochen neue Tablette.»",
+          "hinweis": "Genau. So kann Lupe eingrenzen.",
+          "richtig": true
+        },
+        {
+          "id": "kurz",
+          "text": "«Mir ist schwindlig.»",
+          "hinweis": "Zu wenig. Lupe zählt dann alles auf."
+        },
+        {
+          "id": "lang",
+          "text": "«Mir ist schwindlig, gestern hat es geregnet, und die Katze ist krank.»",
+          "hinweis": "Das lenkt ab. Was nichts damit zu tun hat, weglassen."
+        },
+        {
+          "id": "angst",
+          "text": "«Ist das etwas Schlimmes? Sag schnell!»",
+          "hinweis": "Das verstehe ich. Aber ohne Angaben kann Lupe nichts eingrenzen."
+        }
+      ],
+      "loesung": [
+        "genau"
+      ]
+    },
+    "bs-f": {
+      "typ": "wahl",
+      "wunsch": "Was gehört bei Beschwerden unbedingt dazu?",
+      "frage": "Was vergessen viele, obwohl es wichtig ist?",
+      "lupe": "Was sich zuletzt geändert hat: neue Tabletten, ein Sturz, ein Infekt.",
+      "optionen": [
+        {
+          "id": "neues",
+          "text": "Was sich zuletzt geändert hat, zum Beispiel eine neue Tablette",
+          "hinweis": "Genau. Das ist oft der wichtigste Hinweis.",
+          "richtig": true
+        },
+        {
+          "id": "wetter",
+          "text": "Das Wetter der letzten Tage",
+          "hinweis": "Meist unwichtig."
+        },
+        {
+          "id": "name",
+          "text": "Der Name des Arztes",
+          "hinweis": "Für Lupe nicht nötig."
+        },
+        {
+          "id": "adresse",
+          "text": "Die eigene Adresse",
+          "hinweis": "Die braucht Lupe nicht."
+        }
+      ],
+      "loesung": [
+        "neues"
+      ]
+    },
+    "vl-a": {
+      "wunsch": "Ich habe meinen Blutdruck aufgeschrieben. Ist er besser geworden?",
+      "grundprompt": "Lupe, hier sind meine Blutdrucklisten.",
+      "teile": [
+        {
+          "id": "mai",
+          "art": "anhang",
+          "text": "Blutdruckliste Mai 2026 (Foto)"
+        },
+        {
+          "id": "okt",
+          "art": "anhang",
+          "text": "Blutdruckliste Oktober 2026 (Foto)"
+        },
+        {
+          "id": "ohne",
+          "art": "anhang",
+          "text": "Blutdruckliste ohne Datum (Foto)"
+        },
+        {
+          "id": "veraend",
+          "art": "frage",
+          "text": "Wie haben sich die Werte verändert?"
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "ohne"
+            ]
+          },
+          "fehlbild": "ohneDatum"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "mai"
+            ]
+          },
+          "fehlbild": "nurNeu"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "okt"
+            ]
+          },
+          "fehlbild": "nurAlt"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "veraend"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        }
+      ],
+      "fehlbilder": {
+        "ohneDatum": {
+          "texte": [
+            "Die Liste ohne Datum ist wohl die neuste. Dann sind deine Werte plötzlich ganz anders!",
+            "Drei Listen, eine ohne Datum. Ich sortiere sie nach Gefühl."
+          ],
+          "hinweis": "Ohne Datum weiss Lupe nicht, wann die Liste war. Sie rät."
+        },
+        "nurNeu": {
+          "texte": [
+            "Im Oktober lag dein Blutdruck meist um 125 zu 80. Ob das besser ist als früher? Ich habe nur diese Liste.",
+            "Eine Liste, kein Vergleich. Ich sehe keine Veränderung."
+          ],
+          "hinweis": "Mit nur einer Liste sieht Lupe keine Veränderung."
+        },
+        "nurAlt": {
+          "texte": [
+            "Dein Blutdruck liegt meist um 150 zu 90. (Lupe hält die Liste vom Mai für heute.)",
+            "Im Mai um 150 zu 90. Wie es heute ist, weiss ich nicht."
+          ],
+          "hinweis": "Nur die alte Liste: Lupe hält sie vielleicht für den heutigen Stand."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        }
+      },
+      "erfolg": [
+        "Im Mai meist um 150 zu 90, im Oktober meist um 125 zu 80. Die Werte sind gesunken. Zeig das deinem Arzt.",
+        "Von Mai bis Oktober ist dein Blutdruck gesunken. Besprich mit deinem Arzt, was das heisst."
+      ],
+      "loesung": [
+        "mai",
+        "okt",
+        "veraend"
+      ]
+    },
+    "vl-b": {
+      "wunsch": "Ich habe drei Berichte über die Jahre. Wie war mein Hb?",
+      "grundprompt": "Lupe, hier sind meine Laborberichte.",
+      "teile": [
+        {
+          "id": "j24",
+          "art": "anhang",
+          "text": "Laborbericht März 2024"
+        },
+        {
+          "id": "j26",
+          "art": "anhang",
+          "text": "Laborbericht Mai 2026"
+        },
+        {
+          "id": "ohne",
+          "art": "anhang",
+          "text": "Laborbericht, Datum abgeschnitten"
+        },
+        {
+          "id": "veraend",
+          "art": "frage",
+          "text": "Wie hat sich mein Hb verändert?"
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "ohne"
+            ]
+          },
+          "fehlbild": "ohneDatum"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "j24"
+            ]
+          },
+          "fehlbild": "nurNeu"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "j26"
+            ]
+          },
+          "fehlbild": "nurAlt"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "veraend"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        }
+      ],
+      "fehlbilder": {
+        "ohneDatum": {
+          "texte": [
+            "Der Bericht ohne Datum ist bestimmt von gestern. Dein Hb ist also plötzlich anders!",
+            "Einen Bericht kann ich zeitlich nicht einordnen. Ich rate."
+          ],
+          "hinweis": "Schneid das Datum nicht ab. Ohne Datum rät Lupe."
+        },
+        "nurNeu": {
+          "texte": [
+            "Dein Hb ist 11,2. Wie er früher war? Weiss ich nicht.",
+            "Nur ein Bericht, kein Verlauf."
+          ],
+          "hinweis": "Für einen Verlauf braucht es mehrere Berichte."
+        },
+        "nurAlt": {
+          "texte": [
+            "Dein Hb ist 13,0. (Das war 2024. Lupe hält es für heute.)",
+            "Hb 13,0, alles im Bereich! Von wann? Egal, sagt Lupe."
+          ],
+          "hinweis": "Nur der alte Bericht: Lupe nimmt ihn vielleicht für heute."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        }
+      },
+      "erfolg": [
+        "2024 war dein Hb 13,0, im Mai 2026 11,2. Er ist gesunken. Frag deinen Arzt, woher das kommen kann.",
+        "Dein Hb ist in zwei Jahren von 13,0 auf 11,2 gesunken. Das ist ein guter Punkt für den nächsten Termin."
+      ],
+      "loesung": [
+        "j24",
+        "j26",
+        "veraend"
+      ]
+    },
+    "vl-c": {
+      "wunsch": "Mein Gewicht schreibe ich jede Woche auf. Hilft das?",
+      "grundprompt": "Lupe, hier ist meine Gewichtsliste.",
+      "teile": [
+        {
+          "id": "liste",
+          "art": "anhang",
+          "text": "Gewichtsliste August bis November, mit Datum"
+        },
+        {
+          "id": "heute",
+          "art": "anhang",
+          "text": "Foto der Waage von heute Morgen"
+        },
+        {
+          "id": "veraend",
+          "art": "frage",
+          "text": "Wie hat sich mein Gewicht verändert?"
+        },
+        {
+          "id": "diaet",
+          "art": "frage",
+          "text": "Mach mir einen strengen Diätplan."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "diaet"
+            ]
+          },
+          "fehlbild": "diaet"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "liste"
+            ]
+          },
+          "fehlbild": "nurHeute"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "veraend"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        }
+      ],
+      "fehlbilder": {
+        "diaet": {
+          "texte": [
+            "Hier ein strenger Plan: nur noch Salat. (Das hat niemand verlangt, der dich kennt.)",
+            "Diät? Dazu weiss ich zu wenig über dich. Frag lieber deinen Arzt."
+          ],
+          "hinweis": "Lupe soll den Verlauf zeigen, nicht einen Plan erfinden. Das bespricht man mit dem Arzt."
+        },
+        "nurHeute": {
+          "texte": [
+            "Heute zeigt die Waage 71,4 Kilo. Mehr weiss ich nicht.",
+            "Ein Foto der Waage, ein Wert, kein Verlauf."
+          ],
+          "hinweis": "Ein einzelner Wert zeigt keine Veränderung."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        }
+      },
+      "erfolg": [
+        "Von August bis November hast du gut drei Kilo abgenommen. Erzähl das deinem Arzt.",
+        "Dein Gewicht ist in drei Monaten gesunken. Ob das wichtig ist, beurteilt dein Arzt."
+      ],
+      "loesung": [
+        "liste",
+        "veraend"
+      ]
+    },
+    "vl-d": {
+      "wunsch": "Ich habe Cholesterin-Werte von früher und von jetzt.",
+      "grundprompt": "Lupe, hier sind meine Blutfettwerte.",
+      "teile": [
+        {
+          "id": "alt",
+          "art": "anhang",
+          "text": "Blutfette Januar 2023"
+        },
+        {
+          "id": "neu",
+          "art": "anhang",
+          "text": "Blutfette Oktober 2026"
+        },
+        {
+          "id": "veraend",
+          "art": "frage",
+          "text": "Wie haben sich die Werte verändert?"
+        },
+        {
+          "id": "einfach",
+          "art": "wie",
+          "text": "In einfachen Worten."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "fehlt": [
+              "alt"
+            ]
+          },
+          "fehlbild": "nurNeu"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "neu"
+            ]
+          },
+          "fehlbild": "nurAlt"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "veraend"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "einfach"
+            ]
+          },
+          "fehlbild": "fach"
+        }
+      ],
+      "fehlbilder": {
+        "nurNeu": {
+          "texte": [
+            "Aktuell liegt dein Cholesterin bei 5,0. Ob das mehr oder weniger ist als früher, sehe ich nicht.",
+            "Nur ein Wert, kein Verlauf."
+          ],
+          "hinweis": "Für einen Verlauf braucht es den alten Bericht auch."
+        },
+        "nurAlt": {
+          "texte": [
+            "Dein Cholesterin ist 6,3. (Das war 2023.)",
+            "6,3 mmol/l, von wann? Ich nehme an, heute."
+          ],
+          "hinweis": "Nur der alte Bericht. Lupe kennt den heutigen Stand nicht."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        },
+        "fach": {
+          "texte": [
+            "Gesamtcholesterin rückläufig, LDL-Fraktion reduziert, HDL stabil.",
+            "Lipidprofil im Verlauf gebessert."
+          ],
+          "hinweis": "Bitte um einfache Worte."
+        }
+      },
+      "erfolg": [
+        "2023 war dein Cholesterin 6,3, jetzt ist es 5,0. Es ist gesunken. Frag deinen Arzt, ob es so bleiben soll.",
+        "Deine Blutfette sind seit 2023 gesunken. Besprich mit deinem Arzt, was das für dich heisst."
+      ],
+      "loesung": [
+        "alt",
+        "neu",
+        "veraend",
+        "einfach"
+      ]
+    },
+    "vl-e": {
+      "typ": "wahl",
+      "wunsch": "Lupe sagt, mein Wert sei stark gestiegen. Kann das sein?",
+      "frage": "Einer der Berichte hat kein Datum. Was könnte passiert sein?",
+      "lupe": "Lupe hat den Bericht ohne Datum vielleicht für den neusten gehalten. Prüf die Daten.",
+      "optionen": [
+        {
+          "id": "datum",
+          "text": "Lupe hat die Berichte falsch eingeordnet, weil ein Datum fehlt",
+          "hinweis": "Genau. Schreib das Datum dazu.",
+          "richtig": true
+        },
+        {
+          "id": "krank",
+          "text": "Ich bin sicher plötzlich krank",
+          "hinweis": "Erst die Daten prüfen. Oft ist es nur die Reihenfolge."
+        },
+        {
+          "id": "labor",
+          "text": "Das Labor hat sich verrechnet",
+          "hinweis": "Möglich, aber zuerst das fehlende Datum prüfen."
+        },
+        {
+          "id": "egal",
+          "text": "Egal, Lupe hat immer recht",
+          "hinweis": "Nein. Prüfen lohnt sich."
+        }
+      ],
+      "loesung": [
+        "datum"
+      ]
+    },
+    "vl-f": {
+      "typ": "wahl",
+      "wunsch": "Warum soll ich alte Berichte aufheben?",
+      "frage": "Was zeigt ein Verlauf, was ein einzelner Wert nicht zeigt?",
+      "lupe": "Ob sich etwas verändert: steigt, sinkt oder gleich bleibt.",
+      "optionen": [
+        {
+          "id": "veraenderung",
+          "text": "Ob ein Wert steigt, sinkt oder gleich bleibt",
+          "hinweis": "Genau. Darum alte Berichte aufheben.",
+          "richtig": true
+        },
+        {
+          "id": "nichts",
+          "text": "Nichts, der neuste Wert reicht immer",
+          "hinweis": "Der Verlauf sagt oft mehr als ein Wert."
+        },
+        {
+          "id": "diagnose",
+          "text": "Eine sichere Diagnose",
+          "hinweis": "Nein. Er zeigt eine Entwicklung zum Besprechen."
+        },
+        {
+          "id": "geld",
+          "text": "Wie viel man spart",
+          "hinweis": "Damit hat es nichts zu tun."
+        }
+      ],
+      "loesung": [
+        "veraenderung"
+      ]
+    },
+    "fa-a": {
+      "wunsch": "Nächste Woche habe ich den Termin. Ich vergesse sonst immer alles.",
+      "grundprompt": "Lupe, nächste Woche habe ich einen Arzttermin.",
+      "teile": [
+        {
+          "id": "fragen",
+          "art": "frage",
+          "text": "Mach mir Fragen für den Arzt."
+        },
+        {
+          "id": "thema",
+          "art": "angaben",
+          "text": "Es geht um den Schwindel beim Aufstehen."
+        },
+        {
+          "id": "drei",
+          "art": "wie",
+          "text": "Höchstens drei."
+        },
+        {
+          "id": "kurz",
+          "art": "wie",
+          "text": "Kurz und einfach."
+        },
+        {
+          "id": "vorwurf",
+          "art": "wie",
+          "text": "Der Arzt soll merken, dass er etwas falsch gemacht hat."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "vorwurf"
+            ]
+          },
+          "fehlbild": "vorwurf"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "fragen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "thema"
+            ]
+          },
+          "fehlbild": "thema"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "drei"
+            ]
+          },
+          "fehlbild": "viele"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "kurz"
+            ]
+          },
+          "fehlbild": "lang"
+        }
+      ],
+      "fehlbilder": {
+        "vorwurf": {
+          "texte": [
+            "Frage 1: Warum haben Sie mir diese Tablette überhaupt gegeben? (Das Gespräch wird kühl.)",
+            "Frage 1: Haben Sie Ihr Studium wirklich abgeschlossen?"
+          ],
+          "hinweis": "Fragen mit Vorwurf verderben das Gespräch. Frag offen und freundlich."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        },
+        "thema": {
+          "texte": [
+            "Gern! Fragen zu welchem Thema? Zum Wetter, zu den Ferien?",
+            "Frage 1: Wie geht es Ihnen? Frage 2: Haben Sie Kinder?"
+          ],
+          "hinweis": "Lupe weiss nicht, worum es geht. Nenn das Thema."
+        },
+        "viele": {
+          "texte": [
+            "Hier sind 27 Fragen. (Der Termin dauert 15 Minuten.)",
+            "Frage 1 von 40: …"
+          ],
+          "hinweis": "Zu viele Fragen. Bitte um höchstens drei."
+        },
+        "lang": {
+          "texte": [
+            "Frage 1: Könnten Sie mir unter Berücksichtigung meiner gesamten Krankengeschichte seit 1975 erläutern …",
+            "Eine Frage, aber über eine halbe Seite lang."
+          ],
+          "hinweis": "Lange Fragen sind schwer zu stellen. Bitte um kurze."
+        }
+      },
+      "erfolg": [
+        "1. Kann der Schwindel von der neuen Tablette kommen? 2. Soll ich sie weiter nehmen? 3. Wann soll ich anrufen, wenn es schlimmer wird?",
+        "Drei Fragen: Woher kommt der Schwindel? Hat er mit der Tablette zu tun? Was soll ich tun, wenn er bleibt?"
+      ],
+      "loesung": [
+        "fragen",
+        "thema",
+        "drei",
+        "kurz"
+      ]
+    },
+    "fa-b": {
+      "wunsch": "Für den Termin wegen meiner Blutwerte brauche ich Fragen.",
+      "grundprompt": "Lupe, ich gehe wegen meiner Blutwerte zum Arzt.",
+      "teile": [
+        {
+          "id": "fragen",
+          "art": "frage",
+          "text": "Mach mir Fragen für den Arzt."
+        },
+        {
+          "id": "thema",
+          "art": "angaben",
+          "text": "Es geht um mein tiefes Hb."
+        },
+        {
+          "id": "drei",
+          "art": "wie",
+          "text": "Höchstens drei."
+        },
+        {
+          "id": "kurz",
+          "art": "wie",
+          "text": "Kurz und einfach."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "fehlt": [
+              "fragen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "thema"
+            ]
+          },
+          "fehlbild": "thema"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "drei"
+            ]
+          },
+          "fehlbild": "viele"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "kurz"
+            ]
+          },
+          "fehlbild": "lang"
+        }
+      ],
+      "fehlbilder": {
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        },
+        "thema": {
+          "texte": [
+            "Fragen zu welchem Thema? Ich weiss nicht, worum es geht.",
+            "Frage 1: Was gibt es Neues?"
+          ],
+          "hinweis": "Nenn das Thema."
+        },
+        "viele": {
+          "texte": [
+            "Hier sind 19 Fragen zum Hb …",
+            "Frage 1 von 25: …"
+          ],
+          "hinweis": "Bitte um höchstens drei."
+        },
+        "lang": {
+          "texte": [
+            "Frage 1: Inwiefern könnte die beobachtete Hämoglobinkonzentration im Kontext …",
+            "Eine Frage, die über drei Zeilen geht."
+          ],
+          "hinweis": "Bitte um kurze Fragen."
+        }
+      },
+      "erfolg": [
+        "1. Woher kann das tiefe Hb kommen? 2. Braucht es weitere Untersuchungen? 3. Muss ich etwas ändern?",
+        "Drei Fragen: Was ist der Grund? Was wird untersucht? Was kann ich selbst tun?"
+      ],
+      "loesung": [
+        "fragen",
+        "thema",
+        "drei",
+        "kurz"
+      ]
+    },
+    "fa-c": {
+      "wunsch": "Ich gehe wegen meines Knies zum Arzt. Was frage ich?",
+      "grundprompt": "Lupe, ich habe einen Termin wegen meines Knies.",
+      "teile": [
+        {
+          "id": "fragen",
+          "art": "frage",
+          "text": "Mach mir Fragen für den Arzt."
+        },
+        {
+          "id": "thema",
+          "art": "angaben",
+          "text": "Es geht um das Knie, seit dem Sturz vor fünf Wochen."
+        },
+        {
+          "id": "drei",
+          "art": "wie",
+          "text": "Höchstens drei."
+        },
+        {
+          "id": "kurz",
+          "art": "wie",
+          "text": "Kurz und einfach."
+        },
+        {
+          "id": "roentgen",
+          "art": "wie",
+          "text": "Verlang auf jeden Fall ein MRI."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "roentgen"
+            ]
+          },
+          "fehlbild": "fordern"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "fragen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "thema"
+            ]
+          },
+          "fehlbild": "thema"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "drei"
+            ]
+          },
+          "fehlbild": "viele"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "kurz"
+            ]
+          },
+          "fehlbild": "lang"
+        }
+      ],
+      "fehlbilder": {
+        "fordern": {
+          "texte": [
+            "Frage 1: Ich will ein MRI, sofort! (Ob es nötig ist, entscheidet aber der Arzt.)",
+            "Forderung statt Frage. Der Arzt schaut verwundert."
+          ],
+          "hinweis": "Frag, ob eine Untersuchung sinnvoll ist. Fordere nicht. Der Arzt entscheidet."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        },
+        "thema": {
+          "texte": [
+            "Fragen zu welchem Thema?",
+            "Frage 1: Wie war Ihr Wochenende?"
+          ],
+          "hinweis": "Nenn das Thema."
+        },
+        "viele": {
+          "texte": [
+            "Hier sind 22 Fragen zum Knie.",
+            "Frage 1 von 30 …"
+          ],
+          "hinweis": "Bitte um höchstens drei."
+        },
+        "lang": {
+          "texte": [
+            "Frage 1, in drei Absätzen …",
+            "Eine sehr lange Frage."
+          ],
+          "hinweis": "Bitte um kurze Fragen."
+        }
+      },
+      "erfolg": [
+        "1. Kann der Sturz das Knie verletzt haben? 2. Braucht es ein Bild vom Knie? 3. Was hilft mir beim Treppensteigen?",
+        "Drei Fragen: Was ist im Knie passiert? Braucht es eine Untersuchung? Was darf ich belasten?"
+      ],
+      "loesung": [
+        "fragen",
+        "thema",
+        "drei",
+        "kurz"
+      ]
+    },
+    "fa-d": {
+      "wunsch": "Ich gehe wegen des Hustens zum Arzt. Was nehme ich mit?",
+      "grundprompt": "Lupe, ich habe einen Termin wegen des Hustens.",
+      "teile": [
+        {
+          "id": "fragen",
+          "art": "frage",
+          "text": "Mach mir Fragen für den Arzt."
+        },
+        {
+          "id": "thema",
+          "art": "angaben",
+          "text": "Es geht um den trockenen Husten seit drei Wochen."
+        },
+        {
+          "id": "drei",
+          "art": "wie",
+          "text": "Höchstens drei."
+        },
+        {
+          "id": "kurz",
+          "art": "wie",
+          "text": "Kurz und einfach."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "fehlt": [
+              "fragen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "thema"
+            ]
+          },
+          "fehlbild": "thema"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "drei"
+            ]
+          },
+          "fehlbild": "viele"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "kurz"
+            ]
+          },
+          "fehlbild": "lang"
+        }
+      ],
+      "fehlbilder": {
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        },
+        "thema": {
+          "texte": [
+            "Fragen zu welchem Thema?",
+            "Frage 1: Sind Sie zufrieden mit Ihrer Praxis?"
+          ],
+          "hinweis": "Nenn das Thema."
+        },
+        "viele": {
+          "texte": [
+            "Hier sind 31 Fragen zum Husten.",
+            "Frage 1 von 18 …"
+          ],
+          "hinweis": "Bitte um höchstens drei."
+        },
+        "lang": {
+          "texte": [
+            "Frage 1, über eine halbe Seite …",
+            "Eine Frage mit fünf Nebensätzen."
+          ],
+          "hinweis": "Bitte um kurze Fragen."
+        }
+      },
+      "erfolg": [
+        "1. Kann der Husten von der neuen Tablette kommen? 2. Soll ich etwas ändern? 3. Wann soll ich wiederkommen?",
+        "Drei Fragen: Woher kommt der Husten? Hat er mit der Tablette zu tun? Was tue ich, wenn er bleibt?"
+      ],
+      "loesung": [
+        "fragen",
+        "thema",
+        "drei",
+        "kurz"
+      ]
+    },
+    "fa-e": {
+      "typ": "wahl",
+      "wunsch": "Wie viele Fragen nehme ich zum Termin mit?",
+      "frage": "Was ist für einen kurzen Termin am besten?",
+      "lupe": "Wenige, kurze Fragen, zum Beispiel höchstens drei. Dann bleibt Zeit für Antworten.",
+      "optionen": [
+        {
+          "id": "drei",
+          "text": "Höchstens drei kurze Fragen",
+          "hinweis": "Genau. Dann bleibt Zeit für Antworten.",
+          "richtig": true
+        },
+        {
+          "id": "zwanzig",
+          "text": "Zwanzig Fragen, damit nichts fehlt",
+          "hinweis": "Dafür reicht die Zeit nicht."
+        },
+        {
+          "id": "keine",
+          "text": "Keine, der Arzt weiss schon alles",
+          "hinweis": "Eigene Fragen helfen dem Gespräch."
+        },
+        {
+          "id": "ausdruck",
+          "text": "Den ganzen Chat ausgedruckt",
+          "hinweis": "Zu viel. Die Fragen reichen."
+        }
+      ],
+      "loesung": [
+        "drei"
+      ]
+    },
+    "fa-f": {
+      "typ": "wahl",
+      "wunsch": "Wie nehme ich die Fragen am einfachsten mit?",
+      "frage": "Was ist ein guter Weg?",
+      "lupe": "Ein Bildschirmfoto der Fragen oder ein Zettel.",
+      "optionen": [
+        {
+          "id": "foto",
+          "text": "Ein Bildschirmfoto der Fragen oder ein Zettel",
+          "hinweis": "Genau. So hast du sie in der Praxis dabei.",
+          "richtig": true
+        },
+        {
+          "id": "merken",
+          "text": "Im Kopf merken",
+          "hinweis": "Im Sprechzimmer vergisst man es schnell."
+        },
+        {
+          "id": "lupe",
+          "text": "Lupe in der Praxis laut vorlesen lassen",
+          "hinweis": "Besser selbst fragen."
+        },
+        {
+          "id": "nichts",
+          "text": "Gar nicht, ich improvisiere",
+          "hinweis": "Dann geht leicht etwas vergessen."
+        }
+      ],
+      "loesung": [
+        "foto"
+      ]
+    },
+    "m-a": {
+      "wunsch": "Zum Schluss: Schwindel beschreiben, Blutdruck-Verlauf und Fragen, alles in einem.",
+      "grundprompt": "Lupe, mir ist seit zwei Wochen schwindlig.",
+      "teile": [
+        {
+          "id": "wann",
+          "art": "angaben",
+          "text": "Vor allem beim Aufstehen, nur kurz."
+        },
+        {
+          "id": "neu",
+          "art": "angaben",
+          "text": "Seit drei Wochen nehme ich eine neue Blutdrucktablette."
+        },
+        {
+          "id": "mai",
+          "art": "anhang",
+          "text": "Blutdruckliste Mai 2026"
+        },
+        {
+          "id": "okt",
+          "art": "anhang",
+          "text": "Blutdruckliste Oktober 2026"
+        },
+        {
+          "id": "ohne",
+          "art": "anhang",
+          "text": "Blutdruckliste ohne Datum"
+        },
+        {
+          "id": "fragen",
+          "art": "frage",
+          "text": "Mach mir höchstens drei kurze Fragen für den Arzt."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "ohne"
+            ]
+          },
+          "fehlbild": "ohneDatum"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "wann"
+            ]
+          },
+          "fehlbild": "wenig"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "neu"
+            ]
+          },
+          "fehlbild": "keineTablette"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "mai"
+            ]
+          },
+          "fehlbild": "nurNeu"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "okt"
+            ]
+          },
+          "fehlbild": "nurAlt"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "fragen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        }
+      ],
+      "fehlbilder": {
+        "ohneDatum": {
+          "texte": [
+            "Die Liste ohne Datum ist bestimmt die neuste. Dann ist alles anders!",
+            "Eine Liste kann ich zeitlich nicht einordnen."
+          ],
+          "hinweis": "Die Liste ohne Datum stiftet Verwirrung. Lass sie weg."
+        },
+        "wenig": {
+          "texte": [
+            "Danke! Aber wann genau? Beim Gehen, im Liegen, beim Aufstehen? Ich rate weiter.",
+            "Etwas genauer, bitte: Wann tritt es auf, und wie lange dauert es?"
+          ],
+          "hinweis": "Schon besser. Je genauer die Beschreibung, desto besser kann Lupe eingrenzen."
+        },
+        "keineTablette": {
+          "texte": [
+            "Hat sich etwas geändert, zum Beispiel ein Medikament?",
+            "Gab es etwas Neues?"
+          ],
+          "hinweis": "Die neue Tablette gehört dazu."
+        },
+        "nurNeu": {
+          "texte": [
+            "Im Oktober meist um 125 zu 80. Früher? Weiss ich nicht.",
+            "Nur eine Liste, kein Verlauf."
+          ],
+          "hinweis": "Für den Verlauf fehlt die Liste vom Mai."
+        },
+        "nurAlt": {
+          "texte": [
+            "Meist um 150 zu 90. (Lupe hält den Mai für heute.)",
+            "Mai: 150 zu 90. Und heute?"
+          ],
+          "hinweis": "Die neue Liste fehlt."
+        },
+        "keineFrage": {
+          "texte": [
+            "Danke für die Angaben. Gute Besserung!",
+            "Notiert. Und was soll ich jetzt tun?"
+          ],
+          "hinweis": "Sag Lupe, was du wissen willst."
+        }
+      },
+      "erfolg": [
+        "Dein Blutdruck ist seit Mai gesunken, seit drei Wochen gibt es eine neue Tablette und Schwindel beim Aufstehen. Fragen: Hängt das zusammen? Weiter nehmen? Wann anrufen?",
+        "Verlauf: Blutdruck gesunken. Dazu Schwindel beim Aufstehen und eine neue Tablette. Drei Fragen für deinen Arzt stehen bereit."
+      ],
+      "loesung": [
+        "wann",
+        "neu",
+        "mai",
+        "okt",
+        "fragen"
+      ]
+    }
+  }
+}

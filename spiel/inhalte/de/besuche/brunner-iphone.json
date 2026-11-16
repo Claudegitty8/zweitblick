@@ -1,0 +1,781 @@
+{
+  "id": "brunner-iphone",
+  "kapitel": 3,
+  "gast": "Herr Brunner, 81",
+  "thema": "Die App holen und einrichten",
+  "wunsch": "Ich habe ein neues iPhone. Mein Enkel sagt, ich soll Claude holen. Aber wie?",
+  "dank": "App geladen, Konto da, Training aus. Und ich habe nicht einmal den Enkel gebraucht!",
+  "danach": "Herr Brunner kommt bestimmt wieder. Er hat eine Schublade voller Arztberichte.",
+  "lexikon": [
+    "alter18"
+  ],
+  "runden": [
+    {
+      "id": "r1",
+      "art": "konzept",
+      "konzept": "app-finden",
+      "probieren": {
+        "aufgabe": "af-a",
+        "nurTeile": [
+          "wunder",
+          "klaud",
+          "scanner"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "af-a"
+      },
+      "luecke": {
+        "aufgabe": "af-b",
+        "vorgabe": []
+      },
+      "frei": [
+        "af-c",
+        "af-d",
+        "af-e",
+        "af-f"
+      ]
+    },
+    {
+      "id": "r2",
+      "art": "konzept",
+      "konzept": "konto",
+      "probieren": {
+        "aufgabe": "ko-a",
+        "nurTeile": [
+          "erfunden",
+          "alt",
+          "enkel"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "ko-a"
+      },
+      "luecke": {
+        "aufgabe": "ko-b",
+        "vorgabe": []
+      },
+      "frei": [
+        "ko-c",
+        "ko-d",
+        "ko-e",
+        "ko-f"
+      ]
+    },
+    {
+      "id": "r3",
+      "art": "konzept",
+      "konzept": "datenschutz",
+      "probieren": {
+        "aufgabe": "ds-a",
+        "nurTeile": [
+          "profil",
+          "aussehen",
+          "abmelden"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "ds-a"
+      },
+      "luecke": {
+        "aufgabe": "ds-b",
+        "vorgabe": []
+      },
+      "frei": [
+        "ds-c",
+        "ds-d",
+        "ds-e",
+        "ds-f"
+      ]
+    },
+    {
+      "id": "r4",
+      "art": "misch",
+      "titel": "Alles zusammen",
+      "frei": [
+        "m-a"
+      ]
+    }
+  ],
+  "aufgaben": {
+    "af-a": {
+      "typ": "tippen",
+      "wunsch": "Mein Enkel sagt, ich soll mir Claude holen. Welche App ist es?",
+      "frage": "Herr Brunner hat «KI» gesucht. Welche App lädt er?",
+      "bildschirm": {
+        "titel": "App Store",
+        "zeilen": [
+          "Suchergebnisse"
+        ]
+      },
+      "flaechen": [
+        {
+          "id": "wunder",
+          "text": "Dr. Wunder-KI",
+          "hinweis": "Ein erfundener Nachahmer. Er will Geld, bevor du überhaupt etwas siehst.",
+          "folge": "«Dr. Wunder-KI» will sofort ein Abo: 9.90 [[waehrung]] pro Woche. Und Zugriff auf alle deine Fotos.",
+          "zusatz": "Wunder Apps Ltd. · Abo"
+        },
+        {
+          "id": "klaud",
+          "text": "Klaud Chat Helfer",
+          "hinweis": "Ein erfundener Nachahmer mit ähnlichem Namen. Der Anbieter ist nicht Anthropic.",
+          "folge": "«Klaud Chat Helfer» zeigt erst einmal drei Werbefilme. Danach fragt er nach deiner Telefonnummer.",
+          "zusatz": "Mega Fun Apps · Werbung"
+        },
+        {
+          "id": "scanner",
+          "text": "Gesundheits-Scanner KI",
+          "hinweis": "Ein erfundener Nachahmer. Diagnosen per Foto verspricht keine seriöse App.",
+          "folge": "«Gesundheits-Scanner» verspricht Diagnosen per Foto. Kostet 49 [[waehrung]] im Jahr, vor dem ersten Start.",
+          "zusatz": "Scan4You · 49 [[waehrung]]"
+        },
+        {
+          "id": "claude",
+          "text": "Claude by Anthropic",
+          "hinweis": "Genau. Anbieter Anthropic, gratis zu laden.",
+          "folge": "Richtig: «Claude by Anthropic». Gratis zu laden. Sie braucht iOS 18 oder neuer.",
+          "richtig": true,
+          "zusatz": "Anthropic PBC · Laden"
+        }
+      ],
+      "loesung": [
+        "claude"
+      ]
+    },
+    "af-b": {
+      "typ": "tippen",
+      "wunsch": "Ich bin auf der Seite der richtigen App. Wo lade ich sie?",
+      "frage": "Wo tippst du, um die App zu laden?",
+      "bildschirm": {
+        "titel": "App Store: Claude by Anthropic",
+        "zeilen": [
+          "Anbieter: Anthropic PBC",
+          "Gratis · ab 18 Jahren"
+        ]
+      },
+      "flaechen": [
+        {
+          "id": "bewertung",
+          "text": "Bewertungen lesen",
+          "hinweis": "Interessant, aber damit lädst du nichts.",
+          "folge": "Viele Sterne und Meinungen. Geladen ist die App noch nicht."
+        },
+        {
+          "id": "laden",
+          "text": "Laden",
+          "hinweis": "Genau. Der Knopf zum Laden.",
+          "folge": "Die App wird geladen. Danach findest du sie auf deinem Home-Bildschirm.",
+          "richtig": true,
+          "zusatz": "In-App-Käufe"
+        },
+        {
+          "id": "werbung",
+          "text": "Anzeige: Fit-KI Plus jetzt testen",
+          "hinweis": "Das ist Werbung für eine andere App.",
+          "folge": "Du landest bei einer ganz anderen App. Zurück!"
+        },
+        {
+          "id": "teilen",
+          "text": "Teilen",
+          "hinweis": "Damit schickst du die Seite jemandem. Laden ist es nicht.",
+          "folge": "Das Teilen-Menü geht auf. Die App ist noch nicht geladen."
+        }
+      ],
+      "loesung": [
+        "laden"
+      ]
+    },
+    "af-c": {
+      "typ": "wahl",
+      "wunsch": "Es gibt so viele KI-Apps. Woran erkenne ich die echte?",
+      "frage": "Woran erkennst du die echte Claude-App?",
+      "lupe": "Am Namen «Claude by Anthropic» und am Anbieter Anthropic.",
+      "optionen": [
+        {
+          "id": "anbieter",
+          "text": "Am Anbieter Anthropic unter dem Namen",
+          "hinweis": "Genau. Der Anbieter verrät, wer die App gemacht hat.",
+          "richtig": true
+        },
+        {
+          "id": "bunt",
+          "text": "Am buntesten Symbol",
+          "hinweis": "Das Symbol sagt nichts über den Anbieter."
+        },
+        {
+          "id": "oben",
+          "text": "Sie ist immer ganz oben",
+          "hinweis": "Ganz oben steht oft Werbung."
+        },
+        {
+          "id": "teuer",
+          "text": "Sie ist die teuerste",
+          "hinweis": "Die echte App ist gratis zu laden."
+        }
+      ],
+      "loesung": [
+        "anbieter"
+      ]
+    },
+    "af-d": {
+      "typ": "tippen",
+      "wunsch": "Ich habe «Claude» gesucht. Jetzt sehe ich vier Treffer.",
+      "frage": "Welchen Treffer tippst du an?",
+      "bildschirm": {
+        "titel": "App Store",
+        "zeilen": [
+          "Suchergebnisse für «Claude»"
+        ]
+      },
+      "flaechen": [
+        {
+          "id": "claude",
+          "text": "Claude by Anthropic",
+          "hinweis": "Genau. Anbieter Anthropic, gratis zu laden.",
+          "folge": "Richtig: «Claude by Anthropic». Gratis zu laden. Sie braucht iOS 18 oder neuer.",
+          "richtig": true,
+          "zusatz": "Anthropic PBC · Laden"
+        },
+        {
+          "id": "wunder",
+          "text": "Dr. Wunder-KI",
+          "hinweis": "Ein erfundener Nachahmer. Er will Geld, bevor du überhaupt etwas siehst.",
+          "folge": "«Dr. Wunder-KI» will sofort ein Abo: 9.90 [[waehrung]] pro Woche. Und Zugriff auf alle deine Fotos.",
+          "zusatz": "Wunder Apps Ltd. · Abo"
+        },
+        {
+          "id": "klaud",
+          "text": "Klaud Chat Helfer",
+          "hinweis": "Ein erfundener Nachahmer mit ähnlichem Namen. Der Anbieter ist nicht Anthropic.",
+          "folge": "«Klaud Chat Helfer» zeigt erst einmal drei Werbefilme. Danach fragt er nach deiner Telefonnummer.",
+          "zusatz": "Mega Fun Apps · Werbung"
+        },
+        {
+          "id": "scanner",
+          "text": "Gesundheits-Scanner KI",
+          "hinweis": "Ein erfundener Nachahmer. Diagnosen per Foto verspricht keine seriöse App.",
+          "folge": "«Gesundheits-Scanner» verspricht Diagnosen per Foto. Kostet 49 [[waehrung]] im Jahr, vor dem ersten Start.",
+          "zusatz": "Scan4You · 49 [[waehrung]]"
+        }
+      ],
+      "loesung": [
+        "claude"
+      ]
+    },
+    "af-e": {
+      "typ": "wahl",
+      "wunsch": "Eine App will vor dem ersten Start 9.90 pro Woche. Normal?",
+      "frage": "Was tust du?",
+      "lupe": "Abbrechen. Die echte Claude-App ist gratis zu laden. Prüf den Anbieter.",
+      "optionen": [
+        {
+          "id": "abbrechen",
+          "text": "Abbrechen und den Anbieter prüfen",
+          "hinweis": "Genau. Die echte App ist gratis zu laden.",
+          "richtig": true
+        },
+        {
+          "id": "zahlen",
+          "text": "Zahlen, gute Dinge kosten eben",
+          "hinweis": "Die echte App kostet zum Laden nichts."
+        },
+        {
+          "id": "probe",
+          "text": "Die Gratis-Probewoche nehmen und später kündigen",
+          "hinweis": "Riskant. Kündigen vergisst man leicht."
+        },
+        {
+          "id": "enkel",
+          "text": "Mit der Karte des Enkels zahlen",
+          "hinweis": "Bitte nicht. Und es ist die falsche App."
+        }
+      ],
+      "loesung": [
+        "abbrechen"
+      ]
+    },
+    "af-f": {
+      "typ": "wahl",
+      "wunsch": "Die App lässt sich nicht laden. Da steht «Erfordert iOS 18».",
+      "frage": "Was heisst das?",
+      "lupe": "Auf dem iPhone läuft eine ältere iOS-Version. Schau in den Einstellungen unter «Allgemein» nach einem Update.",
+      "optionen": [
+        {
+          "id": "update",
+          "text": "Mein iPhone braucht ein Update. Ich schaue in den Einstellungen unter «Allgemein».",
+          "hinweis": "Genau. Ist kein Update möglich, ist das iPhone zu alt für die App.",
+          "richtig": true
+        },
+        {
+          "id": "kaputt",
+          "text": "Mein iPhone ist kaputt.",
+          "hinweis": "Nicht kaputt, nur nicht auf dem neusten Stand."
+        },
+        {
+          "id": "andere",
+          "text": "Ich nehme eine andere KI-App.",
+          "hinweis": "Dann vielleicht einen Nachahmer. Zuerst das Update prüfen."
+        },
+        {
+          "id": "geld",
+          "text": "Ich muss mehr bezahlen.",
+          "hinweis": "Mit Geld hat das nichts zu tun."
+        }
+      ],
+      "loesung": [
+        "update"
+      ]
+    },
+    "ko-a": {
+      "typ": "wahl",
+      "wunsch": "Welche E-Mail-Adresse gebe ich beim Anmelden ein?",
+      "frage": "Welche E-Mail-Adresse nimmt Herr Brunner?",
+      "lupe": "Eine, die er selbst liest. Dorthin kommt der Link zum Anmelden.",
+      "optionen": [
+        {
+          "id": "eigene",
+          "text": "Seine eigene, die er jeden Tag liest",
+          "hinweis": "Genau. Dort kommt der Link an.",
+          "richtig": true
+        },
+        {
+          "id": "erfunden",
+          "text": "Eine erfundene, wegen Werbung",
+          "hinweis": "Dann kommt der Link nie an. Herr Brunner wartet ewig."
+        },
+        {
+          "id": "alt",
+          "text": "Die alte vom Geschäft, die es nicht mehr gibt",
+          "hinweis": "Dort liest niemand mehr. Der Link geht verloren."
+        },
+        {
+          "id": "enkel",
+          "text": "Die des Enkels, ohne zu fragen",
+          "hinweis": "Dann landet der Link beim Enkel. Und er weiss nichts davon."
+        }
+      ],
+      "loesung": [
+        "eigene"
+      ]
+    },
+    "ko-b": {
+      "typ": "reihe",
+      "wunsch": "In welcher Reihenfolge melde ich mich an?",
+      "frage": "Bring die Schritte zum Anmelden in die richtige Reihenfolge.",
+      "schritte": [
+        {
+          "id": "link",
+          "text": "In der E-Mail von Anthropic auf den Link tippen"
+        },
+        {
+          "id": "oeffnen",
+          "text": "Die Claude-App öffnen"
+        },
+        {
+          "id": "alter",
+          "text": "Bestätigen, dass ich mindestens 18 bin"
+        },
+        {
+          "id": "mail",
+          "text": "Meine E-Mail-Adresse eingeben"
+        }
+      ],
+      "loesung": [
+        "oeffnen",
+        "mail",
+        "link",
+        "alter"
+      ],
+      "lupe": "App öffnen, E-Mail eingeben, Link antippen, Alter bestätigen. Herr Brunner ist angemeldet.",
+      "daneben": {
+        "texte": [
+          "Herr Brunner sucht den Link, bevor er die Adresse eingegeben hat. Das Postfach ist leer.",
+          "Alter bestätigt, aber noch gar nicht angemeldet. Die App wartet."
+        ],
+        "hinweis": "Zuerst die App, dann die Adresse, dann der Link, dann das Alter."
+      }
+    },
+    "ko-c": {
+      "typ": "wahl",
+      "wunsch": "Ich warte seit fünf Minuten auf die E-Mail. Nichts.",
+      "frage": "Was tut Herr Brunner zuerst?",
+      "lupe": "Im Spam-Ordner nachschauen. Solche Nachrichten landen manchmal dort.",
+      "optionen": [
+        {
+          "id": "spam",
+          "text": "Im Spam-Ordner nachschauen",
+          "hinweis": "Genau. Dort landet sie manchmal.",
+          "richtig": true
+        },
+        {
+          "id": "neu",
+          "text": "Zehnmal einen neuen Link anfordern",
+          "hinweis": "Dann gilt meist nur der neuste. Das verwirrt."
+        },
+        {
+          "id": "aufgeben",
+          "text": "Aufgeben",
+          "hinweis": "Nicht nötig. Meist ist die Nachricht schon da."
+        },
+        {
+          "id": "andere",
+          "text": "Eine andere Adresse erfinden",
+          "hinweis": "Dann kommt gar nichts an."
+        }
+      ],
+      "loesung": [
+        "spam"
+      ]
+    },
+    "ko-d": {
+      "typ": "tippen",
+      "wunsch": "In meinem Postfach sind vier neue Nachrichten. Welche öffne ich?",
+      "frage": "Welche E-Mail öffnest du zum Anmelden?",
+      "bildschirm": {
+        "titel": "Mail",
+        "zeilen": [
+          "Posteingang"
+        ]
+      },
+      "flaechen": [
+        {
+          "id": "gewinn",
+          "text": "Sie haben gewonnen!",
+          "hinweis": "Das ist Werbung oder Betrug. Nicht öffnen.",
+          "folge": "Ein angeblicher Gewinn. Damit meldest du dich nirgends an."
+        },
+        {
+          "id": "garten",
+          "text": "Gartencenter: Rosen im Angebot",
+          "hinweis": "Ein Newsletter, kein Anmelde-Link.",
+          "folge": "Schöne Rosen. Aber angemeldet bist du nicht."
+        },
+        {
+          "id": "anthropic",
+          "text": "Anthropic: Link zum Anmelden",
+          "hinweis": "Genau. Diese Nachricht enthält deinen Link.",
+          "folge": "Du tippst auf den Link und bist in der Claude-App angemeldet.",
+          "richtig": true
+        },
+        {
+          "id": "paket",
+          "text": "Ihr Paket ist unterwegs",
+          "hinweis": "Hat mit Claude nichts zu tun.",
+          "folge": "Eine Paketmeldung. Angemeldet bist du noch nicht."
+        }
+      ],
+      "loesung": [
+        "anthropic"
+      ]
+    },
+    "ko-e": {
+      "typ": "wahl",
+      "wunsch": "Muss ich für Claude ein Abo kaufen?",
+      "frage": "Braucht Herr Brunner ein Abo, um anzufangen?",
+      "lupe": "Nein. Zum Anfangen reicht das Gratis-Konto. Auch Projekte gibt es gratis.",
+      "optionen": [
+        {
+          "id": "nein",
+          "text": "Nein, das Gratis-Konto reicht zum Anfangen",
+          "hinweis": "Genau. Ein Abo kann man später immer noch holen.",
+          "richtig": true
+        },
+        {
+          "id": "ja",
+          "text": "Ja, ohne Abo geht nichts",
+          "hinweis": "Doch, es geht. Gratis kann man Chats, Fotos und Projekte nutzen."
+        },
+        {
+          "id": "jahr",
+          "text": "Ja, gleich für ein ganzes Jahr",
+          "hinweis": "Nicht nötig. Probier es zuerst gratis."
+        },
+        {
+          "id": "max",
+          "text": "Ja, das teuerste, damit alles geht",
+          "hinweis": "Das braucht es zum Anfangen sicher nicht."
+        }
+      ],
+      "loesung": [
+        "nein"
+      ]
+    },
+    "ko-f": {
+      "typ": "wahl",
+      "wunsch": "Meine Enkelin ist 16. Darf sie auch ein Konto haben?",
+      "frage": "Darf die 16-jährige Enkelin Claude selbst benutzen?",
+      "lupe": "Nein. Claude ist laut Anthropic erst ab 18 Jahren.",
+      "optionen": [
+        {
+          "id": "nein",
+          "text": "Nein, Claude ist erst ab 18",
+          "hinweis": "Genau. So steht es in den Bedingungen.",
+          "richtig": true
+        },
+        {
+          "id": "ja",
+          "text": "Ja, ab 12 ist es erlaubt",
+          "hinweis": "Nein. Das Mindestalter ist 18."
+        },
+        {
+          "id": "mitmir",
+          "text": "Ja, mit meinem Konto",
+          "hinweis": "Das Konto ist für dich, nicht für Jugendliche."
+        },
+        {
+          "id": "egal",
+          "text": "Das prüft niemand",
+          "hinweis": "Es gilt trotzdem: ab 18."
+        }
+      ],
+      "loesung": [
+        "nein"
+      ]
+    },
+    "ds-a": {
+      "typ": "tippen",
+      "wunsch": "Ich will nicht, dass meine Gesundheitsfragen zum Training genutzt werden.",
+      "frage": "Wo findest du den Schalter fürs Training?",
+      "bildschirm": {
+        "titel": "Einstellungen"
+      },
+      "flaechen": [
+        {
+          "id": "profil",
+          "text": "Profil",
+          "hinweis": "Hier geht es um Name und E-Mail, nicht ums Training.",
+          "folge": "Dein Name und deine E-Mail. Kein Schalter fürs Training."
+        },
+        {
+          "id": "aussehen",
+          "text": "Aussehen",
+          "hinweis": "Hier stellst du hell oder dunkel ein.",
+          "folge": "Hell oder dunkel. Schön, aber nicht das Richtige."
+        },
+        {
+          "id": "datenschutz",
+          "text": "Datenschutz",
+          "hinweis": "Genau. Dort ist der Schalter fürs Training.",
+          "folge": "Hier ist der Schalter «Help improve Claude».",
+          "richtig": true
+        },
+        {
+          "id": "abmelden",
+          "text": "Abmelden",
+          "hinweis": "Damit meldest du dich ab. Das willst du nicht.",
+          "folge": "Abgemeldet. Jetzt musst du dich neu anmelden."
+        }
+      ],
+      "loesung": [
+        "datenschutz"
+      ]
+    },
+    "ds-b": {
+      "typ": "tippen",
+      "wunsch": "Ich bin unter «Datenschutz». Was schalte ich aus?",
+      "frage": "Welchen Schalter tippst du an?",
+      "bildschirm": {
+        "titel": "Datenschutz",
+        "zeilen": [
+          "Nachgebaut: Die echten Schalter können anders heissen."
+        ]
+      },
+      "flaechen": [
+        {
+          "id": "export",
+          "text": "Daten exportieren",
+          "hinweis": "Damit lädst du deine Daten herunter. Nicht der Training-Schalter.",
+          "folge": "Ein Export wird vorbereitet. Am Training ändert das nichts."
+        },
+        {
+          "id": "training",
+          "text": "Help improve Claude: an",
+          "hinweis": "Genau. Antippen schaltet das Training aus.",
+          "folge": "Der Schalter steht jetzt auf aus. Neue Chats werden nicht fürs Training genutzt.",
+          "richtig": true
+        },
+        {
+          "id": "standort",
+          "text": "Standort: an",
+          "hinweis": "Das betrifft den Standort, nicht das Training.",
+          "folge": "Der Standort ist aus. Das Training läuft weiter."
+        },
+        {
+          "id": "loeschen",
+          "text": "Konto löschen",
+          "hinweis": "Achtung, das löscht dein ganzes Konto. Hier nicht tippen.",
+          "folge": "Halt! Das würde dein ganzes Konto löschen. Zurück."
+        }
+      ],
+      "loesung": [
+        "training"
+      ]
+    },
+    "ds-c": {
+      "typ": "wahl",
+      "wunsch": "Was passiert, wenn der Training-Schalter an bleibt?",
+      "frage": "Was bedeutet «Help improve Claude: an»?",
+      "lupe": "Anthropic darf deine Chats zum Verbessern der KI nutzen und bis fünf Jahre aufbewahren.",
+      "optionen": [
+        {
+          "id": "training",
+          "text": "Meine Chats dürfen zum Verbessern genutzt und bis fünf Jahre aufbewahrt werden",
+          "hinweis": "Genau. Aus heisst: 30 Tage.",
+          "richtig": true
+        },
+        {
+          "id": "schneller",
+          "text": "Claude antwortet schneller",
+          "hinweis": "Mit der Geschwindigkeit hat das nichts zu tun."
+        },
+        {
+          "id": "arzt",
+          "text": "Mein Arzt sieht die Chats",
+          "hinweis": "Nein, der Arzt sieht nichts."
+        },
+        {
+          "id": "nichts",
+          "text": "Nichts, der Schalter ist nur Deko",
+          "hinweis": "Doch, er regelt das Training."
+        }
+      ],
+      "loesung": [
+        "training"
+      ]
+    },
+    "ds-d": {
+      "typ": "wahl",
+      "wunsch": "Wie lange bleiben meine Chats gespeichert, wenn ich das Training ausschalte?",
+      "frage": "Training aus: Wie lange bewahrt Anthropic Chats laut eigenen Angaben auf?",
+      "lupe": "30 Tage. Mit Training wären es bis fünf Jahre.",
+      "optionen": [
+        {
+          "id": "dreissig",
+          "text": "30 Tage",
+          "hinweis": "Genau. So steht es bei Anthropic.",
+          "richtig": true
+        },
+        {
+          "id": "nie",
+          "text": "Gar nicht, sie sind sofort weg",
+          "hinweis": "Nicht ganz. Es sind 30 Tage."
+        },
+        {
+          "id": "fuenf",
+          "text": "Fünf Jahre",
+          "hinweis": "Das gilt, wenn das Training an ist."
+        },
+        {
+          "id": "immer",
+          "text": "Für immer",
+          "hinweis": "Nein. Ohne Training sind es 30 Tage."
+        }
+      ],
+      "loesung": [
+        "dreissig"
+      ]
+    },
+    "ds-e": {
+      "typ": "reihe",
+      "wunsch": "Welcher Weg führt zum Training-Schalter?",
+      "frage": "Bring den Weg zum Schalter in die richtige Reihenfolge.",
+      "schritte": [
+        {
+          "id": "datenschutz",
+          "text": "«Datenschutz» antippen"
+        },
+        {
+          "id": "name",
+          "text": "Im Menü auf den eigenen Namen tippen"
+        },
+        {
+          "id": "schalter",
+          "text": "«Help improve Claude» ausschalten"
+        },
+        {
+          "id": "einstellungen",
+          "text": "«Einstellungen» wählen"
+        }
+      ],
+      "loesung": [
+        "name",
+        "einstellungen",
+        "datenschutz",
+        "schalter"
+      ],
+      "lupe": "Name, Einstellungen, Datenschutz, Schalter aus. Erledigt.",
+      "daneben": {
+        "texte": [
+          "Herr Brunner sucht den Schalter im Menü. Dort ist er nicht, er ist in den Einstellungen.",
+          "Datenschutz gesucht, bevor die Einstellungen offen sind. Nicht gefunden."
+        ],
+        "hinweis": "Zuerst der Name, dann die Einstellungen, dann Datenschutz, dann der Schalter."
+      }
+    },
+    "ds-f": {
+      "typ": "wahl",
+      "wunsch": "Kann ich den Schalter später wieder umstellen?",
+      "frage": "Ist die Entscheidung zum Training endgültig?",
+      "lupe": "Nein. Laut Anthropic kannst du den Schalter jederzeit ändern.",
+      "optionen": [
+        {
+          "id": "jederzeit",
+          "text": "Nein, ich kann ihn jederzeit ändern",
+          "hinweis": "Genau. Du entscheidest.",
+          "richtig": true
+        },
+        {
+          "id": "einmal",
+          "text": "Ja, man entscheidet nur einmal",
+          "hinweis": "Nein, du kannst ihn jederzeit umstellen."
+        },
+        {
+          "id": "abo",
+          "text": "Nur mit einem Abo",
+          "hinweis": "Das geht auch gratis."
+        },
+        {
+          "id": "support",
+          "text": "Nur über den Kundendienst",
+          "hinweis": "Nein, das machst du selbst in den Einstellungen."
+        }
+      ],
+      "loesung": [
+        "jederzeit"
+      ]
+    },
+    "m-a": {
+      "typ": "wahl",
+      "wunsch": "Die App ist geladen, das Konto ist da. Was mache ich vor der ersten Gesundheitsfrage?",
+      "frage": "Was ist der beste nächste Schritt?",
+      "lupe": "Den Training-Schalter ausschalten. Dann die erste Frage stellen.",
+      "optionen": [
+        {
+          "id": "schalter",
+          "text": "In den Einstellungen das Training ausschalten",
+          "hinweis": "Genau. Dann kann es losgehen.",
+          "richtig": true
+        },
+        {
+          "id": "abo",
+          "text": "Ein Abo kaufen",
+          "hinweis": "Nicht nötig zum Anfangen."
+        },
+        {
+          "id": "alles",
+          "text": "Alle Berichte der letzten 20 Jahre schicken",
+          "hinweis": "Zuerst den Datenschutz, und dann nur, was du brauchst."
+        },
+        {
+          "id": "teilen",
+          "text": "Den Chat mit allen Freunden teilen",
+          "hinweis": "Gesundheitsdaten teilt man nicht einfach."
+        }
+      ],
+      "loesung": [
+        "schalter"
+      ]
+    }
+  }
+}

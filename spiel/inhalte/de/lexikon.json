@@ -1,0 +1,216 @@
+{
+  "ki": {
+    "begriff": "KI",
+    "englisch": "AI (Artificial Intelligence)",
+    "erklaerung": "KI heisst künstliche Intelligenz. Gemeint sind Programme wie Claude, die Texte und Bilder lesen und Antworten schreiben."
+  },
+  "erklaeren": {
+    "begriff": "Befund",
+    "englisch": "Findings",
+    "kern": "erklaeren",
+    "erklaerung": "Ein Befund ist das Ergebnis einer Untersuchung, zum Beispiel Blutwerte. Hängst du ihn an, kann die KI ihn lesen und erklären.",
+    "quatsch": "Ohne Bericht erklärte Lupe Frau Gerber, woraus Blut besteht. Ihre eigenen Werte kamen nicht vor."
+  },
+  "nachfragen": {
+    "begriff": "Nachfragen",
+    "kern": "nachfragen",
+    "erklaerung": "Im selben Chat weiss die KI, worüber ihr gesprochen habt. Du kannst nachfragen, bis du es verstehst.",
+    "quatsch": "Auf «Hä?» erklärte Lupe alles nochmals, Wort für Wort gleich."
+  },
+  "arzt-entscheidet": {
+    "begriff": "Zweite Sicht",
+    "kern": "arzt-entscheidet",
+    "erklaerung": "Eine KI kann Befunde erklären und mögliche Ursachen nennen. Sie ist kein Arzt. Entscheiden tut die Ärztin oder der Arzt.",
+    "quelle": "https://support.claude.com/en/articles/11869619-use-claude-with-ios-apps"
+  },
+  "hb": {
+    "begriff": "Hämoglobin (Hb)",
+    "englisch": "Hemoglobin",
+    "erklaerung": "Der rote Blutfarbstoff. Er bringt den Sauerstoff durch den Körper. Ein tiefer Wert kann auf Blutarmut hinweisen.",
+    "quelle": "https://www.gesundheit.gv.at/labor/laborwerte/blutbild/haemoglobin.html"
+  },
+  "referenz": {
+    "begriff": "Referenzbereich",
+    "englisch": "Reference range",
+    "erklaerung": "Der Bereich, in dem ein Wert bei den meisten Menschen liegt. Er steht auf dem Bericht und kann je nach Labor etwas anders sein.",
+    "genauer": "Ein Wert knapp ausserhalb heisst nicht automatisch, dass man krank ist. Das beurteilt die Ärztin oder der Arzt.",
+    "quelle": "https://www.apotheken-umschau.de/diagnose/laborwerte/kleines-und-grosses-blutbild-778955.html"
+  },
+  "claude": {
+    "begriff": "Claude",
+    "englisch": "Claude",
+    "erklaerung": "Eine KI-App der Firma Anthropic. Man schreibt ihr und sie antwortet. Lupe im Spiel ist ihr nachgebaut.",
+    "quelle": "https://support.claude.com/en/articles/11869619-use-claude-with-ios-apps"
+  },
+  "foto-scharf": {
+    "begriff": "Scharfes Foto",
+    "kern": "foto-scharf",
+    "erklaerung": "Ein Foto, auf dem jede Zahl gut lesbar ist. Ganzes Blatt, gerade von oben, ruhig gehalten.",
+    "quatsch": "Auf einem verwackelten Foto las Lupe 18,1 statt 13,1.",
+    "genauer": "Laut Claude-Hilfe sollten Bilder mindestens 1000 mal 1000 Bildpunkte haben. iPhone-Fotos sind meist viel grösser.",
+    "quelle": "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+  },
+  "foto-licht": {
+    "begriff": "Spiegelung und Schatten",
+    "kern": "foto-licht",
+    "erklaerung": "Ein weisser Fleck vom Blitz oder ein dunkler Schatten kann Zahlen verdecken. Dann kann auch die KI sie nicht lesen.",
+    "quatsch": "Bei Frau Meier sah Lupe unter dem Blitz-Fleck nur «weiss». Sie riet die Werte."
+  },
+  "alle-seiten": {
+    "begriff": "Dokumente scannen",
+    "englisch": "Scan documents",
+    "kern": "alle-seiten",
+    "erklaerung": "Eine Funktion der iPhone-App Notizen. Sie fotografiert ein Blatt, schneidet es zu und macht es gerade.",
+    "quatsch": "Mit nur einer von zwei Seiten fehlte Lupe die ganze Beurteilung der Ärztin.",
+    "quelle": "https://www.giga.de/tech/18-versteckte-iphone-tricks-warum-apples-notizen-app-viel-maechtiger-ist-als-ihr-denkt--01M5YHSFVEX9ZMMGT1VHG072CZ"
+  },
+  "pdf": {
+    "begriff": "PDF",
+    "englisch": "Portable Document Format",
+    "erklaerung": "Eine Datei, die wie ein gedrucktes Blatt aussieht. Labors und Spitäler verschicken Berichte oft so. Claude kann PDFs lesen.",
+    "quelle": "https://support.claude.com/en/articles/8241126-upload-files-to-claude"
+  },
+  "app-finden": {
+    "begriff": "App Store",
+    "englisch": "App Store",
+    "kern": "app-finden",
+    "erklaerung": "Der Laden auf dem iPhone, in dem man Apps holt. Neben der echten App gibt es dort oft Nachahmer.",
+    "quatsch": "Herr Brunner erwischte fast «Dr. Wunder-KI» für 9.90 pro Woche.",
+    "quelle": "https://apps.apple.com/de/app/claude-by-anthropic/id6473753684"
+  },
+  "konto": {
+    "begriff": "Konto",
+    "englisch": "Account",
+    "kern": "konto",
+    "erklaerung": "Deine Anmeldung bei Claude. Sie verbindet deine Chats mit dir, auch auf anderen Geräten.",
+    "quatsch": "Mit einer erfundenen E-Mail-Adresse wartete Herr Brunner ewig auf den Code.",
+    "quelle": "https://support.claude.com/en/articles/13189465-log-in-to-your-claude-account"
+  },
+  "datenschutz": {
+    "begriff": "Training",
+    "englisch": "Model training",
+    "kern": "datenschutz",
+    "erklaerung": "Eine KI kann aus Gesprächen lernen. Bei Claude entscheidest du selbst, ob deine Chats dafür genutzt werden.",
+    "genauer": "Mit Training dürfen Chats bis fünf Jahre aufbewahrt werden, ohne Training 30 Tage.",
+    "quelle": "https://www.anthropic.com/news/updates-to-our-consumer-terms"
+  },
+  "alter18": {
+    "begriff": "Mindestalter 18",
+    "englisch": "Minimum age",
+    "erklaerung": "Claude darf man erst ab 18 Jahren selbst benutzen. So steht es in den Bedingungen von Anthropic.",
+    "quelle": "https://www.anthropic.com/legal/consumer-terms"
+  },
+  "projekt": {
+    "begriff": "Projekt",
+    "englisch": "Project",
+    "kern": "projekt",
+    "erklaerung": "Ein Bereich in Claude mit eigenen Dateien und einer Anweisung. Jeder Chat darin kennt beides.",
+    "quatsch": "Ohne Projekt begrüsste Lupe Herrn Brunner jeden Tag wie einen Fremden.",
+    "quelle": "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+  },
+  "anweisung": {
+    "begriff": "Anweisung im Projekt",
+    "englisch": "Project instructions",
+    "kern": "anweisung",
+    "erklaerung": "Ein Text, der für jeden Chat im Projekt gilt. Ideal für Alter, Krankheiten, Tabletten und Wünsche.",
+    "quatsch": "Weil die Katze in der Anweisung stand, gab Lupe zu jedem Bericht Tipps für Katzenfell.",
+    "quelle": "https://support.claude.com/en/articles/9519177-how-can-i-create-and-manage-projects"
+  },
+  "berichte": {
+    "begriff": "Kopie der Krankengeschichte",
+    "kern": "berichte",
+    "erklaerung": "Du darfst deine Berichte einsehen und eine Kopie verlangen. [[kopieRecht]]",
+    "quelle": "[[quelleKopie]]"
+  },
+  "dossier": {
+    "begriff": "[[dossier]]",
+    "englisch": "Electronic health record",
+    "erklaerung": "Eine digitale Sammlung deiner Gesundheitsdokumente. Ob und was darin liegt, ist unterschiedlich.",
+    "quelle": "[[quelleDossier]]"
+  },
+  "usa": {
+    "begriff": "Automatische Verbindung",
+    "englisch": "Health integrations",
+    "erklaerung": "In den USA kann Claude im Abo Apple Health und Gesundheitsakten direkt lesen. In der Schweiz und in Deutschland geht das noch nicht.",
+    "quelle": "https://support.claude.com/en/articles/11869619-use-claude-with-ios-apps"
+  },
+  "beschwerden": {
+    "begriff": "Beschwerden beschreiben",
+    "kern": "beschwerden",
+    "erklaerung": "Je genauer du beschreibst, seit wann, wann und wie es auftritt, desto besser lässt sich die Ursache eingrenzen.",
+    "quatsch": "Auf «Mir ist schwindlig» zählte Lupe zwanzig mögliche Gründe auf.",
+    "quelle": "https://www.apotheken.de/krankheiten/4716-schwindel"
+  },
+  "verlauf": {
+    "begriff": "Verlauf",
+    "englisch": "Trend",
+    "kern": "verlauf",
+    "erklaerung": "Wie sich ein Wert über die Zeit verändert. Dafür braucht es mehrere Messungen mit Datum.",
+    "quatsch": "Ohne Datum hielt Lupe eine Liste vom Mai für die neuste."
+  },
+  "fragen-arzt": {
+    "begriff": "Fragenliste",
+    "kern": "fragen-arzt",
+    "erklaerung": "Wenige, kurze Fragen für den Arzttermin. Sie helfen, nichts zu vergessen.",
+    "quatsch": "Ohne «höchstens drei» schrieb Lupe 27 Fragen. Der Termin dauerte 15 Minuten."
+  },
+  "schwindel": {
+    "begriff": "Schwindel",
+    "englisch": "Dizziness",
+    "erklaerung": "Schwindel hat viele mögliche Ursachen, zum Beispiel im Innenohr, beim Kreislauf oder durch Medikamente. Er sollte ärztlich abgeklärt werden.",
+    "quelle": "https://www.apotheken-umschau.de/einfache-sprache/krankheiten/schwindel-1218299.html"
+  },
+  "ursachen": {
+    "begriff": "Mögliche Ursachen",
+    "englisch": "Differential diagnosis",
+    "kern": "ursachen",
+    "erklaerung": "Eine Liste von Erklärungen, die zu Beschwerden passen könnten. Welche zutrifft, klärt die Ärztin oder der Arzt.",
+    "quatsch": "Auf «Was habe ich?» tippte Lupe auf Frühjahrsmüdigkeit. Es war November.",
+    "genauer": "Ärzte nennen so eine Liste Differentialdiagnose. Lupe stellt keine Diagnose, sie sammelt Möglichkeiten."
+  },
+  "unsicherheit": {
+    "begriff": "Unsicherheit",
+    "kern": "unsicherheit",
+    "erklaerung": "Wie sicher sich eine KI ist, sieht man ihrem Ton nicht an. Man muss danach fragen.",
+    "quatsch": "Bestellt war «Sag, dass alles gut ist». Geliefert wurde genau das, ohne Grund.",
+    "quelle": "https://www.anthropic.com/news/healthcare-life-sciences"
+  },
+  "pruefen": {
+    "begriff": "Halluzination",
+    "englisch": "Hallucination",
+    "kern": "pruefen",
+    "erklaerung": "Wenn eine KI etwas Falsches sagt, das überzeugend klingt. Darum wichtige Zahlen immer nachprüfen.",
+    "quatsch": "Lupe las 17,2 statt 11,2 und lobte den guten Wert."
+  },
+  "muedigkeit": {
+    "begriff": "Müdigkeit",
+    "englisch": "Fatigue",
+    "erklaerung": "Anhaltende Müdigkeit hat viele mögliche Gründe, zum Beispiel Blutarmut, die Schilddrüse oder Medikamente. Ein Arzt kann es abklären.",
+    "quelle": "https://www.apotheken-umschau.de/Schlafen/Muedigkeit--Ursachen-Medikamente-119585_7.html"
+  },
+  "notfall": {
+    "begriff": "Notruf [[notruf]]",
+    "kern": "notfall",
+    "erklaerung": "Die Nummer für medizinische Notfälle in [[land]]. Bei Warnzeichen für Herzinfarkt oder Hirnschlag sofort anrufen.",
+    "quatsch": "Herr Hofmann wollte Lupe zuerst fragen. Lupe sagte nur: «Leg auf und ruf [[notruf]] an!»",
+    "quelle": "[[quelleNotruf]]"
+  },
+  "nur-noetiges": {
+    "begriff": "Datensparsamkeit",
+    "kern": "nur-noetiges",
+    "erklaerung": "Nur so viele persönliche Angaben teilen, wie für die Frage nötig sind.",
+    "quatsch": "Lupe erklärte den Bericht perfekt. Die [[nummer]] auf dem Foto hat sie nie gebraucht."
+  },
+  "loeschen": {
+    "begriff": "Chat löschen",
+    "kern": "loeschen",
+    "erklaerung": "Ein gelöschter Chat verschwindet sofort aus der Liste und laut Anthropic innert 30 Tagen von den Servern.",
+    "quelle": "https://privacy.claude.com/en/articles/10023548-how-long-do-you-store-my-data"
+  },
+  "inkognito": {
+    "begriff": "Inkognito-Chat",
+    "englisch": "Incognito chat",
+    "erklaerung": "Ein Chat, der laut Anthropic nicht zum Verbessern von Claude genutzt wird, auch wenn das Training eingeschaltet ist.",
+    "quelle": "https://support.claude.com/en/articles/8325621-claude-data-privacy-faq"
+  }
+}
