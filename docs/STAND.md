@@ -12,7 +12,7 @@ Stand: 17. November 2026 · Version 0.12 · Spielseite online als Testversion: h
 - 8 Besuche, 24 Themen, 152 Aufgaben in vier Übungsformen: Zusammenstecken (52), Vorhersagen (71), Antippen auf einem nachgebauten iPhone (21), Sortieren (8).
 - Neu in 0.10: Besuch 2 «Eine Akte für alle Werte» (Herr Baumann): Akte als Tabelle anlegen, nachführen, Trends auslesen.
 - Neu in 0.11: «Am iPhone üben» zu 23 Themen, 115 nachgebaute Bildschirme, darunter «Dokumente scannen» in der App Notizen. Knopf nach jedem Thema und im Spickzettel. Online seit 17.11.2026.
-- Neu in 0.12: Liste «Alle Übungen am iPhone» in Hilfe und Einstellungen und im Spickzettel, jede Übung jederzeit. Noch nicht veröffentlicht.
+- Neu in 0.12: Liste «Alle Übungen am iPhone» in Hilfe und Einstellungen und im Spickzettel, jede Übung jederzeit. Online seit 17.11.2026.
 - Kapitel «Gute Fotos von Berichten» mit eigenen Bildern: 9 Fehler (verwackelt, abgeschnitten, zu weit weg, schief, Schatten, Blitz, Finger, zu dunkel, zerknittert) und 3 gute Beispiele (Foto, Scan, PDF). Dazu ein Bild «Seite 1 von 2» und ein Laborbericht, zusammen 14 Bilder.
 - Land-Wahl Schweiz oder Deutschland: Notrufnummer, Patientendossier oder ePA, Kopie-Recht, Versichertennummer.
 - Spickzettel mit den echten Schritten pro Thema, druckbar. Lexikon mit 36 Begriffen und Quellen.
