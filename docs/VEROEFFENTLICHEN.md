@@ -1,6 +1,6 @@
 # Veröffentlichen
 
-Der Code ist öffentlich auf GitHub. Die Spielseite ist noch nicht online. Sie geht nur nach ausdrücklichem Ja des Besitzers online.
+Der Code ist öffentlich auf GitHub. Die Spielseite ist seit 17.11.2026 als Testversion online: https://claudegitty8.github.io/zweitblick/ (Pages-Quelle «GitHub Actions», vom Besitzer eingeschaltet). Neue Fassungen gehen nur nach ausdrücklichem Ja des Besitzers online.
 
 ## Wichtig vorher
 

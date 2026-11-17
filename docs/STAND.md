@@ -1,10 +1,10 @@
 # Stand
 
-Stand: 17. November 2026 · Version 0.9.2 · Spielseite veröffentlicht: nein · Code öffentlich auf GitHub: ja
+Stand: 17. November 2026 · Version 0.9.2 · Spielseite online als Testversion: https://claudegitty8.github.io/zweitblick/ (seit 17.11.2026) · Code öffentlich auf GitHub: ja
 
 ## Wo es liegt
 
-- Code: https://github.com/Claudegitty8/zweitblick, Zweig `main`. Das Repository ist öffentlich (Entscheid des Besitzers, 17.11.2026). Die Spielseite selbst ist noch nicht online (GitHub Pages nicht eingeschaltet).
+- Code: https://github.com/Claudegitty8/zweitblick, Zweig `main`. Das Repository ist öffentlich (Entscheid des Besitzers, 17.11.2026). Die Spielseite ist als Testversion online (GitHub Pages, Ablauf «Spiel veröffentlichen» am 17.11.2026 erfolgreich), mit Band «Testversion» und «noindex», ohne Angaben zum Betreiber.
 - Private Vorschau: Claude-Artefakt «Zweitblick (Vorschau)» (https://claude.ai/artifact/DCKZDBZT17fcuf9tnyWsPj), nur für den Besitzer sichtbar. Ist eine Kopie, nicht die Quelle. In der Vorschau gehen Sichern als Datei, Drucken und Offline nicht (Grenzen der Vorschau, nicht des Spiels).
 
 ## Fertig
