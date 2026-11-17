@@ -180,8 +180,15 @@ async function pruefeTexte({ texte, lexikon, umfrage, lehrplan, gesehen, vor }, 
     for (const text of alleTexte(wert)) if (zuLang(text)) fehler.push(`${vor}/texte.json: app.${schluessel} hat mehr als ${MAX_WOERTER} Wörter`);
   }
   pruefeUeber(texte.app ?? {}, `${vor}/texte.json`, fehler);
-  for (const feld of ['hilfeRegel', 'schonGesehen', 'auswegText', 'auswegKnopf', 'verschobenTitel', 'verschobenText', 'notrufZeile', 'notfallText']) {
+  for (const feld of ['hilfeRegel', 'schonGesehen', 'auswegText', 'auswegKnopf', 'verschobenTitel', 'verschobenText', 'notrufZeile', 'notfallText', 'arztHinweisTitel']) {
     if (!istText(texte.app?.[feld])) fehler.push(`${vor}/texte.json: ${feld} fehlt`);
+  }
+  // Der Gesundheitshinweis (nur für das Gespräch mit dem Arzt) muss da sein und die Original-Befunde nennen.
+  const arztHinweis = texte.app?.arztHinweis;
+  if (!Array.isArray(arztHinweis) || arztHinweis.length === 0 || !arztHinweis.every(istText)) {
+    fehler.push(`${vor}/texte.json: arztHinweis braucht mindestens einen Satz`);
+  } else if (!arztHinweis.some((satz) => satz.includes('Original-Befund'))) {
+    fehler.push(`${vor}/texte.json: arztHinweis muss die Original-Befunde nennen`);
   }
   for (const [id, eintrag] of Object.entries(lexikon)) {
     const name = `${vor}/lexikon.json «${id}»`;

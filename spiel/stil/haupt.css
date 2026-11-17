@@ -142,6 +142,10 @@ a { color: var(--haupt); }
 .karte.feier .lupe { margin: 0 auto 0.4rem; }
 .karte.ausweg { background: var(--hinweis-hell); }
 .karte.notfall { border-left: 6px solid var(--warn); }
+.karte.arzt-hinweis { border-left: 6px solid var(--warn); }
+.karte.arzt-hinweis h2 { font-size: 1.05rem; margin: 0 0 0.4rem; }
+.arzt-hinweis-liste { margin: 0; padding-left: 1.2rem; }
+.arzt-hinweis-liste li { margin: 0.25rem 0; }
 .karte.echt { border-left: 6px solid var(--haupt); }
 .wunsch { font-size: 1.05rem; font-style: italic; }
 

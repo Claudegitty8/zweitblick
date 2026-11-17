@@ -38,6 +38,14 @@ export function punkte(erfolge, noetig, beschriftung) {
   return reihe;
 }
 
+// Gesundheitshinweis: Claudes Antworten nur für das Gespräch mit Ärztin oder Arzt.
+// Überall dieselbe Karte, damit er gleich aussieht und gleich heisst.
+export function arztHinweisKarte(t) {
+  return el('section', { klasse: 'karte arzt-hinweis', role: 'note', 'aria-label': t.arztHinweisTitel },
+    el('h2', { text: t.arztHinweisTitel }),
+    el('ul', { klasse: 'arzt-hinweis-liste' }, (t.arztHinweis ?? []).map((satz) => el('li', { text: satz }))));
+}
+
 // Kopfleiste für Unteransichten: Der Knopf nennt immer sein Ziel.
 export function leiste(t, nav, titel) {
   return el('nav', { klasse: 'leiste', 'aria-label': t.leisteName },

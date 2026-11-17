@@ -11,6 +11,7 @@ In Worten der Spielerinnen und Spieler. Vor jeder Änderung abgleichen: Nichts d
 - Ich kann den Besuch beginnen oder mit «Das kann ich schon» einen Schnelltest machen.
 - Ich sehe alle Besuche mit Stand und meine Punkte pro Thema.
 - Am Anfang und am Schluss kann ich freiwillig sechs Fragen beantworten und sehe, was ich dazugelernt habe.
+- Eine Karte erinnert mich: Claudes Antworten sind nur für das Gespräch mit dem Arzt. Ich nehme sie mit den Original-Befunden mit und entscheide nie selbst. Dieselbe Karte steht bei der Land-Wahl, oben auf dem Spickzettel und in Hilfe und Einstellungen.
 - Unten steht immer die Notrufnummer meines Landes.
 - Vier feste Bereiche oben: Café, Spickzettel, Lexikon, Hilfe und Einstellungen.
 

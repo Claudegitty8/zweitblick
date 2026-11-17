@@ -2,7 +2,7 @@
   "app": {
     "titel": "Zweitblick",
     "untertitel": "Das Gesundheits-Café von Hinterwil",
-    "fuss": "Zweitblick, Version 0.9 · inoffiziell, kein Angebot von Anthropic oder Apple",
+    "fuss": "Zweitblick, Version 0.9.1 · inoffiziell, kein Angebot von Anthropic oder Apple",
     "lupeName": "Lupe, die Übungs-KI",
     "lupeWillkommen": "Hallo! Ich bin Lupe, eine Übungs-KI. Ich sehe viel, aber ich weiss nur, was du mir gibst.",
     "lupeNeu": "Willkommen im Gesundheits-Café! Gleich kommt der erste Gast. Wir helfen zusammen.",
@@ -193,6 +193,12 @@
     "einstellungenTitel": "Hilfe und Einstellungen",
     "notfallTitel": "Im Notfall",
     "notfallText": "Bei Brustschmerz, Atemnot, plötzlicher Lähmung oder Sprachstörung: sofort [[notruf]] anrufen. Nicht chatten, nicht abwarten.",
+    "arztHinweisTitel": "Wichtig: nur für das Gespräch mit dem Arzt",
+    "arztHinweis": [
+      "Claudes Antworten sind keine Diagnose und kein Rat zur Behandlung.",
+      "Nimm sie zusammen mit deinen Original-Befunden zur Ärztin oder zum Arzt.",
+      "Entscheide nie selbst, auch nicht nach den Befunden. Ändere keine Tabletten und warte nicht einfach ab."
+    ],
     "spielHilfeTitel": "So funktioniert das Spiel",
     "spielHilfe": [
       "Gäste im Café bringen erfundene Arztberichte. Du hilfst ihnen mit Lupe, einer Übungs-KI.",

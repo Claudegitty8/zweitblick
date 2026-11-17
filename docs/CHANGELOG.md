@@ -1,5 +1,12 @@
 # Änderungen
 
+## 0.9.1 (17. November 2026): Hinweis «nur für das Gespräch mit dem Arzt»
+
+### Neu
+- Karte «Wichtig: nur für das Gespräch mit dem Arzt»: Claudes Antworten sind keine Diagnose. Mit den Original-Befunden zur Ärztin oder zum Arzt. Nie selbst entscheiden, auch nicht nach den Befunden. Erscheint bei der Land-Wahl, im Café, oben auf dem Spickzettel (auch gedruckt) und in Hilfe und Einstellungen.
+- Die Inhaltsprüfung verlangt diesen Hinweis, ein Test prüft ihn.
+- Lizenz: Code unter MIT, Texte und Bilder unter CC BY 4.0.
+
 ## 0.9 (16. November 2026): erste vollständige Fassung, nicht veröffentlicht
 
 ### Neu
@@ -11,7 +18,6 @@
 - Karten «So ist es in echt» nach jedem Thema und Spickzettel zum Drucken.
 - Lexikon mit 32 Begriffen, 31 Fakten mit Quelle und Prüfdatum, 5 medizinische mit zweiter Quelle.
 - Notfall-Karte und Notrufzeile mit der Nummer des Landes.
-- Lizenz (17.11.2026): Code unter MIT, Texte und Bilder unter CC BY 4.0.
 
 ### Übernommen aus dem KI-Studio (angepasst)
 - Lernregeln, Ausweg, Wiederholungen, Schnelltest, Springen mit Rückgängig, freiwillige Fragen, Spielstand sichern und laden, Umwandlung alter Stände, Inhaltsprüfung, Tests.

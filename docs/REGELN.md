@@ -24,6 +24,7 @@ Sonderfälle: Probieren lässt sich nie lösen (die Inhaltsprüfung testet alle 
 - Keine Ratschläge zu Medikamenten ausser: nicht ohne Rücksprache absetzen.
 - Notfall (Brustschmerz, Atemnot, plötzliche Lähmung oder Sprachstörung): sofort Notruf, nicht chatten, nicht warten.
 - Hinweis im Spiel: «nicht von einer Fachperson geprüft» (Über dieses Spiel).
+- Karte «Wichtig: nur für das Gespräch mit dem Arzt» (`arztHinweisTitel`, `arztHinweis` in `texte.json`): Antworten sind keine Diagnose, mit den Original-Befunden zur Ärztin oder zum Arzt, nie selbst entscheiden. Pflicht laut Inhaltsprüfung.
 
 ## Länder (Platzhalter in `texte.json`, `laender`)
 

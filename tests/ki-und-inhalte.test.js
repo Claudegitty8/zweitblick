@@ -173,3 +173,12 @@ test('Brunner-iPhone: Der Besuch übt das Antippen auf einem nachgebauten iPhone
   assert.ok(tippen.length >= 5);
   for (const aufgabe of tippen) assert.ok(aufgabe.bildschirm?.titel, 'Jeder Bildschirm hat einen Titel');
 });
+
+test('Gesundheitshinweis: Antworten nur für das Gespräch mit dem Arzt, mit den Original-Befunden', () => {
+  const { arztHinweisTitel, arztHinweis } = texte.app;
+  assert.ok(arztHinweisTitel.includes('Arzt'));
+  assert.ok(Array.isArray(arztHinweis) && arztHinweis.length >= 2);
+  assert.ok(arztHinweis.some((satz) => satz.includes('Original-Befunde')), 'nennt die Original-Befunde');
+  assert.ok(arztHinweis.some((satz) => satz.includes('Entscheide nie selbst')), 'sagt: nichts selbst entscheiden');
+  for (const satz of arztHinweis) assert.ok(satz.split(/\s+/).length <= 30, satz);
+});

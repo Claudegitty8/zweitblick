@@ -1,5 +1,5 @@
 // Lexikon sowie Einstellungen und Hilfe: zwei Nebenansichten.
-import { el, fuelle, knopf, punkte, hauptnavigation } from './bausteine.js';
+import { el, fuelle, knopf, punkte, hauptnavigation, arztHinweisKarte } from './bausteine.js';
 import { erfolge, neuerFortschritt } from '../logik/meisterschaft.js';
 import { wendeSchriftAn } from './schrift.js';
 import { wandleUm, pruefeLauf, sprungStatus, springeZuAuftrag, SCHRIFTEN, LAENDER } from '../logik/extras.js';
@@ -135,6 +135,7 @@ export function zeigeEinstellungen(wurzel, app, nav, daten) {
     el('section', { klasse: 'karte notfall' },
       el('h2', { text: t.notfallTitel }),
       el('p', { text: t.notfallText })),
+    arztHinweisKarte(t),
     el('section', { klasse: 'karte' },
       el('h2', { text: t.spielHilfeTitel }),
       t.spielHilfe.map((satz) => el('p', { text: satz }))),

@@ -1,6 +1,6 @@
 # Stand
 
-Stand: 17. November 2026 · Version 0.9 · Spielseite veröffentlicht: nein · Code öffentlich auf GitHub: ja
+Stand: 17. November 2026 · Version 0.9.1 · Spielseite veröffentlicht: nein · Code öffentlich auf GitHub: ja
 
 ## Wo es liegt
 
@@ -16,10 +16,11 @@ Stand: 17. November 2026 · Version 0.9 · Spielseite veröffentlicht: nein · C
 - Lernregeln aus dem KI-Studio: fünf Schritte, Punkte nur beim ersten Versuch, Wiederholungen nach 1, 3 und 7 Runden, drei Hilfestufen, Ausweg, Schnelltest, Springen mit Rückgängig, freiwillige Fragen vorher und nachher.
 - Einstellungen: Schrift in drei Grössen, Land, Spielstand sichern, laden, löschen (mit Rückfrage), Notfall-Karte, Quellenliste.
 - Offline nach dem ersten Laden, Symbol für den Home-Bildschirm.
+- Hinweis «Wichtig: nur für das Gespräch mit dem Arzt» bei Land-Wahl, Café, Spickzettel und Einstellungen (0.9.1).
 
 ## Geprüft (16.11.2026)
 
-- 84 Tests und die Inhaltsprüfung bestehen.
+- 85 Tests und die Inhaltsprüfung bestehen.
 - Im Browser (Chrome, automatisch) ganz durchgespielt: guter Spieler (alle 21 Themen gemeistert) und schwacher Spieler (nie beim ersten Versuch richtig, kommt über den Ausweg ans Ende), Schweiz und Deutschland, Breiten 320 bis 1680 px, hell und dunkel, Schrift normal bis sehr gross. Keine Fehler in der Konsole, nichts scrollt waagrecht, alle Klickflächen mindestens 44 px, Kontrast mindestens 4,5:1.
 - Sonderfälle: Neuladen mitten in der Runde, Doppelklick, kaputter und fremder Speicher, kein Speicher, Löschen mit Rückfrage und Escape, Schnelltest, freiwillige Fragen, Springen und zurück, Sichern und Laden (auch kaputte Dateien), Tastatur, ohne Internet.
 
