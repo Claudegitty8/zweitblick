@@ -1,6 +1,6 @@
 # Veröffentlichen
 
-Noch nicht veröffentlicht. Veröffentlicht wird nur nach ausdrücklichem Ja des Besitzers.
+Der Code ist öffentlich auf GitHub. Die Spielseite ist noch nicht online. Sie geht nur nach ausdrücklichem Ja des Besitzers online.
 
 ## Wichtig vorher
 
@@ -11,9 +11,8 @@ Noch nicht veröffentlicht. Veröffentlicht wird nur nach ausdrücklichem Ja des
 
 ## Einmal einrichten (Besitzer)
 
-1. Auf github.com ein neues, leeres Repository «zweitblick» anlegen (privat, ohne README).
-2. Claude Schreibzugriff darauf geben. Claude lädt dann den Stand hoch.
-3. Wenn veröffentlicht werden soll: Repository öffentlich machen, dann unter «Settings», «Pages», bei «Source» den Eintrag «GitHub Actions» wählen.
+1. Erledigt (17.11.2026): Repository https://github.com/Claudegitty8/zweitblick, öffentlich, Claude hat Schreibzugriff.
+2. Wenn die Spielseite online gehen soll: auf github.com im Repository unter «Settings», «Pages», bei «Source» den Eintrag «GitHub Actions» wählen.
 
 ## Jede Veröffentlichung
 
