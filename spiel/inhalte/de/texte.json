@@ -2,7 +2,7 @@
   "app": {
     "titel": "Zweitblick",
     "untertitel": "Das Gesundheits-Café von Hinterwil",
-    "fuss": "Zweitblick, Version 0.11 · inoffiziell, kein Angebot von Anthropic oder Apple",
+    "fuss": "Zweitblick, Version 0.12 · inoffiziell, kein Angebot von Anthropic oder Apple",
     "lupeName": "Lupe, die Übungs-KI",
     "lupeWillkommen": "Hallo! Ich bin Lupe, eine Übungs-KI. Ich sehe viel, aber ich weiss nur, was du mir gibst.",
     "lupeNeu": "Willkommen im Gesundheits-Café! Gleich kommt der erste Gast. Wir helfen zusammen.",
@@ -113,6 +113,14 @@
     "uebenAus": "aus",
     "uebenTelefonName": "Nachgebauter Bildschirm: {app}, {titel}",
     "uebenNachgebaut": "Vereinfacht nachgebaut. Namen und Knöpfe sind am echten iPhone nicht geprüft und sehen etwas anders aus.",
+    "uebenThema": "Thema: {name}",
+    "uebungenKnopf": "Alle Übungen am iPhone",
+    "uebungenTitel": "Alle Übungen am iPhone",
+    "uebungenInfo": "Jede Übung geht jederzeit, auch bevor du das Thema gespielt hast. Wähle, was du am iPhone üben willst.",
+    "uebungenKarteText": "Übe die Handgriffe auf einem nachgebauten iPhone, zum Beispiel Dokumente scannen oder den Notruf wählen.",
+    "uebungenSchritte": "{anzahl} Schritte",
+    "uebungenZurueck": "Zurück zu allen Übungen",
+    "zurueckHilfe": "Zurück zu Hilfe und Einstellungen",
     "reiheHilfe": "Verschiebe die Schritte mit «Hoch» und «Runter».",
     "reiheHoch": "«{text}» nach oben schieben",
     "reiheRunter": "«{text}» nach unten schieben",
@@ -421,6 +429,7 @@
         "Wähle das Foto oder die Datei mit dem Bericht.",
         "Schreib: «Erklär mir diesen Bericht in einfachen Worten, kurz.» Dann senden."
       ],
+      "uebenName": "Foto vom Bericht anhängen und erklären lassen",
       "ueben": [
         {
           "anleitung": "Öffne die App Claude.",
@@ -641,6 +650,7 @@
         "Frag genau: «Was heisst Erythrozyten?»",
         "Ist es noch zu schwierig, schreib: «Bitte noch einfacher, ohne Fachwörter.»"
       ],
+      "uebenName": "Im selben Chat nachfragen",
       "ueben": [
         {
           "anleitung": "Bleib im selben Chat. Tippe ins Eingabefeld und frag: «Was heisst Erythrozyten?»",
@@ -855,6 +865,7 @@
         "Halte still, bis das Bild scharf ist. Dann abdrücken.",
         "Schau das Foto an und vergrössere es mit zwei Fingern. Ist alles lesbar?"
       ],
+      "uebenName": "Bericht scharf fotografieren",
       "ueben": [
         {
           "anleitung": "Leg das Blatt flach auf den Tisch. Öffne dann die App Kamera.",
@@ -1030,6 +1041,7 @@
         "Streich das Blatt glatt und leg es hin. Halte es nicht mit den Fingern fest.",
         "Pass auf, dass dein Schatten nicht aufs Blatt fällt."
       ],
+      "uebenName": "Blitz ausschalten und fotografieren",
       "ueben": [
         {
           "anleitung": "Geh ans Fenster oder unter eine helle Lampe. Öffne die App Kamera.",
@@ -1180,6 +1192,7 @@
         "Wähle «Dokumente scannen» und halte das iPhone über das Blatt. Es knipst und schneidet selbst zu.",
         "Mach so alle Seiten nacheinander. Dann sichern und in Claude anhängen."
       ],
+      "uebenName": "Dokumente scannen in der App Notizen",
       "ueben": [
         {
           "anleitung": "Für Papier gibt es den Scanner in der App Notizen. Öffne die App Notizen.",
@@ -1480,6 +1493,7 @@
         "Wähle «Claude by Anthropic». Als Anbieter steht Anthropic PBC.",
         "Tippe auf «Laden». Die App braucht iOS 18 oder neuer."
       ],
+      "uebenName": "Claude im App Store laden",
       "ueben": [
         {
           "anleitung": "Öffne den App Store.",
@@ -1631,6 +1645,7 @@
         "Bei E-Mail: Öffne die Nachricht von Anthropic und tippe auf den Link. Nichts gekommen? Schau im Spam-Ordner.",
         "Bestätige, dass du mindestens 18 bist. Ein Abo brauchst du nicht."
       ],
+      "uebenName": "Konto mit Apple anlegen",
       "ueben": [
         {
           "anleitung": "Öffne die App Claude.",
@@ -1737,6 +1752,7 @@
         "Schalte «Help improve Claude» aus. Auf Deutsch heisst er ähnlich.",
         "Neue Chats werden dann nicht mehr fürs Training genutzt."
       ],
+      "uebenName": "Training ausschalten",
       "ueben": [
         {
           "anleitung": "Öffne oben links das Menü.",
@@ -1881,6 +1897,7 @@
         "Starte neue Chats immer in diesem Projekt.",
         "Klappt das Anlegen in der App nicht, öffne claude.ai in Safari."
       ],
+      "uebenName": "Projekt «Meine Gesundheit» anlegen",
       "ueben": [
         {
           "anleitung": "Öffne oben links das Menü.",
@@ -2039,6 +2056,7 @@
         "Schreib Alter, Krankheiten, Tabletten und Allergien hinein.",
         "Ergänze: «Erklär einfach und kurz. Sag, wenn du unsicher bist.»"
       ],
+      "uebenName": "Anweisungen ins Projekt schreiben",
       "ueben": [
         {
           "anleitung": "Öffne das Projekt «Meine Gesundheit».",
@@ -2134,6 +2152,7 @@
         "[[dossierWeg]].",
         "Scanne Papier mit der App Notizen und füge alles ins Projekt ein."
       ],
+      "uebenName": "Bericht ins Projekt legen",
       "ueben": [
         {
           "anleitung": "Hast du einen Bericht gescannt oder als PDF? Öffne das Projekt und tippe auf «+ Dateien hinzufügen».",
@@ -2220,6 +2239,7 @@
         "Nenn, was sich geändert hat, zum Beispiel eine neue Tablette.",
         "Frag: «Was könnte dahinterstecken, und was frage ich meinen Arzt?»"
       ],
+      "uebenName": "Beschwerden im Projekt beschreiben",
       "ueben": [
         {
           "anleitung": "Öffne das Projekt und tippe auf «Neuer Chat im Projekt».",
@@ -2328,6 +2348,7 @@
         "Achte darauf, dass das Datum gut lesbar ist. Sonst schreib es dazu.",
         "Frag: «Wie haben sich meine Werte seit 2024 verändert?»"
       ],
+      "uebenName": "Alten Bericht dazulegen und vergleichen",
       "ueben": [
         {
           "anleitung": "Leg alte und neue Berichte ins Projekt. Tippe auf «+ Dateien hinzufügen».",
@@ -2481,6 +2502,7 @@
         "Mach ein Bildschirmfoto oder schreib sie auf einen Zettel.",
         "Nimm die Fragen mit in die Praxis."
       ],
+      "uebenName": "Fragen für den Arzt machen lassen",
       "ueben": [
         {
           "anleitung": "Tippe im Projekt ins Feld: «Mach mir drei kurze Fragen für meinen Arzttermin zum Schwindel.»",
@@ -2591,6 +2613,7 @@
         "Frag: «Welche Untersuchung würde es klären?»",
         "Nimm die Liste mit zum Arzt. Er entscheidet."
       ],
+      "uebenName": "Nach möglichen Ursachen fragen",
       "ueben": [
         {
           "anleitung": "Tippe im Projekt ins Feld und frag: «Welche Ursachen kommen in Frage? Was spricht dafür und dagegen?»",
@@ -2762,6 +2785,7 @@
         "Frag: «Welche Angaben oder Untersuchungen fehlen dir?»",
         "Nimm, was fehlt, als Frage zum Arzt mit."
       ],
+      "uebenName": "Fragen, wie sicher Claude ist",
       "ueben": [
         {
           "anleitung": "Claude hat geantwortet. Tippe ins Feld und frag: «Wie sicher bist du dir?»",
@@ -2933,6 +2957,7 @@
         "Vergleich sie mit dem Bericht.",
         "Stimmt etwas nicht, schreib zum Beispiel: «Auf dem Bericht steht 11,2, nicht 17,2. Bitte nochmals.»"
       ],
+      "uebenName": "Falsche Zahl finden und korrigieren",
       "ueben": [
         {
           "anleitung": "Vergleich Claudes Antwort mit dem Bericht. Tippe auf die Zahl, die nicht stimmt.",
@@ -3053,6 +3078,7 @@
         "Ruf sofort [[notruf]] an. Sag, wo du bist, wer du bist und was passiert ist.",
         "Fragen an Claude haben Zeit, bis der Notfall vorbei ist."
       ],
+      "uebenName": "Notruf wählen",
       "ueben": [
         {
           "anleitung": "Brustschmerz, Atemnot, plötzliche Lähmung oder Sprachstörung: sofort anrufen. Öffne die App Telefon.",
@@ -3195,6 +3221,7 @@
         "Schick keine Berichte anderer Menschen ohne deren Erlaubnis.",
         "Passwörter und Bankdaten gehören nie in einen Chat."
       ],
+      "uebenName": "Nummer vom Foto wegschneiden",
       "ueben": [
         {
           "anleitung": "Steht deine [[nummer]] auf dem Foto? Dann schneide sie weg. Öffne die App Fotos.",
@@ -3364,6 +3391,7 @@
         "Laut Anthropic ist der Chat innert 30 Tagen auch auf den Servern gelöscht.",
         "Für eine einmalige Frage kannst du einen Inkognito-Chat starten."
       ],
+      "uebenName": "Chat löschen",
       "ueben": [
         {
           "anleitung": "Öffne oben links das Menü.",
@@ -3504,6 +3532,7 @@
         "Tippe auf die fertige Tabelle und sichere sie in der App Dateien. Name: «Gesundheitsakte».",
         "Vergleich ein paar Zahlen mit den Original-Befunden."
       ],
+      "uebenName": "Akte als Tabelle anlegen",
       "ueben": [
         {
           "anleitung": "Zuerst einmalig: Öffne oben links das Menü.",
@@ -3823,6 +3852,7 @@
         "Vergleich die neuen Zeilen mit dem Bericht.",
         "Sichere die neue Akte. Die alte löschst du oder benennst sie «alt»."
       ],
+      "uebenName": "Neue Werte in die Akte eintragen",
       "ueben": [
         {
           "anleitung": "Neuer Bericht? Starte einen neuen Chat und tippe auf «+».",
@@ -4073,6 +4103,7 @@
         "Schreib: «Mach mir drei kurze Fragen dazu für meinen Arzt.»",
         "Nimm Grafik, Fragen und die Original-Befunde mit zum Arzt. Entscheide nichts selbst."
       ],
+      "uebenName": "Verlauf als Grafik zeigen lassen",
       "ueben": [
         {
           "anleitung": "Starte einen neuen Chat und tippe auf «+».",

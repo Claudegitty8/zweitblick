@@ -3,7 +3,7 @@
 import { el, fuelle, knopf, hauptnavigation, arztHinweisKarte, fusszeile } from './bausteine.js';
 import { beispielBild } from './bild.js';
 import { spickzettel } from '../logik/extras.js';
-import { uebenKnopf } from './ueben.js';
+import { uebenKnopf, uebungenKnopf, fokussiereSpaeter } from './ueben.js';
 
 export function zeigeSpickzettel(wurzel, app, nav, daten = {}) {
   const { texte, auftraege, regeln } = app.inhalte;
@@ -26,11 +26,13 @@ export function zeigeSpickzettel(wurzel, app, nav, daten = {}) {
       }));
   }).filter(Boolean);
 
+  const alleUebungen = uebungenKnopf(app, nav, { ziel: 'spickzettel', daten: { fokus: 'uebungen' }, text: t.uebenZurueckSpick }, 'knopf-zweit nicht-drucken');
   wurzel.append(...[
     el('header', { klasse: 'kopf' }, el('h1', { text: t.spickTitel })),
     hauptnavigation(t, nav, 'spickzettel'),
     el('p', { text: t.spickInfo }),
     el('p', { klasse: 'klein', text: t.echtStand }),
+    alleUebungen,
     arztHinweisKarte(t),
     karten.length === 0 ? el('section', { klasse: 'karte' }, el('p', { text: t.spickLeer })) : null,
     ...gruppen,
@@ -40,6 +42,7 @@ export function zeigeSpickzettel(wurzel, app, nav, daten = {}) {
     fusszeile(t, nav),
   ].filter(Boolean));
 
+  if (daten.fokus === 'uebungen') fokussiereSpaeter(alleUebungen);
   // Zurück aus einer Übung: Die Karte dieses Themas kommt wieder ins Bild, der Knopf bekommt den Fokus.
   if (daten.konzept) {
     const karte = wurzel.querySelector(`[data-konzept="${CSS.escape(daten.konzept)}"]`);

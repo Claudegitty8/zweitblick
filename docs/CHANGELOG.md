@@ -1,5 +1,15 @@
 # Änderungen
 
+## 0.12 (17. November 2026): Alle Übungen am iPhone
+
+### Neu
+- Liste «Alle Übungen am iPhone»: alle 23 Übungen auf einen Blick, nach Besuchen geordnet, mit Anzahl Schritte. Jede Übung geht jederzeit, auch bevor man das Thema gespielt hat.
+- Erreichbar in Hilfe und Einstellungen (eigene Karte «Am iPhone üben») und oben im Spickzettel, auch wenn er noch leer ist.
+- Jede Übung hat einen kurzen Namen nach der Handlung, zum Beispiel «Dokumente scannen in der App Notizen». Darunter steht das Thema.
+
+### Geändert
+- Zurück-Knöpfe führen genau dorthin, woher man kam (Liste, Hilfe, Spickzettel, Runde), und der Fokus steht wieder auf dem gewählten Knopf.
+
 ## 0.11 (17. November 2026): Am iPhone üben
 
 ### Neu

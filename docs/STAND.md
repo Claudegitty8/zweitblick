@@ -1,6 +1,6 @@
 # Stand
 
-Stand: 17. November 2026 · Version 0.11 · Spielseite online als Testversion: https://claudegitty8.github.io/zweitblick/ (seit 17.11.2026) · Code öffentlich auf GitHub: ja
+Stand: 17. November 2026 · Version 0.12 · Spielseite online als Testversion: https://claudegitty8.github.io/zweitblick/ (seit 17.11.2026) · Code öffentlich auf GitHub: ja
 
 ## Wo es liegt
 
@@ -11,7 +11,8 @@ Stand: 17. November 2026 · Version 0.11 · Spielseite online als Testversion: h
 
 - 8 Besuche, 24 Themen, 152 Aufgaben in vier Übungsformen: Zusammenstecken (52), Vorhersagen (71), Antippen auf einem nachgebauten iPhone (21), Sortieren (8).
 - Neu in 0.10: Besuch 2 «Eine Akte für alle Werte» (Herr Baumann): Akte als Tabelle anlegen, nachführen, Trends auslesen.
-- Neu in 0.11: «Am iPhone üben» zu 23 Themen, 115 nachgebaute Bildschirme, darunter «Dokumente scannen» in der App Notizen. Knopf nach jedem Thema und im Spickzettel. Noch nicht veröffentlicht.
+- Neu in 0.11: «Am iPhone üben» zu 23 Themen, 115 nachgebaute Bildschirme, darunter «Dokumente scannen» in der App Notizen. Knopf nach jedem Thema und im Spickzettel. Online seit 17.11.2026.
+- Neu in 0.12: Liste «Alle Übungen am iPhone» in Hilfe und Einstellungen und im Spickzettel, jede Übung jederzeit. Noch nicht veröffentlicht.
 - Kapitel «Gute Fotos von Berichten» mit eigenen Bildern: 9 Fehler (verwackelt, abgeschnitten, zu weit weg, schief, Schatten, Blitz, Finger, zu dunkel, zerknittert) und 3 gute Beispiele (Foto, Scan, PDF). Dazu ein Bild «Seite 1 von 2» und ein Laborbericht, zusammen 14 Bilder.
 - Land-Wahl Schweiz oder Deutschland: Notrufnummer, Patientendossier oder ePA, Kopie-Recht, Versichertennummer.
 - Spickzettel mit den echten Schritten pro Thema, druckbar. Lexikon mit 36 Begriffen und Quellen.
@@ -23,7 +24,8 @@ Stand: 17. November 2026 · Version 0.11 · Spielseite online als Testversion: h
 
 ## Geprüft (17.11.2026)
 
-- 94 Tests und die Inhaltsprüfung bestehen.
+- 95 Tests und die Inhaltsprüfung bestehen.
+- 0.12: Liste aller Übungen aus Hilfe und leerem Spickzettel geöffnet, Übung gestartet, zurück mit Fokus auf dem gewählten Knopf, beim Drucken versteckt. 320, 390 und 1280 px, hell und dunkel.
 - 0.11: Alle 23 Abläufe «Am iPhone üben» im Browser durchgespielt (falsch tippen, Stelle gezeigt, «Zeig mir, wo», «Einen Schritt zurück», bis «Geschafft», zurück zur eigenen Karte), 320, 390, 768 und 1280 px, hell und dunkel, Schweiz und Deutschland. Dazu aus einer Runde heraus und zurück.
 - Im Browser (Chrome, automatisch) ganz durchgespielt: guter Spieler (alle 24 Themen gemeistert, 0.10) und schwacher Spieler (nie beim ersten Versuch richtig, kommt über den Ausweg ans Ende), Schweiz und Deutschland, Breiten 320 bis 1680 px, hell und dunkel, Schrift normal bis sehr gross. Keine Fehler in der Konsole, nichts scrollt waagrecht, alle Klickflächen mindestens 44 px, Kontrast mindestens 4,5:1.
 - Sonderfälle: Neuladen mitten in der Runde, Doppelklick, kaputter und fremder Speicher, kein Speicher, Löschen mit Rückfrage und Escape, Schnelltest, freiwillige Fragen, Springen und zurück, Sichern und Laden (auch kaputte Dateien), Tastatur, ohne Internet.

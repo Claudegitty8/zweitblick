@@ -4,6 +4,7 @@ import { erfolge, neuerFortschritt } from '../logik/meisterschaft.js';
 import { wendeSchriftAn } from './schrift.js';
 import { wandleUm, pruefeLauf, sprungStatus, springeZuAuftrag, SCHRIFTEN, LAENDER } from '../logik/extras.js';
 import { istApfelGeraet, laeuftAlsApp } from './hinweise.js';
+import { uebungenKnopf, fokussiereSpaeter } from './ueben.js';
 
 function kopf(t, titel, nav, aktuell) {
   return [el('header', { klasse: 'kopf' }, el('h1', { text: titel })), hauptnavigation(t, nav, aktuell)];
@@ -129,6 +130,7 @@ export function zeigeEinstellungen(wurzel, app, nav, daten) {
   });
   const laden = knopf(t.standLaden, () => dateiWahl.click(), 'knopf-zweit');
   const iphoneHinweis = istApfelGeraet() && !laeuftAlsApp() ? el('p', { klasse: 'klein', text: t.iphoneInfo }) : null;
+  const uebungenEinstieg = uebungenKnopf(app, nav, { ziel: 'einstellungen', daten: { fokus: 'uebungen' }, text: t.zurueckHilfe });
 
   wurzel.append(...[
     ...kopf(t, t.einstellungenTitel, nav, 'einstellungen'),
@@ -140,6 +142,10 @@ export function zeigeEinstellungen(wurzel, app, nav, daten) {
     el('section', { klasse: 'karte' },
       el('h2', { text: t.spielHilfeTitel }),
       t.spielHilfe.map((satz) => el('p', { text: satz }))),
+    el('section', { klasse: 'karte' },
+      el('h2', { text: t.uebenKnopf }),
+      el('p', { text: t.uebungenKarteText }),
+      uebungenEinstieg),
     el('section', { klasse: 'karte' },
       el('h2', { text: t.schriftEtikett }),
       schrift),
@@ -162,6 +168,7 @@ export function zeigeEinstellungen(wurzel, app, nav, daten) {
     ueberDasSpiel(app, t),
     fusszeile(t, nav),
   ].filter(Boolean));
+  if (daten?.fokus === 'uebungen') fokussiereSpaeter(uebungenEinstieg);
 }
 
 // Daten, Hinweis «inoffiziell», fehlende Fachprüfung, Quellen und Kontakt.

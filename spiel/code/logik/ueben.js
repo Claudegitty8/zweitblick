@@ -48,3 +48,16 @@ export function zeigeZiel(stand) {
 export function schrittZurueck(stand) {
   return { schritt: Math.max(0, stand.schritt - (stand.fertig ? 0 : 1)), fehler: 0, gezeigt: false, fertig: false };
 }
+
+// Liste aller Übungen, nach Besuchen geordnet wie im Spiel. Nur Themen mit einem Ablauf.
+// Jedes Thema erscheint nur einmal. Besuche ohne Übung fallen weg.
+export function uebungsListe(auftraege, konzepte) {
+  const gesehen = new Set();
+  return auftraege.map((auftrag) => ({
+    auftrag: auftrag.id,
+    thema: auftrag.thema,
+    konzepte: auftrag.runden
+      .map((runde) => runde.konzept)
+      .filter((id) => id && konzepte[id]?.ueben?.length && !gesehen.has(id) && gesehen.add(id)),
+  })).filter((gruppe) => gruppe.konzepte.length > 0);
+}

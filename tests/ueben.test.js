@@ -75,3 +75,25 @@ test('Üben: Die Inhaltsprüfung findet kaputte Abläufe', async () => {
   assert.match(alles, /unbekannte Art «wolke»/);
   assert.match(alles, /Bildschirm 3 braucht mindestens zwei Stellen/);
 });
+
+test('Üben: Die Liste aller Übungen folgt dem Spiel, jedes Thema einmal', async () => {
+  const { uebungsListe } = await import('../spiel/code/logik/ueben.js');
+  const { AUFTRAEGE } = await import('../spiel/code/inhalte/lader.js');
+  const texte = JSON.parse(await readFile(new URL('../spiel/inhalte/de/texte.json', import.meta.url), 'utf8'));
+  const auftraege = await Promise.all(AUFTRAEGE.map(async (id) => JSON.parse(await readFile(new URL(`../spiel/inhalte/de/besuche/${id}.json`, import.meta.url), 'utf8'))));
+  const liste = uebungsListe(auftraege, texte.konzepte);
+  const alle = liste.flatMap((gruppe) => gruppe.konzepte);
+  assert.equal(alle.length, Object.values(texte.konzepte).filter((k) => k.ueben).length);
+  assert.equal(new Set(alle).size, alle.length);
+  assert.equal(alle[0], 'erklaeren');
+  assert.ok(alle.includes('alle-seiten'));
+  assert.ok(!alle.includes('arzt-entscheidet'));
+  // Jede Übung hat einen kurzen Namen für die Liste.
+  for (const id of alle) assert.ok(texte.konzepte[id].uebenName?.trim(), id);
+  // Kleine Liste: Ein Besuch ohne Übung fällt weg, doppelte Themen erscheinen einmal.
+  const klein = uebungsListe(
+    [{ id: 'a', thema: 'A', runden: [{ konzept: 'x' }, { konzept: 'y' }, { art: 'misch' }] }, { id: 'b', thema: 'B', runden: [{ konzept: 'x' }] }],
+    { x: { ueben: [{}] }, y: {} },
+  );
+  assert.deepEqual(klein, [{ auftrag: 'a', thema: 'A', konzepte: ['x'] }]);
+});

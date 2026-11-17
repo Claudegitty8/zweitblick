@@ -20,7 +20,7 @@ spiel/                     alles, was veröffentlicht wird
       bewertung.js         prüft eine Antwort, wählt die Hilfe
       prompt.js            setzt die Nachricht an Lupe zusammen
       extras.js            Schnelltest, Fragen, Daumen, Spielstand prüfen und umwandeln, Springen, Spickzettel
-      ueben.js             «Am iPhone üben»: richtig oder falsch getippt, Stelle zeigen, Schritt zurück
+      ueben.js             «Am iPhone üben»: richtig oder falsch getippt, Stelle zeigen, Schritt zurück, Liste aller Übungen
     ki/                    Übungs-KI «Lupe» (simuliert, nur nach Regeln aus den Inhalten)
     speicher/speicher.js   localStorage mit Rückfall auf Arbeitsspeicher
     oberflaeche/           Ansichten: Café, Runde, Übungsformen, Lexikon, Einstellungen, Spickzettel, Am iPhone üben (ueben.js)
@@ -51,7 +51,7 @@ werkzeuge/pruefe-veroeffentlichung.mjs   Prüfung vor dem Veröffentlichen (Impr
 
 ## Am iPhone üben (`texte.json`, `konzepte[…].ueben`)
 
-- Optional pro Thema. Zwei bis zehn Bildschirme, jeder mit `anleitung` (höchstens 30 Wörter), `app`, `titel`, `elemente`, optional `hinweis` (bei falschem Tippen).
+- Optional pro Thema, dann mit `uebenName` (kurzer Name nach der Handlung, für die Liste aller Übungen). Zwei bis zehn Bildschirme, jeder mit `anleitung` (höchstens 30 Wörter), `app`, `titel`, `elemente`, optional `hinweis` (bei falschem Tippen).
 - Elemente: `text` und `nachricht` (`von`: claude oder ich) lassen sich nicht antippen. `knopf`, `feld` (optional `leer`), `schalter` (`an`), `datei`, `bild` (`datei`, optional `rahmen`) lassen sich antippen.
 - Genau ein Element pro Bildschirm hat `ziel: true`, dazu mindestens eine andere Stelle zum Tippen. Gleiche `gruppe` hintereinander steht in einer Zeile.
 - Tippen ins Feld: zwei Bildschirme, zuerst das leere Feld, dann das ausgefüllte Feld mit «Senden» als Ziel.

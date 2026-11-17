@@ -183,7 +183,10 @@ async function pruefeTexte({ texte, lexikon, umfrage, lehrplan, gesehen, vor }, 
       else if (!(await bildDa(bild.datei))) fehler.push(`${name}: Bild «${bild.datei}» fehlt`);
     }
     for (const text of alleTexte(eintrag)) if (zuLang(text)) fehler.push(`${name}: Text über ${MAX_WOERTER} Wörter`);
-    if (eintrag && 'ueben' in eintrag) await pruefeUeben(eintrag.ueben, name, fehler);
+    if (eintrag && 'ueben' in eintrag) {
+      if (!istText(eintrag.uebenName)) fehler.push(`${name}: ueben braucht uebenName (kurzer Name für die Liste aller Übungen)`);
+      await pruefeUeben(eintrag.ueben, name, fehler);
+    }
   }
   // Jeder sichtbare Text der Oberfläche ist kurz genug.
   for (const [schluessel, wert] of Object.entries(texte.app ?? {})) {

@@ -344,7 +344,11 @@ button:disabled { cursor: not-allowed; }
 .telefon-fuss { font-size: 0.7rem; color: #555; text-align: center; margin: 0.6rem 0 0; }
 
 /* --- Am iPhone üben: Schritt für Schritt auf dem nachgebauten iPhone --- */
-.ueben-start { width: 100%; margin: 0.5rem 0; }
+.ueben-start, .uebungen-start { width: 100%; margin: 0.5rem 0; }
+.uebungen-liste { list-style: none; padding: 0; margin: 0.4rem 0 0; display: flex; flex-direction: column; gap: 0.5rem; }
+.uebung-wahl { width: 100%; display: flex; flex-direction: column; align-items: flex-start; text-align: left; gap: 0.1rem; }
+.uebung-name { font-weight: 700; }
+.uebung-zusatz { font-size: 0.85rem; font-weight: 400; color: var(--leise); }
 .ueben-thema { margin-top: 0; }
 .ueben-anleitung { font-size: 1.1rem; font-weight: 700; line-height: 1.4; margin: 0.2rem 0 0.4rem; }
 .ueben-anleitung:focus { outline: none; }

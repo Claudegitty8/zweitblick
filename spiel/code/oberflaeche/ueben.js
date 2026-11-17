@@ -4,7 +4,7 @@
 // Der Übungsstand wird nicht gespeichert: Üben ist freiwillig und lässt sich jederzeit wiederholen.
 import { el, fuelle, knopf, lupeFigur } from './bausteine.js';
 import { bildKnoten } from './bild.js';
-import { neueUebung, tippe, zeigeZiel, schrittZurueck, istTippbar, zielIndex } from '../logik/ueben.js';
+import { neueUebung, tippe, zeigeZiel, schrittZurueck, istTippbar, zielIndex, uebungsListe } from '../logik/ueben.js';
 
 // Knopf «Am iPhone üben» zu einem Thema. Hat das Thema keinen Ablauf, gibt es keinen Knopf.
 // zurueck = { ziel, daten, text }: wohin der Zurück-Knopf der Übung führt und wie er heisst.
@@ -16,7 +16,7 @@ export function uebenKnopf(app, nav, konzeptId, zurueck, klasse = 'knopf-zweit')
     type: 'button',
     klasse: `${klasse} ueben-start`,
     text: t.uebenKnopf,
-    'aria-label': fuelle(t.uebenKnopfName, { konzept: konzept.name }),
+    'aria-label': fuelle(t.uebenKnopfName, { konzept: konzept.uebenName ?? konzept.name }),
     onclick: () => nav.zu('ueben', { konzept: konzeptId, zurueck }),
   });
 }
@@ -189,10 +189,70 @@ export function zeigeUeben(wurzel, app, nav, daten = {}) {
       zurueckKnopf('knopf-leise zurueck'),
       el('h1', { klasse: 'leiste-titel', text: t.uebenKnopf })),
     el('section', { klasse: 'karte ueben' },
-      el('h2', { klasse: 'ueben-thema', text: konzept.name }),
+      el('h2', { klasse: 'ueben-thema', text: konzept.uebenName ?? konzept.name }),
+      el('p', { klasse: 'etikett', text: fuelle(t.uebenThema, { name: konzept.name }) }),
       el('p', { klasse: 'klein', text: t.uebenInfo }),
       oben,
       meldung,
       unten),
   );
+}
+
+// Knopf zur Liste aller Übungen (in Hilfe und Einstellungen und im Spickzettel).
+// zurueck = { ziel, daten, text }: wohin der Zurück-Knopf der Liste führt.
+export function uebungenKnopf(app, nav, zurueck, klasse = 'knopf-zweit') {
+  const t = app.inhalte.texte.app;
+  return el('button', {
+    type: 'button',
+    klasse: `${klasse} uebungen-start`,
+    text: t.uebungenKnopf,
+    onclick: () => nav.zu('uebungen', { zurueck }),
+  });
+}
+
+// Alle Übungen auf einen Blick, nach Besuchen geordnet. Jede geht jederzeit, auch vor dem Thema.
+export function zeigeUebungen(wurzel, app, nav, daten = {}) {
+  const { texte, auftraege } = app.inhalte;
+  const t = texte.app;
+  const zurueck = daten.zurueck ?? { ziel: 'einstellungen', daten: { fokus: 'uebungen' }, text: t.zurueckHilfe };
+  const gruppen = uebungsListe(auftraege, texte.konzepte).map((gruppe) => el('section', { klasse: 'karte uebungen-gruppe' },
+    el('h2', { text: gruppe.thema }),
+    el('ul', { klasse: 'uebungen-liste' }, gruppe.konzepte.map((id) => {
+      const konzept = texte.konzepte[id];
+      return el('li', {},
+        el('button', {
+          type: 'button',
+          klasse: 'knopf-zweit uebung-wahl',
+          'data-konzept': id,
+          onclick: () => nav.zu('ueben', { konzept: id, zurueck: { ziel: 'uebungen', daten: { zurueck, konzept: id }, text: t.uebungenZurueck } }),
+        },
+        el('span', { klasse: 'uebung-name', text: konzept.uebenName ?? konzept.name }),
+        el('span', { klasse: 'uebung-zusatz', text: fuelle(t.uebungenSchritte, { anzahl: konzept.ueben.length }) })));
+    }))));
+
+  wurzel.append(
+    el('nav', { klasse: 'leiste', 'aria-label': t.leisteName },
+      knopf(zurueck.text, () => nav.zu(zurueck.ziel, zurueck.daten), 'knopf-leise zurueck'),
+      el('h1', { klasse: 'leiste-titel', text: t.uebungenTitel })),
+    el('p', { text: t.uebungenInfo }),
+    ...gruppen,
+  );
+
+  // Zurück aus einer Übung: Der Knopf dieser Übung bekommt wieder den Fokus.
+  if (daten.konzept) {
+    const knopfDerUebung = wurzel.querySelector(`.uebung-wahl[data-konzept="${CSS.escape(daten.konzept)}"]`);
+    setTimeout(() => {
+      knopfDerUebung?.scrollIntoView({ block: 'center' });
+      knopfDerUebung?.focus({ preventScroll: true });
+    }, 0);
+  }
+}
+
+// Nach dem Zurückkommen: einen Knopf wieder ins Bild holen und fokussieren.
+export function fokussiereSpaeter(knoten) {
+  if (!knoten) return;
+  setTimeout(() => {
+    knoten.scrollIntoView({ block: 'center' });
+    knoten.focus({ preventScroll: true });
+  }, 0);
 }

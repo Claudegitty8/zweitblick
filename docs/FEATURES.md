@@ -36,6 +36,7 @@ In Worten der Spielerinnen und Spieler. Vor jeder Änderung abgleichen: Nichts d
 - Nach zwei Fehlern zeigt das Spiel die richtige Stelle. Ich kann auch selbst «Zeig mir, wo» drücken oder einen Schritt zurückgehen.
 - Dabei ist auch «Dokumente scannen» in der App Notizen, mit Bildern vom Blatt im Sucher.
 - Den Knopf «Am iPhone üben» finde ich nach jedem Thema und auf jeder Karte im Spickzettel. Ich kann so oft üben, wie ich will.
+- In Hilfe und Einstellungen und oben im Spickzettel finde ich «Alle Übungen am iPhone»: alle 23 Übungen auf einen Blick. Jede geht jederzeit, auch bevor ich das Thema gespielt habe.
 
 ## Spickzettel
 - Für jedes gelernte Thema eine Karte mit den echten Schritten, beim Foto-Kapitel mit Bildern, und dem Knopf «Am iPhone üben».
@@ -45,7 +46,7 @@ In Worten der Spielerinnen und Spieler. Vor jeder Änderung abgleichen: Nichts d
 - Jeder neue Begriff wird freigeschaltet, mit Erklärung, englischem Wort und Quelle.
 
 ## Hilfe und Einstellungen
-- Notfall-Karte, kurze Spielhilfe.
+- Notfall-Karte, kurze Spielhilfe, Karte «Am iPhone üben» mit allen Übungen.
 - Schrift: normal, gross, sehr gross. Land wechseln.
 - Spielstand als Datei sichern und wieder laden, alles löschen (mit Rückfrage).
 - Zu einem späteren Besuch springen (mit Rückfrage) und den Sprung rückgängig machen.
