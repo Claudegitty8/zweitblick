@@ -26,3 +26,9 @@ Ohne Konto, gratis, im Browser. Nach dem ersten Laden geht es auch ohne Internet
 - `npm start`: lokal ansehen unter http://localhost:8080 (Node 22, keine Pakete nötig)
 - `npm run pruefen`: alle Tests und die Prüfung der Lerninhalte
 - Aufbau und Regeln: `CLAUDE.md` und `docs/`
+
+## Lizenz
+
+- Programmcode: MIT-Lizenz, siehe `LICENSE`.
+- Texte und Bilder: Creative Commons Namensnennung 4.0 (CC BY 4.0), siehe `LIZENZ-INHALTE.md`.
+- Copyright (c) 2026 Claudegitty8. Marken Dritter (Claude, Anthropic, iPhone, App Store) sind nicht Teil der Lizenz.

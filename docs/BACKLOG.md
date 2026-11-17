@@ -8,7 +8,6 @@ Stand: 16. November 2026
 - Auf einem echten iPhone testen: Safari, Symbol auf dem Home-Bildschirm, ohne Internet, grosse Schrift des iPhones.
 - Testrunde mit mindestens vier älteren Menschen (zwei Schweiz, zwei Deutschland) mit `docs/TESTBOGEN.md`.
 - Rechtliches vor dem öffentlichen Teilen: Impressum, Datenschutzhinweis für Deutschland (DSGVO), Medizinprodukt-Frage. Keine Rechtsberatung durch Claude.
-- Lizenz entscheiden (ohne Lizenz darf niemand den Code weiterverwenden).
 - GitHub: Repository anlegen, Veröffentlichung entscheiden (GitHub Pages ist gratis nur bei öffentlichem Repository).
 
 ## Soll

@@ -11,6 +11,7 @@
 - Karten «So ist es in echt» nach jedem Thema und Spickzettel zum Drucken.
 - Lexikon mit 32 Begriffen, 31 Fakten mit Quelle und Prüfdatum, 5 medizinische mit zweiter Quelle.
 - Notfall-Karte und Notrufzeile mit der Nummer des Landes.
+- Lizenz (17.11.2026): Code unter MIT, Texte und Bilder unter CC BY 4.0.
 
 ### Übernommen aus dem KI-Studio (angepasst)
 - Lernregeln, Ausweg, Wiederholungen, Schnelltest, Springen mit Rückgängig, freiwillige Fragen, Spielstand sichern und laden, Umwandlung alter Stände, Inhaltsprüfung, Tests.

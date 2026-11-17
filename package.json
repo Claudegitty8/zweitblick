@@ -9,5 +9,6 @@
     "test": "node --test",
     "inhalte": "node werkzeuge/pruefe-inhalte.mjs",
     "pruefen": "npm test && npm run inhalte"
-  }
+  },
+  "license": "MIT"
 }

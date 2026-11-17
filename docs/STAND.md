@@ -33,4 +33,6 @@ Stand: 17. November 2026 · Version 0.9 · Spielseite veröffentlicht: nein · C
 
 ## Offen
 
-Siehe `docs/BACKLOG.md`. Vor Version 1.0: iPhone-Prüfung, Testrunde mit vier älteren Menschen, Rechtliches, Entscheid zur Lizenz.
+Siehe `docs/BACKLOG.md`. Vor Version 1.0: iPhone-Prüfung, Testrunde mit vier älteren Menschen, Rechtliches (Impressum, Datenschutzhinweis).
+
+Lizenz (17.11.2026): Code MIT (`LICENSE`), Texte und Bilder CC BY 4.0 (`LIZENZ-INHALTE.md`), Urheber Claudegitty8.
