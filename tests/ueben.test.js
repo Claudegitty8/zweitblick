@@ -43,15 +43,25 @@ test('Üben: «Zeig mir, wo» und «Schritt zurück»', () => {
   assert.equal(istTippbar({ typ: 'nachricht' }), false);
 });
 
-test('Üben: Jeder Ablauf in den Inhalten ist durchspielbar', async () => {
-  const texte = JSON.parse(await readFile(new URL('../spiel/inhalte/de/texte.json', import.meta.url), 'utf8'));
-  const mitUeben = Object.entries(texte.konzepte).filter(([, k]) => k.ueben);
-  assert.ok(mitUeben.length >= 20, 'fast jedes Thema hat einen Ablauf');
-  for (const [id, konzept] of mitUeben) {
-    let stand = neueUebung();
-    let ergebnis = null;
-    for (const bildschirm of konzept.ueben) ({ stand, ergebnis } = tippe(stand, konzept.ueben, zielIndex(bildschirm)));
-    assert.equal(ergebnis, 'fertig', id);
+test('Üben: Jeder Ablauf in den Inhalten ist durchspielbar, in beiden Ländern', async () => {
+  const { setzeLandEin } = await import('../spiel/code/inhalte/lader.js');
+  const roh = JSON.parse(await readFile(new URL('../spiel/inhalte/de/texte.json', import.meta.url), 'utf8'));
+  for (const land of ['ch', 'de']) {
+    const texte = setzeLandEin(roh, roh.laender[land]);
+    const mitUeben = Object.entries(texte.konzepte).filter(([, k]) => k.ueben);
+    assert.ok(mitUeben.length >= 20, 'fast jedes Thema hat einen Ablauf');
+    for (const [id, konzept] of mitUeben) {
+      let stand = neueUebung();
+      let ergebnis = null;
+      for (const bildschirm of konzept.ueben) {
+        // Wer «Für mich schreiben» nimmt, kommt immer weiter.
+        const eingaben = Object.fromEntries(bildschirm.elemente.map((e, i) => [i, e.vorschlag]).filter(([, v]) => v !== undefined));
+        const ohneText = tippe(stand, konzept.ueben, zielIndex(bildschirm), {});
+        if (Object.keys(eingaben).length) assert.equal(ohneText.ergebnis, 'eingabe', `${id}: leeres Feld darf nicht reichen`);
+        ({ stand, ergebnis } = tippe(stand, konzept.ueben, zielIndex(bildschirm), eingaben));
+      }
+      assert.equal(ergebnis, 'fertig', `${land} ${id}`);
+    }
   }
 });
 
@@ -74,6 +84,28 @@ test('Üben: Die Inhaltsprüfung findet kaputte Abläufe', async () => {
   assert.match(alles, /gibtsnicht\.svg» fehlt/);
   assert.match(alles, /unbekannte Art «wolke»/);
   assert.match(alles, /Bildschirm 3 braucht mindestens zwei Stellen/);
+  // Felder zum Schreiben, Symbole und Arten.
+  fehler.length = 0;
+  await pruefeUeben([
+    { anleitung: 'a', app: 'Claude', titel: 'Chat', art: 'zauber', elemente: [
+      { typ: 'knopf', text: '+', symbol: 'gibtsnicht' },
+      { typ: 'eingabe', text: 'Schreib …', vorschlag: 'Hallo', schluessel: ['tschuess'] },
+      { typ: 'knopf', text: 'Senden', ziel: true, stil: 'glitzer' },
+    ] },
+    { anleitung: 'b', app: 'Telefon', titel: 'Ziffern', elemente: [
+      { typ: 'eingabe', text: 'Nummer', art: 'ziffern', vorschlag: 'keine Ziffern' },
+      { typ: 'knopf', text: 'Anrufen', ziel: true },
+      { typ: 'knopf', text: 'Kontakte' },
+      { typ: 'nachricht', text: 'Bild', bild: 'fotos/gibtsnicht.svg' },
+    ] },
+  ], 'felder', fehler);
+  const felder = fehler.join('\n');
+  assert.match(felder, /unbekannte Bildschirm-Art «zauber»/);
+  assert.match(felder, /unbekanntes Symbol «gibtsnicht»/);
+  assert.match(felder, /unbekannter Stil «glitzer»/);
+  assert.match(felder, /Beispiel «Hallo» passt nicht/);
+  assert.match(felder, /Beispiel «keine Ziffern» passt nicht/);
+  assert.match(felder, /Bild in der Nachricht/);
 });
 
 test('Üben: Die Liste aller Übungen folgt dem Spiel, jedes Thema einmal', async () => {
@@ -96,4 +128,49 @@ test('Üben: Die Liste aller Übungen folgt dem Spiel, jedes Thema einmal', asyn
     { x: { ueben: [{}] }, y: {} },
   );
   assert.deepEqual(klein, [{ auftrag: 'a', thema: 'A', konzepte: ['x'] }]);
+});
+
+test('Üben: Selber tippen prüft die wichtigen Wörter und erlaubt kleine Tippfehler', async () => {
+  const { pruefeEingabe, normalisiere, abstand } = await import('../spiel/code/logik/ueben.js');
+  const feld = { typ: 'eingabe', text: 'Schreib Claude …', vorschlag: 'Erklär mir diesen Bericht in einfachen Worten, kurz.', schluessel: ['erklär', 'einfach', 'kurz'] };
+  assert.equal(normalisiere('Erklär mir, kurz!'), 'erklaer mir kurz');
+  assert.equal(abstand('kitten', 'sitting'), 3);
+  assert.equal(abstand('einfahc', 'einfach'), 1, 'vertauschte Buchstaben sind ein Fehler');
+  assert.equal(pruefeEingabe(feld, feld.vorschlag).passt, true);
+  assert.equal(pruefeEingabe(feld, 'Bitte erklaere den Bericht einfach und kurz').passt, true, 'eigene Worte und ae statt ä');
+  assert.equal(pruefeEingabe(feld, 'Erklär mir das ganz einfahc und kurz').passt, true, 'ein Tippfehler');
+  assert.deepEqual(pruefeEingabe(feld, 'Erklär mir das').fehlt, ['einfach', 'kurz']);
+  assert.equal(pruefeEingabe(feld, '   ').leer, true);
+  assert.equal(pruefeEingabe(feld, 'Was ist das?').passt, false);
+  // Mehrere Wörter in einem Stichwort, Zahlen mit Komma.
+  assert.equal(pruefeEingabe({ schluessel: ['sonst nichts'] }, 'Ändere sonst bitte nichts').passt, true);
+  assert.equal(pruefeEingabe({ schluessel: ['11,2'] }, 'Auf dem Bericht steht 11.2').passt, true);
+  assert.equal(pruefeEingabe({ schluessel: ['11,2'] }, 'Auf dem Bericht steht 17,2').passt, false);
+  // Langes Fachwort mit einem fehlenden Buchstaben.
+  assert.equal(pruefeEingabe({ schluessel: ['Erythrozyten'] }, 'Was heisst Erytrozyten?').passt, true);
+  // Ohne Stichwörter genügt irgendein Text.
+  assert.equal(pruefeEingabe({}, 'Meine Gesundheit').passt, true);
+  // Telefon-Tasten: Die Nummer muss genau stimmen.
+  const nummer = { typ: 'eingabe', art: 'ziffern', vorschlag: '144' };
+  assert.equal(pruefeEingabe(nummer, '144').passt, true);
+  assert.equal(pruefeEingabe(nummer, '1444').passt, false);
+  assert.equal(pruefeEingabe(nummer, '').leer, true);
+});
+
+test('Üben: Senden geht erst weiter, wenn das Feld passt', () => {
+  const mitFeld = [
+    { anleitung: 'a', app: 'Claude', titel: 'Chat', elemente: [
+      { typ: 'knopf', text: '+' },
+      { typ: 'eingabe', text: 'Schreib Claude …', vorschlag: 'Was heisst das?', schluessel: ['heisst'] },
+      { typ: 'knopf', text: 'Senden', ziel: true },
+    ] },
+    ablauf[1],
+  ];
+  let { stand, ergebnis, fehlt } = tippe(neueUebung(), mitFeld, 2, {});
+  assert.equal(ergebnis, 'eingabe');
+  assert.deepEqual(fehlt, ['heisst']);
+  assert.equal(stand.fehler, 0, 'Schreiben zählt nicht als Fehler');
+  ({ stand, ergebnis } = tippe(stand, mitFeld, 2, { 1: 'Was heisst Hämoglobin?' }));
+  assert.equal(ergebnis, 'richtig');
+  assert.equal(stand.schritt, 1);
 });

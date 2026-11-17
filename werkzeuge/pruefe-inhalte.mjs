@@ -7,7 +7,8 @@ import path from 'node:path';
 import { bewerte, antworten, EINE_ANTWORT } from '../spiel/code/logik/bewertung.js';
 import { ARTEN } from '../spiel/code/logik/prompt.js';
 import { AUFTRAEGE, LAND_PLATZHALTER, setzeLandEin } from '../spiel/code/inhalte/lader.js';
-import { TIPPBAR } from '../spiel/code/logik/ueben.js';
+import { TIPPBAR, pruefeEingabe } from '../spiel/code/logik/ueben.js';
+import { SYMBOLE } from '../spiel/code/oberflaeche/symbole.js';
 
 const STANDARD_ORDNER = fileURLToPath(new URL('../spiel/inhalte/', import.meta.url));
 const BILDER_ORDNER = fileURLToPath(new URL('../spiel/bilder/', import.meta.url));
@@ -231,7 +232,9 @@ async function pruefeTexte({ texte, lexikon, umfrage, lehrplan, gesehen, vor }, 
 }
 
 // «Am iPhone üben»: nachgebaute Bildschirme. Jeder hat eine Anleitung und genau eine richtige Stelle zum Tippen.
-export const UEBEN_ARTEN = ['text', 'nachricht', ...TIPPBAR];
+export const UEBEN_ARTEN = ['text', 'nachricht', 'eingabe', ...TIPPBAR];
+export const BILDSCHIRM_ARTEN = ['home', 'kamera', 'chat', 'liste', 'blatt', 'dialog', 'fotos', 'app'];
+export const KNOPF_STILE = ['gross', 'rahmen', 'pille', 'rot', 'gruen', 'ausloeser', 'vorschau', 'hardware', 'abbrechen'];
 export async function pruefeUeben(ablauf, name, fehler) {
   if (!Array.isArray(ablauf) || ablauf.length < 2 || ablauf.length > 10) {
     fehler.push(`${name}: ueben braucht zwei bis zehn Bildschirme`);
@@ -241,6 +244,7 @@ export async function pruefeUeben(ablauf, name, fehler) {
     const wo = `${name}: ueben Bildschirm ${nummer + 1}`;
     for (const feld of ['anleitung', 'app', 'titel']) if (!istText(bildschirm?.[feld])) fehler.push(`${wo} braucht ${feld}`);
     if ('hinweis' in (bildschirm ?? {}) && !istText(bildschirm.hinweis)) fehler.push(`${wo}: hinweis ist leer`);
+    if ('art' in (bildschirm ?? {}) && !BILDSCHIRM_ARTEN.includes(bildschirm.art)) fehler.push(`${wo}: unbekannte Bildschirm-Art «${bildschirm.art}»`);
     const elemente = Array.isArray(bildschirm?.elemente) ? bildschirm.elemente : [];
     if (elemente.length === 0) fehler.push(`${wo} braucht elemente`);
     for (const element of elemente) {
@@ -249,10 +253,23 @@ export async function pruefeUeben(ablauf, name, fehler) {
       if (element?.ziel && !TIPPBAR.includes(element.typ)) fehler.push(`${wo}: Ziel «${element.text}» lässt sich nicht antippen`);
       if (element?.typ === 'bild' && !(istText(element.datei) && await bildDa(element.datei))) fehler.push(`${wo}: Bild «${element.datei}» fehlt`);
       if (element?.typ === 'schalter' && typeof element.an !== 'boolean') fehler.push(`${wo}: Schalter braucht an (ja oder nein)`);
+      if ('symbol' in (element ?? {}) && !(element.symbol in SYMBOLE)) fehler.push(`${wo}: unbekanntes Symbol «${element.symbol}»`);
+      if ('stil' in (element ?? {}) && !KNOPF_STILE.includes(element.stil)) fehler.push(`${wo}: unbekannter Stil «${element.stil}»`);
+      if (element?.typ === 'nachricht' && 'bild' in element && !(istText(element.bild) && istText(element.bildText) && await bildDa(element.bild))) {
+        fehler.push(`${wo}: Bild in der Nachricht braucht bild (vorhanden) und bildText`);
+      }
+      if (element?.typ === 'eingabe') {
+        // Ein Feld zum Schreiben: Platzhalter, Beispiel, und das Beispiel muss selbst passen.
+        if (!istText(element.vorschlag)) fehler.push(`${wo}: Feld «${element.text}» braucht vorschlag`);
+        if ('art' in element && element.art !== 'ziffern') fehler.push(`${wo}: Feld mit unbekannter art «${element.art}»`);
+        if ('schluessel' in element && (!Array.isArray(element.schluessel) || !element.schluessel.every(istText))) fehler.push(`${wo}: schluessel braucht Wörter`);
+        else if (istText(element.vorschlag) && !pruefeEingabe(element, element.vorschlag).passt) fehler.push(`${wo}: Das Beispiel «${element.vorschlag}» passt nicht zu den wichtigen Wörtern`);
+      }
     }
     const ziele = elemente.filter((element) => element?.ziel === true);
     if (ziele.length !== 1) fehler.push(`${wo} braucht genau ein Ziel, hat ${ziele.length}`);
     if (elemente.filter((element) => TIPPBAR.includes(element?.typ)).length < 2) fehler.push(`${wo} braucht mindestens zwei Stellen zum Tippen`);
+    if (elemente.some((element) => element?.typ === 'eingabe') && ziele[0]?.typ !== 'knopf') fehler.push(`${wo}: Mit einem Feld zum Schreiben muss das Ziel ein Knopf sein (zum Beispiel «Senden»)`);
   }
 }
 

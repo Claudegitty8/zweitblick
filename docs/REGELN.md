@@ -15,6 +15,10 @@
 | Mischrunde am Ende jedes Besuchs | jede Aufgabe muss gelöst werden, beliebig viele Versuche | `verbucheFrei` |
 | Am iPhone üben: Stelle zeigen nach so vielen Fehlern auf einem Bildschirm | 2 | `logik/ueben.js` (`ZEIGEN_NACH`) |
 | Am iPhone üben: Punkte und Speichern | keine Punkte, nichts gespeichert, beliebig oft | `oberflaeche/ueben.js` |
+| Selber tippen: was zählt | alle wichtigen Wörter drin; Gross und klein, Satzzeichen und ä/ae egal | `pruefeEingabe` |
+| Selber tippen: erlaubte Tippfehler pro Wort | 0 bis 4 Buchstaben, 1 ab 5, 2 ab 8 (vertauschte Buchstaben zählen als einer) | `logik/ueben.js` |
+| Selber tippen: falsch oder leer | zählt nicht als Fehler, das Spiel nennt die fehlenden Wörter | `tippe` |
+| Telefon-Tasten | Nummer muss genau stimmen | `pruefeEingabe` |
 
 Sonderfälle: Probieren lässt sich nie lösen (die Inhaltsprüfung testet alle Kombinationen). Bei «Ergänzen» ist ein Teil vorgegeben. Jedes Fehlbild muss mit einer Auswahl erreichbar sein.
 

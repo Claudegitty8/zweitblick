@@ -356,72 +356,210 @@ button:disabled { cursor: not-allowed; }
 .ueben-meldung { min-height: 1.4em; margin: 0.2rem 0; font-weight: 700; }
 .ueben-meldung.richtig { color: var(--gut); }
 .ueben-meldung.falsch { color: var(--warn); }
-.ueben-telefon { max-width: 22rem; }
-.ueben-telefon .telefon-kopf { display: flex; flex-direction: column; gap: 0.1rem; }
-.ueben-app { font-size: 0.8rem; font-weight: 400; color: #4a4f57; }
-.ueben-flaechen { display: flex; flex-direction: column; gap: 0.45rem; }
-.ueben-zeile { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-/* Knöpfe in einer Zeile so breit wie ihr Text. Reicht der Platz nicht, rutscht einer in die nächste Zeile. */
-.ueben-zeile > .ueben-el { flex: 1 1 auto; width: auto; hyphens: manual; }
-/* Home-Bildschirm: Apps im Raster, auf schmalen Bildschirmen zwei nebeneinander. */
-.ueben-zeile.zeile-reihe { display: grid; grid-template-columns: repeat(auto-fill, minmax(5.2rem, 1fr)); }
-.ueben-zeile.zeile-reihe > .ueben-el { align-items: center; text-align: center; min-height: 3.6rem; padding: 0.3rem; hyphens: auto; }
-.ueben-zeile.zeile-eingabe > .ueben-feld { flex: 3 1 8rem; }
-.ueben-zeile.zeile-eingabe > .ueben-knopf { flex: 0 1 auto; }
+.ueben-app-name { text-align: center; font-weight: 700; color: var(--leise); margin: 0.7rem 0 0; font-size: 0.9rem; }
+.ueben-nachgebaut { text-align: center; margin-top: 0; }
+.ueben-schreibhilfe { border: 2px dashed var(--haupt); border-radius: var(--rund); padding: 0.6rem 0.8rem; margin: 0.4rem 0; background: var(--haupt-hell); }
+.ueben-vorschlag p { margin: 0.1rem 0; }
+.ueben-vorschlag-text { font-weight: 700; font-size: 1.05rem; }
+.ueben-fuer-mich { width: 100%; margin-top: 0.5rem; }
+
+/* Das iPhone selbst. Es bleibt immer hell (ausser Kamera und Home), auch im dunklen Modus. Eigene Farben. */
+.telefon.ueben-telefon {
+  --ios-blau: #0058c4;   /* Kontrast zu Weiss über 6:1 */
+  --ios-grau: #5c5f66;   /* leise Schrift, über 6:1 auf Weiss */
+  --ios-grund: #f2f2f7;
+  --ios-linie: #c8c8cd;
+  --ios-rot: #c4141f;
+  --ios-gruen: #1f7a35;
+  --leise: #4f463c;
+  --text: #1f1a14;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  max-width: 21rem;
+  margin: 0.4rem auto;
+  padding: 0;
+  border: 0.55rem solid #1c1c1e;
+  border-radius: 2.6rem;
+  box-shadow: 0 0 0 2px #48484a;
+  background: var(--ios-grund);
+  color: #111;
+  overflow: hidden;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+.ueben-telefon .symbol { width: 1.4rem; height: 1.4rem; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ios-status { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 0.45rem 1.1rem 0.25rem; font-size: 0.8rem; font-weight: 700; color: #111; }
+.ios-status.hell { color: #fff; }
+.ios-zeit { justify-self: start; }
+.ios-insel { width: 4.2rem; height: 1.3rem; background: #000; border-radius: 1rem; }
+.ios-anzeigen { justify-self: end; display: flex; gap: 0.15rem; }
+.ios-anzeige { width: 0.95rem; height: 0.95rem; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+.ios-bildschirm { flex: 1; display: flex; flex-direction: column; min-height: 25rem; }
+.ios-strich { display: block; width: 7rem; height: 0.3rem; border-radius: 1rem; background: #111; margin: 0.5rem auto 0.1rem; }
+.ueben-telefon.dunkel .ios-strich { background: #fff; }
+
+/* Alles, was man antippen kann. */
 .ueben-el {
   position: relative;
-  display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
-  min-height: var(--klick);
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: center; gap: 0.15rem;
+  min-height: 2.2rem; min-width: 2.2rem;
   width: 100%;
-  text-align: left;
-  background: #ffffff;
-  color: #111;
-  border: 2px solid #c8ccd4;
-  border-radius: 12px;
+  margin: 0;
   padding: 0.45rem 0.7rem;
-  font: inherit;
-  font-size: 0.95rem;
+  font: inherit; text-align: left;
+  color: #111; background: #fff;
+  border: 1px solid var(--ios-linie); border-radius: 0.8rem;
   overflow-wrap: anywhere;
   cursor: pointer;
   touch-action: manipulation;
 }
-.ueben-el:focus-visible { outline: 3px solid #1d5c63; outline-offset: 2px; }
-.ueben-knopf { font-weight: 700; color: #0b4f8a; }
-.ueben-feld { border-radius: 22px; background: #fff; }
-.ueben-feld.leer { color: #555b63; font-style: italic; }
-.ueben-datei { flex-direction: row; align-items: center; gap: 0.6rem; font-weight: 700; }
-.ueben-datei-zeichen {
-  flex: 0 0 auto; width: 1.3rem; height: 1.7rem; border: 2px solid #4a4f57; border-radius: 3px;
-  background: linear-gradient(#4a4f57, #4a4f57) 0.2rem 0.45rem / 0.7rem 2px no-repeat,
-              linear-gradient(#4a4f57, #4a4f57) 0.2rem 0.8rem / 0.7rem 2px no-repeat, #fff;
-}
-.ueben-schalter-text { font-weight: 700; }
-.ueben-schalter { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.2rem; }
-.ueben-schalter-bahn { width: 3rem; height: 1.7rem; border-radius: 1rem; background: #8a9099; position: relative; flex: 0 0 auto; }
-.ueben-schalter-knopf { position: absolute; top: 0.15rem; left: 0.15rem; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: #fff; }
-.ueben-schalter.an .ueben-schalter-bahn { background: #1e7a34; }
-.ueben-schalter.an .ueben-schalter-knopf { left: auto; right: 0.15rem; }
-.ueben-schalter-wert { font-size: 0.9rem; }
-.ueben-el.ueben-bild { align-items: center; }
-.ueben-foto { display: block; width: 100%; max-height: 13rem; object-fit: contain; border-radius: 8px; background: #e7e9ec; }
-.ueben-foto-text { font-size: 0.85rem; margin-top: 0.25rem; }
-.mit-rahmen .ueben-foto { outline: 4px solid #d9a400; outline-offset: -0.7rem; }
-.ueben-text { font-size: 0.9rem; color: #333; margin: 0.1rem 0.2rem; }
-.ueben-nachricht { font-size: 0.95rem; margin: 0; padding: 0.5rem 0.7rem; border-radius: 14px; max-width: 90%; background: #ffffff; border: 1px solid #d5d8de; color: #111; }
-.ueben-nachricht.von-ich { align-self: flex-end; background: #dbe8f7; border-color: #b9cde6; }
-.ueben-el.gezeigt { border-color: #8a4a17; box-shadow: 0 0 0 4px #8a4a17; }
-.ueben-el.daneben { border-color: #a3201b; border-style: dashed; }
-.ueben-marke { display: inline-block; margin-top: 0.3rem; padding: 0.1rem 0.5rem; border-radius: 6px; font-size: 0.85rem; font-weight: 700; color: #fff; font-style: normal; }
+.ueben-el:focus-visible { outline: 3px solid var(--ios-blau); outline-offset: 2px; }
+.ueben-el.gezeigt { box-shadow: inset 0 0 0 4px #8a4a17; background: #fff4e5; }
+.ueben-el.daneben { outline: 3px dashed var(--ios-rot); outline-offset: -3px; }
+.ueben-marke { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 6px; font-size: 0.8rem; font-weight: 700; color: #fff; font-style: normal; white-space: nowrap; }
 .ueben-marke.hier { background: #8a4a17; }
 .ueben-marke.nicht { background: #a3201b; }
-/* Kamera: dunkler Hintergrund wie in echt. Die Knöpfe bleiben hell und gut lesbar. */
-.ueben-telefon.dunkel { background: #1b1c1f; color: #f2f2f2; }
-.ueben-telefon.dunkel .telefon-kopf { border-bottom-color: #44474d; }
-.ueben-telefon.dunkel .ueben-app, .ueben-telefon.dunkel .telefon-fuss { color: #d0d3d8; }
-.ueben-telefon.dunkel .ueben-text { color: #e6e6e6; }
-@media (prefers-reduced-motion: no-preference) {
-  .ueben-el.gezeigt { transition: box-shadow 0.2s; }
-}
+
+/* Leiste oben mit Titel. */
+.ios-leiste { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0.3rem; min-height: 3rem; padding: 0.15rem 0.4rem; background: #f9f9f9; border-bottom: 1px solid var(--ios-linie); }
+.ios-titel { margin: 0; font-weight: 700; text-align: center; font-size: 0.95rem; max-width: 9rem; }
+.ios-leiste-seite { display: flex; gap: 0.2rem; }
+.ios-leiste-seite.rechts { justify-content: flex-end; }
+.ueben-el.ort-kopf, .ueben-el.ort-unten { width: auto; background: none; border: 0; border-radius: 0.6rem; align-items: center; text-align: center; color: var(--ios-blau); font-size: 0.72rem; font-weight: 600; padding: 0.25rem 0.35rem; }
+.ueben-el.ort-kopf:not(:has(.symbol)) { font-size: 0.9rem; }
+.ueben-el.ort-kopf.gezeigt, .ueben-el.ort-unten.gezeigt { background: #fff4e5; }
+
+/* Leiste unten (Tabs, Werkzeuge). */
+.ios-unten { display: flex; justify-content: space-around; align-items: stretch; gap: 0.1rem; padding: 0.2rem 0.2rem 0; background: #f9f9f9; border-top: 1px solid var(--ios-linie); }
+.ios-unten .ueben-el.ort-unten { flex: 1 1 0; min-height: 3rem; }
+
+/* Inhalt und Listen. */
+.ios-inhalt { flex: 1; display: flex; flex-direction: column; gap: 0.55rem; padding: 0.7rem 0.6rem; }
+.ios-gruppe { display: flex; flex-direction: column; background: #fff; border-radius: 0.8rem; overflow: hidden; }
+.ueben-el.ort-zeile, .ueben-el.ort-blatt { flex-direction: row; align-items: center; gap: 0.6rem; border: 0; border-radius: 0; min-height: 2.9rem; padding: 0.45rem 0.7rem; font-size: 0.92rem; }
+.ios-gruppe > * + * { border-top: 1px solid #dcdce0; }
+.ueben-el.ort-zeile .ueben-el-text, .ueben-el.ort-blatt .ueben-el-text, .ueben-schalter-text { flex: 1 1 auto; }
+.ios-zeilen-symbol { display: grid; place-items: center; width: 1.8rem; height: 1.8rem; border-radius: 0.45rem; background: var(--ios-blau); color: #fff; flex: 0 0 auto; }
+.ios-zeilen-symbol .symbol { width: 1.15rem; height: 1.15rem; }
+.ios-pfeil.symbol { width: 1rem; height: 1rem; color: #8e8e93; margin-left: auto; }
+.ueben-el.ueben-schalter { flex-direction: row; align-items: center; }
+.ueben-el .datei-symbol { width: 1.7rem; height: 1.7rem; color: var(--ios-blau); }
+.ueben-el.ueben-datei { flex-direction: row; align-items: center; gap: 0.6rem; font-weight: 700; }
+.ueben-text { margin: 0.1rem 0.2rem; font-size: 0.88rem; color: #3a3a3c; }
+.ueben-zeile { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.ueben-zeile > .ueben-el { flex: 1 1 auto; width: auto; }
+
+/* Besondere Knöpfe. */
+.ueben-el.stil-gross { background: #1c1c1e; color: #fff; border: 0; align-items: center; text-align: center; font-weight: 700; min-height: 2.9rem; }
+.ueben-el.stil-gross.gezeigt { background: #1c1c1e; box-shadow: 0 0 0 4px #8a4a17; }
+.ueben-el.stil-rahmen { align-items: center; text-align: center; font-weight: 700; border: 1.5px solid #8e8e93; min-height: 2.9rem; }
+.ueben-el.stil-pille { width: auto; align-self: flex-start; background: var(--ios-blau); color: #fff; border: 0; border-radius: 1.5rem; padding: 0.35rem 1.4rem; font-weight: 700; }
+.ueben-el.stil-pille.gezeigt { background: var(--ios-blau); box-shadow: 0 0 0 4px #8a4a17; }
+.ueben-el.stil-rot { color: var(--ios-rot); }
+.ueben-el.stil-abbrechen { align-items: center; text-align: center; font-weight: 700; color: var(--ios-blau); border: 0; margin-top: 0.4rem; }
+.ueben-el.stil-gruen { width: auto; align-self: center; background: none; border: 0; align-items: center; font-weight: 700; }
+.ueben-el.stil-gruen .symbol { width: 3.6rem; height: 3.6rem; padding: 0.9rem; border-radius: 50%; background: var(--ios-gruen); color: #fff; stroke-width: 2; }
+.ueben-el.stil-hardware { flex-direction: row; align-items: center; gap: 0.5rem; background: #2c2c2e; color: #fff; border: 0; font-weight: 700; }
+.ueben-el.stil-hardware.gezeigt { background: #2c2c2e; box-shadow: 0 0 0 4px #e8a13a; }
+
+/* Home-Bildschirm: Hintergrund und App-Kacheln. */
+.ueben-telefon.art-home { background: #1d2a4d linear-gradient(165deg, #1d3a6b, #3b2457); color: #fff; }
+.ios-home { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem 0.2rem; padding: 1.2rem 0.5rem; align-content: start; }
+.ueben-el.ort-home { background: none; border: 0; color: #fff; align-items: center; text-align: center; padding: 0.15rem 0; font-size: 0.68rem; font-weight: 600; hyphens: auto; overflow-wrap: normal; }
+.ios-kachel { display: grid; place-items: center; width: min(2.8rem, 100%); aspect-ratio: 1; border-radius: 0.75rem; }
+.ios-kachel .symbol { width: 1.7rem; height: 1.7rem; color: #fff; stroke-width: 2; }
+.ios-kachel .symbol.bunt { color: #c45a00; }
+.ueben-el.ort-home.gezeigt { background: rgba(255, 255, 255, 0.12); box-shadow: 0 0 0 3px #ffb347; }
+.ueben-el.ort-home.daneben { outline-color: #ff9b94; }
+.ueben-el.ort-home .ueben-marke { white-space: normal; font-size: 0.65rem; padding: 0.05rem 0.3rem; }
+
+/* Kamera: schwarz wie in echt. */
+.ueben-telefon.art-kamera { background: #000; color: #fff; }
+.ios-kamera-oben { display: flex; justify-content: space-between; gap: 0.3rem; padding: 0.1rem 0.6rem; min-height: 2.6rem; }
+.art-kamera .ueben-el.ort-kopf, .art-kamera .ueben-el.ort-unten { color: #fff; }
+.art-kamera .ueben-el.ort-kopf.gezeigt, .art-kamera .ueben-el.ort-unten.gezeigt { background: #3a2a10; box-shadow: 0 0 0 3px #ffb347; }
+.ios-sucher { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 0.4rem 0.3rem; }
+.art-kamera .ueben-el.ueben-bild { background: none; border: 0; color: #fff; align-items: center; }
+.art-kamera .ios-unten { background: #000; border: 0; align-items: center; padding: 0.4rem 0.2rem 0.3rem; }
+.ios-ausloeser { display: block; width: 3.6rem; height: 3.6rem; border-radius: 50%; background: #fff; box-shadow: 0 0 0 3px #000, 0 0 0 6px #fff; margin: 0.4rem auto 0.4rem; }
+.ios-vorschau { display: block; width: 2.6rem; height: 2.6rem; border-radius: 0.5rem; overflow: hidden; border: 2px solid #fff; }
+.ios-vorschau .ueben-foto { width: 100%; height: 100%; max-height: none; object-fit: cover; border-radius: 0; }
+
+/* Fotos: mehrere nebeneinander, eines gross. */
+.ios-raster { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.3rem; }
+.ios-raster.einzeln { grid-template-columns: 1fr; }
+.ueben-el.ueben-bild { padding: 0.25rem; align-items: center; gap: 0.2rem; }
+.ios-bildrahmen { position: relative; display: block; width: 100%; }
+.ueben-foto { display: block; width: 100%; max-height: 14rem; object-fit: contain; border-radius: 6px; background: #e7e9ec; }
+.ios-raster:not(.einzeln) .ueben-foto { aspect-ratio: 3 / 4; object-fit: cover; }
+.mit-rahmen .ios-bildrahmen::after { content: ""; position: absolute; inset: 6% 10%; border: 3px solid #f5c400; border-radius: 4px; }
+.ueben-foto-text { font-size: 0.75rem; text-align: center; }
+
+/* Chat in der App Claude. */
+.ios-inhalt.art-chat { background: #fbfaf7; }
+.ueben-nachricht { margin: 0; font-size: 0.92rem; color: #111; }
+.ueben-nachricht p { margin: 0; }
+.ueben-nachricht.von-ich { align-self: flex-end; max-width: 85%; padding: 0.5rem 0.75rem; border-radius: 1rem; background: #ebe7df; }
+.ueben-nachricht.von-claude { max-width: 95%; }
+.nachricht-bild { display: block; width: 100%; max-width: 15rem; margin: 0 0 0.4rem; border-radius: 0.5rem; border: 1px solid #d8d8dc; }
+/* Schreibzeile wie in der App: oben der Text, darunter «+» links und «Senden» rechts. */
+.ios-schreibzeile { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 0.25rem 0.35rem; margin: 0.3rem 0.5rem 0; padding: 0.35rem; background: #fff; border: 1px solid var(--ios-linie); border-radius: 1.4rem; }
+.ios-schreibzeile > .ueben-eingabe, .ios-schreibzeile > .ueben-feld { grid-column: 1 / -1; grid-row: 1; width: 100%; }
+.ios-schreibzeile > .ueben-knopf:not(:has(.symbol)) { grid-column: 1; grid-row: 2; }
+.ios-schreibzeile > .ueben-knopf:has(.symbol) { grid-column: 3; grid-row: 2; white-space: nowrap; }
+.ios-schreibzeile .ueben-el { width: auto; border-radius: 1.2rem; border: 0; }
+.ios-schreibzeile .ueben-knopf { background: #ececf0; align-items: center; font-size: 1.15rem; font-weight: 700; min-width: 2.75rem; padding: 0.4rem 0.6rem; }
+.ios-schreibzeile .ueben-feld { flex: 1 1 auto; background: none; color: #5c5f66; }
+.ios-schreibzeile .ueben-knopf:has(.symbol) { flex-direction: row; gap: 0.25rem; background: #1c1c1e; color: #fff; font-size: 0.8rem; }
+.ios-schreibzeile .ueben-knopf.gezeigt { box-shadow: 0 0 0 4px #8a4a17; }
+.ios-schreibzeile .ueben-knopf:has(.symbol).gezeigt { background: #1c1c1e; }
+
+/* Felder zum selber Schreiben. Mindestens 16 Punkte Schrift, sonst vergrössert das iPhone die Seite. */
+.ueben-eingabe { font: inherit; font-size: 1rem; color: #111; background: #fff; min-height: 2.75rem; }
+.ueben-eingabe::placeholder { color: #6c6c70; opacity: 1; }
+.ueben-eingabe.ort-eingabe { flex: 1 1 auto; min-width: 0; border: 0; resize: none; padding: 0.55rem 0.3rem; background: transparent; line-height: 1.35; }
+.ueben-eingabe.ort-frei, .ueben-eingabe.ort-zeile, .ueben-eingabe.ort-kopf { width: 100%; border: 1px solid var(--ios-linie); border-radius: 0.7rem; padding: 0.5rem 0.7rem; resize: vertical; }
+.ueben-zeile > .ueben-eingabe { flex: 1 1 8rem; width: auto; }
+.ueben-eingabe:focus-visible { outline: 3px solid var(--ios-blau); outline-offset: 1px; }
+
+/* Telefon-Tasten. */
+.ios-tastenfeld { padding: 0.2rem 0.4rem 0.4rem; }
+.ios-nummer-zeile { display: flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 3rem; }
+.ios-nummer { font-size: 1.6rem; letter-spacing: 0.08em; color: #111; }
+.ios-nummer.leer { font-size: 0.9rem; letter-spacing: 0; color: var(--ios-grau); }
+.ios-tasten { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.45rem 0.6rem; justify-items: center; }
+.ueben-taste { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 3.1rem; height: 3.1rem; border: 0; border-radius: 50%; background: #e3e3e8; color: #111; font: inherit; cursor: pointer; touch-action: manipulation; }
+.ueben-taste:focus-visible, .ueben-taste-weg:focus-visible { outline: 3px solid var(--ios-blau); outline-offset: 2px; }
+.taste-ziffer { font-size: 1.25rem; line-height: 1; }
+.taste-buchstaben { font-size: 0.5rem; letter-spacing: 0.08em; color: #3a3a3c; }
+.ueben-taste-weg { background: none; border: 0; color: var(--ios-blau); font: inherit; font-size: 0.85rem; font-weight: 600; min-height: 2.75rem; padding: 0 0.4rem; cursor: pointer; }
+
+/* Fenster von unten und Rückfrage: Der Hintergrund wird grau. */
+.ueben-telefon.art-blatt, .ueben-telefon.art-dialog { background: #9a9aa0; }
+.ios-hintergrund { flex: 1; display: flex; flex-direction: column; gap: 0.6rem; padding: 1rem; min-height: 5rem; }
+.ios-hintergrund span { display: block; height: 0.8rem; border-radius: 0.4rem; background: #b4b4ba; }
+.ios-hintergrund span:nth-child(2) { width: 70%; }
+.ios-hintergrund span:nth-child(3) { width: 45%; }
+.ios-blatt { background: var(--ios-grund); border-radius: 1rem 1rem 0 0; padding: 0.6rem 0.6rem 0.2rem; display: flex; flex-direction: column; gap: 0.4rem; }
+.ios-blatt-titel { margin: 0 0 0.1rem; text-align: center; font-weight: 700; font-size: 0.85rem; color: #3a3a3c; }
+.art-dialog .ios-bildschirm { justify-content: center; }
+.art-dialog .ios-hintergrund { display: none; }
+.ios-dialog { margin: 0 1.1rem; background: var(--ios-grund); border-radius: 0.9rem; text-align: center; overflow: hidden; }
+.ios-dialog-titel { margin: 0.9rem 0.8rem 0.2rem; font-weight: 700; }
+.ios-dialog .ueben-text { margin: 0 0.8rem 0.8rem; text-align: center; }
+.ios-dialog-knoepfe { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); border-top: 1px solid var(--ios-linie); }
+.ios-dialog-knoepfe > * + * { border-left: 1px solid var(--ios-linie); }
+.ueben-el.ort-dialog { border: 0; border-radius: 0; background: none; align-items: center; text-align: center; color: var(--ios-blau); font-weight: 600; min-height: 2.9rem; }
+.ueben-el.ort-dialog.stil-rot { color: var(--ios-rot); }
+
+/* Schalter, wie im iPhone. */
+.ios-schalter { display: inline-flex; align-items: center; gap: 0.4rem; margin-left: auto; }
+.ueben-schalter-bahn { width: 2.9rem; height: 1.7rem; border-radius: 1rem; background: #8a9099; position: relative; flex: 0 0 auto; }
+.ueben-schalter-knopf { position: absolute; top: 0.15rem; left: 0.15rem; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: #fff; }
+.ios-schalter.an .ueben-schalter-bahn { background: #1e7a34; }
+.ios-schalter.an .ueben-schalter-knopf { left: auto; right: 0.15rem; }
+.ueben-schalter-wert { font-size: 0.8rem; color: #3a3a3c; }
 
 /* --- Sortieren --- */
 .reihe { list-style: decimal; padding-left: 1.3rem; margin: 0.5rem 0; }

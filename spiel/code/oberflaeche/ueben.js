@@ -3,8 +3,8 @@
 // Alle Texte kommen aus spiel/inhalte/de/texte.json (app.ueben… und konzepte[…].ueben).
 // Der Übungsstand wird nicht gespeichert: Üben ist freiwillig und lässt sich jederzeit wiederholen.
 import { el, fuelle, knopf, lupeFigur } from './bausteine.js';
-import { bildKnoten } from './bild.js';
-import { neueUebung, tippe, zeigeZiel, schrittZurueck, istTippbar, zielIndex, uebungsListe } from '../logik/ueben.js';
+import { baueIphone } from './iphone.js';
+import { neueUebung, tippe, zeigeZiel, schrittZurueck, zielIndex, uebungsListe } from '../logik/ueben.js';
 
 // Knopf «Am iPhone üben» zu einem Thema. Hat das Thema keinen Ablauf, gibt es keinen Knopf.
 // zurueck = { ziel, daten, text }: wohin der Zurück-Knopf der Übung führt und wie er heisst.
@@ -21,36 +21,6 @@ export function uebenKnopf(app, nav, konzeptId, zurueck, klasse = 'knopf-zweit')
   });
 }
 
-// Fasst Elemente mit gleicher «gruppe» direkt hintereinander zu einer Zeile zusammen.
-function inZeilen(elemente) {
-  const zeilen = [];
-  elemente.forEach((element, index) => {
-    const letzte = zeilen.at(-1);
-    if (element.gruppe && letzte?.gruppe === element.gruppe) letzte.teile.push({ element, index });
-    else zeilen.push({ gruppe: element.gruppe ?? null, teile: [{ element, index }] });
-  });
-  return zeilen;
-}
-
-// Inhalt eines Elements auf dem nachgebauten Bildschirm.
-function elementInhalt(element, t) {
-  switch (element.typ) {
-    case 'schalter':
-      return [
-        el('span', { klasse: 'ueben-schalter-text', text: element.text }),
-        el('span', { klasse: element.an ? 'ueben-schalter an' : 'ueben-schalter' },
-          el('span', { klasse: 'ueben-schalter-bahn', 'aria-hidden': 'true' }, el('span', { klasse: 'ueben-schalter-knopf' })),
-          el('span', { klasse: 'ueben-schalter-wert', text: element.an ? t.uebenAn : t.uebenAus })),
-      ];
-    case 'datei':
-      return [el('span', { klasse: 'ueben-datei-zeichen', 'aria-hidden': 'true' }), el('span', { text: element.text })];
-    case 'bild':
-      return [bildKnoten(element.datei, element.text, 'ueben-foto'), el('span', { klasse: 'ueben-foto-text', text: element.text })];
-    default:
-      return [el('span', { text: element.text })];
-  }
-}
-
 export function zeigeUeben(wurzel, app, nav, daten = {}) {
   const t = app.inhalte.texte.app;
   const konzept = app.inhalte.texte.konzepte[daten.konzept];
@@ -64,6 +34,8 @@ export function zeigeUeben(wurzel, app, nav, daten = {}) {
 
   let stand = neueUebung();
   let daneben = null; // Stelle, die zuletzt falsch angetippt wurde.
+  let eingaben = {}; // Was in den Feldern des aktuellen Bildschirms steht. Gilt nur für diesen Bildschirm.
+  let felder = [];
 
   const oben = el('div', { klasse: 'ueben-oben' });
   // Die Rückmeldung bleibt immer derselbe Knoten, damit Vorlesehilfen jede Änderung ansagen.
@@ -79,8 +51,18 @@ export function zeigeUeben(wurzel, app, nav, daten = {}) {
 
   function tippeAn(index) {
     const vorher = stand;
-    const { stand: neu, ergebnis } = tippe(stand, ablauf, index);
+    const { stand: neu, ergebnis, ...pruefung } = tippe(stand, ablauf, index, eingaben);
     stand = neu;
+    if (ergebnis === 'eingabe') {
+      // Das Feld passt noch nicht: sagen, was fehlt. Der Bildschirm bleibt, der Text auch.
+      const feld = ablauf[stand.schritt].elemente[pruefung.feld];
+      let text = feld.art === 'ziffern' ? t.uebenZiffernLeer : t.uebenEingabeLeer;
+      if (feld.art === 'ziffern' && !pruefung.leer) text = fuelle(t.uebenZiffernFalsch, { nummer: feld.vorschlag });
+      else if (!pruefung.leer) text = fuelle(t.uebenEingabeFehlt, { woerter: pruefung.fehlt.map((wort) => `«${wort}»`).join(', ') });
+      setzeMeldung(text, 'falsch');
+      felder[pruefung.feld]?.focus?.();
+      return;
+    }
     if (ergebnis === 'falsch') {
       daneben = index;
       const hinweis = ablauf[vorher.schritt].hinweis ?? t.uebenFalsch;
@@ -90,6 +72,7 @@ export function zeigeUeben(wurzel, app, nav, daten = {}) {
       return;
     }
     daneben = null;
+    eingaben = {};
     if (ergebnis === 'richtig') {
       setzeMeldung(fuelle(t.uebenRichtig, { nr: neu.schritt + 1 }), 'richtig');
       zeichne();
@@ -102,39 +85,41 @@ export function zeigeUeben(wurzel, app, nav, daten = {}) {
   }
 
   function telefon(bildschirm) {
-    knoepfe = [];
-    const zeilen = inZeilen(bildschirm.elemente).map(({ gruppe, teile }) => {
-      const knoten = teile.map(({ element, index }) => {
-        if (!istTippbar(element)) {
-          const klasse = element.typ === 'nachricht' ? `ueben-nachricht von-${element.von ?? 'claude'}` : 'ueben-text';
-          return el('p', { klasse, text: element.text });
-        }
-        const gezeigt = stand.gezeigt && element.ziel === true;
-        const klassen = ['ueben-el', `ueben-${element.typ}`];
-        if (element.leer) klassen.push('leer');
-        if (element.rahmen) klassen.push('mit-rahmen');
-        if (gezeigt) klassen.push('gezeigt');
-        if (daneben === index && !gezeigt) klassen.push('daneben');
-        const button = el('button', { type: 'button', klasse: klassen.join(' '), onclick: () => tippeAn(index) },
-          elementInhalt(element, t),
-          gezeigt ? el('span', { klasse: 'ueben-marke hier', text: t.uebenHier }) : null,
-          daneben === index && !gezeigt ? el('span', { klasse: 'ueben-marke nicht', text: t.uebenDaneben }) : null);
-        knoepfe[index] = button;
-        return button;
-      });
-      return gruppe ? el('div', { klasse: `ueben-zeile zeile-${gruppe.replace(/\d+$/, '')}` }, knoten) : knoten;
+    const gebaut = baueIphone(bildschirm, {
+      t,
+      gezeigt: stand.gezeigt,
+      daneben,
+      eingaben,
+      beiTippen: tippeAn,
+      beiEingabe: (index, wert) => { eingaben[index] = wert; },
+      // Enter im Feld wirkt wie das Ziel (zum Beispiel «Senden»).
+      beiEnter: () => tippeAn(zielIndex(bildschirm)),
     });
-    const dunkel = bildschirm.app === 'Kamera';
-    return el('div', {
-      klasse: dunkel ? 'telefon ueben-telefon dunkel' : 'telefon ueben-telefon',
-      role: 'group',
-      'aria-label': fuelle(t.uebenTelefonName, { app: bildschirm.app, titel: bildschirm.titel }),
-    },
-    el('div', { klasse: 'telefon-kopf' },
-      el('span', { klasse: 'ueben-app', text: bildschirm.app }),
-      el('span', { klasse: 'telefon-titel', text: bildschirm.titel })),
-    el('div', { klasse: 'ueben-flaechen' }, zeilen.flat()),
-    el('p', { klasse: 'telefon-fuss', text: t.uebenNachgebaut }));
+    knoepfe = gebaut.knoepfe;
+    felder = gebaut.felder;
+    return gebaut.knoten;
+  }
+
+  // Bei Feldern zum Schreiben: ein Beispiel, die wichtigen Wörter und «Für mich schreiben».
+  function schreibHilfe(bildschirm) {
+    const stellen = bildschirm.elemente.map((element, index) => ({ element, index })).filter(({ element }) => element.typ === 'eingabe');
+    if (stellen.length === 0) return null;
+    const ziffern = stellen.every(({ element }) => element.art === 'ziffern');
+    const schreibeFuerMich = knopf(ziffern ? t.uebenFuerMichZiffern : t.uebenFuerMich, () => {
+      for (const { element, index } of stellen) eingaben[index] = element.vorschlag;
+      setzeMeldung(t.uebenGeschrieben);
+      zeichne();
+      knoepfe[zielIndex(bildschirm)]?.focus();
+    }, 'knopf-zweit ueben-fuer-mich');
+    if (ziffern) return el('div', { klasse: 'ueben-schreibhilfe' }, schreibeFuerMich);
+    return el('div', { klasse: 'ueben-schreibhilfe' },
+      stellen.map(({ element }) => el('div', { klasse: 'ueben-vorschlag' },
+        el('p', { klasse: 'etikett', text: t.uebenVorschlag }),
+        el('p', { klasse: 'ueben-vorschlag-text', text: `«${element.vorschlag}»` }),
+        element.schluessel?.length
+          ? el('p', { klasse: 'klein', text: fuelle(t.uebenWichtig, { woerter: element.schluessel.map((wort) => `«${wort}»`).join(', ') }) })
+          : null)),
+      schreibeFuerMich);
   }
 
   function zeichne() {
@@ -151,6 +136,7 @@ export function zeigeUeben(wurzel, app, nav, daten = {}) {
         zurueckKnopf('los'),
         knopf(t.uebenNochmals, () => {
           stand = neueUebung();
+          eingaben = {};
           setzeMeldung('');
           zeichne();
           anleitung?.focus();
@@ -164,7 +150,10 @@ export function zeigeUeben(wurzel, app, nav, daten = {}) {
       anleitung,
     );
     unten.replaceChildren(
+      ...[schreibHilfe(bildschirm)].filter(Boolean),
+      el('p', { klasse: 'ueben-app-name', text: fuelle(t.uebenAppName, { app: bildschirm.app }) }),
       telefon(bildschirm),
+      el('p', { klasse: 'klein ueben-nachgebaut', text: t.uebenNachgebaut }),
       el('div', { klasse: 'knopf-reihe' },
         stand.gezeigt ? null : knopf(t.uebenZeig, () => {
           stand = zeigeZiel(stand);
@@ -176,6 +165,7 @@ export function zeigeUeben(wurzel, app, nav, daten = {}) {
         stand.schritt > 0 ? knopf(t.uebenZurueckSchritt, () => {
           stand = schrittZurueck(stand);
           daneben = null;
+          eingaben = {};
           setzeMeldung('');
           zeichne();
           anleitung?.focus();

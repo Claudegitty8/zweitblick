@@ -1,5 +1,19 @@
 # Änderungen
 
+## 0.13 (17. November 2026): Echt wirkendes iPhone und selber tippen
+
+### Neu
+- Das nachgebaute iPhone wirkt echt: Rahmen, Statusleiste, Home-Bildschirm mit gezeichneten App-Kacheln, schwarze Kamera mit rundem Auslöser, Fenster von unten, Rückfragen, Listen mit Pfeilen, Schalter, Leisten oben und unten. Alles selbst gezeichnet, ohne Logos.
+- Selber tippen: In 18 Feldern schreibt man selbst, zum Beispiel die Bitte an Claude, den Projektnamen oder «Claude» im App Store. Es zählen die wichtigen Wörter, eigene Worte und kleine Tippfehler sind erlaubt. Fehlt etwas, sagt das Spiel welches Wort.
+- «Für mich schreiben» füllt das Feld mit einem Beispiel, wenn das Tippen zu mühsam ist.
+- Notruf: Die Nummer tippt man auf nachgebauten Telefon-Tasten ein, mit «Löschen».
+- Zwei neue Bilder: die Akte als Tabelle und eine Verlaufsgrafik, beide in Claudes Antwort.
+- Die Inhaltsprüfung kennt Bildschirm-Arten, Symbole, Knopf-Arten und Felder. Jedes Beispiel muss zu seinen wichtigen Wörtern passen.
+
+### Geändert
+- Abläufe mit Schreiben sind kürzer: Schreiben und Senden geschieht auf demselben Bildschirm (zusammen 97 statt 115 Bildschirme).
+- Über dem iPhone steht, in welcher App man ist. Der Hinweis «vereinfacht nachgebaut» steht darunter.
+
 ## 0.12 (17. November 2026): Alle Übungen am iPhone
 
 ### Neu

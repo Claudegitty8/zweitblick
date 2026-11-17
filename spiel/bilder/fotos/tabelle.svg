@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 216" width="380" height="216" role="img"><title>Gesundheitsakte als Tabelle: Datum, Wert, Ergebnis, Einheit, Normbereich, Bericht</title>
+<rect width="380" height="216" fill="#ffffff"/>
+<rect x="0" y="0" width="380" height="30" fill="#1f6b3a"/>
+<text x="8" y="20" font-size="11" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">Datum</text>
+<text x="78" y="20" font-size="11" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">Wert</text>
+<text x="150" y="20" font-size="11" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">Ergebnis</text>
+<text x="205" y="20" font-size="11" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">Einheit</text>
+<text x="250" y="20" font-size="11" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">Normbereich</text>
+<text x="330" y="20" font-size="11" font-weight="700" fill="#ffffff" font-family="Arial, sans-serif">Bericht</text>
+<text x="8" y="47" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">03.03.2024</text>
+<text x="78" y="47" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">Hämoglobin</text>
+<text x="150" y="47" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">12,9</text>
+<text x="205" y="47" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">g/dl</text>
+<text x="250" y="47" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">12,0–16,0</text>
+<text x="330" y="47" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">Labor</text>
+<line x1="0" y1="56" x2="380" y2="56" stroke="#d5ddd7" stroke-width="1"/>
+<rect x="0" y="56" width="380" height="26" fill="#eef5f0"/>
+<text x="8" y="73" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">03.03.2024</text>
+<text x="78" y="73" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">Leukozyten</text>
+<text x="150" y="73" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">6,1</text>
+<text x="205" y="73" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">G/l</text>
+<text x="250" y="73" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">4,0–10,0</text>
+<text x="330" y="73" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">Labor</text>
+<line x1="0" y1="82" x2="380" y2="82" stroke="#d5ddd7" stroke-width="1"/>
+<text x="8" y="99" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">12.09.2025</text>
+<text x="78" y="99" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">Hämoglobin</text>
+<text x="150" y="99" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">12,1</text>
+<text x="205" y="99" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">g/dl</text>
+<text x="250" y="99" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">12,0–16,0</text>
+<text x="330" y="99" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">Hausarzt</text>
+<line x1="0" y1="108" x2="380" y2="108" stroke="#d5ddd7" stroke-width="1"/>
+<rect x="0" y="108" width="380" height="26" fill="#eef5f0"/>
+<text x="8" y="125" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">12.09.2025</text>
+<text x="78" y="125" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">Leukozyten</text>
+<text x="150" y="125" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">5,9</text>
+<text x="205" y="125" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">G/l</text>
+<text x="250" y="125" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">4,0–10,0</text>
+<text x="330" y="125" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">Hausarzt</text>
+<line x1="0" y1="134" x2="380" y2="134" stroke="#d5ddd7" stroke-width="1"/>
+<text x="8" y="151" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">05.05.2026</text>
+<text x="78" y="151" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">Hämoglobin</text>
+<text x="150" y="151" font-size="11" fill="#b3261e" font-weight="700" font-family="Arial, sans-serif">11,2</text>
+<text x="205" y="151" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">g/dl</text>
+<text x="250" y="151" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">12,0–16,0</text>
+<text x="330" y="151" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">Labor</text>
+<line x1="0" y1="160" x2="380" y2="160" stroke="#d5ddd7" stroke-width="1"/>
+<rect x="0" y="160" width="380" height="26" fill="#eef5f0"/>
+<text x="8" y="177" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">05.05.2026</text>
+<text x="78" y="177" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">Leukozyten</text>
+<text x="150" y="177" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">5,8</text>
+<text x="205" y="177" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">G/l</text>
+<text x="250" y="177" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">4,0–10,0</text>
+<text x="330" y="177" font-size="11" fill="#1a1a1a" font-family="Arial, sans-serif">Labor</text>
+<line x1="0" y1="186" x2="380" y2="186" stroke="#d5ddd7" stroke-width="1"/>
+<text x="8" y="210" font-size="9" fill="#555" font-family="Arial, sans-serif">Erfundene Werte. Rot: ausserhalb des Normbereichs.</text>
+</svg>

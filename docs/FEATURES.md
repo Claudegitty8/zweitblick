@@ -35,6 +35,9 @@ In Worten der Spielerinnen und Spieler. Vor jeder Änderung abgleichen: Nichts d
 - Oben steht, was ich tun soll. Tippe ich richtig, kommt der nächste Bildschirm. Tippe ich falsch, steht dort «Nicht hier» und ein Hinweis.
 - Nach zwei Fehlern zeigt das Spiel die richtige Stelle. Ich kann auch selbst «Zeig mir, wo» drücken oder einen Schritt zurückgehen.
 - Dabei ist auch «Dokumente scannen» in der App Notizen, mit Bildern vom Blatt im Sucher.
+- Das iPhone sieht echt aus: Home-Bildschirm mit App-Kacheln, Kamera mit rundem Auslöser, Fenster von unten, Rückfragen, Schalter.
+- Ich schreibe selbst, zum Beispiel meine Bitte an Claude. Eigene Worte und kleine Tippfehler sind erlaubt. Fehlt ein wichtiges Wort, sagt mir das Spiel welches. «Für mich schreiben» hilft, wenn Tippen zu mühsam ist.
+- Die Notrufnummer tippe ich auf Telefon-Tasten ein.
 - Den Knopf «Am iPhone üben» finde ich nach jedem Thema und auf jeder Karte im Spickzettel. Ich kann so oft üben, wie ich will.
 - In Hilfe und Einstellungen und oben im Spickzettel finde ich «Alle Übungen am iPhone»: alle 23 Übungen auf einen Blick. Jede geht jederzeit, auch bevor ich das Thema gespielt habe.
 

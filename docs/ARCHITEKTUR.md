@@ -10,7 +10,7 @@ spiel/                     alles, was veröffentlicht wird
   manifest.webmanifest     Name und Symbol für den Home-Bildschirm
   sw.js                    Service Worker: Offline nach dem ersten Laden (erst Netz, sonst Ablage)
   stil/haupt.css           ganze Gestaltung, hell und dunkel, Druck
-  bilder/                  Lupe-Symbol (SVG, PNG) und fotos/ (14 eigene Beispielbilder, SVG)
+  bilder/                  Lupe-Symbol (SVG, PNG) und fotos/ (16 eigene Bilder, SVG, darunter Tabelle und Grafik)
   code/
     start.js               holt Inhalte, Speicher, Übungs-KI; schaltet Ansichten um
     inhalte/lader.js       lädt JSON, setzt Länderwerte ein ([[name]])
@@ -23,7 +23,8 @@ spiel/                     alles, was veröffentlicht wird
       ueben.js             «Am iPhone üben»: richtig oder falsch getippt, Stelle zeigen, Schritt zurück, Liste aller Übungen
     ki/                    Übungs-KI «Lupe» (simuliert, nur nach Regeln aus den Inhalten)
     speicher/speicher.js   localStorage mit Rückfall auf Arbeitsspeicher
-    oberflaeche/           Ansichten: Café, Runde, Übungsformen, Lexikon, Einstellungen, Spickzettel, Am iPhone üben (ueben.js)
+    oberflaeche/           Ansichten: Café, Runde, Übungsformen, Lexikon, Einstellungen, Spickzettel, Am iPhone üben (ueben.js),
+                           nachgebautes iPhone (iphone.js), eigene Symbole (symbole.js)
   inhalte/
     regeln.json            Zahlen der Lernregeln
     lehrplan.json          8 Kapitel, 24 Themen mit Voraussetzungen
@@ -52,9 +53,12 @@ werkzeuge/pruefe-veroeffentlichung.mjs   Prüfung vor dem Veröffentlichen (Impr
 ## Am iPhone üben (`texte.json`, `konzepte[…].ueben`)
 
 - Optional pro Thema, dann mit `uebenName` (kurzer Name nach der Handlung, für die Liste aller Übungen). Zwei bis zehn Bildschirme, jeder mit `anleitung` (höchstens 30 Wörter), `app`, `titel`, `elemente`, optional `hinweis` (bei falschem Tippen).
-- Elemente: `text` und `nachricht` (`von`: claude oder ich) lassen sich nicht antippen. `knopf`, `feld` (optional `leer`), `schalter` (`an`), `datei`, `bild` (`datei`, optional `rahmen`) lassen sich antippen.
+- Bildschirm-Art `art`: home, kamera, chat, liste, blatt (Fenster von unten), dialog (Rückfrage), fotos, app.
+- Elemente: `text` und `nachricht` (`von`: claude oder ich, optional `bild` + `bildText`) lassen sich nicht antippen. `knopf`, `feld` (optional `leer`), `schalter` (`an`), `datei`, `bild` (`datei`, optional `rahmen`) lassen sich antippen.
+- Knöpfe optional mit `symbol` (Name aus `oberflaeche/symbole.js`) und `stil` (gross, rahmen, pille, rot, gruen, ausloeser, vorschau, hardware, abbrechen).
+- `eingabe`: Feld zum selber Schreiben mit `text` (Platzhalter), `vorschlag` (Beispiel für «Für mich schreiben») und optional `schluessel` (wichtige Wörter). Mit `art: ziffern` sind es Telefon-Tasten, die Nummer muss genau stimmen. Geprüft wird beim Tippen aufs Ziel, das dann ein Knopf sein muss.
+- Gruppen: `kopf` = Leiste oben, `unten` = Leiste unten, `eingabe` = Schreibzeile im Chat.
 - Genau ein Element pro Bildschirm hat `ziel: true`, dazu mindestens eine andere Stelle zum Tippen. Gleiche `gruppe` hintereinander steht in einer Zeile.
-- Tippen ins Feld: zwei Bildschirme, zuerst das leere Feld, dann das ausgefüllte Feld mit «Senden» als Ziel.
 - Der Übungsstand wird nicht gespeichert. Die Inhaltsprüfung und `tests/ueben.test.js` prüfen jeden Ablauf.
 
 ## Einen Besuch ergänzen

@@ -24,6 +24,7 @@ Stand der Karten «So ist es in echt»: November 2026, nicht am Gerät geprüft.
 | A14 | Eine Excel-Tabelle von Claude antippen und in der App Dateien sichern: geht das so? | | |
 | A15 | «Am iPhone üben» im Spiel mit dem echten iPhone vergleichen: Notizen (Neue Notiz, Büroklammer, «Dokumente scannen», «Sichern»), Teilen «In Dateien sichern», Fotos (Bearbeiten, Zuschneiden), Telefon (Ziffern). Was heisst in echt anders? | | |
 | A16 | Lassen sich die nachgebauten Bildschirme auf dem iPhone gut antippen und lesen (Safari und Symbol auf dem Home-Bildschirm)? | | |
+| A17 | Selber tippen am iPhone: Kommt die Tastatur, verdeckt sie das Feld, hilft die Autokorrektur oder stört sie? | | |
 
 ## B. Testrunde mit älteren Menschen
 
