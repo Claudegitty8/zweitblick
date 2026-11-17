@@ -9,6 +9,7 @@ import {
 import { hilfeTeil } from '../logik/bewertung.js';
 import { erfolge, neuerFortschritt } from '../logik/meisterschaft.js';
 import { daumenKarte } from './extras.js';
+import { uebenKnopf } from './ueben.js';
 
 function schrittReihe(t, aktuell) {
   return el('ol', { klasse: 'schritte', 'aria-label': t.schritteName }, SCHRITTE.map((schritt) => el('li', {
@@ -237,9 +238,12 @@ function zeigeAufgabe(wurzel, app, nav, a, auftrag) {
 }
 
 // Zwischenbild nach einer Runde oder nach dem ganzen Besuch.
-export function zeigeZwischen(wurzel, app, nav, { ereignis, konzept, titel, auftrag }) {
+export function zeigeZwischen(wurzel, app, nav, daten) {
+  const { ereignis, konzept, titel, auftrag } = daten;
   const { texte, regeln } = app.inhalte;
   const t = texte.app;
+  // «Am iPhone üben» führt danach wieder hierher zurück.
+  const ueben = konzept ? uebenKnopf(app, nav, konzept, { ziel: 'zwischen', daten, text: t.uebenZurueckRunde }) : null;
   const zumCafe = knopf(t.zumCafe, () => nav.zu('cafe'), 'los');
   const naechsteRunde = app.stand.lauf ? knopf(t.weiterRunde, () => nav.zu('runde'), 'knopf-zweit') : null;
 
@@ -267,6 +271,7 @@ export function zeigeZwischen(wurzel, app, nav, { ereignis, konzept, titel, auft
         el('h1', { text: t.verschobenTitel }),
         el('p', { text: fuelle(t.verschobenText, { konzept: texte.konzepte[konzept].name }) })),
       echtKarte(app, konzept),
+      ueben,
       el('p', { klasse: 'klein', text: t.aufSpickzettel }),
       el('p', { klasse: 'klein', text: t.pause }),
       el('div', { klasse: 'knopf-reihe' }, zumCafe, naechsteRunde),
@@ -295,6 +300,7 @@ export function zeigeZwischen(wurzel, app, nav, { ereignis, konzept, titel, auft
       punkte(noetig, noetig, t.punkteLabel),
       el('p', { text: fuelle(t.rundeFertigText, { anzahl: noetig }) })),
     echtKarte(app, konzept),
+    ueben,
     el('p', { klasse: 'klein', text: t.aufSpickzettel }),
     el('p', { klasse: 'klein', text: t.pause }),
     el('div', { klasse: 'knopf-reihe' }, zumCafe, naechsteRunde),

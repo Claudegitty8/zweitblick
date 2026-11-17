@@ -343,6 +343,82 @@ button:disabled { cursor: not-allowed; }
 .flaeche-bild { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 8px; margin-bottom: 0.3rem; background: #ddd; }
 .telefon-fuss { font-size: 0.7rem; color: #555; text-align: center; margin: 0.6rem 0 0; }
 
+/* --- Am iPhone üben: Schritt für Schritt auf dem nachgebauten iPhone --- */
+.ueben-start { width: 100%; margin: 0.5rem 0; }
+.ueben-thema { margin-top: 0; }
+.ueben-anleitung { font-size: 1.1rem; font-weight: 700; line-height: 1.4; margin: 0.2rem 0 0.4rem; }
+.ueben-anleitung:focus { outline: none; }
+.ueben-anleitung:focus-visible { outline: 3px solid var(--haupt); outline-offset: 3px; }
+.ueben-meldung { min-height: 1.4em; margin: 0.2rem 0; font-weight: 700; }
+.ueben-meldung.richtig { color: var(--gut); }
+.ueben-meldung.falsch { color: var(--warn); }
+.ueben-telefon { max-width: 22rem; }
+.ueben-telefon .telefon-kopf { display: flex; flex-direction: column; gap: 0.1rem; }
+.ueben-app { font-size: 0.8rem; font-weight: 400; color: #4a4f57; }
+.ueben-flaechen { display: flex; flex-direction: column; gap: 0.45rem; }
+.ueben-zeile { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+/* Knöpfe in einer Zeile so breit wie ihr Text. Reicht der Platz nicht, rutscht einer in die nächste Zeile. */
+.ueben-zeile > .ueben-el { flex: 1 1 auto; width: auto; hyphens: manual; }
+/* Home-Bildschirm: Apps im Raster, auf schmalen Bildschirmen zwei nebeneinander. */
+.ueben-zeile.zeile-reihe { display: grid; grid-template-columns: repeat(auto-fill, minmax(5.2rem, 1fr)); }
+.ueben-zeile.zeile-reihe > .ueben-el { align-items: center; text-align: center; min-height: 3.6rem; padding: 0.3rem; hyphens: auto; }
+.ueben-zeile.zeile-eingabe > .ueben-feld { flex: 3 1 8rem; }
+.ueben-zeile.zeile-eingabe > .ueben-knopf { flex: 0 1 auto; }
+.ueben-el {
+  position: relative;
+  display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
+  min-height: var(--klick);
+  width: 100%;
+  text-align: left;
+  background: #ffffff;
+  color: #111;
+  border: 2px solid #c8ccd4;
+  border-radius: 12px;
+  padding: 0.45rem 0.7rem;
+  font: inherit;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+.ueben-el:focus-visible { outline: 3px solid #1d5c63; outline-offset: 2px; }
+.ueben-knopf { font-weight: 700; color: #0b4f8a; }
+.ueben-feld { border-radius: 22px; background: #fff; }
+.ueben-feld.leer { color: #555b63; font-style: italic; }
+.ueben-datei { flex-direction: row; align-items: center; gap: 0.6rem; font-weight: 700; }
+.ueben-datei-zeichen {
+  flex: 0 0 auto; width: 1.3rem; height: 1.7rem; border: 2px solid #4a4f57; border-radius: 3px;
+  background: linear-gradient(#4a4f57, #4a4f57) 0.2rem 0.45rem / 0.7rem 2px no-repeat,
+              linear-gradient(#4a4f57, #4a4f57) 0.2rem 0.8rem / 0.7rem 2px no-repeat, #fff;
+}
+.ueben-schalter-text { font-weight: 700; }
+.ueben-schalter { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 0.2rem; }
+.ueben-schalter-bahn { width: 3rem; height: 1.7rem; border-radius: 1rem; background: #8a9099; position: relative; flex: 0 0 auto; }
+.ueben-schalter-knopf { position: absolute; top: 0.15rem; left: 0.15rem; width: 1.4rem; height: 1.4rem; border-radius: 50%; background: #fff; }
+.ueben-schalter.an .ueben-schalter-bahn { background: #1e7a34; }
+.ueben-schalter.an .ueben-schalter-knopf { left: auto; right: 0.15rem; }
+.ueben-schalter-wert { font-size: 0.9rem; }
+.ueben-el.ueben-bild { align-items: center; }
+.ueben-foto { display: block; width: 100%; max-height: 13rem; object-fit: contain; border-radius: 8px; background: #e7e9ec; }
+.ueben-foto-text { font-size: 0.85rem; margin-top: 0.25rem; }
+.mit-rahmen .ueben-foto { outline: 4px solid #d9a400; outline-offset: -0.7rem; }
+.ueben-text { font-size: 0.9rem; color: #333; margin: 0.1rem 0.2rem; }
+.ueben-nachricht { font-size: 0.95rem; margin: 0; padding: 0.5rem 0.7rem; border-radius: 14px; max-width: 90%; background: #ffffff; border: 1px solid #d5d8de; color: #111; }
+.ueben-nachricht.von-ich { align-self: flex-end; background: #dbe8f7; border-color: #b9cde6; }
+.ueben-el.gezeigt { border-color: #8a4a17; box-shadow: 0 0 0 4px #8a4a17; }
+.ueben-el.daneben { border-color: #a3201b; border-style: dashed; }
+.ueben-marke { display: inline-block; margin-top: 0.3rem; padding: 0.1rem 0.5rem; border-radius: 6px; font-size: 0.85rem; font-weight: 700; color: #fff; font-style: normal; }
+.ueben-marke.hier { background: #8a4a17; }
+.ueben-marke.nicht { background: #a3201b; }
+/* Kamera: dunkler Hintergrund wie in echt. Die Knöpfe bleiben hell und gut lesbar. */
+.ueben-telefon.dunkel { background: #1b1c1f; color: #f2f2f2; }
+.ueben-telefon.dunkel .telefon-kopf { border-bottom-color: #44474d; }
+.ueben-telefon.dunkel .ueben-app, .ueben-telefon.dunkel .telefon-fuss { color: #d0d3d8; }
+.ueben-telefon.dunkel .ueben-text { color: #e6e6e6; }
+@media (prefers-reduced-motion: no-preference) {
+  .ueben-el.gezeigt { transition: box-shadow 0.2s; }
+}
+
 /* --- Sortieren --- */
 .reihe { list-style: decimal; padding-left: 1.3rem; margin: 0.5rem 0; }
 .reihe-zeile { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.4rem; padding: 0.4rem 0; border-bottom: 1px solid var(--linie); }

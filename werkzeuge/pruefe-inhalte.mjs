@@ -7,6 +7,7 @@ import path from 'node:path';
 import { bewerte, antworten, EINE_ANTWORT } from '../spiel/code/logik/bewertung.js';
 import { ARTEN } from '../spiel/code/logik/prompt.js';
 import { AUFTRAEGE, LAND_PLATZHALTER, setzeLandEin } from '../spiel/code/inhalte/lader.js';
+import { TIPPBAR } from '../spiel/code/logik/ueben.js';
 
 const STANDARD_ORDNER = fileURLToPath(new URL('../spiel/inhalte/', import.meta.url));
 const BILDER_ORDNER = fileURLToPath(new URL('../spiel/bilder/', import.meta.url));
@@ -182,6 +183,7 @@ async function pruefeTexte({ texte, lexikon, umfrage, lehrplan, gesehen, vor }, 
       else if (!(await bildDa(bild.datei))) fehler.push(`${name}: Bild «${bild.datei}» fehlt`);
     }
     for (const text of alleTexte(eintrag)) if (zuLang(text)) fehler.push(`${name}: Text über ${MAX_WOERTER} Wörter`);
+    if (eintrag && 'ueben' in eintrag) await pruefeUeben(eintrag.ueben, name, fehler);
   }
   // Jeder sichtbare Text der Oberfläche ist kurz genug.
   for (const [schluessel, wert] of Object.entries(texte.app ?? {})) {
@@ -222,6 +224,32 @@ async function pruefeTexte({ texte, lexikon, umfrage, lehrplan, gesehen, vor }, 
     if (!istText(frage.frage) || zuLang(frage.frage)) fehler.push(`${name}: frage fehlt oder ist zu lang`);
     if ((frage.optionen ?? []).filter((o) => o.richtig).length !== 1) fehler.push(`${name}: genau eine Antwort muss richtig sein`);
     if ((frage.optionen ?? []).some((o) => !istText(o.text))) fehler.push(`${name}: Antwort ohne text`);
+  }
+}
+
+// «Am iPhone üben»: nachgebaute Bildschirme. Jeder hat eine Anleitung und genau eine richtige Stelle zum Tippen.
+export const UEBEN_ARTEN = ['text', 'nachricht', ...TIPPBAR];
+export async function pruefeUeben(ablauf, name, fehler) {
+  if (!Array.isArray(ablauf) || ablauf.length < 2 || ablauf.length > 10) {
+    fehler.push(`${name}: ueben braucht zwei bis zehn Bildschirme`);
+    return;
+  }
+  for (const [nummer, bildschirm] of ablauf.entries()) {
+    const wo = `${name}: ueben Bildschirm ${nummer + 1}`;
+    for (const feld of ['anleitung', 'app', 'titel']) if (!istText(bildschirm?.[feld])) fehler.push(`${wo} braucht ${feld}`);
+    if ('hinweis' in (bildschirm ?? {}) && !istText(bildschirm.hinweis)) fehler.push(`${wo}: hinweis ist leer`);
+    const elemente = Array.isArray(bildschirm?.elemente) ? bildschirm.elemente : [];
+    if (elemente.length === 0) fehler.push(`${wo} braucht elemente`);
+    for (const element of elemente) {
+      if (!UEBEN_ARTEN.includes(element?.typ)) fehler.push(`${wo}: unbekannte Art «${element?.typ}»`);
+      if (!istText(element?.text)) fehler.push(`${wo}: Element ohne text`);
+      if (element?.ziel && !TIPPBAR.includes(element.typ)) fehler.push(`${wo}: Ziel «${element.text}» lässt sich nicht antippen`);
+      if (element?.typ === 'bild' && !(istText(element.datei) && await bildDa(element.datei))) fehler.push(`${wo}: Bild «${element.datei}» fehlt`);
+      if (element?.typ === 'schalter' && typeof element.an !== 'boolean') fehler.push(`${wo}: Schalter braucht an (ja oder nein)`);
+    }
+    const ziele = elemente.filter((element) => element?.ziel === true);
+    if (ziele.length !== 1) fehler.push(`${wo} braucht genau ein Ziel, hat ${ziele.length}`);
+    if (elemente.filter((element) => TIPPBAR.includes(element?.typ)).length < 2) fehler.push(`${wo} braucht mindestens zwei Stellen zum Tippen`);
   }
 }
 

@@ -13,6 +13,8 @@
 | Schnelltest | 3 Aufgaben pro Thema, alle richtig = Thema sitzt | `logik/extras.js` |
 | Springen | Themen davor gelten als gemeistert, kommen als Wiederholung | `springeZuAuftrag` |
 | Mischrunde am Ende jedes Besuchs | jede Aufgabe muss gelöst werden, beliebig viele Versuche | `verbucheFrei` |
+| Am iPhone üben: Stelle zeigen nach so vielen Fehlern auf einem Bildschirm | 2 | `logik/ueben.js` (`ZEIGEN_NACH`) |
+| Am iPhone üben: Punkte und Speichern | keine Punkte, nichts gespeichert, beliebig oft | `oberflaeche/ueben.js` |
 
 Sonderfälle: Probieren lässt sich nie lösen (die Inhaltsprüfung testet alle Kombinationen). Bei «Ergänzen» ist ein Teil vorgegeben. Jedes Fehlbild muss mit einer Auswahl erreichbar sein.
 
@@ -42,6 +44,7 @@ Weitere: `land`, `dossierKurz`, `dossierWeg`, `nummerLang`, `waehrung`, `arztpra
 
 - In `fakten.json` mit Quelle und Prüfdatum: App-Name, Anbieter, Alter, iOS-Version, Anmelden, Training-Schalter und Fristen, Löschen, Inkognito, Projekte, Anhängen, Gesundheitsfunktionen nur in den USA.
 - Die Knopf-Beschriftungen auf Deutsch sind «nicht geprüft», bis der Besitzer sie am iPhone bestätigt. Jede «So ist es in echt»-Karte nennt den Stand und sagt, dass Knöpfe anders heissen können.
+- Dasselbe gilt für die nachgebauten Bildschirme in «Am iPhone üben» (Claude, Notizen, Kamera, Fotos, App Store, Telefon, Teilen). Jeder Bildschirm sagt: vereinfacht nachgebaut, nicht geprüft. Keine Bildschirmfotos echter Apps, keine Logos.
 - Vor jeder Version neu prüfen, sonst alle drei Monate.
 
 ## Daten

@@ -8,6 +8,7 @@ import { zeigeLexikon, zeigeEinstellungen } from './oberflaeche/lexikon.js';
 import { zeigeSchnelltest, zeigeUmfrage } from './oberflaeche/extras.js';
 import { zeigeSpickzettel } from './oberflaeche/spickzettel.js';
 import { zeigeImpressum, zeigeDatenschutz } from './oberflaeche/recht.js';
+import { zeigeUeben } from './oberflaeche/ueben.js';
 import { wendeSchriftAn } from './oberflaeche/schrift.js';
 import { pruefeLauf } from './logik/extras.js';
 
@@ -23,6 +24,7 @@ const ANSICHTEN = {
   spickzettel: zeigeSpickzettel,
   impressum: zeigeImpressum,
   datenschutz: zeigeDatenschutz,
+  ueben: zeigeUeben,
 };
 
 // Ohne Internet spielen: Ein kleiner Helfer im Browser (Service Worker) legt alle Dateien auf dem Gerät ab.

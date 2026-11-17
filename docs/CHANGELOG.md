@@ -1,5 +1,18 @@
 # Änderungen
 
+## 0.11 (17. November 2026): Am iPhone üben
+
+### Neu
+- «Am iPhone üben»: Zu 23 Themen tippt man Schritt für Schritt auf einem nachgebauten iPhone, als ob man es selber macht. 115 Bildschirme, oben steht immer, was zu tun ist.
+- Dokumente scannen in der App Notizen mit Bildern: neue Notiz, Büroklammer, «Dokumente scannen», gelber Rahmen, zweite Seite, Sichern, in Dateien sichern, in Claude anhängen.
+- Weitere Abläufe unter anderem: App im App Store finden, Konto, Datenschutz-Schalter, Projekt und Anweisungen, Foto zuschneiden, Chat löschen, Notruf wählen, Akte anlegen, nachführen und als Grafik auslesen.
+- Falsch getippt: «Nicht hier» an der Stelle und ein Hinweis. Nach zwei Fehlern zeigt das Spiel die richtige Stelle. Dazu die Knöpfe «Zeig mir, wo» und «Einen Schritt zurück».
+- Knopf «Am iPhone üben» nach jedem Thema und auf jeder Karte im Spickzettel (nicht beim Drucken). Der Zurück-Knopf führt dorthin zurück.
+- Die Inhaltsprüfung verlangt pro Bildschirm eine Anleitung und genau eine richtige Stelle. Tests spielen jeden Ablauf durch.
+
+### Geändert
+- Nichts entfernt. Der Übungsstand wird nicht gespeichert, der Spielstand bleibt unverändert.
+
 ## 0.10 (17. November 2026): Besuch «Eine Akte für alle Werte»
 
 ### Neu

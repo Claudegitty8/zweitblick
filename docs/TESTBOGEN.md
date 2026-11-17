@@ -22,6 +22,8 @@ Stand der Karten «So ist es in echt»: November 2026, nicht am Gerät geprüft.
 | A12 | Ist die Oberfläche der App auf Deutsch? | | |
 | A13 | Einstellungen, «Funktionen» (oder «Capabilities»): Schalter fürs Erstellen von Dateien. Wie heisst er auf Deutsch? | | |
 | A14 | Eine Excel-Tabelle von Claude antippen und in der App Dateien sichern: geht das so? | | |
+| A15 | «Am iPhone üben» im Spiel mit dem echten iPhone vergleichen: Notizen (Neue Notiz, Büroklammer, «Dokumente scannen», «Sichern»), Teilen «In Dateien sichern», Fotos (Bearbeiten, Zuschneiden), Telefon (Ziffern). Was heisst in echt anders? | | |
+| A16 | Lassen sich die nachgebauten Bildschirme auf dem iPhone gut antippen und lesen (Safari und Symbol auf dem Home-Bildschirm)? | | |
 
 ## B. Testrunde mit älteren Menschen
 

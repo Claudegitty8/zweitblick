@@ -30,8 +30,15 @@ In Worten der Spielerinnen und Spieler. Vor jeder Änderung abgleichen: Nichts d
 - Ich lerne, neue Berichte nachzutragen, ohne dass alte Zeilen verändert werden.
 - Ich lerne, Verläufe als Grafik auslesen zu lassen, Auffälliges zu markieren und Fragen für den Arzt mitzunehmen. Eine Diagnose gibt es nicht.
 
+## Am iPhone üben
+- Zu jedem Thema, bei dem ich am iPhone selbst etwas tue, kann ich es vorher im Spiel üben: Schritt für Schritt auf einem nachgebauten iPhone.
+- Oben steht, was ich tun soll. Tippe ich richtig, kommt der nächste Bildschirm. Tippe ich falsch, steht dort «Nicht hier» und ein Hinweis.
+- Nach zwei Fehlern zeigt das Spiel die richtige Stelle. Ich kann auch selbst «Zeig mir, wo» drücken oder einen Schritt zurückgehen.
+- Dabei ist auch «Dokumente scannen» in der App Notizen, mit Bildern vom Blatt im Sucher.
+- Den Knopf «Am iPhone üben» finde ich nach jedem Thema und auf jeder Karte im Spickzettel. Ich kann so oft üben, wie ich will.
+
 ## Spickzettel
-- Für jedes gelernte Thema eine Karte mit den echten Schritten, beim Foto-Kapitel mit Bildern.
+- Für jedes gelernte Thema eine Karte mit den echten Schritten, beim Foto-Kapitel mit Bildern, und dem Knopf «Am iPhone üben».
 - Ich kann ihn drucken.
 
 ## Lexikon

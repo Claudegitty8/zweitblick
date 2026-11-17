@@ -20,15 +20,16 @@ spiel/                     alles, was veröffentlicht wird
       bewertung.js         prüft eine Antwort, wählt die Hilfe
       prompt.js            setzt die Nachricht an Lupe zusammen
       extras.js            Schnelltest, Fragen, Daumen, Spielstand prüfen und umwandeln, Springen, Spickzettel
+      ueben.js             «Am iPhone üben»: richtig oder falsch getippt, Stelle zeigen, Schritt zurück
     ki/                    Übungs-KI «Lupe» (simuliert, nur nach Regeln aus den Inhalten)
     speicher/speicher.js   localStorage mit Rückfall auf Arbeitsspeicher
-    oberflaeche/           Ansichten: Café, Runde, Übungsformen, Lexikon, Einstellungen, Spickzettel
+    oberflaeche/           Ansichten: Café, Runde, Übungsformen, Lexikon, Einstellungen, Spickzettel, Am iPhone üben (ueben.js)
   inhalte/
     regeln.json            Zahlen der Lernregeln
     lehrplan.json          8 Kapitel, 24 Themen mit Voraussetzungen
     fakten.json            Angaben mit Quelle und Prüfdatum
     betreiber.json         Angaben fürs Impressum, Schalter «testumgebung»
-    de/texte.json          alle Oberflächentexte, Länderwerte, Themen (Aha, Tipp, Merkbild, echte Schritte, Bilder)
+    de/texte.json          alle Oberflächentexte, Länderwerte, Themen (Aha, Tipp, Merkbild, echte Schritte, Bilder, Übungsabläufe)
     de/lexikon.json        36 Begriffe
     de/umfrage.json        6 freiwillige Fragen
     de/besuche/<id>.json   ein Besuch: Gast, Runden, Aufgaben
@@ -48,10 +49,18 @@ werkzeuge/pruefe-veroeffentlichung.mjs   Prüfung vor dem Veröffentlichen (Impr
   - Antippen (`typ: tippen`): `frage`, `bildschirm` (`titel`, `zeilen`, `anordnung` liste oder raster), `flaechen` (je `hinweis` und `folge`, optional `bild`, `zusatz`, `art: foto`).
   - Sortieren (`typ: reihe`): `frage`, `schritte`, `loesung`, `lupe`, `daneben` (Texte, Hinweis).
 
+## Am iPhone üben (`texte.json`, `konzepte[…].ueben`)
+
+- Optional pro Thema. Zwei bis zehn Bildschirme, jeder mit `anleitung` (höchstens 30 Wörter), `app`, `titel`, `elemente`, optional `hinweis` (bei falschem Tippen).
+- Elemente: `text` und `nachricht` (`von`: claude oder ich) lassen sich nicht antippen. `knopf`, `feld` (optional `leer`), `schalter` (`an`), `datei`, `bild` (`datei`, optional `rahmen`) lassen sich antippen.
+- Genau ein Element pro Bildschirm hat `ziel: true`, dazu mindestens eine andere Stelle zum Tippen. Gleiche `gruppe` hintereinander steht in einer Zeile.
+- Tippen ins Feld: zwei Bildschirme, zuerst das leere Feld, dann das ausgefüllte Feld mit «Senden» als Ziel.
+- Der Übungsstand wird nicht gespeichert. Die Inhaltsprüfung und `tests/ueben.test.js` prüfen jeden Ablauf.
+
 ## Einen Besuch ergänzen
 
 1. Datei in `spiel/inhalte/de/besuche/` anlegen, Kennung in `AUFTRAEGE` in `code/inhalte/lader.js` eintragen.
-2. Themen in `lehrplan.json` und Texte in `texte.json` unter `konzepte` (name, analogie, aha, tipp, echt, optional bilder), Begriffe in `lexikon.json`.
+2. Themen in `lehrplan.json` und Texte in `texte.json` unter `konzepte` (name, analogie, aha, tipp, echt, optional bilder und ueben), Begriffe in `lexikon.json`.
 3. `npm run pruefen`. Die Prüfung findet fehlende Teile, unlösbare oder zu leichte Aufgaben, zu lange Texte, Emoji, fehlende Bilder und Platzhalter.
 4. Tests in `tests/ganzes-spiel.test.js` anpassen (Anzahl Themen).
 
@@ -61,4 +70,4 @@ werkzeuge/pruefe-veroeffentlichung.mjs   Prüfung vor dem Veröffentlichen (Impr
 
 ## Budgets
 
-Ganzer Ordner `spiel/` rund 680 KB (Ziel unter 1 MB). Start ohne Netzwerkanfragen ausser den eigenen Dateien.
+Ganzer Ordner `spiel/` rund 870 KB (Ziel unter 1 MB). Davon sind rund 90 KB die Übungsabläufe in `texte.json` (GitHub Pages schickt sie gepackt, Annahme: rund 15 KB). Start ohne Netzwerkanfragen ausser den eigenen Dateien.

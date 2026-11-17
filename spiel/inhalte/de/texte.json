@@ -2,7 +2,7 @@
   "app": {
     "titel": "Zweitblick",
     "untertitel": "Das Gesundheits-Café von Hinterwil",
-    "fuss": "Zweitblick, Version 0.10 · inoffiziell, kein Angebot von Anthropic oder Apple",
+    "fuss": "Zweitblick, Version 0.11 · inoffiziell, kein Angebot von Anthropic oder Apple",
     "lupeName": "Lupe, die Übungs-KI",
     "lupeWillkommen": "Hallo! Ich bin Lupe, eine Übungs-KI. Ich sehe viel, aber ich weiss nur, was du mir gibst.",
     "lupeNeu": "Willkommen im Gesundheits-Café! Gleich kommt der erste Gast. Wir helfen zusammen.",
@@ -92,6 +92,27 @@
     "tippenEtikett": "Tippe auf die richtige Stelle",
     "telefonName": "Nachgebauter iPhone-Bildschirm",
     "nachgebaut": "Vereinfacht nachgebaut. In echt sieht es etwas anders aus.",
+    "uebenKnopf": "Am iPhone üben",
+    "uebenKnopfName": "Am iPhone üben: {konzept}",
+    "uebenInfo": "Tippe auf dem nachgebauten iPhone, als ob du es selber machst. Oben steht immer, was zu tun ist.",
+    "uebenSchritt": "Schritt {nr} von {anzahl}",
+    "uebenRichtig": "Richtig. Weiter mit Schritt {nr}.",
+    "uebenFalsch": "Nicht hier. Lies oben nochmals, was zu tun ist.",
+    "uebenDaneben": "Nicht hier",
+    "uebenHier": "Hier tippen",
+    "uebenGezeigt": "Die richtige Stelle ist jetzt markiert: «Hier tippen».",
+    "uebenZeig": "Zeig mir, wo",
+    "uebenZurueckSchritt": "Einen Schritt zurück",
+    "uebenFertigTitel": "Geschafft",
+    "uebenFertigText": "Du hast alle {anzahl} Schritte gemacht. Am echten iPhone geht es genauso, nur sieht es etwas anders aus.",
+    "uebenFertigEcht": "Probier es jetzt am echten iPhone. Die Schritte stehen auch auf deinem Spickzettel.",
+    "uebenNochmals": "Nochmals üben",
+    "uebenZurueckSpick": "Zurück zum Spickzettel",
+    "uebenZurueckRunde": "Zurück zur Runde",
+    "uebenAn": "ein",
+    "uebenAus": "aus",
+    "uebenTelefonName": "Nachgebauter Bildschirm: {app}, {titel}",
+    "uebenNachgebaut": "Vereinfacht nachgebaut. Namen und Knöpfe sind am echten iPhone nicht geprüft und sehen etwas anders aus.",
     "reiheHilfe": "Verschiebe die Schritte mit «Hoch» und «Runter».",
     "reiheHoch": "«{text}» nach oben schieben",
     "reiheRunter": "«{text}» nach unten schieben",
@@ -399,6 +420,211 @@
         "Öffne die Claude-App und tippe unten im Eingabefeld auf «+».",
         "Wähle das Foto oder die Datei mit dem Bericht.",
         "Schreib: «Erklär mir diesen Bericht in einfachen Worten, kurz.» Dann senden."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Öffne die App Claude.",
+          "app": "iPhone",
+          "titel": "Home-Bildschirm",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Telefon",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Kamera",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Fotos",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Notizen",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "App Store",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Claude",
+              "ziel": true,
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dateien",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Einstellungen",
+              "gruppe": "reihe1"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe unten links im Eingabefeld auf «+».",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "ziel": true,
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «Fotos». Dort liegt das Foto von deinem Bericht.",
+          "app": "Claude",
+          "titel": "Anhängen",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Kamera"
+            },
+            {
+              "typ": "knopf",
+              "text": "Fotos",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Dateien"
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf das Foto vom Bericht.",
+          "app": "Fotos",
+          "titel": "Alle Fotos",
+          "elemente": [
+            {
+              "typ": "bild",
+              "text": "Foto vom Laborbericht",
+              "ziel": true,
+              "datei": "fotos/gerber.svg"
+            },
+            {
+              "typ": "bild",
+              "text": "Foto vom Küchentisch",
+              "datei": "fotos/zuweit.svg"
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe ins Eingabefeld. Bitte: «Erklär mir diesen Bericht in einfachen Worten, kurz.»",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "datei",
+              "text": "Foto vom Laborbericht"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "datei",
+              "text": "Foto vom Laborbericht"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Erklär mir diesen Bericht in einfachen Worten, kurz.",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        }
       ]
     },
     "nachfragen": {
@@ -414,6 +640,162 @@
         "Bleib im selben Chat. Schreib unten ins Eingabefeld.",
         "Frag genau: «Was heisst Erythrozyten?»",
         "Ist es noch zu schwierig, schreib: «Bitte noch einfacher, ohne Fachwörter.»"
+      ],
+      "ueben": [
+        {
+          "anleitung": "Bleib im selben Chat. Tippe ins Eingabefeld und frag: «Was heisst Erythrozyten?»",
+          "app": "Claude",
+          "titel": "Dein Bericht",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Deine Erythrozyten liegen im Normbereich. Das Hämoglobin ist etwas tief.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Dein Bericht",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Deine Erythrozyten liegen im Normbereich. Das Hämoglobin ist etwas tief.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Was heisst Erythrozyten?",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Noch zu schwierig? Tippe ins Feld und schreib: «Bitte noch einfacher, ohne Fachwörter.»",
+          "app": "Claude",
+          "titel": "Dein Bericht",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Erythrozyten sind die roten Blutkörperchen. Sie transportieren Sauerstoff.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Dein Bericht",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Erythrozyten sind die roten Blutkörperchen. Sie transportieren Sauerstoff.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Bitte noch einfacher, ohne Fachwörter.",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        }
       ]
     },
     "arzt-entscheidet": {
@@ -472,6 +854,133 @@
         "Halte das iPhone gerade darüber, so dass das ganze Blatt aufs Bild passt.",
         "Halte still, bis das Bild scharf ist. Dann abdrücken.",
         "Schau das Foto an und vergrössere es mit zwei Fingern. Ist alles lesbar?"
+      ],
+      "ueben": [
+        {
+          "anleitung": "Leg das Blatt flach auf den Tisch. Öffne dann die App Kamera.",
+          "app": "iPhone",
+          "titel": "Home-Bildschirm",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Telefon",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Kamera",
+              "ziel": true,
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Fotos",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Notizen",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "App Store",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Claude",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dateien",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Einstellungen",
+              "gruppe": "reihe1"
+            }
+          ]
+        },
+        {
+          "anleitung": "Halte das iPhone gerade über das Blatt. Ist das ganze Blatt scharf im Bild, tippe auf den runden Auslöser.",
+          "app": "Kamera",
+          "titel": "Foto",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Blitz",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "bild",
+              "text": "Das ganze Blatt gerade und scharf im Sucher",
+              "datei": "fotos/gut.svg"
+            },
+            {
+              "typ": "knopf",
+              "text": "Video",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Auslöser",
+              "ziel": true,
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Umdrehen",
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe unten links auf das kleine Bild. So siehst du dein Foto.",
+          "app": "Kamera",
+          "titel": "Foto",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Kleines Bild unten links",
+              "ziel": true,
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Auslöser",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Umdrehen",
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Vergrössere mit zwei Fingern und prüf, ob alles lesbar ist. Hier im Spiel tippst du auf «Vergrössern».",
+          "app": "Fotos",
+          "titel": "Dein Foto",
+          "elemente": [
+            {
+              "typ": "bild",
+              "text": "Dein Foto vom Bericht",
+              "datei": "fotos/gut.svg"
+            },
+            {
+              "typ": "knopf",
+              "text": "Vergrössern",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Löschen"
+            }
+          ]
+        }
       ]
     },
     "foto-licht": {
@@ -520,6 +1029,127 @@
         "Schalte den Blitz aus. Auf glänzendem Papier macht er weisse Flecken.",
         "Streich das Blatt glatt und leg es hin. Halte es nicht mit den Fingern fest.",
         "Pass auf, dass dein Schatten nicht aufs Blatt fällt."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Geh ans Fenster oder unter eine helle Lampe. Öffne die App Kamera.",
+          "app": "iPhone",
+          "titel": "Home-Bildschirm",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Telefon",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Kamera",
+              "ziel": true,
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Fotos",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Notizen",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "App Store",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Claude",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dateien",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Einstellungen",
+              "gruppe": "reihe1"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe oben auf den Blitz.",
+          "app": "Kamera",
+          "titel": "Foto",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Blitz",
+              "ziel": true,
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Live",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "bild",
+              "text": "Blatt im Sucher",
+              "datei": "fotos/gut.svg"
+            },
+            {
+              "typ": "knopf",
+              "text": "Auslöser",
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «Aus». Auf glänzendem Papier macht der Blitz weisse Flecken.",
+          "app": "Kamera",
+          "titel": "Blitz",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Automatisch"
+            },
+            {
+              "typ": "knopf",
+              "text": "Ein"
+            },
+            {
+              "typ": "knopf",
+              "text": "Aus",
+              "ziel": true
+            }
+          ]
+        },
+        {
+          "anleitung": "Achte darauf, dass kein Schatten und kein Finger auf dem Blatt ist. Dann tippe auf den Auslöser.",
+          "app": "Kamera",
+          "titel": "Foto",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Blitz: aus",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "bild",
+              "text": "Blatt hell, ohne Schatten",
+              "datei": "fotos/gut.svg"
+            },
+            {
+              "typ": "knopf",
+              "text": "Auslöser",
+              "ziel": true,
+              "gruppe": "unten"
+            }
+          ]
+        }
       ]
     },
     "alle-seiten": {
@@ -549,6 +1179,290 @@
         "Für Papier: Öffne die App Notizen und eine neue Notiz. Tippe auf die Büroklammer oder die Kamera.",
         "Wähle «Dokumente scannen» und halte das iPhone über das Blatt. Es knipst und schneidet selbst zu.",
         "Mach so alle Seiten nacheinander. Dann sichern und in Claude anhängen."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Für Papier gibt es den Scanner in der App Notizen. Öffne die App Notizen.",
+          "app": "iPhone",
+          "titel": "Home-Bildschirm",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Telefon",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Kamera",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Fotos",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Notizen",
+              "ziel": true,
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "App Store",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Claude",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dateien",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Einstellungen",
+              "gruppe": "reihe1"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe unten rechts auf «Neue Notiz».",
+          "app": "Notizen",
+          "titel": "Notizen",
+          "elemente": [
+            {
+              "typ": "text",
+              "text": "Einkaufsliste"
+            },
+            {
+              "typ": "text",
+              "text": "Geburtstage"
+            },
+            {
+              "typ": "knopf",
+              "text": "Ordner",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neue Notiz",
+              "ziel": true,
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe unten auf die Büroklammer.",
+          "app": "Notizen",
+          "titel": "Neue Notiz",
+          "elemente": [
+            {
+              "typ": "text",
+              "text": "(leere Notiz)"
+            },
+            {
+              "typ": "knopf",
+              "text": "Aa",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Liste",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Büroklammer",
+              "ziel": true,
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Stift",
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «Dokumente scannen».",
+          "app": "Notizen",
+          "titel": "Anhängen",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Foto oder Video auswählen"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dokumente scannen",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Foto oder Video aufnehmen"
+            },
+            {
+              "typ": "knopf",
+              "text": "Text scannen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Halte das iPhone über Seite 1. Der gelbe Rahmen zeigt das Blatt. Oft knipst es selbst, sonst tippe auf den Auslöser.",
+          "app": "Notizen",
+          "titel": "Scannen",
+          "elemente": [
+            {
+              "typ": "bild",
+              "text": "Seite 1 mit gelbem Rahmen",
+              "datei": "fotos/gut.svg",
+              "rahmen": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Auslöser",
+              "ziel": true,
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Leg Seite 2 hin und scanne sie genauso. Sind alle Seiten drin, tippe auf «Sichern».",
+          "app": "Notizen",
+          "titel": "Scannen",
+          "elemente": [
+            {
+              "typ": "bild",
+              "text": "Seite 2 mit gelbem Rahmen",
+              "datei": "fotos/seite2.svg",
+              "rahmen": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Auslöser",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Sichern (2 Seiten)",
+              "ziel": true,
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Scan liegt in der Notiz. Tippe oben auf «Teilen».",
+          "app": "Notizen",
+          "titel": "Neue Notiz",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Teilen",
+              "ziel": true,
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Löschen",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "datei",
+              "text": "Gescanntes Dokument, 2 Seiten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «In Dateien sichern». Gib ihm einen Namen, zum Beispiel «Laborbericht Mai».",
+          "app": "iPhone",
+          "titel": "Teilen",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Nachrichten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Mail"
+            },
+            {
+              "typ": "knopf",
+              "text": "In Dateien sichern",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Kopieren"
+            }
+          ]
+        },
+        {
+          "anleitung": "Jetzt in Claude: Tippe im Eingabefeld auf «+».",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "ziel": true,
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «Dateien». Dort liegt dein Scan.",
+          "app": "Claude",
+          "titel": "Anhängen",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Kamera"
+            },
+            {
+              "typ": "knopf",
+              "text": "Fotos"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dateien",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        }
       ]
     },
     "app-finden": {
@@ -565,6 +1479,141 @@
         "Gib «Claude» ein.",
         "Wähle «Claude by Anthropic». Als Anbieter steht Anthropic PBC.",
         "Tippe auf «Laden». Die App braucht iOS 18 oder neuer."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Öffne den App Store.",
+          "app": "iPhone",
+          "titel": "Home-Bildschirm",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Telefon",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Kamera",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Fotos",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Notizen",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "App Store",
+              "ziel": true,
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Claude",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dateien",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Einstellungen",
+              "gruppe": "reihe1"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe unten auf «Suchen».",
+          "app": "App Store",
+          "titel": "Heute",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Heute",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Spiele",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Apps",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Suchen",
+              "ziel": true,
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe ins Suchfeld und gib «Claude» ein.",
+          "app": "App Store",
+          "titel": "Suchen",
+          "elemente": [
+            {
+              "typ": "feld",
+              "text": "Spiele, Apps und mehr",
+              "ziel": true,
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «Claude by Anthropic». Darunter steht der Anbieter Anthropic PBC.",
+          "app": "App Store",
+          "titel": "Claude",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Klaud Chat Helfer · Wunder Apps Ltd."
+            },
+            {
+              "typ": "knopf",
+              "text": "Claude by Anthropic · Anthropic PBC",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Dr. Wunder-KI · Mega Fun Apps"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf «Laden». Die App ist gratis.",
+          "app": "App Store",
+          "titel": "Claude by Anthropic",
+          "elemente": [
+            {
+              "typ": "text",
+              "text": "Anbieter: Anthropic PBC"
+            },
+            {
+              "typ": "knopf",
+              "text": "Laden",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Teilen"
+            }
+          ]
+        }
       ]
     },
     "konto": {
@@ -581,6 +1630,96 @@
         "Melde dich mit Apple, Google oder deiner E-Mail-Adresse an.",
         "Bei E-Mail: Öffne die Nachricht von Anthropic und tippe auf den Link. Nichts gekommen? Schau im Spam-Ordner.",
         "Bestätige, dass du mindestens 18 bist. Ein Abo brauchst du nicht."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Öffne die App Claude.",
+          "app": "iPhone",
+          "titel": "Home-Bildschirm",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Telefon",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Kamera",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Fotos",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Notizen",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "App Store",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Claude",
+              "ziel": true,
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dateien",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Einstellungen",
+              "gruppe": "reihe1"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle, wie du dich anmeldest. Hier üben wir «Mit Apple fortfahren».",
+          "app": "Claude",
+          "titel": "Willkommen",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Mit Apple fortfahren",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Mit Google fortfahren"
+            },
+            {
+              "typ": "knopf",
+              "text": "Mit E-Mail fortfahren"
+            }
+          ]
+        },
+        {
+          "anleitung": "Bestätige, dass du mindestens 18 Jahre alt bist.",
+          "app": "Claude",
+          "titel": "Dein Alter",
+          "elemente": [
+            {
+              "typ": "text",
+              "text": "Claude ist ab 18 Jahren."
+            },
+            {
+              "typ": "knopf",
+              "text": "Ich bin 18 oder älter",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        }
       ]
     },
     "datenschutz": {
@@ -597,6 +1736,133 @@
         "Wähle «Einstellungen» und dann «Datenschutz».",
         "Schalte «Help improve Claude» aus. Auf Deutsch heisst er ähnlich.",
         "Neue Chats werden dann nicht mehr fürs Training genutzt."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Öffne oben links das Menü.",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "ziel": true,
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe unten auf deinen Namen.",
+          "app": "Claude",
+          "titel": "Menü",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat"
+            },
+            {
+              "typ": "knopf",
+              "text": "Chats"
+            },
+            {
+              "typ": "knopf",
+              "text": "Projekte"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dein Name",
+              "ziel": true,
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «Einstellungen».",
+          "app": "Claude",
+          "titel": "Dein Name",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Einstellungen",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Hilfe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Abmelden"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «Datenschutz».",
+          "app": "Claude",
+          "titel": "Einstellungen",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Profil"
+            },
+            {
+              "typ": "knopf",
+              "text": "Funktionen"
+            },
+            {
+              "typ": "knopf",
+              "text": "Datenschutz",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Aussehen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Schalte «Help improve Claude» aus. Auf Deutsch heisst der Schalter ähnlich.",
+          "app": "Claude",
+          "titel": "Datenschutz",
+          "elemente": [
+            {
+              "typ": "schalter",
+              "text": "Help improve Claude",
+              "ziel": true,
+              "an": true
+            },
+            {
+              "typ": "schalter",
+              "text": "Standort teilen",
+              "an": false
+            },
+            {
+              "typ": "knopf",
+              "text": "Zurück"
+            }
+          ]
+        }
       ]
     },
     "projekt": {
@@ -614,6 +1880,148 @@
         "Füge deine Berichte als Dateien zum Projekt hinzu.",
         "Starte neue Chats immer in diesem Projekt.",
         "Klappt das Anlegen in der App nicht, öffne claude.ai in Safari."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Öffne oben links das Menü.",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "ziel": true,
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf «Projekte».",
+          "app": "Claude",
+          "titel": "Menü",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat"
+            },
+            {
+              "typ": "knopf",
+              "text": "Chats"
+            },
+            {
+              "typ": "knopf",
+              "text": "Projekte",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Dein Name",
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf «Neues Projekt».",
+          "app": "Claude",
+          "titel": "Projekte",
+          "elemente": [
+            {
+              "typ": "text",
+              "text": "Noch keine Projekte."
+            },
+            {
+              "typ": "knopf",
+              "text": "Neues Projekt",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Zurück"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe ins Feld und gib den Namen «Meine Gesundheit» ein.",
+          "app": "Claude",
+          "titel": "Neues Projekt",
+          "elemente": [
+            {
+              "typ": "feld",
+              "text": "Name des Projekts",
+              "ziel": true,
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf «Projekt erstellen».",
+          "app": "Claude",
+          "titel": "Neues Projekt",
+          "elemente": [
+            {
+              "typ": "feld",
+              "text": "Meine Gesundheit"
+            },
+            {
+              "typ": "knopf",
+              "text": "Projekt erstellen",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Füge deine Berichte hinzu: Tippe auf «+ Dateien hinzufügen».",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Anweisungen"
+            },
+            {
+              "typ": "knopf",
+              "text": "+ Dateien hinzufügen",
+              "ziel": true
+            },
+            {
+              "typ": "datei",
+              "text": "Laborbericht Mai 2026.pdf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat im Projekt"
+            }
+          ]
+        }
       ]
     },
     "anweisung": {
@@ -630,6 +2038,85 @@
         "Öffne die Anweisungen des Projekts.",
         "Schreib Alter, Krankheiten, Tabletten und Allergien hinein.",
         "Ergänze: «Erklär einfach und kurz. Sag, wenn du unsicher bist.»"
+      ],
+      "ueben": [
+        {
+          "anleitung": "Öffne das Projekt «Meine Gesundheit».",
+          "app": "Claude",
+          "titel": "Projekte",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Meine Gesundheit",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Neues Projekt"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf «Anweisungen».",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Anweisungen",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "+ Dateien hinzufügen"
+            },
+            {
+              "typ": "datei",
+              "text": "Laborbericht Mai 2026.pdf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat im Projekt"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe ins Feld. Schreib Alter, Krankheiten, Tabletten und Allergien hinein.",
+          "app": "Claude",
+          "titel": "Anweisungen",
+          "elemente": [
+            {
+              "typ": "feld",
+              "text": "Wie soll Claude antworten?",
+              "ziel": true,
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Ergänze: «Erklär einfach und kurz. Sag, wenn du unsicher bist.» Dann tippe auf «Sichern».",
+          "app": "Claude",
+          "titel": "Anweisungen",
+          "elemente": [
+            {
+              "typ": "feld",
+              "text": "Ich bin 78, habe Bluthochdruck, nehme … Erklär einfach und kurz. Sag, wenn du unsicher bist."
+            },
+            {
+              "typ": "knopf",
+              "text": "Sichern",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        }
       ]
     },
     "berichte": {
@@ -646,6 +2133,76 @@
         "[[kopieRecht]]",
         "[[dossierWeg]].",
         "Scanne Papier mit der App Notizen und füge alles ins Projekt ein."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Hast du einen Bericht gescannt oder als PDF? Öffne das Projekt und tippe auf «+ Dateien hinzufügen».",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Anweisungen"
+            },
+            {
+              "typ": "knopf",
+              "text": "+ Dateien hinzufügen",
+              "ziel": true
+            },
+            {
+              "typ": "datei",
+              "text": "Laborbericht Mai 2026.pdf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat im Projekt"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «Dateien». Dort liegen deine Scans und PDFs.",
+          "app": "Claude",
+          "titel": "Hinzufügen",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Fotos"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dateien",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Text einfügen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf den Bericht.",
+          "app": "Dateien",
+          "titel": "Zuletzt verwendet",
+          "elemente": [
+            {
+              "typ": "datei",
+              "text": "Austrittsbericht Spital.pdf",
+              "ziel": true
+            },
+            {
+              "typ": "datei",
+              "text": "Rezept Apotheke.pdf"
+            },
+            {
+              "typ": "datei",
+              "text": "Ferienplan.pdf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        }
       ]
     },
     "beschwerden": {
@@ -662,6 +2219,99 @@
         "Beschreib: seit wann, wann genau, wie lange, was dazukommt.",
         "Nenn, was sich geändert hat, zum Beispiel eine neue Tablette.",
         "Frag: «Was könnte dahinterstecken, und was frage ich meinen Arzt?»"
+      ],
+      "ueben": [
+        {
+          "anleitung": "Öffne das Projekt und tippe auf «Neuer Chat im Projekt».",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Anweisungen"
+            },
+            {
+              "typ": "knopf",
+              "text": "+ Dateien hinzufügen"
+            },
+            {
+              "typ": "datei",
+              "text": "Laborbericht Mai 2026.pdf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat im Projekt",
+              "ziel": true
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe ins Feld. Beschreib: seit wann, wann genau, wie lange, was dazukommt, was sich geändert hat.",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Seit zwei Wochen ist mir beim Aufstehen kurz schwindlig. Seit drei Wochen nehme ich eine neue Blutdrucktablette.",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        }
       ]
     },
     "verlauf": {
@@ -677,6 +2327,143 @@
         "Leg alte und neue Berichte ins Projekt.",
         "Achte darauf, dass das Datum gut lesbar ist. Sonst schreib es dazu.",
         "Frag: «Wie haben sich meine Werte seit 2024 verändert?»"
+      ],
+      "ueben": [
+        {
+          "anleitung": "Leg alte und neue Berichte ins Projekt. Tippe auf «+ Dateien hinzufügen».",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Anweisungen"
+            },
+            {
+              "typ": "knopf",
+              "text": "+ Dateien hinzufügen",
+              "ziel": true
+            },
+            {
+              "typ": "datei",
+              "text": "Laborbericht Mai 2026.pdf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat im Projekt"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle den alten Bericht. Achte darauf, dass das Datum gut lesbar ist.",
+          "app": "Dateien",
+          "titel": "Zuletzt verwendet",
+          "elemente": [
+            {
+              "typ": "datei",
+              "text": "Laborbericht März 2024.pdf",
+              "ziel": true
+            },
+            {
+              "typ": "datei",
+              "text": "Ferienplan.pdf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf «Neuer Chat im Projekt».",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Anweisungen"
+            },
+            {
+              "typ": "knopf",
+              "text": "+ Dateien hinzufügen"
+            },
+            {
+              "typ": "datei",
+              "text": "Laborbericht Mai 2026.pdf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat im Projekt",
+              "ziel": true
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe ins Feld und frag: «Wie haben sich meine Werte seit 2024 verändert?»",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Wie haben sich meine Werte seit 2024 verändert?",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        }
       ]
     },
     "fragen-arzt": {
@@ -693,6 +2480,100 @@
         "Lies die Fragen und streich, was nicht passt.",
         "Mach ein Bildschirmfoto oder schreib sie auf einen Zettel.",
         "Nimm die Fragen mit in die Praxis."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Tippe im Projekt ins Feld: «Mach mir drei kurze Fragen für meinen Arzttermin zum Schwindel.»",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Mach mir drei kurze Fragen für meinen Arzttermin zum Schwindel.",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Mach ein Bildschirmfoto: Seitentaste und Lauter-Taste gleichzeitig kurz drücken. Hier im Spiel tippst du auf die beiden Tasten.",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "nachricht",
+              "text": "1. Kann die neue Tablette schuld sein? 2. Soll ich etwas ändern? 3. Wann komme ich wieder?",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "Seitentaste und Lauter-Taste",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Kopieren"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat"
+            }
+          ]
+        }
       ]
     },
     "ursachen": {
@@ -709,6 +2590,162 @@
         "Frag: «Welche Ursachen kommen in Frage? Was spricht dafür und dagegen?»",
         "Frag: «Welche Untersuchung würde es klären?»",
         "Nimm die Liste mit zum Arzt. Er entscheidet."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Tippe im Projekt ins Feld und frag: «Welche Ursachen kommen in Frage? Was spricht dafür und dagegen?»",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Ich bin seit Wochen sehr müde. Seit März nehme ich eine neue Tablette.",
+              "von": "ich"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Ich bin seit Wochen sehr müde. Seit März nehme ich eine neue Tablette.",
+              "von": "ich"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Welche Ursachen kommen in Frage? Was spricht dafür und dagegen?",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Frag dann: «Welche Untersuchung würde es klären?»",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "In Frage kommen zum Beispiel Blutarmut, die Schilddrüse oder die Tablette. Das klärt dein Arzt.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "In Frage kommen zum Beispiel Blutarmut, die Schilddrüse oder die Tablette. Das klärt dein Arzt.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Welche Untersuchung würde es klären?",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        }
       ]
     },
     "unsicherheit": {
@@ -724,6 +2761,162 @@
         "Schreib nach einer Antwort: «Wie sicher bist du dir?»",
         "Frag: «Welche Angaben oder Untersuchungen fehlen dir?»",
         "Nimm, was fehlt, als Frage zum Arzt mit."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Claude hat geantwortet. Tippe ins Feld und frag: «Wie sicher bist du dir?»",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Am ehesten passt Blutarmut.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Am ehesten passt Blutarmut.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Wie sicher bist du dir?",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Frag weiter: «Welche Angaben oder Untersuchungen fehlen dir?»",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Nicht sehr sicher. Mir fehlt der Eisenwert.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Meine Gesundheit",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Nicht sehr sicher. Mir fehlt der Eisenwert.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Welche Angaben oder Untersuchungen fehlen dir?",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        }
       ]
     },
     "pruefen": {
@@ -739,6 +2932,111 @@
         "Lies Claudes Antwort und such die Zahlen darin.",
         "Vergleich sie mit dem Bericht.",
         "Stimmt etwas nicht, schreib zum Beispiel: «Auf dem Bericht steht 11,2, nicht 17,2. Bitte nochmals.»"
+      ],
+      "ueben": [
+        {
+          "anleitung": "Vergleich Claudes Antwort mit dem Bericht. Tippe auf die Zahl, die nicht stimmt.",
+          "app": "Claude",
+          "titel": "Dein Bericht",
+          "elemente": [
+            {
+              "typ": "bild",
+              "text": "Bericht: Hämoglobin 11,2",
+              "datei": "fotos/gerber.svg"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Dein Hämoglobin ist 17,2. Das ist hoch.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "17,2 in Claudes Antwort",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "11,2 im Bericht"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe ins Feld und schreib: «Auf dem Bericht steht 11,2, nicht 17,2. Bitte nochmals.»",
+          "app": "Claude",
+          "titel": "Dein Bericht",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Dein Hämoglobin ist 17,2. Das ist hoch.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Dein Bericht",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Dein Hämoglobin ist 17,2. Das ist hoch.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Auf dem Bericht steht 11,2, nicht 17,2. Bitte nochmals.",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        }
       ]
     },
     "notfall": {
@@ -754,6 +3052,132 @@
         "Warnzeichen: Brustschmerz oder Druck, Atemnot, plötzliche Lähmung, Sprachstörung.",
         "Ruf sofort [[notruf]] an. Sag, wo du bist, wer du bist und was passiert ist.",
         "Fragen an Claude haben Zeit, bis der Notfall vorbei ist."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Brustschmerz, Atemnot, plötzliche Lähmung oder Sprachstörung: sofort anrufen. Öffne die App Telefon.",
+          "app": "iPhone",
+          "titel": "Home-Bildschirm",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Telefon",
+              "ziel": true,
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Kamera",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Fotos",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Notizen",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "App Store",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Claude",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dateien",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Einstellungen",
+              "gruppe": "reihe1"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe unten auf «Ziffern».",
+          "app": "Telefon",
+          "titel": "Telefon",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Favoriten",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Anrufliste",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Kontakte",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Ziffern",
+              "ziel": true,
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tipp [[notruf]] ein. Hier im Spiel tippst du auf das Nummernfeld.",
+          "app": "Telefon",
+          "titel": "Ziffern",
+          "elemente": [
+            {
+              "typ": "feld",
+              "text": "Nummer eingeben",
+              "ziel": true,
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "1",
+              "gruppe": "r1"
+            },
+            {
+              "typ": "knopf",
+              "text": "2",
+              "gruppe": "r1"
+            },
+            {
+              "typ": "knopf",
+              "text": "3",
+              "gruppe": "r1"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf den grünen Hörer. Sag dann, wo du bist, wer du bist und was passiert ist.",
+          "app": "Telefon",
+          "titel": "Ziffern",
+          "elemente": [
+            {
+              "typ": "feld",
+              "text": "[[notruf]]"
+            },
+            {
+              "typ": "knopf",
+              "text": "Anrufen",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Löschen"
+            }
+          ]
+        }
       ]
     },
     "nur-noetiges": {
@@ -770,6 +3194,159 @@
         "Deck sie beim Fotografieren mit einem Zettel ab oder schneide das Foto in der App Fotos zu.",
         "Schick keine Berichte anderer Menschen ohne deren Erlaubnis.",
         "Passwörter und Bankdaten gehören nie in einen Chat."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Steht deine [[nummer]] auf dem Foto? Dann schneide sie weg. Öffne die App Fotos.",
+          "app": "iPhone",
+          "titel": "Home-Bildschirm",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Telefon",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Kamera",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Fotos",
+              "ziel": true,
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "Notizen",
+              "gruppe": "reihe0"
+            },
+            {
+              "typ": "knopf",
+              "text": "App Store",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Claude",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dateien",
+              "gruppe": "reihe1"
+            },
+            {
+              "typ": "knopf",
+              "text": "Einstellungen",
+              "gruppe": "reihe1"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf das Foto vom Bericht.",
+          "app": "Fotos",
+          "titel": "Alle Fotos",
+          "elemente": [
+            {
+              "typ": "bild",
+              "text": "Foto vom Laborbericht",
+              "ziel": true,
+              "datei": "fotos/gerber.svg"
+            },
+            {
+              "typ": "bild",
+              "text": "Foto vom Küchentisch",
+              "datei": "fotos/zuweit.svg"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe oben rechts auf «Bearbeiten».",
+          "app": "Fotos",
+          "titel": "Foto",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Teilen",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Bearbeiten",
+              "ziel": true,
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "bild",
+              "text": "Laborbericht mit Nummer oben",
+              "datei": "fotos/gerber.svg"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf «Zuschneiden».",
+          "app": "Fotos",
+          "titel": "Bearbeiten",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Anpassen",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Filter",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Zuschneiden",
+              "ziel": true,
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Zieh den oberen Rand nach unten, bis die Nummer weg ist. Hier im Spiel tippst du auf den Rand.",
+          "app": "Fotos",
+          "titel": "Zuschneiden",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Oberen Rand nach unten ziehen",
+              "ziel": true
+            },
+            {
+              "typ": "bild",
+              "text": "Laborbericht",
+              "datei": "fotos/gerber.svg"
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf «Fertig».",
+          "app": "Fotos",
+          "titel": "Zuschneiden",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Abbrechen",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Fertig",
+              "ziel": true,
+              "gruppe": "unten"
+            }
+          ]
+        }
       ]
     },
     "loeschen": {
@@ -786,6 +3363,129 @@
         "Öffne beim Chat das Menü und wähle «Löschen». Bestätige.",
         "Laut Anthropic ist der Chat innert 30 Tagen auch auf den Servern gelöscht.",
         "Für eine einmalige Frage kannst du einen Inkognito-Chat starten."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Öffne oben links das Menü.",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "ziel": true,
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf «Chats».",
+          "app": "Claude",
+          "titel": "Menü",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat"
+            },
+            {
+              "typ": "knopf",
+              "text": "Chats",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Projekte"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dein Name",
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe beim Chat «Laborwerte Mai» auf die drei Punkte.",
+          "app": "Claude",
+          "titel": "Chats",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Laborwerte Mai · …",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Rezeptideen · …"
+            },
+            {
+              "typ": "knopf",
+              "text": "Ferien in Ascona · …"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «Löschen».",
+          "app": "Claude",
+          "titel": "Laborwerte Mai",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Umbenennen"
+            },
+            {
+              "typ": "knopf",
+              "text": "Zum Projekt hinzufügen"
+            },
+            {
+              "typ": "knopf",
+              "text": "Löschen",
+              "ziel": true
+            }
+          ]
+        },
+        {
+          "anleitung": "Bestätige mit «Löschen».",
+          "app": "Claude",
+          "titel": "Chat löschen?",
+          "elemente": [
+            {
+              "typ": "text",
+              "text": "Das lässt sich nicht rückgängig machen."
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen",
+              "gruppe": "unten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Löschen",
+              "ziel": true,
+              "gruppe": "unten"
+            }
+          ]
+        }
       ]
     },
     "akte-anlegen": {
@@ -803,6 +3503,309 @@
         "Schreib: «Mach mir daraus eine Excel-Tabelle. Eine Zeile pro Wert, mit Datum, Wert, Einheit, Normbereich und Bericht.»",
         "Tippe auf die fertige Tabelle und sichere sie in der App Dateien. Name: «Gesundheitsakte».",
         "Vergleich ein paar Zahlen mit den Original-Befunden."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Zuerst einmalig: Öffne oben links das Menü.",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "ziel": true,
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe unten auf deinen Namen.",
+          "app": "Claude",
+          "titel": "Menü",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat"
+            },
+            {
+              "typ": "knopf",
+              "text": "Chats"
+            },
+            {
+              "typ": "knopf",
+              "text": "Projekte"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dein Name",
+              "ziel": true,
+              "gruppe": "unten"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «Einstellungen».",
+          "app": "Claude",
+          "titel": "Dein Name",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Einstellungen",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Hilfe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Abmelden"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «Funktionen».",
+          "app": "Claude",
+          "titel": "Einstellungen",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Profil"
+            },
+            {
+              "typ": "knopf",
+              "text": "Funktionen",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Datenschutz"
+            },
+            {
+              "typ": "knopf",
+              "text": "Aussehen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Schalte «Dateien erstellen» ein. Auf Deutsch kann er etwas anders heissen.",
+          "app": "Claude",
+          "titel": "Funktionen",
+          "elemente": [
+            {
+              "typ": "schalter",
+              "text": "Dateien erstellen",
+              "ziel": true,
+              "an": false
+            },
+            {
+              "typ": "schalter",
+              "text": "Websuche",
+              "an": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Zurück"
+            }
+          ]
+        },
+        {
+          "anleitung": "Starte einen neuen Chat. Tippe auf «+» und häng alle Berichte an.",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "ziel": true,
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe ins Feld: «Mach mir daraus eine Excel-Tabelle. Eine Zeile pro Wert, mit Datum, Wert, Einheit, Normbereich und Bericht.»",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "datei",
+              "text": "5 Laborberichte"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "datei",
+              "text": "5 Laborberichte"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Mach mir daraus eine Excel-Tabelle. Eine Zeile pro Wert, mit Datum, Wert, Einheit, Normbereich und Bericht.",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Claude hat die Tabelle gemacht. Tippe darauf.",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Hier ist deine Akte mit 38 Zeilen.",
+              "von": "claude"
+            },
+            {
+              "typ": "datei",
+              "text": "Gesundheitsakte.xlsx",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe auf «Teilen» und wähle «In Dateien sichern». Name: «Gesundheitsakte».",
+          "app": "iPhone",
+          "titel": "Teilen",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Nachrichten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Mail"
+            },
+            {
+              "typ": "knopf",
+              "text": "In Dateien sichern",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Kopieren"
+            }
+          ]
+        }
       ]
     },
     "akte-nachfuehren": {
@@ -819,6 +3822,240 @@
         "Schreib: «Trag die neuen Werte in die Akte ein. Ändere sonst nichts. Gib mir die ganze Akte zurück.»",
         "Vergleich die neuen Zeilen mit dem Bericht.",
         "Sichere die neue Akte. Die alte löschst du oder benennst sie «alt»."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Neuer Bericht? Starte einen neuen Chat und tippe auf «+».",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "ziel": true,
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «Dateien».",
+          "app": "Claude",
+          "titel": "Anhängen",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Kamera"
+            },
+            {
+              "typ": "knopf",
+              "text": "Fotos"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dateien",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle die neuste Akte, nicht die alte.",
+          "app": "Dateien",
+          "titel": "Zuletzt verwendet",
+          "elemente": [
+            {
+              "typ": "datei",
+              "text": "Gesundheitsakte.xlsx",
+              "ziel": true
+            },
+            {
+              "typ": "datei",
+              "text": "Gesundheitsakte_alt.xlsx"
+            },
+            {
+              "typ": "datei",
+              "text": "Laborbericht Nov 2026.pdf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Häng auch den neuen Bericht an. Tippe dann ins Feld und bitte: «Trag die neuen Werte ein. Ändere sonst nichts.»",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "datei",
+              "text": "Gesundheitsakte.xlsx"
+            },
+            {
+              "typ": "datei",
+              "text": "Laborbericht Nov 2026.pdf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "datei",
+              "text": "Gesundheitsakte.xlsx"
+            },
+            {
+              "typ": "datei",
+              "text": "Laborbericht Nov 2026.pdf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Trag die neuen Werte in die Akte ein. Ändere sonst nichts. Gib mir die ganze Akte zurück.",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Vergleich die neuen Zeilen mit dem Bericht. Dann tippe auf die neue Akte.",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Eingetragen: 6 neue Zeilen, alles andere unverändert.",
+              "von": "claude"
+            },
+            {
+              "typ": "datei",
+              "text": "Gesundheitsakte.xlsx",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Sichere sie mit «In Dateien sichern». Die alte löschst du oder nennst sie «alt».",
+          "app": "iPhone",
+          "titel": "Teilen",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Nachrichten"
+            },
+            {
+              "typ": "knopf",
+              "text": "Mail"
+            },
+            {
+              "typ": "knopf",
+              "text": "In Dateien sichern",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Kopieren"
+            }
+          ]
+        }
       ]
     },
     "trends": {
@@ -835,6 +4072,238 @@
         "Schreib: «Zeig mir als Grafik, wie sich jeder Wert verändert hat. Markiere Werte ausserhalb des Normbereichs.»",
         "Schreib: «Mach mir drei kurze Fragen dazu für meinen Arzt.»",
         "Nimm Grafik, Fragen und die Original-Befunde mit zum Arzt. Entscheide nichts selbst."
+      ],
+      "ueben": [
+        {
+          "anleitung": "Starte einen neuen Chat und tippe auf «+».",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "ziel": true,
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle «Dateien».",
+          "app": "Claude",
+          "titel": "Anhängen",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Kamera"
+            },
+            {
+              "typ": "knopf",
+              "text": "Fotos"
+            },
+            {
+              "typ": "knopf",
+              "text": "Dateien",
+              "ziel": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Wähle deine Gesundheitsakte.",
+          "app": "Dateien",
+          "titel": "Zuletzt verwendet",
+          "elemente": [
+            {
+              "typ": "datei",
+              "text": "Gesundheitsakte.xlsx",
+              "ziel": true
+            },
+            {
+              "typ": "datei",
+              "text": "Ferienplan.pdf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Abbrechen"
+            }
+          ]
+        },
+        {
+          "anleitung": "Tippe ins Feld: «Zeig mir als Grafik, wie sich jeder Wert verändert hat. Markiere Werte ausserhalb des Normbereichs.»",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "datei",
+              "text": "Gesundheitsakte.xlsx"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "datei",
+              "text": "Gesundheitsakte.xlsx"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Zeig mir als Grafik, wie sich jeder Wert verändert hat. Markiere Werte ausserhalb des Normbereichs.",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Frag dann: «Mach mir drei kurze Fragen dazu für meinen Arzt.» Nimm alles mit den Original-Befunden mit.",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Hämoglobin sinkt seit 2024 langsam, zuletzt 11,2. Rot markiert.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Schreib Claude …",
+              "ziel": true,
+              "gruppe": "eingabe",
+              "leer": true
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "gruppe": "eingabe"
+            }
+          ]
+        },
+        {
+          "anleitung": "Der Text steht im Feld. Tippe auf «Senden».",
+          "app": "Claude",
+          "titel": "Neuer Chat",
+          "elemente": [
+            {
+              "typ": "knopf",
+              "text": "Menü",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "knopf",
+              "text": "Neuer Chat",
+              "gruppe": "kopf"
+            },
+            {
+              "typ": "nachricht",
+              "text": "Hämoglobin sinkt seit 2024 langsam, zuletzt 11,2. Rot markiert.",
+              "von": "claude"
+            },
+            {
+              "typ": "knopf",
+              "text": "+",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "feld",
+              "text": "Mach mir drei kurze Fragen dazu für meinen Arzt.",
+              "gruppe": "eingabe"
+            },
+            {
+              "typ": "knopf",
+              "text": "Senden",
+              "ziel": true,
+              "gruppe": "eingabe"
+            }
+          ]
+        }
       ]
     }
   }
