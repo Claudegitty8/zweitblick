@@ -12,7 +12,9 @@ import { erstelleKi } from '../spiel/code/ki/schnittstelle.js';
 const lies = async (pfad) => JSON.parse(await readFile(new URL(`../spiel/inhalte/${pfad}`, import.meta.url), 'utf8'));
 const regeln = await lies('regeln.json');
 const alle = await Promise.all(AUFTRAEGE.map((id) => lies(`de/besuche/${id}.json`)));
-const [gerber, meier] = alle;
+const nachId = (id) => alle.find((a) => a.id === id);
+const gerber = nachId('gerber');
+const meier = nachId('meier');
 const fragen = (await lies('de/umfrage.json')).fragen;
 const konzepteVon = (auftrag) => auftrag.runden.filter((r) => r.konzept).map((r) => r.konzept);
 

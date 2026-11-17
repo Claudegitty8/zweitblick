@@ -25,6 +25,11 @@ In Worten der Spielerinnen und Spieler. Vor jeder Änderung abgleichen: Nichts d
 - Nach jedem Thema sehe ich «So ist es in echt»: die Schritte in der echten Claude-App.
 - Frühere Themen kommen als kurze Wiederholung wieder.
 
+## Die Akte (Besuch 2)
+- Ich lerne, aus allen Berichten eine Tabelle machen zu lassen: Datum, Wert, Normbereich, Quelle.
+- Ich lerne, neue Berichte nachzutragen, ohne dass alte Zeilen verändert werden.
+- Ich lerne, Verläufe als Grafik auslesen zu lassen, Auffälliges zu markieren und Fragen für den Arzt mitzunehmen. Eine Diagnose gibt es nicht.
+
 ## Spickzettel
 - Für jedes gelernte Thema eine Karte mit den echten Schritten, beim Foto-Kapitel mit Bildern.
 - Ich kann ihn drucken.

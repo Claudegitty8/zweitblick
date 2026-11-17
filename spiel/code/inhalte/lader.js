@@ -6,7 +6,7 @@
 const BASIS = new URL('../../inhalte/', import.meta.url);
 
 // Die Besuche in Spielreihenfolge. Neue Besuche werden hier eingetragen.
-export const AUFTRAEGE = ['gerber', 'meier', 'brunner-iphone', 'brunner-ordner', 'keller', 'rossi', 'hofmann'];
+export const AUFTRAEGE = ['gerber', 'baumann', 'meier', 'brunner-iphone', 'brunner-ordner', 'keller', 'rossi', 'hofmann'];
 
 // Platzhalter für Länderwerte: zwei eckige Klammern um einen Namen aus Buchstaben.
 export const LAND_PLATZHALTER = /\[\[([a-zA-Z]+)\]\]/g;

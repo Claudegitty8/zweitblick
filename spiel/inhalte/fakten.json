@@ -203,6 +203,18 @@
       "aussage": "GitHub ist im EU-US und im Swiss-US Data Privacy Framework als aktiv eingetragen.",
       "quelle": "https://www.dataprivacyframework.gov/participant/6174",
       "geprueft": "2026-11-17"
+    },
+    {
+      "id": "dateien-erstellen",
+      "aussage": "Claude kann Excel-Tabellen, Word-Dokumente und PDFs erstellen, für alle Pläne, im Web, am Computer und am Handy. Am Handy einschalten unter Einstellungen, «Capabilities».",
+      "quelle": "https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude",
+      "geprueft": "2026-11-17"
+    },
+    {
+      "id": "grafiken",
+      "aussage": "Claude kann Daten auswerten und Grafiken als Bilddateien erstellen.",
+      "quelle": "https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude",
+      "geprueft": "2026-11-17"
     }
   ]
 }

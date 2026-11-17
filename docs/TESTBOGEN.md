@@ -20,6 +20,8 @@ Stand der Karten «So ist es in echt»: November 2026, nicht am Gerät geprüft.
 | A10 | Inkognito-Chat starten (wo ist der Knopf?) | | |
 | A11 | Notizen, neue Notiz, Büroklammer oder Kamera, «Dokumente scannen» | | |
 | A12 | Ist die Oberfläche der App auf Deutsch? | | |
+| A13 | Einstellungen, «Funktionen» (oder «Capabilities»): Schalter fürs Erstellen von Dateien. Wie heisst er auf Deutsch? | | |
+| A14 | Eine Excel-Tabelle von Claude antippen und in der App Dateien sichern: geht das so? | | |
 
 ## B. Testrunde mit älteren Menschen
 

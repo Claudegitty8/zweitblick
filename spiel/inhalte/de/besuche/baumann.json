@@ -1,0 +1,1808 @@
+{
+  "id": "baumann",
+  "kapitel": 2,
+  "gast": "Herr Baumann, 80",
+  "thema": "Eine Akte für alle Werte",
+  "wunsch": "Ich habe eine Schachtel voller Laborberichte und verliere den Überblick. Wie haben sich meine Werte verändert?",
+  "dank": "Jetzt sehe ich auf einen Blick, wie sich meine Werte verändern. Das nehme ich zum Arzt mit.",
+  "danach": "Herr Baumann bringt beim nächsten Arzttermin seine Grafik mit. Morgen kommt Frau Meier mit einem Stapel Fotos.",
+  "lexikon": [
+    "tabelle"
+  ],
+  "runden": [
+    {
+      "id": "r1",
+      "art": "konzept",
+      "konzept": "akte-anlegen",
+      "probieren": {
+        "aufgabe": "ak-a",
+        "nurTeile": [
+          "berichte",
+          "tabelle"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "ak-a"
+      },
+      "luecke": {
+        "aufgabe": "ak-b",
+        "vorgabe": [
+          "pdfs",
+          "tabelle"
+        ]
+      },
+      "frei": [
+        "ak-c",
+        "ak-d",
+        "ak-e",
+        "ak-f"
+      ]
+    },
+    {
+      "id": "r2",
+      "art": "konzept",
+      "konzept": "akte-nachfuehren",
+      "probieren": {
+        "aufgabe": "an-a",
+        "nurTeile": [
+          "neu",
+          "ergaenzen"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "an-a"
+      },
+      "luecke": {
+        "aufgabe": "an-b",
+        "vorgabe": [
+          "akte",
+          "neu",
+          "ergaenzen"
+        ]
+      },
+      "frei": [
+        "an-c",
+        "an-d",
+        "an-e",
+        "an-f"
+      ]
+    },
+    {
+      "id": "r3",
+      "art": "konzept",
+      "konzept": "trends",
+      "probieren": {
+        "aufgabe": "tr-a",
+        "nurTeile": [
+          "akte",
+          "verlauf"
+        ]
+      },
+      "beispiel": {
+        "aufgabe": "tr-a"
+      },
+      "luecke": {
+        "aufgabe": "tr-b",
+        "vorgabe": [
+          "akte",
+          "verlauf"
+        ]
+      },
+      "frei": [
+        "tr-c",
+        "tr-d",
+        "tr-e",
+        "tr-f"
+      ]
+    },
+    {
+      "id": "r4",
+      "art": "misch",
+      "titel": "Alles zusammen",
+      "frei": [
+        "m-a"
+      ]
+    }
+  ],
+  "aufgaben": {
+    "ak-a": {
+      "wunsch": "Ich habe eine Schachtel voller Laborberichte. Kann Lupe mir eine Übersicht machen?",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "berichte",
+          "art": "anhang",
+          "text": "Fünf Laborberichte von 2023 bis 2026 (Fotos)"
+        },
+        {
+          "id": "nummer",
+          "art": "angaben",
+          "text": "Meine [[nummer]]: [[nummerBeispiel]]"
+        },
+        {
+          "id": "tabelle",
+          "art": "frage",
+          "text": "Mach daraus eine Tabelle, eine Zeile pro Wert."
+        },
+        {
+          "id": "datum",
+          "art": "wie",
+          "text": "Mit einer Spalte für das Datum."
+        },
+        {
+          "id": "norm",
+          "art": "wie",
+          "text": "Mit Einheit und Normbereich."
+        },
+        {
+          "id": "quelle",
+          "art": "wie",
+          "text": "Mit einer Spalte, aus welchem Bericht der Wert stammt."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "nummer"
+            ]
+          },
+          "fehlbild": "nummer"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "berichte"
+            ]
+          },
+          "fehlbild": "keine"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "tabelle"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "datum"
+            ]
+          },
+          "fehlbild": "keinDatum"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "quelle"
+            ]
+          },
+          "fehlbild": "keineQuelle"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "norm"
+            ]
+          },
+          "fehlbild": "keinNorm"
+        }
+      ],
+      "fehlbilder": {
+        "nummer": {
+          "texte": [
+            "Erledigt. Deine [[nummer]] steht jetzt in allen 38 Zeilen.",
+            "Die Akte ist fertig, mit deiner [[nummer]] ganz oben. Die braucht es zwar nicht, aber bitte."
+          ],
+          "hinweis": "Die [[nummer]] braucht die Akte nicht. Nur Nötiges hinein."
+        },
+        "keine": {
+          "texte": [
+            "Gern mache ich eine Tabelle. Aber wovon? Ich sehe keinen Bericht.",
+            "Eine Tabelle, schön. Ich habe nur nichts, was ich eintragen könnte."
+          ],
+          "hinweis": "Ohne die Berichte hat Lupe nichts für die Akte."
+        },
+        "keineFrage": {
+          "texte": [
+            "Ich sehe die Berichte. Soll ich sie zusammenfassen? Ich erzähle einfach von jedem, Seite für Seite.",
+            "Viele Berichte! Was soll ich damit tun? Ich fange beim ersten an und erkläre alles."
+          ],
+          "hinweis": "Sag Lupe, dass du eine Tabelle willst, eine Zeile pro Wert."
+        },
+        "keinDatum": {
+          "texte": [
+            "Hier die Tabelle: Hämoglobin 13,1 · 12,4 · 11,8 · 12,9 · 11,2. Welcher Wert ist der neuste? Das steht nicht drin.",
+            "Alle Werte untereinander, ohne Datum. Ob es besser oder schlechter wird, sieht man so nicht."
+          ],
+          "hinweis": "Ohne Datum gibt es keinen Verlauf."
+        },
+        "keineQuelle": {
+          "texte": [
+            "Die Tabelle ist fertig. Steht da 11,2 oder 17,2? Aus welchem Bericht der Wert kommt, weiss ich nicht mehr.",
+            "Fertig. Aber welche Zeile stammt aus welchem Bericht? Nachprüfen geht so nicht."
+          ],
+          "hinweis": "Mit der Quelle kannst du jeden Wert im Original nachprüfen."
+        },
+        "keinNorm": {
+          "texte": [
+            "Hämoglobin 11,2. Ist das viel oder wenig? Einheit und Normbereich habe ich weggelassen.",
+            "Nur Zahlen, ohne Einheit und Normbereich. Ob ein Wert auffällt, sieht man so nicht."
+          ],
+          "hinweis": "Erst mit Einheit und Normbereich sieht man, ob ein Wert auffällt."
+        }
+      },
+      "erfolg": [
+        "Hier ist deine Akte: 38 Zeilen, je mit Datum, Wert, Einheit, Normbereich und Bericht. Prüf ein paar Zahlen mit den Originalen.",
+        "Fertig: eine Tabelle mit allen Werten von 2023 bis 2026. Jede Zeile sagt, aus welchem Bericht sie stammt."
+      ],
+      "loesung": [
+        "berichte",
+        "tabelle",
+        "datum",
+        "norm",
+        "quelle"
+      ]
+    },
+    "ak-b": {
+      "wunsch": "Meine Tochter hat mir alle Berichte als PDF geschickt. Wie wird daraus eine Akte?",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "pdfs",
+          "art": "anhang",
+          "text": "Sieben Berichte als PDF (aus der E-Mail)"
+        },
+        {
+          "id": "tabelle",
+          "art": "frage",
+          "text": "Mach daraus eine Tabelle, eine Zeile pro Wert."
+        },
+        {
+          "id": "alles",
+          "art": "frage",
+          "text": "Erklär mir jeden Bericht ausführlich."
+        },
+        {
+          "id": "datum",
+          "art": "wie",
+          "text": "Mit einer Spalte für das Datum."
+        },
+        {
+          "id": "norm",
+          "art": "wie",
+          "text": "Mit Einheit und Normbereich."
+        },
+        {
+          "id": "quelle",
+          "art": "wie",
+          "text": "Mit einer Spalte, aus welchem Bericht der Wert stammt."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "alles"
+            ]
+          },
+          "fehlbild": "zuviel"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "pdfs"
+            ]
+          },
+          "fehlbild": "keine"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "tabelle"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "datum"
+            ]
+          },
+          "fehlbild": "keinDatum"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "quelle"
+            ]
+          },
+          "fehlbild": "keineQuelle"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "norm"
+            ]
+          },
+          "fehlbild": "keinNorm"
+        }
+      ],
+      "fehlbilder": {
+        "zuviel": {
+          "texte": [
+            "Gern! Bericht 1 von 7: Die Leukozyten sind weisse Blutkörperchen, die … (Lupe schreibt sieben lange Aufsätze.)",
+            "Ich erkläre zuerst alle sieben Berichte ausführlich. Die Tabelle kommt danach, irgendwann."
+          ],
+          "hinweis": "Für die Akte brauchst du eine Tabelle, keine langen Erklärungen."
+        },
+        "keine": {
+          "texte": [
+            "Gern mache ich eine Tabelle. Aber wovon? Ich sehe keinen Bericht.",
+            "Eine Tabelle, schön. Ich habe nur nichts, was ich eintragen könnte."
+          ],
+          "hinweis": "Ohne die Berichte hat Lupe nichts für die Akte."
+        },
+        "keineFrage": {
+          "texte": [
+            "Ich sehe die Berichte. Soll ich sie zusammenfassen? Ich erzähle einfach von jedem, Seite für Seite.",
+            "Viele Berichte! Was soll ich damit tun? Ich fange beim ersten an und erkläre alles."
+          ],
+          "hinweis": "Sag Lupe, dass du eine Tabelle willst, eine Zeile pro Wert."
+        },
+        "keinDatum": {
+          "texte": [
+            "Hier die Tabelle: Hämoglobin 13,1 · 12,4 · 11,8 · 12,9 · 11,2. Welcher Wert ist der neuste? Das steht nicht drin.",
+            "Alle Werte untereinander, ohne Datum. Ob es besser oder schlechter wird, sieht man so nicht."
+          ],
+          "hinweis": "Ohne Datum gibt es keinen Verlauf."
+        },
+        "keineQuelle": {
+          "texte": [
+            "Die Tabelle ist fertig. Steht da 11,2 oder 17,2? Aus welchem Bericht der Wert kommt, weiss ich nicht mehr.",
+            "Fertig. Aber welche Zeile stammt aus welchem Bericht? Nachprüfen geht so nicht."
+          ],
+          "hinweis": "Mit der Quelle kannst du jeden Wert im Original nachprüfen."
+        },
+        "keinNorm": {
+          "texte": [
+            "Hämoglobin 11,2. Ist das viel oder wenig? Einheit und Normbereich habe ich weggelassen.",
+            "Nur Zahlen, ohne Einheit und Normbereich. Ob ein Wert auffällt, sieht man so nicht."
+          ],
+          "hinweis": "Erst mit Einheit und Normbereich sieht man, ob ein Wert auffällt."
+        }
+      },
+      "erfolg": [
+        "Fertig: 52 Zeilen aus sieben Berichten, mit Datum, Wert, Einheit, Normbereich und Quelle. Vergleich ein paar Zahlen mit den PDFs.",
+        "Deine Akte ist bereit. Jede Zeile hat Datum, Wert, Normbereich und den Namen des Berichts."
+      ],
+      "loesung": [
+        "pdfs",
+        "tabelle",
+        "datum",
+        "norm",
+        "quelle"
+      ]
+    },
+    "ak-c": {
+      "wunsch": "Ich habe Werte vom Hausarzt und vom Spital. Passt das in eine Akte?",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "haus",
+          "art": "anhang",
+          "text": "Drei Berichte vom Hausarzt (Fotos)"
+        },
+        {
+          "id": "spital",
+          "art": "anhang",
+          "text": "Zwei Berichte vom Spital (PDF)"
+        },
+        {
+          "id": "tabelle",
+          "art": "frage",
+          "text": "Mach daraus eine gemeinsame Tabelle, eine Zeile pro Wert."
+        },
+        {
+          "id": "runden",
+          "art": "wie",
+          "text": "Runde alle Werte schön auf ganze Zahlen."
+        },
+        {
+          "id": "datum",
+          "art": "wie",
+          "text": "Mit einer Spalte für das Datum."
+        },
+        {
+          "id": "quelle",
+          "art": "wie",
+          "text": "Mit einer Spalte, aus welchem Bericht der Wert stammt."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "runden"
+            ]
+          },
+          "fehlbild": "gerundet"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "haus"
+            ]
+          },
+          "fehlbild": "nurSpital"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "spital"
+            ]
+          },
+          "fehlbild": "nurHaus"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "tabelle"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "datum"
+            ]
+          },
+          "fehlbild": "keinDatum"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "quelle"
+            ]
+          },
+          "fehlbild": "keineQuelle"
+        }
+      ],
+      "fehlbilder": {
+        "gerundet": {
+          "texte": [
+            "Erledigt, alles schön rund: Hämoglobin 11 statt 11,2, Kalium 4 statt 4,4. (Kleine Unterschiede sind jetzt weg.)",
+            "Fertig gerundet. Aus 5,4 und 5,6 wurden beide 5. Ob sich etwas verändert hat, sieht man nicht mehr."
+          ],
+          "hinweis": "Werte genau übernehmen. Gerundet gehen kleine, aber wichtige Unterschiede verloren."
+        },
+        "nurSpital": {
+          "texte": [
+            "Die Akte hat nur die Werte vom Spital. Vom Hausarzt habe ich nichts bekommen.",
+            "Zwei Berichte, eine kurze Tabelle. Fehlt da nicht etwas?"
+          ],
+          "hinweis": "In die Akte gehören alle Berichte, vom Hausarzt und vom Spital."
+        },
+        "nurHaus": {
+          "texte": [
+            "Die Akte hat nur die Werte vom Hausarzt. Die Spitalberichte fehlen.",
+            "Drei Berichte, eine Tabelle. Die Werte aus dem Spital kenne ich nicht."
+          ],
+          "hinweis": "In die Akte gehören alle Berichte, vom Hausarzt und vom Spital."
+        },
+        "keineFrage": {
+          "texte": [
+            "Ich sehe die Berichte. Soll ich sie zusammenfassen? Ich erzähle einfach von jedem, Seite für Seite.",
+            "Viele Berichte! Was soll ich damit tun? Ich fange beim ersten an und erkläre alles."
+          ],
+          "hinweis": "Sag Lupe, dass du eine Tabelle willst, eine Zeile pro Wert."
+        },
+        "keinDatum": {
+          "texte": [
+            "Hier die Tabelle: Hämoglobin 13,1 · 12,4 · 11,8 · 12,9 · 11,2. Welcher Wert ist der neuste? Das steht nicht drin.",
+            "Alle Werte untereinander, ohne Datum. Ob es besser oder schlechter wird, sieht man so nicht."
+          ],
+          "hinweis": "Ohne Datum gibt es keinen Verlauf."
+        },
+        "keineQuelle": {
+          "texte": [
+            "Die Tabelle ist fertig. Steht da 11,2 oder 17,2? Aus welchem Bericht der Wert kommt, weiss ich nicht mehr.",
+            "Fertig. Aber welche Zeile stammt aus welchem Bericht? Nachprüfen geht so nicht."
+          ],
+          "hinweis": "Mit der Quelle kannst du jeden Wert im Original nachprüfen."
+        }
+      },
+      "erfolg": [
+        "Fertig: Werte von Hausarzt und Spital in einer Tabelle. Die Spalte Quelle zeigt, woher jeder Wert stammt. Labore können verschiedene Normbereiche haben.",
+        "Eine gemeinsame Akte, genau übernommen. Wo Hausarzt und Spital verschieden messen, steht der Normbereich je Zeile."
+      ],
+      "loesung": [
+        "haus",
+        "spital",
+        "tabelle",
+        "datum",
+        "quelle"
+      ]
+    },
+    "ak-d": {
+      "typ": "wahl",
+      "wunsch": "Lupes Tabelle sieht ordentlich aus. Fehlt da noch etwas?",
+      "frage": "Lupes Tabelle hat die Spalten Wert, Einheit, Normbereich und Bericht. Was fehlt für einen Verlauf?",
+      "lupe": "Das Datum. Erst damit sieht man, ob ein Wert steigt oder fällt.",
+      "optionen": [
+        {
+          "id": "datum",
+          "text": "Das Datum jeder Messung",
+          "hinweis": "Genau. Ohne Datum gibt es keinen Verlauf.",
+          "richtig": true
+        },
+        {
+          "id": "farbe",
+          "text": "Eine schöne Farbe",
+          "hinweis": "Schön, aber für den Verlauf egal."
+        },
+        {
+          "id": "arzt",
+          "text": "Der Name der Ärztin",
+          "hinweis": "Steht im Bericht. Für den Verlauf fehlt etwas anderes."
+        },
+        {
+          "id": "wetter",
+          "text": "Das Wetter am Messtag",
+          "hinweis": "Das braucht die Akte nicht."
+        }
+      ],
+      "loesung": [
+        "datum"
+      ]
+    },
+    "ak-e": {
+      "typ": "wahl",
+      "wunsch": "Was schreibe ich alles in meine Akte?",
+      "frage": "Welche Angabe gehört nicht in die Akte?",
+      "lupe": "Die [[nummer]]. Für Werte und Verläufe braucht Lupe sie nicht.",
+      "optionen": [
+        {
+          "id": "nummer",
+          "text": "Meine [[nummer]]",
+          "hinweis": "Richtig. Die gehört nicht hinein. Nur Nötiges teilen.",
+          "richtig": true
+        },
+        {
+          "id": "datum",
+          "text": "Das Datum der Messung",
+          "hinweis": "Das gehört hinein, sonst gibt es keinen Verlauf."
+        },
+        {
+          "id": "wert",
+          "text": "Der Wert mit Einheit",
+          "hinweis": "Das ist das Wichtigste in der Akte."
+        },
+        {
+          "id": "quelle",
+          "text": "Aus welchem Bericht der Wert stammt",
+          "hinweis": "Das gehört hinein, damit du nachprüfen kannst."
+        }
+      ],
+      "loesung": [
+        "nummer"
+      ]
+    },
+    "ak-f": {
+      "typ": "tippen",
+      "wunsch": "Lupe sagt, sie darf keine Dateien machen. Was nun?",
+      "frage": "Damit Claude eine Tabelle erstellen darf, musst du etwas einschalten. Was tippst du an?",
+      "bildschirm": {
+        "titel": "Einstellungen",
+        "zeilen": [
+          "Dein Konto"
+        ]
+      },
+      "flaechen": [
+        {
+          "id": "profil",
+          "text": "Profil",
+          "hinweis": "Dort stehen Name und Konto. Mit Dateien hat das nichts zu tun.",
+          "folge": "Du siehst deinen Namen und deine E-Mail-Adresse. Eine Tabelle gibt es so nicht."
+        },
+        {
+          "id": "funktionen",
+          "text": "Funktionen",
+          "hinweis": "Genau. Dort schaltest du das Erstellen von Dateien ein.",
+          "folge": "Du siehst den Schalter «Dateien erstellen». Du schaltest ihn ein. Jetzt kann Claude Tabellen machen.",
+          "richtig": true,
+          "zusatz": "Was Claude für dich tun darf"
+        },
+        {
+          "id": "aussehen",
+          "text": "Aussehen",
+          "hinweis": "Hell oder dunkel. Für Tabellen egal.",
+          "folge": "Die App wird dunkel. Eine Tabelle gibt es trotzdem nicht."
+        },
+        {
+          "id": "abmelden",
+          "text": "Abmelden",
+          "hinweis": "Damit meldest du dich ab. Das willst du nicht.",
+          "folge": "Du bist abgemeldet und musst dich neu anmelden. Die Tabelle ist noch immer nicht erlaubt."
+        }
+      ],
+      "loesung": [
+        "funktionen"
+      ]
+    },
+    "an-a": {
+      "wunsch": "Ich habe einen neuen Laborbericht bekommen. Wie kommt er in meine Akte?",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "akte",
+          "art": "anhang",
+          "text": "Gesundheitsakte.xlsx (bisher 38 Zeilen)"
+        },
+        {
+          "id": "neu",
+          "art": "anhang",
+          "text": "Laborbericht vom 3. November 2026 (Foto)"
+        },
+        {
+          "id": "ergaenzen",
+          "art": "frage",
+          "text": "Trag die neuen Werte in die Akte ein."
+        },
+        {
+          "id": "schoen",
+          "art": "wie",
+          "text": "Mach die Tabelle schöner und ordne alles neu."
+        },
+        {
+          "id": "nichts",
+          "art": "wie",
+          "text": "Ändere sonst nichts."
+        },
+        {
+          "id": "ganz",
+          "art": "wie",
+          "text": "Gib mir die ganze Akte zurück."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "schoen"
+            ]
+          },
+          "fehlbild": "umgebaut"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "akte"
+            ]
+          },
+          "fehlbild": "vonVorn"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "neu"
+            ]
+          },
+          "fehlbild": "keinNeuer"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "ergaenzen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "nichts"
+            ]
+          },
+          "fehlbild": "geaendert"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "ganz"
+            ]
+          },
+          "fehlbild": "nurNeu"
+        }
+      ],
+      "fehlbilder": {
+        "umgebaut": {
+          "texte": [
+            "Ich habe alles neu geordnet, nach Farben! Wo dein Hämoglobin jetzt steht? Irgendwo weiter unten.",
+            "Die Akte ist jetzt schöner, mit neuen Spalten. Leider sieht sie ganz anders aus als vorher."
+          ],
+          "hinweis": "Wer umbauen lässt, verliert den Überblick. Nur eintragen lassen."
+        },
+        "vonVorn": {
+          "texte": [
+            "Hier ist deine Akte: 6 Zeilen vom 3. November. (Die 38 alten Zeilen fehlen. Lupe hatte die alte Akte nicht.)",
+            "Ich habe eine neue Akte angelegt, nur mit dem neuen Bericht. Die alten Werte kenne ich nicht."
+          ],
+          "hinweis": "Ohne die bisherige Akte fängt Lupe von vorn an."
+        },
+        "keinNeuer": {
+          "texte": [
+            "Ich sehe deine Akte. Was soll ich eintragen? Es ist kein neuer Bericht dabei.",
+            "Die Akte ist da, aber kein neuer Bericht. Ich habe nichts zum Eintragen."
+          ],
+          "hinweis": "Der neue Bericht fehlt."
+        },
+        "keineFrage": {
+          "texte": [
+            "Ich sehe deine Akte und einen neuen Bericht. Soll ich den Bericht erklären? Ich fange einfach mal an.",
+            "Akte und Bericht sind da. Was soll ich damit tun? Ich fasse mal den Bericht zusammen."
+          ],
+          "hinweis": "Sag Lupe, dass sie die neuen Werte eintragen soll."
+        },
+        "geaendert": {
+          "texte": [
+            "Eingetragen! Dabei habe ich alte Zeilen etwas aufgeräumt: drei Werte gerundet und die Spalten neu sortiert.",
+            "Fertig. Ich habe auch alte Zeilen verbessert. Hoffentlich stimmt noch alles."
+          ],
+          "hinweis": "Sag dazu: sonst nichts ändern. Sonst verändert Lupe auch alte Zeilen."
+        },
+        "nurNeu": {
+          "texte": [
+            "Hier sind die 6 neuen Zeilen. (Die übrige Akte hast du nicht verlangt.)",
+            "Ich schicke dir nur die neuen Werte. Zusammenfügen musst du selbst."
+          ],
+          "hinweis": "Ohne «ganze Akte zurück» bekommst du nur ein Stück. Dann hast du zwei halbe Akten."
+        }
+      },
+      "erfolg": [
+        "Eingetragen: 6 neue Zeilen vom 3. November. Die 38 alten Zeilen sind unverändert. Hier die ganze Akte mit 44 Zeilen.",
+        "Fertig. Alte Zeilen unverändert, 6 neue Werte unten angefügt. Vergleich die neuen Zeilen mit dem Bericht."
+      ],
+      "loesung": [
+        "akte",
+        "neu",
+        "ergaenzen",
+        "nichts",
+        "ganz"
+      ]
+    },
+    "an-b": {
+      "wunsch": "Ich war im Spital und habe einen Austrittsbericht. Soll der auch in die Akte?",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "akte",
+          "art": "anhang",
+          "text": "Gesundheitsakte.xlsx (bisher 44 Zeilen)"
+        },
+        {
+          "id": "neu",
+          "art": "anhang",
+          "text": "Austrittsbericht vom Spital (PDF)"
+        },
+        {
+          "id": "ergaenzen",
+          "art": "frage",
+          "text": "Trag die neuen Werte in die Akte ein."
+        },
+        {
+          "id": "nichts",
+          "art": "wie",
+          "text": "Ändere sonst nichts."
+        },
+        {
+          "id": "ganz",
+          "art": "wie",
+          "text": "Gib mir die ganze Akte zurück."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "fehlt": [
+              "akte"
+            ]
+          },
+          "fehlbild": "vonVorn"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "neu"
+            ]
+          },
+          "fehlbild": "keinNeuer"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "ergaenzen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "nichts"
+            ]
+          },
+          "fehlbild": "geaendert"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "ganz"
+            ]
+          },
+          "fehlbild": "nurNeu"
+        }
+      ],
+      "fehlbilder": {
+        "vonVorn": {
+          "texte": [
+            "Hier ist deine Akte: 6 Zeilen vom 3. November. (Die 38 alten Zeilen fehlen. Lupe hatte die alte Akte nicht.)",
+            "Ich habe eine neue Akte angelegt, nur mit dem neuen Bericht. Die alten Werte kenne ich nicht."
+          ],
+          "hinweis": "Ohne die bisherige Akte fängt Lupe von vorn an."
+        },
+        "keinNeuer": {
+          "texte": [
+            "Ich sehe deine Akte. Was soll ich eintragen? Es ist kein neuer Bericht dabei.",
+            "Die Akte ist da, aber kein neuer Bericht. Ich habe nichts zum Eintragen."
+          ],
+          "hinweis": "Der neue Bericht fehlt."
+        },
+        "keineFrage": {
+          "texte": [
+            "Ich sehe deine Akte und einen neuen Bericht. Soll ich den Bericht erklären? Ich fange einfach mal an.",
+            "Akte und Bericht sind da. Was soll ich damit tun? Ich fasse mal den Bericht zusammen."
+          ],
+          "hinweis": "Sag Lupe, dass sie die neuen Werte eintragen soll."
+        },
+        "geaendert": {
+          "texte": [
+            "Eingetragen! Dabei habe ich alte Zeilen etwas aufgeräumt: drei Werte gerundet und die Spalten neu sortiert.",
+            "Fertig. Ich habe auch alte Zeilen verbessert. Hoffentlich stimmt noch alles."
+          ],
+          "hinweis": "Sag dazu: sonst nichts ändern. Sonst verändert Lupe auch alte Zeilen."
+        },
+        "nurNeu": {
+          "texte": [
+            "Hier sind die 6 neuen Zeilen. (Die übrige Akte hast du nicht verlangt.)",
+            "Ich schicke dir nur die neuen Werte. Zusammenfügen musst du selbst."
+          ],
+          "hinweis": "Ohne «ganze Akte zurück» bekommst du nur ein Stück. Dann hast du zwei halbe Akten."
+        }
+      },
+      "erfolg": [
+        "Eingetragen: 9 Werte aus dem Spital, mit Datum und Quelle «Spital». Alles andere unverändert. Hier die ganze Akte.",
+        "Fertig, 53 Zeilen. Die neuen stehen unten, die alten sind genau wie vorher."
+      ],
+      "loesung": [
+        "akte",
+        "neu",
+        "ergaenzen",
+        "nichts",
+        "ganz"
+      ]
+    },
+    "an-c": {
+      "wunsch": "Ich habe zwei Akten-Dateien gefunden. Welche schicke ich mit?",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "akte",
+          "art": "anhang",
+          "text": "Gesundheitsakte.xlsx (neuste, 53 Zeilen)"
+        },
+        {
+          "id": "alt",
+          "art": "anhang",
+          "text": "Gesundheitsakte_alt.xlsx (vom letzten Jahr)"
+        },
+        {
+          "id": "neu",
+          "art": "anhang",
+          "text": "Blutdruckliste November 2026 (Foto)"
+        },
+        {
+          "id": "ergaenzen",
+          "art": "frage",
+          "text": "Trag die neuen Werte in die Akte ein."
+        },
+        {
+          "id": "nichts",
+          "art": "wie",
+          "text": "Ändere sonst nichts."
+        },
+        {
+          "id": "ganz",
+          "art": "wie",
+          "text": "Gib mir die ganze Akte zurück."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "alt"
+            ]
+          },
+          "fehlbild": "zweiAkten"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "akte"
+            ]
+          },
+          "fehlbild": "vonVorn"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "neu"
+            ]
+          },
+          "fehlbild": "keinNeuer"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "ergaenzen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "nichts"
+            ]
+          },
+          "fehlbild": "geaendert"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "ganz"
+            ]
+          },
+          "fehlbild": "nurNeu"
+        }
+      ],
+      "fehlbilder": {
+        "zweiAkten": {
+          "texte": [
+            "Zwei Akten! Welche gilt? Ich mische beide. Manche Werte stehen jetzt doppelt drin.",
+            "Ich habe die alte Akte genommen. (Die neusten Zeilen sind damit verschwunden.)"
+          ],
+          "hinweis": "Immer nur die neuste Akte anhängen. Die alte verwirrt Lupe."
+        },
+        "vonVorn": {
+          "texte": [
+            "Hier ist deine Akte: 6 Zeilen vom 3. November. (Die 38 alten Zeilen fehlen. Lupe hatte die alte Akte nicht.)",
+            "Ich habe eine neue Akte angelegt, nur mit dem neuen Bericht. Die alten Werte kenne ich nicht."
+          ],
+          "hinweis": "Ohne die bisherige Akte fängt Lupe von vorn an."
+        },
+        "keinNeuer": {
+          "texte": [
+            "Ich sehe deine Akte. Was soll ich eintragen? Es ist kein neuer Bericht dabei.",
+            "Die Akte ist da, aber kein neuer Bericht. Ich habe nichts zum Eintragen."
+          ],
+          "hinweis": "Der neue Bericht fehlt."
+        },
+        "keineFrage": {
+          "texte": [
+            "Ich sehe deine Akte und einen neuen Bericht. Soll ich den Bericht erklären? Ich fange einfach mal an.",
+            "Akte und Bericht sind da. Was soll ich damit tun? Ich fasse mal den Bericht zusammen."
+          ],
+          "hinweis": "Sag Lupe, dass sie die neuen Werte eintragen soll."
+        },
+        "geaendert": {
+          "texte": [
+            "Eingetragen! Dabei habe ich alte Zeilen etwas aufgeräumt: drei Werte gerundet und die Spalten neu sortiert.",
+            "Fertig. Ich habe auch alte Zeilen verbessert. Hoffentlich stimmt noch alles."
+          ],
+          "hinweis": "Sag dazu: sonst nichts ändern. Sonst verändert Lupe auch alte Zeilen."
+        },
+        "nurNeu": {
+          "texte": [
+            "Hier sind die 6 neuen Zeilen. (Die übrige Akte hast du nicht verlangt.)",
+            "Ich schicke dir nur die neuen Werte. Zusammenfügen musst du selbst."
+          ],
+          "hinweis": "Ohne «ganze Akte zurück» bekommst du nur ein Stück. Dann hast du zwei halbe Akten."
+        }
+      },
+      "erfolg": [
+        "Eingetragen: 30 Blutdruckwerte vom November. Alles andere unverändert. Hier die ganze Akte mit 83 Zeilen.",
+        "Fertig. Die Blutdruckliste ist unten angefügt, mit Datum. Sichere die neue Akte und leg die alte weg."
+      ],
+      "loesung": [
+        "akte",
+        "neu",
+        "ergaenzen",
+        "nichts",
+        "ganz"
+      ]
+    },
+    "an-d": {
+      "typ": "reihe",
+      "wunsch": "In welcher Reihenfolge führe ich die Akte nach?",
+      "frage": "Bring die Schritte zum Nachführen in die richtige Reihenfolge.",
+      "schritte": [
+        {
+          "id": "pruefen",
+          "text": "Neue Zeilen mit dem Bericht vergleichen"
+        },
+        {
+          "id": "anhaengen",
+          "text": "Akte und neuen Bericht anhängen"
+        },
+        {
+          "id": "sichern",
+          "text": "Neue Akte sichern, alte weglegen"
+        },
+        {
+          "id": "chat",
+          "text": "Neuen Chat starten"
+        },
+        {
+          "id": "bitten",
+          "text": "Um Eintragen bitten, sonst nichts ändern"
+        }
+      ],
+      "loesung": [
+        "chat",
+        "anhaengen",
+        "bitten",
+        "pruefen",
+        "sichern"
+      ],
+      "lupe": "Neuer Chat, anhängen, bitten, prüfen, sichern. So bleibt die Akte vollständig und stimmt.",
+      "daneben": {
+        "texte": [
+          "Du hast gesichert, bevor du geprüft hast. Ein falscher Wert steht jetzt in der Akte.",
+          "Lupe soll eintragen, hat aber noch nichts bekommen. Erst anhängen, dann bitten."
+        ],
+        "hinweis": "Erst anhängen und bitten. Dann prüfen und erst zum Schluss sichern."
+      }
+    },
+    "an-e": {
+      "typ": "wahl",
+      "wunsch": "Lupe hat mir die neue Akte geschickt. Ist jetzt alles gut?",
+      "frage": "Lupe hat die neue Akte geschickt. Was prüfst du zuerst?",
+      "lupe": "Die neuen Zeilen mit dem Bericht. Auch Lupe kann sich verlesen.",
+      "optionen": [
+        {
+          "id": "vergleichen",
+          "text": "Die neuen Zeilen mit dem Bericht vergleichen",
+          "hinweis": "Genau. Prüfen statt glauben.",
+          "richtig": true
+        },
+        {
+          "id": "huebsch",
+          "text": "Ob die Tabelle hübsch aussieht",
+          "hinweis": "Schön ist gut, richtig ist wichtiger."
+        },
+        {
+          "id": "nichts",
+          "text": "Nichts, Lupe macht keine Fehler",
+          "hinweis": "Doch, auch Lupe kann sich verlesen."
+        },
+        {
+          "id": "zeilen",
+          "text": "Nur, wie viele Zeilen es sind",
+          "hinweis": "Die Zahl allein sagt nicht, ob die Werte stimmen."
+        }
+      ],
+      "loesung": [
+        "vergleichen"
+      ]
+    },
+    "an-f": {
+      "typ": "wahl",
+      "wunsch": "Jetzt habe ich zwei Dateien: die alte und die neue Akte. Was tue ich?",
+      "frage": "Nach dem Nachführen hast du eine alte und eine neue Akte. Was tust du?",
+      "lupe": "Die neue sichern und die alte löschen oder als «alt» ablegen. So gilt immer nur eine.",
+      "optionen": [
+        {
+          "id": "neue",
+          "text": "Die neue sichern, die alte löschen oder «alt» nennen",
+          "hinweis": "Genau. Es gilt immer nur eine Akte.",
+          "richtig": true
+        },
+        {
+          "id": "beide",
+          "text": "Beide behalten und abwechselnd anhängen",
+          "hinweis": "Dann weiss Lupe nie, welche gilt."
+        },
+        {
+          "id": "schicken",
+          "text": "Beide an Lupe schicken",
+          "hinweis": "Zwei Akten verwirren Lupe."
+        },
+        {
+          "id": "loeschen",
+          "text": "Die neue löschen",
+          "hinweis": "Dann sind die neuen Werte wieder weg."
+        }
+      ],
+      "loesung": [
+        "neue"
+      ]
+    },
+    "tr-a": {
+      "wunsch": "Meine Akte ist voll. Wird mein Hämoglobin besser oder schlechter?",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "akte",
+          "art": "anhang",
+          "text": "Gesundheitsakte.xlsx (2023 bis 2026)"
+        },
+        {
+          "id": "verlauf",
+          "art": "frage",
+          "text": "Wie hat sich jeder Wert verändert?"
+        },
+        {
+          "id": "gesund",
+          "art": "frage",
+          "text": "Bin ich gesund?"
+        },
+        {
+          "id": "grafik",
+          "art": "wie",
+          "text": "Zeig es als Grafik."
+        },
+        {
+          "id": "markieren",
+          "art": "wie",
+          "text": "Markiere Werte ausserhalb des Normbereichs."
+        },
+        {
+          "id": "fragen",
+          "art": "frage",
+          "text": "Mach mir drei kurze Fragen dazu für meinen Arzt."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "gesund"
+            ]
+          },
+          "fehlbild": "diagnose"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "akte"
+            ]
+          },
+          "fehlbild": "keineAkte"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "verlauf"
+            ]
+          },
+          "fehlbild": "keinVerlauf"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "grafik"
+            ]
+          },
+          "fehlbild": "keineGrafik"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "markieren"
+            ]
+          },
+          "fehlbild": "nichtsMarkiert"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "fragen"
+            ]
+          },
+          "fehlbild": "keineFragen"
+        }
+      ],
+      "fehlbilder": {
+        "diagnose": {
+          "texte": [
+            "Gesund? Das kann ich nicht beurteilen. Ich sehe nur Zahlen. Das sagt dir deine Ärztin oder dein Arzt.",
+            "Ob du gesund bist, entscheide nicht ich. Ich kann dir den Verlauf zeigen, für das Gespräch mit dem Arzt."
+          ],
+          "hinweis": "Lupe stellt keine Diagnose. Frag nach dem Verlauf, nicht nach einem Urteil."
+        },
+        "keineAkte": {
+          "texte": [
+            "Gern zeige ich dir den Verlauf. Von welchen Werten? Ich sehe keine Akte.",
+            "Eine Grafik! Nur wovon? Mir fehlen die Zahlen."
+          ],
+          "hinweis": "Ohne Akte hat Lupe keine Werte für einen Verlauf."
+        },
+        "keinVerlauf": {
+          "texte": [
+            "Ich sehe deine Akte. Soll ich sie vorlesen? Zeile 1: 12. März 2023, Hämoglobin 13,1 …",
+            "Eine schöne Akte. Was willst du wissen? Ich lese mal die erste Seite vor."
+          ],
+          "hinweis": "Frag Lupe, wie sich die Werte verändert haben."
+        },
+        "keineGrafik": {
+          "texte": [
+            "Hämoglobin: 13,1 · 12,4 · 11,8 · 12,9 · 11,2. Erkennst du den Verlauf?",
+            "Hier alle 14 Werte als lange Zahlenreihe. Steigt oder fällt etwas? Such selbst."
+          ],
+          "hinweis": "Eine Grafik zeigt auf einen Blick, ob ein Wert steigt oder fällt."
+        },
+        "nichtsMarkiert": {
+          "texte": [
+            "Hier die Grafik mit 14 Linien. Was davon wichtig ist? Das musst du selbst herausfinden.",
+            "Alle Werte, alle gleich wichtig. Welche ausserhalb des Normbereichs liegen, habe ich nicht markiert."
+          ],
+          "hinweis": "Lass Werte ausserhalb des Normbereichs markieren. Dann siehst du, was zu besprechen ist."
+        },
+        "keineFragen": {
+          "texte": [
+            "Hämoglobin sank von 13,1 auf 11,2. Was du damit machst? Viel Glück!",
+            "Hier die Grafik. Ob das etwas bedeutet, weiss ich nicht. Mach dir keine Sorgen. Oder doch."
+          ],
+          "hinweis": "Mach aus dem Verlauf Fragen für den Arzt. Dort gehört er hin."
+        }
+      },
+      "erfolg": [
+        "Grafik: Hämoglobin sinkt seit 2024 langsam, zuletzt 11,2, rot markiert. Fragen: Woran kann das liegen? Was sollten wir abklären? Worauf soll ich achten?",
+        "Rot markiert: Hämoglobin 11,2, unter dem Normbereich. Drei Fragen für den Arzt stehen darunter. Nimm sie mit den Original-Befunden mit."
+      ],
+      "loesung": [
+        "akte",
+        "verlauf",
+        "grafik",
+        "markieren",
+        "fragen"
+      ]
+    },
+    "tr-b": {
+      "wunsch": "Ich messe seit einem Jahr meinen Blutdruck. Was sagt der Verlauf?",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "akte",
+          "art": "anhang",
+          "text": "Gesundheitsakte.xlsx mit Blutdruckwerten seit 2025"
+        },
+        {
+          "id": "verlauf",
+          "art": "frage",
+          "text": "Wie hat sich mein Blutdruck verändert?"
+        },
+        {
+          "id": "grafik",
+          "art": "wie",
+          "text": "Zeig es als Grafik."
+        },
+        {
+          "id": "markieren",
+          "art": "wie",
+          "text": "Markiere Werte ausserhalb des Normbereichs."
+        },
+        {
+          "id": "fragen",
+          "art": "frage",
+          "text": "Mach mir drei kurze Fragen dazu für meinen Arzt."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "fehlt": [
+              "akte"
+            ]
+          },
+          "fehlbild": "keineAkte"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "verlauf"
+            ]
+          },
+          "fehlbild": "keinVerlauf"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "grafik"
+            ]
+          },
+          "fehlbild": "keineGrafik"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "markieren"
+            ]
+          },
+          "fehlbild": "nichtsMarkiert"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "fragen"
+            ]
+          },
+          "fehlbild": "keineFragen"
+        }
+      ],
+      "fehlbilder": {
+        "keineAkte": {
+          "texte": [
+            "Gern zeige ich dir den Verlauf. Von welchen Werten? Ich sehe keine Akte.",
+            "Eine Grafik! Nur wovon? Mir fehlen die Zahlen."
+          ],
+          "hinweis": "Ohne Akte hat Lupe keine Werte für einen Verlauf."
+        },
+        "keinVerlauf": {
+          "texte": [
+            "Ich sehe deine Akte. Soll ich sie vorlesen? Zeile 1: 12. März 2023, Hämoglobin 13,1 …",
+            "Eine schöne Akte. Was willst du wissen? Ich lese mal die erste Seite vor."
+          ],
+          "hinweis": "Frag Lupe, wie sich die Werte verändert haben."
+        },
+        "keineGrafik": {
+          "texte": [
+            "Hämoglobin: 13,1 · 12,4 · 11,8 · 12,9 · 11,2. Erkennst du den Verlauf?",
+            "Hier alle 14 Werte als lange Zahlenreihe. Steigt oder fällt etwas? Such selbst."
+          ],
+          "hinweis": "Eine Grafik zeigt auf einen Blick, ob ein Wert steigt oder fällt."
+        },
+        "nichtsMarkiert": {
+          "texte": [
+            "Hier die Grafik mit 14 Linien. Was davon wichtig ist? Das musst du selbst herausfinden.",
+            "Alle Werte, alle gleich wichtig. Welche ausserhalb des Normbereichs liegen, habe ich nicht markiert."
+          ],
+          "hinweis": "Lass Werte ausserhalb des Normbereichs markieren. Dann siehst du, was zu besprechen ist."
+        },
+        "keineFragen": {
+          "texte": [
+            "Hämoglobin sank von 13,1 auf 11,2. Was du damit machst? Viel Glück!",
+            "Hier die Grafik. Ob das etwas bedeutet, weiss ich nicht. Mach dir keine Sorgen. Oder doch."
+          ],
+          "hinweis": "Mach aus dem Verlauf Fragen für den Arzt. Dort gehört er hin."
+        }
+      },
+      "erfolg": [
+        "Grafik: Der Blutdruck lag im Frühling oft über 140, seit dem Sommer meist um 130. Markiert sind 12 hohe Werte. Fragen für den Arzt stehen darunter.",
+        "Seit dem Sommer sinkt dein Blutdruck etwas. Die hohen Werte im Frühling sind rot. Drei Fragen dazu für deinen Arzt."
+      ],
+      "loesung": [
+        "akte",
+        "verlauf",
+        "grafik",
+        "markieren",
+        "fragen"
+      ]
+    },
+    "tr-c": {
+      "wunsch": "Mein Cholesterin ist gestiegen. Kann ich die Tablette jetzt weglassen?",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "akte",
+          "art": "anhang",
+          "text": "Gesundheitsakte.xlsx (2023 bis 2026)"
+        },
+        {
+          "id": "verlauf",
+          "art": "frage",
+          "text": "Wie hat sich mein Cholesterin verändert?"
+        },
+        {
+          "id": "absetzen",
+          "art": "frage",
+          "text": "Soll ich meine Cholesterintablette absetzen?"
+        },
+        {
+          "id": "grafik",
+          "art": "wie",
+          "text": "Zeig es als Grafik."
+        },
+        {
+          "id": "markieren",
+          "art": "wie",
+          "text": "Markiere Werte ausserhalb des Normbereichs."
+        },
+        {
+          "id": "fragen",
+          "art": "frage",
+          "text": "Mach mir drei kurze Fragen dazu für meinen Arzt."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "absetzen"
+            ]
+          },
+          "fehlbild": "absetzen"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "akte"
+            ]
+          },
+          "fehlbild": "keineAkte"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "verlauf"
+            ]
+          },
+          "fehlbild": "keinVerlauf"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "grafik"
+            ]
+          },
+          "fehlbild": "keineGrafik"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "markieren"
+            ]
+          },
+          "fehlbild": "nichtsMarkiert"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "fragen"
+            ]
+          },
+          "fehlbild": "keineFragen"
+        }
+      ],
+      "fehlbilder": {
+        "absetzen": {
+          "texte": [
+            "Das kann und darf ich nicht entscheiden. Setz keine Tablette ohne deinen Arzt ab.",
+            "Bitte nichts absetzen. Nimm den Verlauf mit zum Arzt und frag dort."
+          ],
+          "hinweis": "Entscheide nie selbst. Der Verlauf gehört ins Gespräch mit dem Arzt."
+        },
+        "keineAkte": {
+          "texte": [
+            "Gern zeige ich dir den Verlauf. Von welchen Werten? Ich sehe keine Akte.",
+            "Eine Grafik! Nur wovon? Mir fehlen die Zahlen."
+          ],
+          "hinweis": "Ohne Akte hat Lupe keine Werte für einen Verlauf."
+        },
+        "keinVerlauf": {
+          "texte": [
+            "Ich sehe deine Akte. Soll ich sie vorlesen? Zeile 1: 12. März 2023, Hämoglobin 13,1 …",
+            "Eine schöne Akte. Was willst du wissen? Ich lese mal die erste Seite vor."
+          ],
+          "hinweis": "Frag Lupe, wie sich die Werte verändert haben."
+        },
+        "keineGrafik": {
+          "texte": [
+            "Hämoglobin: 13,1 · 12,4 · 11,8 · 12,9 · 11,2. Erkennst du den Verlauf?",
+            "Hier alle 14 Werte als lange Zahlenreihe. Steigt oder fällt etwas? Such selbst."
+          ],
+          "hinweis": "Eine Grafik zeigt auf einen Blick, ob ein Wert steigt oder fällt."
+        },
+        "nichtsMarkiert": {
+          "texte": [
+            "Hier die Grafik mit 14 Linien. Was davon wichtig ist? Das musst du selbst herausfinden.",
+            "Alle Werte, alle gleich wichtig. Welche ausserhalb des Normbereichs liegen, habe ich nicht markiert."
+          ],
+          "hinweis": "Lass Werte ausserhalb des Normbereichs markieren. Dann siehst du, was zu besprechen ist."
+        },
+        "keineFragen": {
+          "texte": [
+            "Hämoglobin sank von 13,1 auf 11,2. Was du damit machst? Viel Glück!",
+            "Hier die Grafik. Ob das etwas bedeutet, weiss ich nicht. Mach dir keine Sorgen. Oder doch."
+          ],
+          "hinweis": "Mach aus dem Verlauf Fragen für den Arzt. Dort gehört er hin."
+        }
+      },
+      "erfolg": [
+        "Grafik: Das Cholesterin stieg 2025 an, zuletzt rot markiert. Fragen: Woran kann das liegen? Passt die Behandlung noch? Was kann ich selbst beitragen?",
+        "Rot markiert sind die zwei letzten Werte. Drei Fragen für deinen Arzt stehen darunter. Ändere nichts, bevor du mit ihm gesprochen hast."
+      ],
+      "loesung": [
+        "akte",
+        "verlauf",
+        "grafik",
+        "markieren",
+        "fragen"
+      ]
+    },
+    "tr-d": {
+      "typ": "wahl",
+      "wunsch": "Die Grafik ist fertig. Was mache ich damit?",
+      "frage": "Lupes Grafik zeigt: Hämoglobin sank von 13,1 (2023) auf 11,2 (2026). Was nimmst du mit zum Arzt?",
+      "lupe": "Grafik, Fragen und die Original-Befunde. Der Arzt prüft und entscheidet.",
+      "optionen": [
+        {
+          "id": "alles",
+          "text": "Grafik, Fragen und die Original-Befunde",
+          "hinweis": "Genau. So kann der Arzt alles prüfen.",
+          "richtig": true
+        },
+        {
+          "id": "diagnose",
+          "text": "Lupes Diagnose",
+          "hinweis": "Lupe stellt keine Diagnose. Das macht der Arzt."
+        },
+        {
+          "id": "nichts",
+          "text": "Nichts, Lupe hat es ja erklärt",
+          "hinweis": "Der Verlauf gehört ins Gespräch mit dem Arzt."
+        },
+        {
+          "id": "tablette",
+          "text": "Eisentabletten aus der Apotheke, schon eingenommen",
+          "hinweis": "Nicht selbst behandeln. Erst mit dem Arzt sprechen."
+        }
+      ],
+      "loesung": [
+        "alles"
+      ]
+    },
+    "tr-e": {
+      "typ": "wahl",
+      "wunsch": "Lupe hat einen Wert rot markiert. Muss ich mir Sorgen machen?",
+      "frage": "In der Grafik ist ein Wert rot markiert. Was heisst das?",
+      "lupe": "Er liegt ausserhalb des Normbereichs. Das besprichst du mit dem Arzt. Es heisst nicht automatisch, dass du krank bist.",
+      "optionen": [
+        {
+          "id": "besprechen",
+          "text": "Er liegt ausserhalb des Normbereichs. Ich bespreche ihn mit dem Arzt.",
+          "hinweis": "Genau. Markiert heisst: anschauen lassen.",
+          "richtig": true
+        },
+        {
+          "id": "krank",
+          "text": "Ich bin krank",
+          "hinweis": "Nicht automatisch. Ein Wert ausserhalb des Normbereichs sagt allein nichts über eine Krankheit."
+        },
+        {
+          "id": "fehler",
+          "text": "Lupe hat sich vertan",
+          "hinweis": "Möglich, darum vergleichst du mit dem Original. Besprechen musst du ihn trotzdem."
+        },
+        {
+          "id": "aendern",
+          "text": "Ich muss sofort etwas ändern",
+          "hinweis": "Nein. Erst mit dem Arzt sprechen, dann entscheidet er mit dir."
+        }
+      ],
+      "loesung": [
+        "besprechen"
+      ]
+    },
+    "tr-f": {
+      "typ": "wahl",
+      "wunsch": "Welche Frage stelle ich dem Arzt zu meinem Verlauf?",
+      "frage": "Hämoglobin ist in zwei Jahren von 13,1 auf 11,2 gesunken. Welche Frage passt für den Arzt?",
+      "lupe": "Eine offene Frage nach Ursache und nächsten Schritten.",
+      "optionen": [
+        {
+          "id": "ursache",
+          "text": "Woran kann das liegen, und was sollten wir abklären?",
+          "hinweis": "Genau. So erfährst du, was als Nächstes kommt.",
+          "richtig": true
+        },
+        {
+          "id": "kaufen",
+          "text": "Welche Tablette soll ich kaufen?",
+          "hinweis": "Erst die Ursache klären, dann entscheidet der Arzt."
+        },
+        {
+          "id": "schlimm",
+          "text": "Bin ich todkrank?",
+          "hinweis": "Verständlich, aber zu eng. Frag nach Ursache und nächsten Schritten."
+        },
+        {
+          "id": "egal",
+          "text": "Darf ich das einfach ignorieren?",
+          "hinweis": "Besser offen fragen, was es bedeutet und was zu tun ist."
+        }
+      ],
+      "loesung": [
+        "ursache"
+      ]
+    },
+    "m-a": {
+      "wunsch": "Ein neuer Bericht ist da. Kann Lupe ihn eintragen und mir gleich den Verlauf zeigen?",
+      "grundprompt": "Hallo Lupe.",
+      "teile": [
+        {
+          "id": "akte",
+          "art": "anhang",
+          "text": "Gesundheitsakte.xlsx (bisher 83 Zeilen)"
+        },
+        {
+          "id": "neu",
+          "art": "anhang",
+          "text": "Laborbericht vom 10. Dezember 2026 (Foto)"
+        },
+        {
+          "id": "ergaenzen",
+          "art": "frage",
+          "text": "Trag die neuen Werte in die Akte ein."
+        },
+        {
+          "id": "nichts",
+          "art": "wie",
+          "text": "Ändere sonst nichts und gib mir die ganze Akte zurück."
+        },
+        {
+          "id": "verlauf",
+          "art": "frage",
+          "text": "Zeig mir dann als Grafik, wie sich die Werte verändert haben."
+        },
+        {
+          "id": "gesund",
+          "art": "frage",
+          "text": "Und sag mir, ob ich gesund bin."
+        },
+        {
+          "id": "fragen",
+          "art": "frage",
+          "text": "Mach mir drei kurze Fragen dazu für meinen Arzt."
+        }
+      ],
+      "pruefungen": [
+        {
+          "wenn": {
+            "gewaehlt": [
+              "gesund"
+            ]
+          },
+          "fehlbild": "diagnose"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "akte"
+            ]
+          },
+          "fehlbild": "vonVorn"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "neu"
+            ]
+          },
+          "fehlbild": "keinNeuer"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "ergaenzen"
+            ]
+          },
+          "fehlbild": "keineFrage"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "nichts"
+            ]
+          },
+          "fehlbild": "geaendert"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "verlauf"
+            ]
+          },
+          "fehlbild": "keinVerlauf"
+        },
+        {
+          "wenn": {
+            "fehlt": [
+              "fragen"
+            ]
+          },
+          "fehlbild": "keineFragen"
+        }
+      ],
+      "fehlbilder": {
+        "diagnose": {
+          "texte": [
+            "Gesund? Das kann ich nicht beurteilen. Ich sehe nur Zahlen. Das sagt dir deine Ärztin oder dein Arzt.",
+            "Ob du gesund bist, entscheide nicht ich. Ich kann dir den Verlauf zeigen, für das Gespräch mit dem Arzt."
+          ],
+          "hinweis": "Lupe stellt keine Diagnose. Frag nach dem Verlauf, nicht nach einem Urteil."
+        },
+        "vonVorn": {
+          "texte": [
+            "Hier ist deine Akte: 6 Zeilen vom 3. November. (Die 38 alten Zeilen fehlen. Lupe hatte die alte Akte nicht.)",
+            "Ich habe eine neue Akte angelegt, nur mit dem neuen Bericht. Die alten Werte kenne ich nicht."
+          ],
+          "hinweis": "Ohne die bisherige Akte fängt Lupe von vorn an."
+        },
+        "keinNeuer": {
+          "texte": [
+            "Ich sehe deine Akte. Was soll ich eintragen? Es ist kein neuer Bericht dabei.",
+            "Die Akte ist da, aber kein neuer Bericht. Ich habe nichts zum Eintragen."
+          ],
+          "hinweis": "Der neue Bericht fehlt."
+        },
+        "keineFrage": {
+          "texte": [
+            "Ich sehe deine Akte und einen neuen Bericht. Soll ich den Bericht erklären? Ich fange einfach mal an.",
+            "Akte und Bericht sind da. Was soll ich damit tun? Ich fasse mal den Bericht zusammen."
+          ],
+          "hinweis": "Sag Lupe, dass sie die neuen Werte eintragen soll."
+        },
+        "geaendert": {
+          "texte": [
+            "Eingetragen! Dabei habe ich alte Zeilen etwas aufgeräumt: drei Werte gerundet und die Spalten neu sortiert.",
+            "Fertig. Ich habe auch alte Zeilen verbessert. Hoffentlich stimmt noch alles."
+          ],
+          "hinweis": "Sag dazu: sonst nichts ändern. Sonst verändert Lupe auch alte Zeilen."
+        },
+        "keinVerlauf": {
+          "texte": [
+            "Eingetragen, die Akte hat jetzt 89 Zeilen. Wie sich die Werte verändert haben? Hast du nicht gefragt.",
+            "Fertig nachgeführt. Einen Verlauf habe ich nicht gemacht."
+          ],
+          "hinweis": "Frag nach dem Verlauf, sonst bekommst du nur die Tabelle."
+        },
+        "keineFragen": {
+          "texte": [
+            "Hämoglobin sank von 13,1 auf 11,2. Was du damit machst? Viel Glück!",
+            "Hier die Grafik. Ob das etwas bedeutet, weiss ich nicht. Mach dir keine Sorgen. Oder doch."
+          ],
+          "hinweis": "Mach aus dem Verlauf Fragen für den Arzt. Dort gehört er hin."
+        }
+      },
+      "erfolg": [
+        "Eingetragen: 6 neue Werte, alles andere unverändert. Grafik: Hämoglobin wieder bei 12,0. Drei Fragen für deinen Arzt stehen darunter.",
+        "Die Akte hat jetzt 89 Zeilen. Die Grafik zeigt alle Werte, Auffälliges ist rot. Nimm Grafik, Fragen und Befunde mit zum Arzt."
+      ],
+      "loesung": [
+        "akte",
+        "neu",
+        "ergaenzen",
+        "nichts",
+        "verlauf",
+        "fragen"
+      ]
+    }
+  }
+}

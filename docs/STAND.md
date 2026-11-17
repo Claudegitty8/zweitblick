@@ -1,6 +1,6 @@
 # Stand
 
-Stand: 17. November 2026 · Version 0.9.2 · Spielseite online als Testversion: https://claudegitty8.github.io/zweitblick/ (seit 17.11.2026) · Code öffentlich auf GitHub: ja
+Stand: 17. November 2026 · Version 0.10 · Spielseite online als Testversion: https://claudegitty8.github.io/zweitblick/ (seit 17.11.2026) · Code öffentlich auf GitHub: ja
 
 ## Wo es liegt
 
@@ -9,10 +9,11 @@ Stand: 17. November 2026 · Version 0.9.2 · Spielseite online als Testversion: 
 
 ## Fertig
 
-- 7 Besuche, 21 Themen, 133 Aufgaben in vier Übungsformen: Zusammenstecken (42), Vorhersagen (64), Antippen auf einem nachgebauten iPhone (20), Sortieren (7).
+- 8 Besuche, 24 Themen, 152 Aufgaben in vier Übungsformen: Zusammenstecken (52), Vorhersagen (71), Antippen auf einem nachgebauten iPhone (21), Sortieren (8).
+- Neu in 0.10: Besuch 2 «Eine Akte für alle Werte» (Herr Baumann): Akte als Tabelle anlegen, nachführen, Trends auslesen.
 - Kapitel «Gute Fotos von Berichten» mit eigenen Bildern: 9 Fehler (verwackelt, abgeschnitten, zu weit weg, schief, Schatten, Blitz, Finger, zu dunkel, zerknittert) und 3 gute Beispiele (Foto, Scan, PDF). Dazu ein Bild «Seite 1 von 2» und ein Laborbericht, zusammen 14 Bilder.
 - Land-Wahl Schweiz oder Deutschland: Notrufnummer, Patientendossier oder ePA, Kopie-Recht, Versichertennummer.
-- Spickzettel mit den echten Schritten pro Thema, druckbar. Lexikon mit 32 Begriffen und Quellen.
+- Spickzettel mit den echten Schritten pro Thema, druckbar. Lexikon mit 36 Begriffen und Quellen.
 - Lernregeln aus dem KI-Studio: fünf Schritte, Punkte nur beim ersten Versuch, Wiederholungen nach 1, 3 und 7 Runden, drei Hilfestufen, Ausweg, Schnelltest, Springen mit Rückgängig, freiwillige Fragen vorher und nachher.
 - Einstellungen: Schrift in drei Grössen, Land, Spielstand sichern, laden, löschen (mit Rückfrage), Notfall-Karte, Quellenliste.
 - Offline nach dem ersten Laden, Symbol für den Home-Bildschirm.
@@ -21,8 +22,8 @@ Stand: 17. November 2026 · Version 0.9.2 · Spielseite online als Testversion: 
 
 ## Geprüft (16.11.2026)
 
-- 88 Tests und die Inhaltsprüfung bestehen.
-- Im Browser (Chrome, automatisch) ganz durchgespielt: guter Spieler (alle 21 Themen gemeistert) und schwacher Spieler (nie beim ersten Versuch richtig, kommt über den Ausweg ans Ende), Schweiz und Deutschland, Breiten 320 bis 1680 px, hell und dunkel, Schrift normal bis sehr gross. Keine Fehler in der Konsole, nichts scrollt waagrecht, alle Klickflächen mindestens 44 px, Kontrast mindestens 4,5:1.
+- 89 Tests und die Inhaltsprüfung bestehen.
+- Im Browser (Chrome, automatisch) ganz durchgespielt: guter Spieler (alle 24 Themen gemeistert, 0.10) und schwacher Spieler (nie beim ersten Versuch richtig, kommt über den Ausweg ans Ende), Schweiz und Deutschland, Breiten 320 bis 1680 px, hell und dunkel, Schrift normal bis sehr gross. Keine Fehler in der Konsole, nichts scrollt waagrecht, alle Klickflächen mindestens 44 px, Kontrast mindestens 4,5:1.
 - Sonderfälle: Neuladen mitten in der Runde, Doppelklick, kaputter und fremder Speicher, kein Speicher, Löschen mit Rückfrage und Escape, Schnelltest, freiwillige Fragen, Springen und zurück, Sichern und Laden (auch kaputte Dateien), Tastatur, ohne Internet.
 
 ## Nicht geprüft

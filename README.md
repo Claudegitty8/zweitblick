@@ -1,8 +1,9 @@
 # Zweitblick
 
-Ein Lernspiel für ältere Menschen in der Schweiz und in Deutschland. Im «Gesundheits-Café von Hinterwil» bringen sieben Gäste erfundene Arztberichte mit. Mit Lupe, einer nachgebauten Übungs-KI, lernst du:
+Ein Lernspiel für ältere Menschen in der Schweiz und in Deutschland. Im «Gesundheits-Café von Hinterwil» bringen acht Gäste erfundene Arztberichte mit. Mit Lupe, einer nachgebauten Übungs-KI, lernst du:
 
 - Berichte erklären lassen, nachfragen, und dass die Ärztin oder der Arzt entscheidet,
+- eine Gesundheitsakte als Tabelle anlegen, nachführen und Verläufe für das Arztgespräch auslesen,
 - gute Fotos von Berichten machen (mit Bildern, wie man es nicht machen soll),
 - die echte Claude-App finden, ein Konto anlegen und das Training ausschalten,
 - ein Projekt «Meine Gesundheit» anlegen und Berichte beschaffen,

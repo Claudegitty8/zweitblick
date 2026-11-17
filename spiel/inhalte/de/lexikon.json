@@ -212,5 +212,32 @@
     "englisch": "Incognito chat",
     "erklaerung": "Ein Chat, der laut Anthropic nicht zum Verbessern von Claude genutzt wird, auch wenn das Training eingeschaltet ist.",
     "quelle": "https://support.claude.com/en/articles/8325621-claude-data-privacy-faq"
+  },
+  "akte-anlegen": {
+    "begriff": "Gesundheitsakte",
+    "kern": "akte-anlegen",
+    "erklaerung": "Hier: eine Tabelle mit allen Werten aus deinen Berichten, je mit Datum, Normbereich und Quelle. Claude kann sie als Excel-Datei erstellen.",
+    "quatsch": "Ohne Datum schrieb Lupe fünf Hämoglobin-Werte untereinander. Welcher der neuste war, wusste niemand.",
+    "quelle": "https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude"
+  },
+  "akte-nachfuehren": {
+    "begriff": "Nachführen",
+    "kern": "akte-nachfuehren",
+    "erklaerung": "Neue Werte in eine bestehende Akte eintragen, ohne die alten zu verändern.",
+    "quatsch": "Ohne die alte Akte fing Lupe von vorn an. Die Akte hatte danach sechs statt 44 Zeilen."
+  },
+  "trends": {
+    "begriff": "Diagramm",
+    "englisch": "Chart",
+    "kern": "trends",
+    "erklaerung": "Ein Bild aus Zahlen. Eine Linie zeigt auf einen Blick, ob ein Wert steigt oder fällt.",
+    "quatsch": "Auf «Bin ich gesund?» hätte Lupe gern geantwortet. Darf sie aber nicht: Das beurteilt die Ärztin oder der Arzt.",
+    "quelle": "https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude"
+  },
+  "tabelle": {
+    "begriff": "Tabelle (Excel)",
+    "englisch": "Spreadsheet",
+    "erklaerung": "Zeilen und Spalten mit Zahlen und Text. Excel ist ein bekanntes Programm dafür. Auf dem iPhone öffnet sich so eine Datei auch ohne Excel.",
+    "quelle": "https://support.claude.com/en/articles/12111783-create-and-edit-files-with-claude"
   }
 }

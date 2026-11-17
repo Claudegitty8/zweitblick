@@ -49,12 +49,12 @@ test('Guter Spieler: Das ganze Spiel lässt sich durchspielen, alles ist gemeist
   let stand = neuerStand();
   for (const auftrag of alle) ({ stand } = spieleBesuch(stand, auftrag, true));
   assert.deepEqual(stand.erledigt, AUFTRAEGE);
-  assert.equal(lehrplan.konzepte.length, 21);
+  assert.equal(lehrplan.konzepte.length, 24);
   for (const konzept of lehrplan.konzepte) {
     assert.ok(istGemeistert(stand.fortschritt[konzept.id], regeln), `«${konzept.id}» ist gemeistert`);
   }
   assert.deepEqual([...stand.lexikon].sort(), Object.keys(lexikon).sort());
-  assert.equal(spickzettel(stand, alle, regeln).length, 21);
+  assert.equal(spickzettel(stand, alle, regeln).length, 24);
 });
 
 test('Schwacher Spieler: Wer nie beim ersten Versuch richtig liegt, kommt über den Ausweg trotzdem ans Ende', () => {
@@ -66,10 +66,10 @@ test('Schwacher Spieler: Wer nie beim ersten Versuch richtig liegt, kommt über 
     auswege += ergebnis.auswege;
   }
   assert.deepEqual(stand.erledigt, AUFTRAEGE);
-  assert.equal(auswege, 21, 'Jede Konzept-Runde wurde über den Ausweg verlassen');
+  assert.equal(auswege, 24, 'Jede Konzept-Runde wurde über den Ausweg verlassen');
   // Nichts ist gemeistert, aber alles wird nachgeholt und liegt auf dem Spickzettel.
   for (const konzept of lehrplan.konzepte) assert.equal(stand.fortschritt[konzept.id].nachholen, true, konzept.id);
-  assert.equal(spickzettel(stand, alle, regeln).length, 21);
+  assert.equal(spickzettel(stand, alle, regeln).length, 24);
 });
 
 test('Jedes Kernkonzept hat genau eine Konzept-Runde, in der Reihenfolge des Lehrplans', () => {
@@ -100,4 +100,19 @@ test('Lupe schickt bei Notfällen immer zur Notrufnummer', () => {
   const hofmann = alle.find((a) => a.id === 'hofmann');
   const notfall = JSON.stringify(Object.entries(hofmann.aufgaben).filter(([id]) => id.startsWith('no-')));
   assert.ok(notfall.includes('[[notruf]]'));
+});
+
+test('Die Akte: Besuch 2 lehrt anlegen, nachführen und Trends, ohne Diagnose', () => {
+  const baumann = alle.find((a) => a.id === 'baumann');
+  assert.equal(AUFTRAEGE.indexOf('baumann'), 1, 'gleich nach Frau Gerber');
+  assert.deepEqual(baumann.runden.filter((r) => r.konzept).map((r) => r.konzept), ['akte-anlegen', 'akte-nachfuehren', 'trends']);
+  // Wer nach einer Diagnose fragt oder eine Tablette absetzen will, bekommt nie ein «richtig».
+  const verboten = ['gesund', 'absetzen'];
+  for (const [id, aufgabe] of Object.entries(baumann.aufgaben)) {
+    for (const teil of (aufgabe.teile ?? []).filter((t) => verboten.includes(t.id))) {
+      assert.ok(!aufgabe.loesung.includes(teil.id), `${id}: ${teil.id} gehört nicht zur Lösung`);
+    }
+  }
+  // Die Karte «So ist es in echt» sagt, dass am Schluss mit den Original-Befunden zum Arzt.
+  assert.ok(texte.konzepte.trends.echt.some((s) => s.includes('Original-Befunde')));
 });

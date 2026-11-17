@@ -9,7 +9,10 @@ import { pruefeInhalte, pruefeAufgabe, pruefeUeber } from '../werkzeuge/pruefe-i
 
 const lies = async (pfad) => JSON.parse(await readFile(new URL(`../spiel/inhalte/${pfad}`, import.meta.url), 'utf8'));
 const alle = await Promise.all(AUFTRAEGE.map((id) => lies(`de/besuche/${id}.json`)));
-const [gerber, meier, iphone] = alle;
+const nachId = (id) => alle.find((a) => a.id === id);
+const gerber = nachId('gerber');
+const meier = nachId('meier');
+const iphone = nachId('brunner-iphone');
 const texte = await lies('de/texte.json');
 
 test('Lupe zeigt beim Zusammenstecken das passende Fehlbild und beim nächsten Versuch eine andere Variante', async () => {
@@ -66,7 +69,7 @@ test('Jede Aufgabe des Spiels lässt sich mit ihrer Lösung lösen, und nichts t
       assert.equal(leer.ok, false, `${auftrag.id} ${id} leer`);
     }
   }
-  assert.equal(anzahl, 133);
+  assert.equal(anzahl, 152);
 });
 
 test('Antippen: Jede Fläche hat eine Folge und einen Hinweis, genau eine ist richtig', () => {

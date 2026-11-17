@@ -25,11 +25,11 @@ spiel/                     alles, was veröffentlicht wird
     oberflaeche/           Ansichten: Café, Runde, Übungsformen, Lexikon, Einstellungen, Spickzettel
   inhalte/
     regeln.json            Zahlen der Lernregeln
-    lehrplan.json          7 Kapitel, 21 Themen mit Voraussetzungen
+    lehrplan.json          8 Kapitel, 24 Themen mit Voraussetzungen
     fakten.json            Angaben mit Quelle und Prüfdatum
     betreiber.json         Angaben fürs Impressum, Schalter «testumgebung»
     de/texte.json          alle Oberflächentexte, Länderwerte, Themen (Aha, Tipp, Merkbild, echte Schritte, Bilder)
-    de/lexikon.json        32 Begriffe
+    de/lexikon.json        36 Begriffe
     de/umfrage.json        6 freiwillige Fragen
     de/besuche/<id>.json   ein Besuch: Gast, Runden, Aufgaben
 tests/                     node --test

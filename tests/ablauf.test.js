@@ -10,6 +10,7 @@ import { istGemeistert } from '../spiel/code/logik/meisterschaft.js';
 const lies = async (pfad) => JSON.parse(await readFile(new URL(`../spiel/inhalte/${pfad}`, import.meta.url), 'utf8'));
 const regeln = await lies('regeln.json');
 const alle = await Promise.all(AUFTRAEGE.map((id) => lies(`de/besuche/${id}.json`)));
+// Erster und zweiter Besuch in Spielreihenfolge.
 const [gerber, meier] = alle;
 
 // Spielt einen Besuch durch, mit gutem Spieler. Merkt sich, welche Wiederholungen kamen.

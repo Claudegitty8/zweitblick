@@ -2,7 +2,7 @@
   "app": {
     "titel": "Zweitblick",
     "untertitel": "Das Gesundheits-Café von Hinterwil",
-    "fuss": "Zweitblick, Version 0.9.2 · inoffiziell, kein Angebot von Anthropic oder Apple",
+    "fuss": "Zweitblick, Version 0.10 · inoffiziell, kein Angebot von Anthropic oder Apple",
     "lupeName": "Lupe, die Übungs-KI",
     "lupeWillkommen": "Hallo! Ich bin Lupe, eine Übungs-KI. Ich sehe viel, aber ich weiss nur, was du mir gibst.",
     "lupeNeu": "Willkommen im Gesundheits-Café! Gleich kommt der erste Gast. Wir helfen zusammen.",
@@ -364,21 +364,24 @@
       "name": "Der erste Versuch"
     },
     "2": {
-      "name": "Gute Fotos"
+      "name": "Die Akte"
     },
     "3": {
-      "name": "Die App holen"
+      "name": "Gute Fotos"
     },
     "4": {
-      "name": "Ein Ordner für alles"
+      "name": "Die App holen"
     },
     "5": {
-      "name": "Die zweite Sicht"
+      "name": "Ein Ordner für alles"
     },
     "6": {
-      "name": "Mögliche Ursachen"
+      "name": "Die zweite Sicht"
     },
     "7": {
+      "name": "Mögliche Ursachen"
+    },
+    "8": {
       "name": "Sicher bleiben"
     }
   },
@@ -783,6 +786,55 @@
         "Öffne beim Chat das Menü und wähle «Löschen». Bestätige.",
         "Laut Anthropic ist der Chat innert 30 Tagen auch auf den Servern gelöscht.",
         "Für eine einmalige Frage kannst du einen Inkognito-Chat starten."
+      ]
+    },
+    "akte-anlegen": {
+      "name": "Eine Akte anlegen",
+      "analogie": "Wie ein Haushaltsbuch: jede Ausgabe in einer Zeile, mit Datum. Am Jahresende siehst du, wohin das Geld ging.",
+      "aha": [
+        "Lupe kann aus vielen Berichten eine Tabelle machen: eine Zeile pro Wert.",
+        "Wichtig sind die Spalten: Datum, Wert mit Einheit, Normbereich und aus welchem Bericht.",
+        "Ohne Datum gibt es keinen Verlauf. Ohne Quelle kannst du nichts nachprüfen."
+      ],
+      "tipp": "Alle Berichte anhängen und um eine Tabelle bitten: Datum, Wert, Normbereich, Quelle.",
+      "echt": [
+        "Öffne die Einstellungen und schalte unter «Funktionen» das Erstellen von Dateien ein.",
+        "Starte einen neuen Chat und häng alle Berichte an, als Foto oder PDF.",
+        "Schreib: «Mach mir daraus eine Excel-Tabelle. Eine Zeile pro Wert, mit Datum, Wert, Einheit, Normbereich und Bericht.»",
+        "Tippe auf die fertige Tabelle und sichere sie in der App Dateien. Name: «Gesundheitsakte».",
+        "Vergleich ein paar Zahlen mit den Original-Befunden."
+      ]
+    },
+    "akte-nachfuehren": {
+      "name": "Die Akte nachführen",
+      "analogie": "Wie ein Sparbüchlein: Jede neue Buchung kommt unten dazu. Die alten Einträge bleiben, wie sie sind.",
+      "aha": [
+        "Kommt ein neuer Bericht, häng die bisherige Akte und den neuen Bericht an.",
+        "Sag: nur die neuen Werte eintragen, sonst nichts ändern, die ganze Akte zurückgeben.",
+        "Sonst fängt Lupe von vorn an oder ändert alte Zeilen."
+      ],
+      "tipp": "Bisherige Akte und neuer Bericht. Nur eintragen, nichts ändern, ganze Akte zurück.",
+      "echt": [
+        "Starte einen neuen Chat. Häng die Gesundheitsakte und den neuen Bericht an.",
+        "Schreib: «Trag die neuen Werte in die Akte ein. Ändere sonst nichts. Gib mir die ganze Akte zurück.»",
+        "Vergleich die neuen Zeilen mit dem Bericht.",
+        "Sichere die neue Akte. Die alte löschst du oder benennst sie «alt»."
+      ]
+    },
+    "trends": {
+      "name": "Trends auslesen",
+      "analogie": "Wie das Barometer im Gang: Nicht der einzelne Stand zählt, sondern ob es steigt oder fällt.",
+      "aha": [
+        "Mit der Akte zeigt Lupe, wie sich jeder Wert verändert hat, als Tabelle und Grafik.",
+        "Lass Werte ausserhalb des Normbereichs markieren und Fragen für den Arzt machen.",
+        "Eine Diagnose gibt es nicht. Den Verlauf besprichst du mit der Ärztin oder dem Arzt."
+      ],
+      "tipp": "Akte anhängen, Verlauf mit Grafik, Auffälliges markieren, Fragen für den Arzt.",
+      "echt": [
+        "Häng deine Gesundheitsakte an.",
+        "Schreib: «Zeig mir als Grafik, wie sich jeder Wert verändert hat. Markiere Werte ausserhalb des Normbereichs.»",
+        "Schreib: «Mach mir drei kurze Fragen dazu für meinen Arzt.»",
+        "Nimm Grafik, Fragen und die Original-Befunde mit zum Arzt. Entscheide nichts selbst."
       ]
     }
   }

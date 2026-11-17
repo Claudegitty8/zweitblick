@@ -1,5 +1,17 @@
 # Änderungen
 
+## 0.10 (17. November 2026): Besuch «Eine Akte für alle Werte»
+
+### Neu
+- Besuch 2 mit Herrn Baumann, gleich nach Frau Gerber: Akte als Tabelle anlegen, Akte nachführen, Trends auslesen. 19 Aufgaben, alle vier Übungsformen.
+- Lupe zeigt typische Fehler: kein Datum (kein Verlauf), keine Quelle (nicht nachprüfbar), gerundete Werte, zwei Akten gleichzeitig, «Bin ich gesund?» (keine Diagnose), «Tablette absetzen?» (nie selbst entscheiden).
+- Karten «So ist es in echt»: Erstellen von Dateien einschalten, Tabelle sichern, nachführen, Grafik und Fragen mit den Original-Befunden zum Arzt.
+- Lexikon: Gesundheitsakte, Nachführen, Diagramm, Tabelle (Excel). Zwei Fakten zum Erstellen von Dateien mit Quelle.
+
+### Geändert
+- Die übrigen Besuche rücken eine Stelle nach hinten (Kapitel 3 bis 8). Frau Gerber kündigt jetzt Herrn Baumann an.
+- Wer Frau Gerber schon fertig hat, bekommt als Nächstes Herrn Baumann. Gespeicherte Stände bleiben erhalten.
+
 ## 0.9.2 (17. November 2026): Testversion mit Impressum und Datenschutz
 
 ### Neu
