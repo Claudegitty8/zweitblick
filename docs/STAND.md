@@ -13,7 +13,7 @@ Stand: 17. November 2026 · Version 0.13 · Spielseite online als Testversion: h
 - Neu in 0.10: Besuch 2 «Eine Akte für alle Werte» (Herr Baumann): Akte als Tabelle anlegen, nachführen, Trends auslesen.
 - Neu in 0.11: «Am iPhone üben» zu 23 Themen, 115 nachgebaute Bildschirme, darunter «Dokumente scannen» in der App Notizen. Knopf nach jedem Thema und im Spickzettel. Online seit 17.11.2026.
 - Neu in 0.12: Liste «Alle Übungen am iPhone» in Hilfe und Einstellungen und im Spickzettel, jede Übung jederzeit. Online seit 17.11.2026.
-- Neu in 0.13: echt wirkendes iPhone (Home, Kamera, Fenster, Rückfragen, Listen) und selber tippen in 18 Feldern plus Telefon-Tasten, mit Prüfung der wichtigen Wörter und «Für mich schreiben». 97 Bildschirme. Noch nicht veröffentlicht.
+- Neu in 0.13: echt wirkendes iPhone (Home, Kamera, Fenster, Rückfragen, Listen) und selber tippen in 18 Feldern plus Telefon-Tasten, mit Prüfung der wichtigen Wörter und «Für mich schreiben». 97 Bildschirme. Online seit 17.11.2026.
 - Kapitel «Gute Fotos von Berichten» mit eigenen Bildern: 9 Fehler (verwackelt, abgeschnitten, zu weit weg, schief, Schatten, Blitz, Finger, zu dunkel, zerknittert) und 3 gute Beispiele (Foto, Scan, PDF). Dazu ein Bild «Seite 1 von 2» und ein Laborbericht, zusammen 14 Bilder.
 - Land-Wahl Schweiz oder Deutschland: Notrufnummer, Patientendossier oder ePA, Kopie-Recht, Versichertennummer.
 - Spickzettel mit den echten Schritten pro Thema, druckbar. Lexikon mit 36 Begriffen und Quellen.
