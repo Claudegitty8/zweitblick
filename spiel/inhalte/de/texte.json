@@ -2,7 +2,7 @@
   "app": {
     "titel": "Zweitblick",
     "untertitel": "Das Gesundheits-Café von Hinterwil",
-    "fuss": "Zweitblick, Version 0.9.1 · inoffiziell, kein Angebot von Anthropic oder Apple",
+    "fuss": "Zweitblick, Version 0.9.2 · inoffiziell, kein Angebot von Anthropic oder Apple",
     "lupeName": "Lupe, die Übungs-KI",
     "lupeWillkommen": "Hallo! Ich bin Lupe, eine Übungs-KI. Ich sehe viel, aber ich weiss nur, was du mir gibst.",
     "lupeNeu": "Willkommen im Gesundheits-Café! Gleich kommt der erste Gast. Wir helfen zusammen.",
@@ -258,7 +258,70 @@
     "ueberKontaktAdresse": "",
     "quellenTitel": "Quellen ({anzahl})",
     "quelleStand": "Quelle, geprüft {datum}",
-    "quelleZweite": "zweite Quelle"
+    "quelleZweite": "zweite Quelle",
+    "rechtName": "Rechtliches",
+    "fussImpressum": "Impressum",
+    "fussDatenschutz": "Datenschutz",
+    "impressumTitel": "Impressum",
+    "impressumPrivat": "Diese Website wird von einer Privatperson betrieben.",
+    "impressumName": "Verantwortlich",
+    "impressumAdresse": "Adresse",
+    "impressumEmail": "E-Mail",
+    "impressumFehlt": "Noch nicht eingetragen.",
+    "impressumUnabhaengig": "Zweitblick ist ein kostenloses Lernspiel. Es gehört zu keiner Firma und hat keine Verbindung zu Anthropic, dem Hersteller von Claude, oder zu Apple.",
+    "impressumGesundheit": "Dieses Spiel ersetzt keinen ärztlichen Rat. Alle Fälle sind erfunden. Die Inhalte wurden nicht von einer Ärztin oder einem Arzt geprüft.",
+    "impressumLizenz": "Code unter MIT-Lizenz, Texte und Bilder unter CC BY 4.0.",
+    "impressumQuellcode": "Quellcode auf GitHub (neues Fenster)",
+    "impressumQuellcodeAdresse": "https://github.com/Claudegitty8/zweitblick",
+    "datenschutzTitel": "Datenschutz",
+    "datenschutzVerantwortlich": "Wer ist verantwortlich?",
+    "datenschutzAbschnitte": [
+      {
+        "titel": "Das Wichtigste in Kürze",
+        "saetze": [
+          "Das Spiel fragt keine persönlichen Angaben ab. Es gibt kein Konto, kein Formular, keine Cookies, keine Werbung und keine Statistik.",
+          "Das Spiel fragt nie nach Gesundheitsdaten.",
+          "Lupe, die KI im Spiel, ist nur nachgebaut. Es gibt keine Verbindung zu einer echten KI."
+        ]
+      },
+      {
+        "titel": "Was bleibt auf deinem Gerät?",
+        "saetze": [
+          "Dein Spielstand, damit du später weiterspielen kannst. Er liegt im Speicher deines Browsers.",
+          "Die Dateien des Spiels, damit es auch ohne Internet läuft.",
+          "Niemand ausser dir sieht diese Daten. Du löschst sie mit «Spielstand löschen» in den Einstellungen oder über die Website-Daten deines Browsers.",
+          "Sicherst du den Spielstand als Datei, liegt diese Datei nur bei dir."
+        ]
+      },
+      {
+        "titel": "Wer betreibt den Server?",
+        "saetze": [
+          "Die Seite liegt bei GitHub Pages, einem Dienst der Firma GitHub, Inc. in den USA.",
+          "Beim Aufruf sieht GitHub deine IP-Adresse, eine Art Adresse deines Internetanschlusses. GitHub speichert sie nach eigenen Angaben aus Sicherheitsgründen.",
+          "Der Betreiber von Zweitblick hat darauf keinen Zugriff. Die Daten können in die USA gelangen.",
+          "GitHub ist im «EU-US Data Privacy Framework» und im «Swiss-US Data Privacy Framework» zertifiziert. Für solche Firmen gilt der Datenschutz als angemessen."
+        ]
+      },
+      {
+        "titel": "Warum?",
+        "saetze": [
+          "Ohne Server kann niemand die Seite aufrufen.",
+          "Der Betreiber hat ein berechtigtes Interesse, das Spiel sicher und gratis anzubieten (in der EU: Art. 6 Abs. 1 lit. f DSGVO)."
+        ]
+      },
+      {
+        "titel": "Deine Rechte",
+        "saetze": [
+          "Du kannst Auskunft verlangen und, wo möglich, Berichtigung oder Löschung. Schreib an die E-Mail-Adresse oben.",
+          "Anfragen zu den Daten bei GitHub leitet der Betreiber gern weiter.",
+          "Du kannst dich auch bei einer Datenschutzbehörde beschweren: in der Schweiz beim EDÖB, in Deutschland bei der Behörde deines Bundeslandes."
+        ]
+      }
+    ],
+    "datenschutzStand": "Stand: 17. November 2026",
+    "testTitel": "Testversion",
+    "testText": "Diese Seite ist nur zum Ausprobieren. Sie ist noch nicht offiziell veröffentlicht. Rückmeldungen sind willkommen.",
+    "impressumTest": "Testversion: Die Angaben folgen vor der offiziellen Veröffentlichung."
   },
   "laender": {
     "ch": {

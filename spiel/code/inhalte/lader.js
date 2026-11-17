@@ -29,16 +29,17 @@ export function setzeLandEin(wert, werte) {
 
 // Lädt alles einmal. Das Ergebnis ist «roh»: noch mit Platzhaltern.
 export async function ladeRoh(sprache = 'de') {
-  const [regeln, lehrplan, texte, lexikon, umfrage, fakten, ...auftraege] = await Promise.all([
+  const [regeln, lehrplan, texte, lexikon, umfrage, fakten, betreiber, ...auftraege] = await Promise.all([
     ladeJson('regeln.json'),
     ladeJson('lehrplan.json'),
     ladeJson(`${sprache}/texte.json`),
     ladeJson(`${sprache}/lexikon.json`),
     ladeJson(`${sprache}/umfrage.json`),
     ladeJson('fakten.json'),
+    ladeJson('betreiber.json'),
     ...AUFTRAEGE.map((id) => ladeJson(`${sprache}/besuche/${id}.json`)),
   ]);
-  return { regeln, lehrplan, texte, lexikon, auftraege, umfrage: umfrage.fragen, fakten: fakten.fakten };
+  return { regeln, lehrplan, texte, lexikon, auftraege, umfrage: umfrage.fragen, fakten: fakten.fakten, betreiber };
 }
 
 // Macht aus den rohen Inhalten die Inhalte für ein Land. Ohne gewähltes Land gilt die Schweiz,

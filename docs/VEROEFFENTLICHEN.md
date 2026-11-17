@@ -14,6 +14,11 @@ Der Code ist öffentlich auf GitHub. Die Spielseite ist noch nicht online. Sie g
 1. Erledigt (17.11.2026): Repository https://github.com/Claudegitty8/zweitblick, öffentlich, Claude hat Schreibzugriff.
 2. Wenn die Spielseite online gehen soll: auf github.com im Repository unter «Settings», «Pages», bei «Source» den Eintrag «GitHub Actions» wählen.
 
+## Testumgebung oder offizielle Version
+Gesteuert über `spiel/inhalte/betreiber.json`:
+- Testumgebung (jetzt): `testumgebung: true`. Band «Testversion» oben, «noindex» in `spiel/index.html`, Impressum ohne Angaben erlaubt.
+- Offizielle Version: Name, Strasse, Ort und E-Mail eintragen, `testumgebung: false`, die Zeile mit «noindex» in `spiel/index.html` löschen. Der Ablauf prüft beides und bricht sonst ab.
+
 ## Jede Veröffentlichung
 
 1. `npm run pruefen` besteht, Version und `docs/CHANGELOG.md` sind nachgeführt.

@@ -27,6 +27,7 @@ spiel/                     alles, was veröffentlicht wird
     regeln.json            Zahlen der Lernregeln
     lehrplan.json          7 Kapitel, 21 Themen mit Voraussetzungen
     fakten.json            Angaben mit Quelle und Prüfdatum
+    betreiber.json         Angaben fürs Impressum, Schalter «testumgebung»
     de/texte.json          alle Oberflächentexte, Länderwerte, Themen (Aha, Tipp, Merkbild, echte Schritte, Bilder)
     de/lexikon.json        32 Begriffe
     de/umfrage.json        6 freiwillige Fragen
@@ -34,6 +35,7 @@ spiel/                     alles, was veröffentlicht wird
 tests/                     node --test
 werkzeuge/pruefe-inhalte.mjs   Inhaltsprüfung
 werkzeuge/server.mjs           lokaler Server
+werkzeuge/pruefe-veroeffentlichung.mjs   Prüfung vor dem Veröffentlichen (Impressum, noindex)
 ```
 
 ## Ein Besuch (`de/besuche/<id>.json`)

@@ -61,6 +61,14 @@ export async function pruefeInhalte(ordner = STANDARD_ORDNER, sprachen = ['de'])
   const regeln = await lies(ordner, 'regeln.json', fehler);
   const lehrplan = await lies(ordner, 'lehrplan.json', fehler);
   const fakten = await lies(ordner, 'fakten.json', fehler);
+  // Angaben für Impressum und Datenschutz: Die Datei muss da sein, die Felder dürfen vor dem Veröffentlichen leer sein.
+  const betreiber = await lies(ordner, 'betreiber.json', fehler);
+  if (betreiber) {
+    for (const feld of ['name', 'strasse', 'ort', 'land', 'email']) {
+      if (typeof betreiber[feld] !== 'string') fehler.push(`betreiber.json: ${feld} muss ein Text sein (darf leer sein)`);
+    }
+    if (typeof betreiber.testumgebung !== 'boolean') fehler.push('betreiber.json: testumgebung muss true oder false sein');
+  }
 
   if (regeln) {
     if (!Number.isInteger(regeln.erfolgeFuerMeisterschaft) || regeln.erfolgeFuerMeisterschaft < 1) {
@@ -180,9 +188,18 @@ async function pruefeTexte({ texte, lexikon, umfrage, lehrplan, gesehen, vor }, 
     for (const text of alleTexte(wert)) if (zuLang(text)) fehler.push(`${vor}/texte.json: app.${schluessel} hat mehr als ${MAX_WOERTER} Wörter`);
   }
   pruefeUeber(texte.app ?? {}, `${vor}/texte.json`, fehler);
-  for (const feld of ['hilfeRegel', 'schonGesehen', 'auswegText', 'auswegKnopf', 'verschobenTitel', 'verschobenText', 'notrufZeile', 'notfallText', 'arztHinweisTitel']) {
+  for (const feld of ['hilfeRegel', 'schonGesehen', 'auswegText', 'auswegKnopf', 'verschobenTitel', 'verschobenText', 'notrufZeile', 'notfallText', 'arztHinweisTitel',
+    'fussImpressum', 'fussDatenschutz', 'impressumTitel', 'impressumPrivat', 'impressumFehlt', 'impressumGesundheit', 'datenschutzTitel', 'datenschutzStand', 'testTitel', 'testText', 'impressumTest']) {
     if (!istText(texte.app?.[feld])) fehler.push(`${vor}/texte.json: ${feld} fehlt`);
   }
+  // Datenschutz: Abschnitte mit Titel und Sätzen, darunter einer zu GitHub als Hoster.
+  const abschnitte = texte.app?.datenschutzAbschnitte;
+  if (!Array.isArray(abschnitte) || abschnitte.length === 0 || abschnitte.some((a) => !istText(a?.titel) || !Array.isArray(a.saetze) || !a.saetze.every(istText))) {
+    fehler.push(`${vor}/texte.json: datenschutzAbschnitte braucht Abschnitte mit titel und saetze`);
+  } else if (!abschnitte.some((a) => a.saetze.some((s) => s.includes('GitHub')))) {
+    fehler.push(`${vor}/texte.json: datenschutzAbschnitte muss GitHub als Hoster nennen`);
+  }
+  if (!/^https:\/\/\S+$/.test(texte.app?.impressumQuellcodeAdresse ?? '')) fehler.push(`${vor}/texte.json: impressumQuellcodeAdresse braucht eine https-Adresse`);
   // Der Gesundheitshinweis (nur für das Gespräch mit dem Arzt) muss da sein und die Original-Befunde nennen.
   const arztHinweis = texte.app?.arztHinweis;
   if (!Array.isArray(arztHinweis) || arztHinweis.length === 0 || !arztHinweis.every(istText)) {

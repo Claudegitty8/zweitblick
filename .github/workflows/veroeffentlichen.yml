@@ -27,6 +27,8 @@ jobs:
         with:
           node-version: 22
       - run: npm run pruefen
+      # Ohne vollständiges Impressum wird nichts veröffentlicht.
+      - run: npm run veroeffentlichung
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

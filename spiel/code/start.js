@@ -7,6 +7,7 @@ import { zeigeRunde, zeigeZwischen } from './oberflaeche/runde.js';
 import { zeigeLexikon, zeigeEinstellungen } from './oberflaeche/lexikon.js';
 import { zeigeSchnelltest, zeigeUmfrage } from './oberflaeche/extras.js';
 import { zeigeSpickzettel } from './oberflaeche/spickzettel.js';
+import { zeigeImpressum, zeigeDatenschutz } from './oberflaeche/recht.js';
 import { wendeSchriftAn } from './oberflaeche/schrift.js';
 import { pruefeLauf } from './logik/extras.js';
 
@@ -20,6 +21,8 @@ const ANSICHTEN = {
   schnelltest: zeigeSchnelltest,
   umfrage: zeigeUmfrage,
   spickzettel: zeigeSpickzettel,
+  impressum: zeigeImpressum,
+  datenschutz: zeigeDatenschutz,
 };
 
 // Ohne Internet spielen: Ein kleiner Helfer im Browser (Service Worker) legt alle Dateien auf dem Gerät ab.
@@ -37,6 +40,20 @@ async function richteOfflineEin() {
   } catch {
     // Kein Offline-Betrieb auf diesem Gerät oder an diesem Ort. Das Spiel selbst ist davon nicht betroffen.
   }
+}
+
+// Testumgebung: Ein Band oben auf jeder Seite sagt, dass dies eine Testversion ist.
+// Ein- und ausgeschaltet wird es in spiel/inhalte/betreiber.json (testumgebung).
+function zeigeTesthinweis(app) {
+  if (app.roh.betreiber?.testumgebung !== true) return;
+  const t = app.inhalte.texte.app;
+  const band = document.createElement('div');
+  band.className = 'testband';
+  band.setAttribute('role', 'note');
+  const titel = document.createElement('strong');
+  titel.textContent = `${t.testTitel}: `;
+  band.append(titel, t.testText);
+  document.body.prepend(band);
 }
 
 async function start() {
@@ -78,6 +95,7 @@ async function start() {
       },
     };
     wendeSchriftAn(app.stand.einstellungen.schrift);
+    zeigeTesthinweis(app);
     nav.zu('cafe');
     richteOfflineEin();
   } catch (fehler) {

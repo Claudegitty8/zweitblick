@@ -118,7 +118,22 @@ a { color: var(--haupt); }
   margin-bottom: 0.6rem;
 }
 .leiste-titel { font-size: 1rem; margin: 0; color: var(--leise); }
+.testband {
+  background: var(--hinweis-hell);
+  color: var(--text);
+  border-bottom: 3px solid var(--warm);
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
 .fuss { text-align: center; font-size: 0.8rem; color: var(--leise); margin-top: 1.5rem; }
+.fuss p { margin: 0 0 0.3rem; }
+.fuss-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.5rem; }
+.fuss-links .knopf-leise { font-size: 0.9rem; min-height: 44px; }
+.recht dl { margin: 0.4rem 0; }
+.recht dt { font-weight: 700; margin-top: 0.5rem; }
+.recht dd { margin: 0; }
+.recht h2 { font-size: 1.05rem; margin: 0 0 0.4rem; }
 .notruf-zeile {
   margin: 1rem 0 0;
   padding: 0.6rem 0.8rem;
@@ -394,7 +409,7 @@ details.eintrag summary::marker { color: var(--haupt); }
 /* --- Drucken: nur der Inhalt, ohne Knöpfe und Navigation --- */
 @media print {
   :root { --grund: #fff; --karte: #fff; --text: #000; --schatten: none; }
-  .hauptnav, .nicht-drucken, button { display: none !important; }
+  .hauptnav, .nicht-drucken, button, .testband { display: none !important; }
   .klein-bilder { grid-template-columns: repeat(3, 1fr); }
   h2, h3 { break-after: avoid; }
   .karte { break-inside: avoid; border: 1px solid #999; }

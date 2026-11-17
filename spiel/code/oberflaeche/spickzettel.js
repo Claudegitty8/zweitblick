@@ -1,6 +1,6 @@
 // Der Spickzettel: Karten mit den echten Schritten in der Claude-App.
 // Jede Karte kommt dazu, sobald die Runde zu ihrem Thema vorbei ist. Druckbar.
-import { el, fuelle, knopf, hauptnavigation, arztHinweisKarte } from './bausteine.js';
+import { el, fuelle, knopf, hauptnavigation, arztHinweisKarte, fusszeile } from './bausteine.js';
 import { beispielBild } from './bild.js';
 import { spickzettel } from '../logik/extras.js';
 
@@ -35,5 +35,6 @@ export function zeigeSpickzettel(wurzel, app, nav) {
     karten.length > 0 ? knopf(t.spickDrucken, () => globalThis.print?.(), 'knopf-zweit nicht-drucken') : null,
     el('p', { klasse: 'klein', text: fuelle(t.spickOffen, { anzahl: gesamt - karten.length, gesamt }) }),
     el('p', { klasse: 'notruf-zeile', text: t.notrufZeile }),
+    fusszeile(t, nav),
   ].filter(Boolean));
 }

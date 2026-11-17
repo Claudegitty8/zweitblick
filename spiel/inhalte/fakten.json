@@ -191,6 +191,18 @@
       "aussage": "Für ältere Menschen: grosse Schrift, grosse Klickflächen, beschriftete Knöpfe.",
       "quelle": "https://www.nngroup.com/alertbox/seniors.html",
       "geprueft": "2026-11-16"
+    },
+    {
+      "id": "github-ip",
+      "aussage": "Beim Besuch einer GitHub-Pages-Seite speichert GitHub die IP-Adresse aus Sicherheitsgründen, auch ohne Anmeldung.",
+      "quelle": "https://docs.github.com/en/articles/about-github-pages",
+      "geprueft": "2026-11-17"
+    },
+    {
+      "id": "github-dpf",
+      "aussage": "GitHub ist im EU-US und im Swiss-US Data Privacy Framework als aktiv eingetragen.",
+      "quelle": "https://www.dataprivacyframework.gov/participant/6174",
+      "geprueft": "2026-11-17"
     }
   ]
 }

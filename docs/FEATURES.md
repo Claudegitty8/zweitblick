@@ -39,6 +39,11 @@ In Worten der Spielerinnen und Spieler. Vor jeder Änderung abgleichen: Nichts d
 - Zu einem späteren Besuch springen (mit Rückfrage) und den Sprung rückgängig machen.
 - «Über dieses Spiel»: Zweck, Daten, inoffiziell, nicht von einer Fachperson geprüft, alle Quellen mit Prüfdatum.
 
+## Rechtliches
+- In der Fusszeile jeder Hauptseite finde ich «Impressum» und «Datenschutz».
+- Der Datenschutz erklärt in einfachen Worten: was auf meinem Gerät bleibt, was GitHub sieht und welche Rechte ich habe.
+- In der Testversion steht oben ein Band «Testversion».
+
 ## Überall
 - Hell und dunkel nach Einstellung des Geräts, «Bewegung reduzieren» wird beachtet.
 - Funktioniert nach dem ersten Laden ohne Internet, als Symbol auf dem Home-Bildschirm.

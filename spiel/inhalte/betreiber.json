@@ -1,0 +1,9 @@
+{
+  "hinweis": "Angaben für Impressum und Datenschutz. «testumgebung: true» zeigt oben den Hinweis «Testversion» und erlaubt das Veröffentlichen ohne Angaben. Für die offizielle Version: Angaben ausfüllen, testumgebung auf false, noindex in index.html entfernen.",
+  "name": "",
+  "strasse": "",
+  "ort": "",
+  "land": "Schweiz",
+  "email": "",
+  "testumgebung": true
+}

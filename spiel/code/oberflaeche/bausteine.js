@@ -38,6 +38,16 @@ export function punkte(erfolge, noetig, beschriftung) {
   return reihe;
 }
 
+// Fusszeile mit Version und den Links zu Impressum und Datenschutz.
+// Von jeder Hauptseite aus ein Klick, von jeder anderen Seite aus höchstens zwei.
+export function fusszeile(t, nav) {
+  return el('footer', { klasse: 'fuss' },
+    el('p', { text: t.fuss }),
+    el('nav', { klasse: 'fuss-links', 'aria-label': t.rechtName },
+      knopf(t.fussImpressum, () => nav.zu('impressum'), 'knopf-leise'),
+      knopf(t.fussDatenschutz, () => nav.zu('datenschutz'), 'knopf-leise')));
+}
+
 // Gesundheitshinweis: Claudes Antworten nur für das Gespräch mit Ärztin oder Arzt.
 // Überall dieselbe Karte, damit er gleich aussieht und gleich heisst.
 export function arztHinweisKarte(t) {

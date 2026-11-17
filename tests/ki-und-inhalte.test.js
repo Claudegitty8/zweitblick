@@ -182,3 +182,37 @@ test('Gesundheitshinweis: Antworten nur für das Gespräch mit dem Arzt, mit den
   assert.ok(arztHinweis.some((satz) => satz.includes('Entscheide nie selbst')), 'sagt: nichts selbst entscheiden');
   for (const satz of arztHinweis) assert.ok(satz.split(/\s+/).length <= 30, satz);
 });
+
+test('Impressum: Vor dem Veröffentlichen müssen Name, Strasse, Ort und E-Mail da sein, ein Postfach allein reicht nicht', async () => {
+  const { pruefeBetreiber } = await import('../werkzeuge/pruefe-veroeffentlichung.mjs');
+  const gut = { name: 'Anna Muster', strasse: 'Dorfstrasse 1', ort: '8000 Zürich', land: 'Schweiz', email: 'anna@beispiel.ch' };
+  assert.deepEqual(pruefeBetreiber(gut), []);
+  assert.equal(pruefeBetreiber({ ...gut, name: 'Anna' }).length, 1);
+  assert.equal(pruefeBetreiber({ ...gut, strasse: 'Postfach 12' }).length, 1);
+  assert.equal(pruefeBetreiber({ ...gut, ort: 'Zürich' }).length, 1);
+  assert.equal(pruefeBetreiber({ ...gut, email: 'keine adresse' }).length, 1);
+  assert.equal(pruefeBetreiber(null).length, 5);
+});
+
+test('Datenschutz: Abschnitte sind kurz und nennen GitHub und die IP-Adresse', () => {
+  const abschnitte = texte.app.datenschutzAbschnitte;
+  const alle = abschnitte.flatMap((a) => a.saetze).join(' ');
+  assert.ok(alle.includes('GitHub') && alle.includes('IP-Adresse'));
+  for (const satz of abschnitte.flatMap((a) => a.saetze)) assert.ok(satz.split(/\s+/).length <= 30, satz);
+});
+
+test('Veröffentlichen: Testumgebung braucht «noindex», die offizielle Version ein vollständiges Impressum', async () => {
+  const { pruefeVeroeffentlichung } = await import('../werkzeuge/pruefe-veroeffentlichung.mjs');
+  const mit = '<meta name="robots" content="noindex, nofollow">';
+  const ohne = '<meta name="theme-color" content="#1d5c63">';
+  const leer = { name: '', strasse: '', ort: '', land: 'Schweiz', email: '' };
+  const voll = { name: 'Anna Muster', strasse: 'Dorfstrasse 1', ort: '8000 Zürich', land: 'Schweiz', email: 'anna@beispiel.ch' };
+  assert.deepEqual(pruefeVeroeffentlichung({ ...leer, testumgebung: true }, mit).fehler, []);
+  assert.equal(pruefeVeroeffentlichung({ ...leer, testumgebung: true }, ohne).fehler.length, 1);
+  assert.ok(pruefeVeroeffentlichung({ ...leer, testumgebung: false }, ohne).fehler.length > 0);
+  assert.deepEqual(pruefeVeroeffentlichung({ ...voll, testumgebung: false }, ohne).fehler, []);
+  assert.equal(pruefeVeroeffentlichung({ ...voll, testumgebung: false }, mit).fehler.length, 1);
+  // Der Stand im Repository passt zusammen.
+  const seite = await readFile(new URL('../spiel/index.html', import.meta.url), 'utf8');
+  assert.deepEqual(pruefeVeroeffentlichung(await lies('betreiber.json'), seite).fehler, []);
+});

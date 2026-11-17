@@ -1,5 +1,14 @@
 # Änderungen
 
+## 0.9.2 (17. November 2026): Testversion mit Impressum und Datenschutz
+
+### Neu
+- Seiten «Impressum» und «Datenschutz», erreichbar über die Fusszeile jeder Hauptseite (auch schon bei der Land-Wahl).
+- Band «Testversion» oben auf jeder Seite. Die Testumgebung trägt «noindex» und erscheint nicht in Suchmaschinen.
+- Angaben zum Betreiber in `spiel/inhalte/betreiber.json`. In der Testumgebung bleiben sie leer (Wunsch des Besitzers), das Impressum sagt dann: Angaben folgen vor der offiziellen Veröffentlichung.
+- Prüfung vor dem Veröffentlichen (`npm run veroeffentlichung`, auch im Ablauf «Spiel veröffentlichen»): Testumgebung nur mit «noindex», offizielle Version nur mit vollständigem Impressum und ohne «noindex».
+- Zwei Fakten zum Hoster GitHub (IP-Adressen, Data Privacy Framework) mit Quelle.
+
 ## 0.9.1 (17. November 2026): Hinweis «nur für das Gespräch mit dem Arzt»
 
 ### Neu

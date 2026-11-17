@@ -1,5 +1,5 @@
 // Lexikon sowie Einstellungen und Hilfe: zwei Nebenansichten.
-import { el, fuelle, knopf, punkte, hauptnavigation, arztHinweisKarte } from './bausteine.js';
+import { el, fuelle, knopf, punkte, hauptnavigation, arztHinweisKarte, fusszeile } from './bausteine.js';
 import { erfolge, neuerFortschritt } from '../logik/meisterschaft.js';
 import { wendeSchriftAn } from './schrift.js';
 import { wandleUm, pruefeLauf, sprungStatus, springeZuAuftrag, SCHRIFTEN, LAENDER } from '../logik/extras.js';
@@ -43,6 +43,7 @@ export function zeigeLexikon(wurzel, app, nav) {
     el('p', { klasse: 'klein', text: t.lexikonInfo }),
     ...eintraege,
     el('p', { klasse: 'klein', text: fuelle(t.lexikonOffen, { anzahl: offen }) }),
+    fusszeile(t, nav),
   );
 }
 
@@ -159,7 +160,7 @@ export function zeigeEinstellungen(wurzel, app, nav, daten) {
       rueckfrage),
     springen(app, nav, t, daten?.springen),
     ueberDasSpiel(app, t),
-    el('footer', { klasse: 'fuss', text: t.fuss }),
+    fusszeile(t, nav),
   ].filter(Boolean));
 }
 

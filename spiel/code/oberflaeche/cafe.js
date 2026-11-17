@@ -1,6 +1,6 @@
 // Das Café: Startbildschirm mit dem nächsten Besuch, allen Besuchen und der Meisterschaft.
 // Dazu die Land-Wahl, die vor dem ersten Besuch kommt.
-import { el, fuelle, knopf, lupeFigur, punkte, hauptnavigation, arztHinweisKarte } from './bausteine.js';
+import { el, fuelle, knopf, lupeFigur, punkte, hauptnavigation, arztHinweisKarte, fusszeile } from './bausteine.js';
 import { starteAuftrag } from '../logik/ablauf.js';
 import { erfolge, neuerFortschritt } from '../logik/meisterschaft.js';
 import { sprungStatus } from '../logik/extras.js';
@@ -122,7 +122,7 @@ export function zeigeCafe(wurzel, app, nav, daten) {
     alle,
     meisterschaft,
     el('p', { klasse: 'notruf-zeile', text: t.notrufZeile }),
-    el('footer', { klasse: 'fuss', text: t.fuss }),
+    fusszeile(t, nav),
   ].filter(Boolean));
 }
 
@@ -144,6 +144,6 @@ export function zeigeLand(wurzel, app, nav) {
         knopf(t.landName.de, () => waehle('de'), 'los')),
       el('p', { klasse: 'klein', text: t.landSpaeter })),
     arztHinweisKarte(t),
-    el('footer', { klasse: 'fuss', text: t.fuss }),
+    fusszeile(t, nav),
   );
 }
